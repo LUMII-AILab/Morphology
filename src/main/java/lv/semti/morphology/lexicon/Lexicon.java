@@ -19,8 +19,8 @@ package lv.semti.morphology.lexicon;
 
 import lv.semti.morphology.analyzer.AllEndings;
 import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.StemVariant;
 import lv.semti.morphology.analyzer.Trie;
-import lv.semti.morphology.analyzer.Variants;
 import lv.semti.morphology.attributes.AttributeNames;
 
 import java.io.*;
@@ -481,10 +481,10 @@ public class Lexicon {
 			stem = ending.stem(word.toLowerCase());
 			int mija = ending.getMija();
 			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
-				ArrayList<Variants> stems = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));
+				ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, mija, word.matches("\\p{Lu}.*"));
 				if (stems.isEmpty()) return null; // acīmredzot neder ar miju
 				// FIXME ! Nevajadzētu te būt iespējai uz null!
-				stem = stems.get(0).celms;
+				stem = stems.get(0).stem;
 				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 			}
 		} catch (Exception e) {

@@ -179,10 +179,10 @@ public class Analyzer extends Lexicon {
 			}
 			int stemChange = ending.getMija();
 			boolean properName = p_firstcap.matcher(originalWord).matches();
-			ArrayList<Variants> stemVariants = Mijas.mijuVarianti(stemWithoutMija, stemChange, properName);
+			ArrayList<StemVariant> stemVariants = Mijas.applyFormToLemmaMija(stemWithoutMija, stemChange, properName);
 
-			for (Variants stemVariant : stemVariants) {
-				ArrayList<Lexeme> lexemes = ending.getEndingLexemes(stemVariant.celms);
+			for (StemVariant stemVariant : stemVariants) {
+				ArrayList<Lexeme> lexemes = ending.getEndingLexemes(stemVariant.stem);
 				boolean foundSomethingHere = false;
 				if (lexemes != null) 					
 					for (Lexeme lexeme : lexemes) {
@@ -190,7 +190,7 @@ public class Analyzer extends Lexicon {
 						if (lexeme.getParadigm().getStems().contains(StemType.STEM3)) {
 							thirdStem = lexeme.getStem(StemType.STEM3);
 						}
-						if (!Mijas.atpakaļlocīšanasVerifikācija(stemVariant, stemWithoutMija, stemChange, thirdStem, properName))
+						if (!Mijas.backwardsVerification(stemVariant, stemWithoutMija, stemChange, thirdStem, properName))
 							continue;
 						Wordform wordformOptions = new Wordform(word, lexeme, ending, originalWord);
 						wordformOptions.addAttributes(stemVariant);
@@ -336,13 +336,13 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 
-	private void guessDerivedNoun(String word, Word result, Ending ending, Variants stemVariant, String originalWord) {
+	private void guessDerivedNoun(String word, Word result, Ending ending, StemVariant stemVariant, String originalWord) {
 		// -tājs, -ējs, -tāja, -ēja
 		if (!ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Derivation_tājs_tāja_ējs_ēja))
 			return;
 
-		if (stemVariant.celms.endsWith("tāj")) {
-			String verb_stem = stemVariant.celms.substring(0,stemVariant.celms.length()-3);
+		if (stemVariant.stem.endsWith("tāj")) {
+			String verb_stem = stemVariant.stem.substring(0,stemVariant.stem.length()-3);
 			for (int paradigmID : new int[]{16, 17, 45}) {
 				Paradigm p = this.paradigmByID(paradigmID);
 				ArrayList<Lexeme> lexemes = p.getLexemesByStem(StemType.STEM1).get(verb_stem);
@@ -360,11 +360,11 @@ public class Analyzer extends Lexicon {
 					}
 				}
 			}
-		} else if (stemVariant.celms.endsWith("ēj")) {
+		} else if (stemVariant.stem.endsWith("ēj")) {
 			Paradigm p = this.paradigmByID(15); // verb-1
-			ArrayList<Variants> verbStemVariants = Mijas.mijuVarianti(stemVariant.celms.substring(0,stemVariant.celms.length()-2), 14,false); // 1. konj -is formas mija - manuprāt tas šeit ir pareizais
-			for (Variants verbStem : verbStemVariants) {
-				ArrayList<Lexeme> lexemes = p.getLexemesByStem(StemType.STEM3).get(verbStem.celms);
+			ArrayList<StemVariant> verbStemVariants = Mijas.applyFormToLemmaMija(stemVariant.stem.substring(0,stemVariant.stem.length()-2), 14,false); // 1. konj -is formas mija - manuprāt tas šeit ir pareizais
+			for (StemVariant verbStem : verbStemVariants) {
+				ArrayList<Lexeme> lexemes = p.getLexemesByStem(StemType.STEM3).get(verbStem.stem);
 				if (lexemes != null) {
 					for (Lexeme lexeme : lexemes) {
 						Wordform wordFormOption = new Wordform(word, lexeme, ending);
@@ -372,7 +372,7 @@ public class Analyzer extends Lexicon {
 						wordFormOption.addAttribute(AttributeNames.i_Source, "-ējs/-ēja sufiksāls atvasinājums");
 						wordFormOption.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
 						wordFormOption.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						String lemma = verbStem.celms + "ēj" + ending.getLemmaEnding().getEnding();
+						String lemma = verbStem.stem + "ēj" + ending.getLemmaEnding().getEnding();
 						lemma = recapitalize(lemma, originalWord);
 						wordFormOption.addAttribute(AttributeNames.i_Lemma, lemma);
 						result.addWordform(wordFormOption);
@@ -387,11 +387,11 @@ public class Analyzer extends Lexicon {
 	 * form of some noun in lexicon
 	 */
 	private void guessDeminutive(String word, Word result, Ending ending,
-			Variants stemVariant, String originalWord) {
+								 StemVariant stemVariant, String originalWord) {
 
-		if (stemVariant.celms.endsWith("īt") &&
+		if (stemVariant.stem.endsWith("īt") &&
 				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_īt)) {
-			ArrayList<Lexeme> deminutiveLexemes = ending.getEndingLexemes(stemVariant.celms.substring(0,stemVariant.celms.length()-2));
+			ArrayList<Lexeme> deminutiveLexemes = ending.getEndingLexemes(stemVariant.stem.substring(0,stemVariant.stem.length()-2));
 			if (deminutiveLexemes != null)
 				for (Lexeme lexeme : deminutiveLexemes) {
 					Wordform wordformOption = new Wordform(word, lexeme, ending);
@@ -407,9 +407,9 @@ public class Analyzer extends Lexicon {
 				}
 		}
 
-		if (stemVariant.celms.endsWith("iņ") &&
+		if (stemVariant.stem.endsWith("iņ") &&
 				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ)) {
-			String lemmaCandidate1 = stemVariant.celms.substring(0,stemVariant.celms.length()-2);
+			String lemmaCandidate1 = stemVariant.stem.substring(0,stemVariant.stem.length()-2);
 			String lemmaCandidate2 = lemmaCandidate1;
 			if (lemmaCandidate1.endsWith("dz")) lemmaCandidate2 = lemmaCandidate1.substring(0,lemmaCandidate1.length()-2)+"g";
 			if (lemmaCandidate1.endsWith("c")) lemmaCandidate2 = lemmaCandidate1.substring(0,lemmaCandidate1.length()-1)+"k";
@@ -530,9 +530,9 @@ public class Analyzer extends Lexicon {
                         throw new Error(e); // Shouldn't ever happen - matchedEndings should ensure that word contains that ending.
                     }
 
-                    ArrayList<Variants> stemVariants = Mijas.mijuVarianti(stemFromEnding, ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
-                    for (Variants stemVariant : stemVariants) {
-                        String stemFromMija = stemVariant.celms;
+                    ArrayList<StemVariant> stemVariants = Mijas.applyFormToLemmaMija(stemFromEnding, ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
+                    for (StemVariant stemVariant : stemVariants) {
+                        String stemFromMija = stemVariant.stem;
 
                         if (!p.allowedGuess(stemFromMija))
                             if (p_firstcap.matcher(originalWord).matches() && (p.getName().equalsIgnoreCase("noun-4m") ||
@@ -1052,10 +1052,10 @@ public class Analyzer extends Lexicon {
 					stemBeforeMija = this.NEGATION_PREFIX + stemBeforeMija;
 				}
 
-		    	ArrayList<Variants> stemVariants = Mijas.MijasLocīšanai(stemBeforeMija, ending.getMija(), thirdStem, superlativeDegree, properName);
+		    	ArrayList<StemVariant> stemVariants = Mijas.applyLemmaToFormMija(stemBeforeMija, ending.getMija(), thirdStem, superlativeDegree, properName);
 
-		    	for (Variants stemVariant : stemVariants){
-		    		word = stemVariant.celms + ending.getEnding();
+		    	for (StemVariant stemVariant : stemVariants){
+		    		word = stemVariant.stem + ending.getEnding();
 		    		word = recapitalize(word, lemma);
 
 		    		Wordform inflection = new Wordform(word, lexeme, ending);

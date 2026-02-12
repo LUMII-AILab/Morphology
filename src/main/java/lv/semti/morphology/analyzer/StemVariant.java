@@ -19,27 +19,21 @@ package lv.semti.morphology.analyzer;
 
 import lv.semti.morphology.attributes.AttributeValues;
 
-public class Variants extends AttributeValues{
+public class StemVariant extends AttributeValues{
 	// variants meklēšanai ar mijām
-	public String celms;
+	public String stem;
 
-	protected Variants (String _celms) {
-		celms = _celms;
+	protected StemVariant(String stem) {
+		this.stem = stem;
 	}
 
-	protected Variants (String _celms, String īpašība, String vērtība) {
-		celms = _celms;
-		addAttribute(īpašība, vērtība );
+	protected StemVariant(String stem, String attribute, String value) {
+		this.stem = stem;
+		addAttribute(attribute, value );
 	}
 
-	protected Variants (String _celms, String īpašība, String vērtība, String īpašība2, String vērtība2) {
-		celms = _celms;
-		addAttribute(īpašība, vērtība);
-		addAttribute(īpašība2, vērtība2);
-	}
-
-	protected Variants (String _celms, AttributeValues īpašības) {
-		celms = _celms;
-		addAttributes(īpašības);
+	protected StemVariant(String stem, AttributeValues attributes) {
+		this.stem = stem;
+		addAttributes(attributes);
 	}
 }	

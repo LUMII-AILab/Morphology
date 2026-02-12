@@ -23,7 +23,7 @@ import java.util.*;
 
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Mijas;
-import lv.semti.morphology.analyzer.Variants;
+import lv.semti.morphology.analyzer.StemVariant;
 import org.json.simple.JSONObject;
 import org.w3c.dom.Node;
 
@@ -177,13 +177,13 @@ public class Lexeme extends AttributeValues {
                     String stem = paradigm.getLemmaEnding().stem(lemma);
                     int mija = paradigm.getLemmaEnding().getMija();
                     if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
-                        ArrayList<Variants> varianti = Mijas.mijuVarianti(stem, mija, false);
-                        for (Variants v : varianti) {
+                        ArrayList<StemVariant> varianti = Mijas.applyFormToLemmaMija(stem, mija, false);
+                        for (StemVariant v : varianti) {
                             if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
                                     !v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
                             ) continue;
                             // FIXME - ko tad darīt ar vairākiem variantiem ????
-                            stem = v.celms;
+                            stem = v.stem;
                         }
                     }
                     stems.put(StemType.STEM1, stem);
@@ -218,10 +218,10 @@ public class Lexeme extends AttributeValues {
             if (e.isMatchingWeak(filter)) {
                 try {
                     String stem = e.stem(lemma);
-                    ArrayList<Variants> stems = Mijas.mijuVarianti(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
-                    for (Variants v : stems) {
+                    ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
+                    for (StemVariant v : stems) {
                         // FIXME - ko tad darīt ar vairākiem variantiem ????
-                        this.stems.put(StemType.STEM1, v.celms.toLowerCase(Locale.ROOT));
+                        this.stems.put(StemType.STEM1, v.stem.toLowerCase(Locale.ROOT));
                     }
                 } catch (Ending.WrongEndingException exc2) { /*pass*/ }
             }

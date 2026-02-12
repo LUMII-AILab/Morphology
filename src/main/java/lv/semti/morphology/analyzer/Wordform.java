@@ -89,11 +89,11 @@ public class Wordform extends AttributeValues implements Serializable{
 			if (paradigm.getStems().contains(StemType.STEM3))
 				thirdStem = lexeme.getStem(StemType.STEM3);
 			String stem = lexeme.getStem(lemmaEnding.stemType);
-			ArrayList<Variants> stemsWithChanges = Mijas.MijasLocīšanai(
+			ArrayList<StemVariant> stemsWithChanges = Mijas.applyLemmaToFormMija(
 					stem, lemmaEnding.getMija(), thirdStem, false,
 					this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
 			
-			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
+			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.get(0).stem; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
 			
 			String lemma = stem + lemmaEnding.getEnding();
 			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
