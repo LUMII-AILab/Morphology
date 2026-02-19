@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
+ * Copyright 2008, 2009, 2014, 2026 Institute of Mathematics and Computer Science, University of Latvia
+ * Author: Pēteris Paikens, Lauma Pretkalniņa
  * 
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -206,7 +206,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	}
 
 	public int size() {
-		return attributes.entrySet().size();
+		return attributes.size();
 	}
 
 	@Override
@@ -238,6 +238,11 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public Set<Entry<String,String>> entrySet() {
 	//FIXME - jākopē, lai nav editējams - vai jāmaina pieeja tur kur šo sauc.
 		return attributes.entrySet();
+	}
+
+	public Set<String> keySet()
+	{
+		return attributes.keySet();
 	}
 
 	public AttributeValues(Node node) {

@@ -1,21 +1,3 @@
-/*******************************************************************************
- * Copyright 2025 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Lauma Pretkalniņa
- *
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
-
 package lv.semti.gf;
 
 import lv.semti.morphology.analyzer.Analyzer;
@@ -35,7 +17,17 @@ public class ParadigmExport
 {
 	static String RESULT_FILE = "PortedMorphoParadigmsLav.gf";
 	static String INDENT = "  ";
+	final static String GF_BIG_SEPERATOR = "_";
+	final static String GF_OPER_LEMMA_POSTFIX = GF_BIG_SEPERATOR + "fromLemma";
+	final static String GF_OPER_STEMS_POSTFIX = GF_BIG_SEPERATOR + "fromStems";
+	final static String GF_STEMCHANGE_SIMPLE_OPER = "stemchangeSimple";
 	final static String[] SUPPORTED_PARADIGMS = new String []{
+			"noun-1a", "noun-1b", "noun-2a", "noun-2b", "noun-2c", "noun-2d",
+			"noun-3f", "noun-3m", "noun-4f", "noun-4m", "noun-5fa", "noun-5fb",
+			"noun-5ma", "noun-5mb", "noun-6a", "noun-6b",
+	};
+
+	final static String[] PARADIGMS_WITH_PURAL_NOM_LEMMAS = new String []{
 			"noun-1a", "noun-1b", "noun-2a", "noun-2b", "noun-2c", "noun-2d",
 			"noun-3f", "noun-3m", "noun-4f", "noun-4m", "noun-5fa", "noun-5fb",
 			"noun-5ma", "noun-5mb", "noun-6a", "noun-6b",
@@ -70,6 +62,7 @@ public class ParadigmExport
 	BufferedWriter gfOut;
 	int indentDepth = 0;
 	private final Set<String> supportedParadigms;
+	private final Set<String> paradigmsWithPlNomLemmas;
 
 	public ParadigmExport(boolean latgalian) throws IOException
 	{
@@ -85,6 +78,7 @@ public class ParadigmExport
 		gfOut = new BufferedWriter(new OutputStreamWriter(
 				Files.newOutputStream(Paths.get(RESULT_FILE)), StandardCharsets.UTF_8));
 		supportedParadigms = new HashSet<>(Arrays.asList(SUPPORTED_PARADIGMS));
+		paradigmsWithPlNomLemmas = new HashSet<>(Arrays.asList(PARADIGMS_WITH_PURAL_NOM_LEMMAS));
 	}
 
 	// TODO:
@@ -100,17 +94,28 @@ public class ParadigmExport
 
 		exporter.printGfHeader();
 
-
 		for (Paradigm paradigm : exporter.analyzer.paradigms)
 		{
 			if (!exporter.supportedParadigms.contains(paradigm.getName()))
 				System.out.println (paradigm.getName() + " is not supported yet.");
 			else
 			{
+				String resultTypeGf = null;
 				if (paradigm.getName().startsWith("noun-")) // TODO parameter for paradigm?
+				{
+					resultTypeGf = "Noun";
 					exporter.writeGf2DTableParadigm(
-							paradigm, AttributeNames.i_Number, AttributeNames.i_Case, "Noun",
+							paradigm, AttributeNames.i_Number, AttributeNames.i_Case, resultTypeGf,
 							new String[]{AttributeNames.i_Gender});
+					exporter.writeParadigmFromNormalLemmaWrapper(paradigm, resultTypeGf);
+				}
+				if (exporter.paradigmsWithPlNomLemmas.contains(paradigm.getName()))
+				{
+					AttributeValues pluraleTantum = new AttributeValues();
+					pluraleTantum.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+					pluraleTantum.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+					exporter.writeParadigmFromArbitraryLemmaWrapper(paradigm, resultTypeGf, pluraleTantum);
+				}
 				// TODO other paradigms
 
 			}
@@ -120,13 +125,66 @@ public class ParadigmExport
 		exporter.closeGfFile();
 	}
 
+	void writeParadigmFromNormalLemmaWrapper(Paradigm paradigm, String resultType)
+			throws IOException
+	{
+		String gfParadigmName = getGFParadigmName(paradigm.name);
+		String lemmaEnding = paradigm.getLemmaEnding().getEnding();
+		gfOut.newLine();
+		writeGfFullLine(gfParadigmName + GF_OPER_LEMMA_POSTFIX
+				+ " : Str -> " + resultType + " = \\lemma ->");
+		indentDepth++;
+		writeGfFullLine("case lemma of {");
+		indentDepth++;
+		writeGfFullLine("stem + \"" +  lemmaEnding
+				+ "\" => " + gfParadigmName + GF_OPER_STEMS_POSTFIX + " stem ;");
+		writeGfFullLine("_ => Predef.error (\"" + gfParadigmName + GF_OPER_LEMMA_POSTFIX
+				+ " is only applicable for words that end in -" + lemmaEnding
+				+ ", tried to apply to\" ++ lemma)");
+		indentDepth--;
+		writeGfFullLine("} ;");
+		indentDepth--;
+	}
+
+	void writeParadigmFromArbitraryLemmaWrapper (
+			Paradigm paradigm, String resultType, AttributeValues lemmaParams)
+			throws IOException
+	{
+		String gfParadigmName = getGFParadigmName(paradigm.name);
+		String pos = paradigm.getValue(AttributeNames.i_PartOfSpeech);
+		ArrayList<Ending> potentialLemmaEndings = paradigm.getEndingsByAttributes(lemmaParams);
+		if (potentialLemmaEndings.size() != 1)
+			throw new IllegalArgumentException (
+					"writeParadigmFromArbitraryLemmaWrapper() must have lemmaParams argument that specifies a unique lemma ");
+		String lemmaEnding = potentialLemmaEndings.get(0).getEnding();
+		String methodPostfix = GF_BIG_SEPERATOR + "from" + lemmaParams.keySet()
+				.stream().sorted()
+				.map(attr -> getGFValue(attr, lemmaParams.getValue(attr), pos))
+				.reduce((s1, s2) -> s1 + s2).orElse("Unk");
+
+		gfOut.newLine();
+		writeGfFullLine(gfParadigmName + methodPostfix + " : Str -> " + resultType + " = \\lemma ->");
+		indentDepth++;
+		writeGfFullLine("case lemma of {");
+		indentDepth++;
+		writeGfFullLine("stem + \"" +  lemmaEnding + "\" => " + gfParadigmName + GF_OPER_STEMS_POSTFIX + " stem ;");
+		writeGfFullLine("_ => Predef.error (\"" + gfParadigmName + methodPostfix
+				+ " is only applicable for words that end in -" + lemmaEnding
+				+ ", tried to apply to\" ++ lemma)");
+		indentDepth--;
+		writeGfFullLine("} ;");
+		indentDepth--;
+	}
+
 	void writeGf2DTableParadigm(Paradigm paradigm, String firstLevelAttribute,
 								String secondLevelAttribute, String resultType,
 								String[] lexicalAttributes) throws IOException
 	{
 		// TODO: handle "Nepiemīt" with more care
 		gfOut.newLine();
-		writeGfFullLine(getGFParadigmName(paradigm.name) + " : Str -> " + resultType + " = \\stem ->");
+		writeGfFullLine(
+				getGFParadigmName(paradigm.name) + GF_OPER_STEMS_POSTFIX
+						+ " : Str -> " + resultType + " = \\stem ->");
 		writeGfFullLine("{");
 		indentDepth++;
 		writeGfFullLine("s = table {");
@@ -175,7 +233,7 @@ public class ParadigmExport
 						if (stemchangeID == 0)
 							forms.add("stem + \"" + e.getEnding() + "\"");
 						else
-							forms.add("stemchangeSimple " + stemchangeID + " stem + \"" + e.getEnding() + "\"");
+							forms.add(GF_STEMCHANGE_SIMPLE_OPER + " " + stemchangeID + " stem + \"" + e.getEnding() + "\"");
 						verifCopy.remove(e);
 					}
 					if (forms.size() > 1)
@@ -226,8 +284,6 @@ public class ParadigmExport
 
 	/**
 	 * Start line with indent and end with newline.
-	 * @param line
-	 * @throws IOException
 	 */
 	void writeGfFullLine(String line) throws IOException
 	{
@@ -238,8 +294,6 @@ public class ParadigmExport
 
 	/**
 	 * Start line with indent, but don't put newline at the end.
-	 * @param line
-	 * @throws IOException
 	 */
 	void writeGfLineStart(String line) throws IOException
 	{
@@ -249,8 +303,6 @@ public class ParadigmExport
 
 	/**
 	 * Write line without indent, but add newline at the end.
-	 * @param line
-	 * @throws IOException
 	 */
 	void writeGfLineEnd(String line) throws IOException
 	{
@@ -266,7 +318,7 @@ public class ParadigmExport
 
 		gfOut.write("-- Contents of this file are automatically ported paradigms from");
 		gfOut.newLine();
-		gfOut.write("-- https://github.com/PeterisP/morphology/blob/master/src/main/resources/Lexicon_v2.xml");
+		gfOut.write("-- https://github.com/LUMII-AILab/Morphology/blob/master/src/main/resources/Lexicon_v2.xml");
 		gfOut.newLine();
 		gfOut.write("-- NB: Do NOT edit this without consulting lauma@ailab.lv or normundsg@ailab.lv");
 		gfOut.newLine();
@@ -326,7 +378,7 @@ public class ParadigmExport
 		else if (numberAttrs.size() > 1)
 			System.err.println("Warning: Attribute \"" + attrName + "\" for pos \""
 					+ pos + "\" has multiple interpetations! ");
-		String result = ((FixedAttribute)numberAttrs.getFirst()).attributeGF;
+		String result = numberAttrs.getFirst().attributeGF;
 		if (result == null || result.isEmpty())
 			System.err.println("Warning: Attribute \"" + attrName + "\" for pos \""
 					+ pos + "\" has no GF name! ");
@@ -336,6 +388,6 @@ public class ParadigmExport
 	private static String getGFParadigmName (String paradigm)
 	{
 		if (paradigm == null || paradigm.isEmpty()) return paradigm;
-		return paradigm.replace("-", "_");
+		return paradigm.replace("-", GF_BIG_SEPERATOR);
 	}
 }
