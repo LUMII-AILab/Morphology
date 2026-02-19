@@ -1,19 +1,12 @@
-N.B. Starting 2026-02 development of the morphology library has been moved to https://github.com/LUMII-AILab/Morphology/
-
-
-
-
-
-***********************************************
-* Morphological Analyzer for Latvian Language *
-***********************************************
+# Morphological Analyzer for Latvian Language
 
  A Java library for analyzing morphology and part of speech information for Latvian words.
  Accurate analysis is based on lexeme data periodically updated from Tezaurs.lv database.
  Also includes generation of all inflections of a word, and crude statistical disambiguation for analysis.
  
-BASIC USAGE
+## BASIC USAGE
 
+```
  Analyzer analyzer = new Analyzer();
  
  // analysis
@@ -27,26 +20,30 @@ BASIC USAGE
  for (Wordform wf : wordforms) {
 	wf.describe();
  }
+```
 
  Review unit tests for more examples.
 
-INSTALLATION
+## INSTALLATION
   
 Use maven to build and deploy.
 The published releases should be available at Maven Central https://central.sonatype.com/artifact/lv.ailab.morphology/morphology
 
-Packaging instructions at docs/deployment.md
+Packaging instructions at `docs/deployment.md`
 
-LICENCE
+## LICENCE
 
-(c) Institute of Mathematics and Computer Science, University of Latvia, 2005-2025
+(c) Institute of Mathematics and Computer Science, University of Latvia, 2005-2026
 
 This software is licenced under GNU General Public Licence.
-Commercial licencing is available if neccessary, contact us at peteris@ailab.lv.
+Commercial licencing is available if neccessary, contact us at lauma@ailab.lv.
 
-REFERENCES
+## REFERENCES
  Current usage is described at http://www.ep.liu.se/ecp_article/index.en.aspx?issue=085;article=024
  The initial core algorithm is published at http://www.semti-kamols.lv/doc_upl/Kamols-Kaunas-paper-3.pdf
  
+P.S. Since 2026-02 development of the morphology library has been continued here here. 
+
+
 
 
