@@ -4494,4 +4494,19 @@ public class MorphologyTest {
         assertTrue(found);
     }
 
+    @Test
+    public void abbrievationTokenizing() {
+        // Tēzaura datos ir definēts, ka šī ir viena tekstvienība, kas nav dalāma sīkāk.
+        Word abbr = locītājs.analyze("P.S.");
+        //describe(abbr.wordforms);
+        assertTrue(abbr.isRecognized());
+        boolean found = false;
+        for (Wordform wf :  abbr.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Lemma, "P.S."))
+                found = true;
+        }
+        assertTrue(found);
+
+    }
+
 }
