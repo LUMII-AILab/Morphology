@@ -12,7 +12,7 @@ Jaunākie Treebank / anotēto korpusu dati (https://github.com/LUMII-AILab/Treeb
 Vārdnīcas datu atjaunināšana
 ----
 
-Vajag rīku https://github.com/PeterisP/tezaurs_dump , kuram db_config.py jānorāda strādājoša piekļuve tēzaura darba versijas Postgresql datubāzei.
+Vajag rīku https://github.com/LUMII-AILab/TezaursMorphoDump.git , kuram db_config.py jānorāda strādājoša piekļuve tēzaura darba versijas Postgresql datubāzei.
 
 Rīks sagatavos `tezaurs_lexemes.json` (vai arī `tezaurs_latgalian.json` ja skriptu laidīs ar parametru latgalian), kas jāieliek morfoloģijas pakā zem `src/main/resources/`
 
@@ -40,7 +40,7 @@ uz OS X:
 Uz Windows:
 	???
 
-Palaižam `PmlCorporaTools/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunākos datus zem `../morphology/src/main/resources/`
+Palaižam `TreebankTools/PmlCorporaTools/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunākos datus zem `../morphology/src/main/resources/`
 
 Versijas atjaunināšana
 -----
@@ -51,24 +51,25 @@ Izlaiž testus un paskatās vai `MorphoEvaluate` rezultātos nav būtisku procen
 - LatgalianTest
 - MorphoEvaluate
 
-pom.xml jāatjaunina laidiena versija, un ar `mvn clean deploy` tas varētu nonākt maven central, ja ir visi priekšnosacījumi
+`pom.xml` jāatjaunina laidiena versija, un ar `mvn clean deploy` tas varētu nonākt maven central, ja ir visi priekšnosacījumi
 - pareizi piekļuves kredenciāļi ~/.m2/settings.xml
 - nokonfigurēta gpg atslēga pakas parakstīšanai
 
 Nākamie soļi pēc morfoloģijas versijas atjaunināšanas
 ----
 
-LVTager blokā (https://github.com/PeterisP/LVTagger/)
-	jāapdeito pom.xml dependenciji
-	mvn clean install lai paņem svaigākos dependencijus
-	Pozitīvi var būt arī apmācīt jaunu produkcijas modeli tagerim `./morpho_train.sh -production` kas uz 2025. MacbookPro iet 45min
-	Ciparus pieraksta MorphoCRF/morfoCRFeksperimenti.txt
-	produkcijas modeļus pako atsevišķā maven pakā, kas ir mapītē `morphomodel`
-	
+LVTager blokā (https://github.com/LUMII-AILab/LVTagger/)
+- Jāatjaunina `pom.xml` atkarības
+- `mvn clean install`, lai paņem svaigākās atkarības
+- Pozitīvi var būt arī apmācīt jaunu produkcijas modeli tagerim `./morpho_train.sh -production` kas uz 2025. MacbookPro iet 45min
+- Rezultātus pieraksta `MorphoCRF/morfoCRFeksperimenti.txt`
+- Produkcijas modeļus pako atsevišķā maven pakā, kas ir mapītē `morphomodel`
+
+
 Webservisu blokā (https://github.com/LUMII-AILab/Webservices)
-	jāapdeito pom.xml dependenciji
-	jāpako maven uz maven central
-	jāuzkopē uz `api.tezaurs.lv`
-	`sudo service tezaurs-api restart`
+- Jāatjaunina `pom.xml` atkarības
+- Jāpako maven uz maven central
+- Jāuzkopē uz `api.tezaurs.lv`
+- `sudo service tezaurs-api restart`
 
 

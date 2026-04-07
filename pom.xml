@@ -5,10 +5,10 @@
 	<groupId>lv.ailab.morphology</groupId>
 	<artifactId>morphology</artifactId>
 	<packaging>jar</packaging>
-	<version>2.5.15-SNAPSHOT</version>
+	<version>2.5.15</version>
 	<name>Latvian morphological analysis library</name>
 	<description>Latvian morphological analysis library</description>
-	<url>https://github.com/PeterisP/morphology</url>
+	<url>https://github.com/LUMII-AILab/Morphology</url>
 
 	<licenses>
 		<license>
@@ -19,17 +19,17 @@
 
 	<developers>
 		<developer>
-			<name>Peteris Paikens</name>
-			<email>peterisp@gmail.com</email>
+			<name>Lauma Pretkalniņa</name>
+			<email>lauma@ailab.lv</email>
 			<organization>University of Latvia IMCS AILab</organization>
 			<organizationUrl>ailab.lv</organizationUrl>
 		</developer>
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:peterisp/morphology.git</connection>
-		<developerConnection>scm:git:git@github.com:peterisp/morphology.git</developerConnection>
-		<url>git@github.com:peterisp/morphology.git</url>
+		<connection>scm:git:git@github.com:LUMII-AILab/Morphology.git</connection>
+		<developerConnection>scm:git:git@github.com:LUMII-AILab/Morphology.git</developerConnection>
+		<url>git@github.com:LUMII-AILab/Morphology.git</url>
 	</scm>
 
 	<distributionManagement>
