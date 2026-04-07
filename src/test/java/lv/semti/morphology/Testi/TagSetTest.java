@@ -27,6 +27,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.MarkupConverter;
@@ -123,8 +124,11 @@ public class TagSetTest {
             }
 			AttributeValues av = tags.fromTag(e.tag);
 			String converted = tags.toTag(av);
-			
-			if (!e.tag.equalsIgnoreCase(converted)) {
+
+			// Ja šeit apakšsvītra nav wildecard, tad parādās arī tie tagi, kur
+			// daļa pazīmju nav zināma analizatoram (t.i., nav tēzaurā).
+			//if (!e.tag.equalsIgnoreCase(converted)) {
+			if (!e.tag.matches("^" + converted.replace('_', '.') + "$")) {
 			    bad_tags = true;
 				izeja.println("Korpusā ir  \t"+e.tag+"\t("+e.wordform+")\nDekodējas uz\t"+converted+"\n");
 				av.describe(izeja);
