@@ -149,7 +149,9 @@ public class Statistics {
 		Document doc = null;
 
 		InputStream stream = this.getClass().getClassLoader().getResourceAsStream(fileName);
-		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setAttribute("jdk.xml.elementAttributeLimit", 20000); // Galotņu biežumam nezkāpēc visas galotnes ir kā atribūti un latgaliešiem tas ir daudz.
+		DocumentBuilder docBuilder = dbf.newDocumentBuilder();
 		doc = docBuilder.parse(stream);
 
 		Node node = doc.getDocumentElement();
