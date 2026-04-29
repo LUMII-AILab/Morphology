@@ -4,6 +4,7 @@
  Accurate analysis is based on lexeme data periodically updated from Tezaurs.lv database.
  Also includes generation of all inflections of a word, and crude statistical disambiguation for analysis.
  
+
 ## BASIC USAGE
 
 ```
@@ -24,12 +25,14 @@
 
  Review unit tests for more examples.
 
+
 ## INSTALLATION
   
 Use maven to build and deploy.
 The published releases should be available at Maven Central https://central.sonatype.com/artifact/lv.ailab.morphology/morphology
 
 Packaging instructions at `docs/deployment.md`
+
 
 ## LICENCE
 
@@ -38,12 +41,16 @@ Packaging instructions at `docs/deployment.md`
 This software is licenced under GNU General Public Licence.
 Commercial licencing is available if neccessary, contact us at lauma@ailab.lv.
 
+
 ## REFERENCES
  Current usage is described at http://www.ep.liu.se/ecp_article/index.en.aspx?issue=085;article=024
  The initial core algorithm is published at http://www.semti-kamols.lv/doc_upl/Kamols-Kaunas-paper-3.pdf
- 
-P.S. Since 2026-02 development of the morphology library has been continued here here. 
 
 
+## Acknowledgements
+
+Work on morphological toolkit has been carried out through various projects since at least 2005. The author of the core algorithm is Pēteris Paikens. Since 2026-02 development of the library continues here, in this repository.
+
+The work on porting Tezaurs.lv inflectional paradigms to GF and creating a wide-coverage computational GF lexicon for Latvian was funded by the Latvian Council of Science under the grant agreement lzp-2022/1-0443 ([Advancing Latvian Computational Lexical Resources for Natural Language Understanding and Generation](https://wordnet.ailab.lv/project2)).
 
 
