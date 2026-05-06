@@ -1,20 +1,3 @@
-/******************************************************************************
- Copyright 2008, 2009, 2014, 2024-2025 Institute of Mathematics and Computer Science, University of Latvia
- Author: Pēteris Paikens, Lauma Pretkalniņa
-
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package lv.semti.morphology.Testi;
 
 
@@ -2696,8 +2679,9 @@ public class MorphologyTest {
         assertInflection(laivas_iršana, tagadne, "iru");
     }
 
-    @Test // Problēma ar daudzskaitlinieku locīšanu
-    public void ļaudis() {
+    @Test
+    public void sixthDeclPlurals() {
+        // 2016./2017. gadā bija problēma, ka tēzaurā ģenerē datīvu "ļaudiij"
         AttributeValues attrs = new AttributeValues();
         attrs.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
         attrs.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
@@ -2713,6 +2697,21 @@ public class MorphologyTest {
         if (ļaudiij.isRecognized())
             ļaudiij.describe(System.out);
         assertFalse(ļaudiij.isRecognized());
+
+        // 2026-06-05 Gunta sūdzas, korpusā asinis tago ncfsg6.
+        // Leksēma "asinis" atišķirībā no "ļaudis" tajā brīdī ir "neīstais
+        // daudzskaitlinieks" -- leksēma, kam lemma norādīta daudzskaitlī, un ir
+        // atribūts "Leksēmas pamatformas īpatnības": "Daudzskaitlis".
+        Word asinis = locītājs.analyze("asinis");
+        assertTrue(asinis.isRecognized());
+        describe(asinis.wordforms);
+        boolean found = false;
+        for (Wordform wf :  asinis.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive))
+                found = true;
+        }
+        assertFalse(found);
+
     }
 
     @Test // https://github.com/PeterisP/morphology/issues/15
@@ -4493,6 +4492,7 @@ public class MorphologyTest {
         }
         assertTrue(found);
     }
+
 
     @Test
     public void abbrievationTokenizing() {
