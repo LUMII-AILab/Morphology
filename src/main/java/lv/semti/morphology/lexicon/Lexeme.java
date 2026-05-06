@@ -1,20 +1,3 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.lexicon;
 
 import java.io.IOException;
@@ -167,38 +150,34 @@ public class Lexeme extends AttributeValues {
                     lemma = lemma.substring(0, lemma.length()-1) + "s";
                 }
             }
-
-            if (paradigm.getLemmaEnding() == null) {
-                stems.put(StemType.STEM1, lemma);
-            } else if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
-                constructor_try_plural();
-            } else {
-                try {
-                    String stem = paradigm.getLemmaEnding().stem(lemma);
-                    int mija = paradigm.getLemmaEnding().getMija();
-                    if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
-                        ArrayList<StemVariant> varianti = Mijas.applyFormToLemmaMija(stem, mija, false);
-                        for (StemVariant v : varianti) {
-                            if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
-                                    !v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
-                            ) continue;
-                            // FIXME - ko tad darīt ar vairākiem variantiem ????
-                            stem = v.stem;
-                        }
-                    }
-                    stems.put(StemType.STEM1, stem);
-                    if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) {
-                        addAttribute(AttributeNames.i_LemmaOverride, lemma);
-                    }
-                } catch (Ending.WrongEndingException exc) {
-                    if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
-                        constructor_try_plural();
-                    } else {
-                        System.err.printf("Leksēmai '%s' #%d galotne neatbilst paradigmai%n", lemma, this.id);
-                        this.describe(System.err);
-                    }
-                }
-            }
+			try {
+				if (paradigm.getLemmaEnding() == null) {
+					stems.put(StemType.STEM1, lemma);
+				} else if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
+						|| isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
+					constructor_try_plural();
+				} else {
+					String stem = paradigm.getLemmaEnding().stem(lemma);
+					int mija = paradigm.getLemmaEnding().getMija();
+					if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
+						ArrayList<StemVariant> varianti = Mijas.applyFormToLemmaMija(stem, mija, false);
+						for (StemVariant v : varianti) {
+							if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
+									!v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
+							) continue;
+							// FIXME - ko tad darīt ar vairākiem variantiem ????
+							stem = v.stem;
+						}
+					}
+					stems.put(StemType.STEM1, stem);
+					if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) {
+						addAttribute(AttributeNames.i_LemmaOverride, lemma);
+					}
+				}
+			} catch (Ending.WrongEndingException exc) {
+				System.err.printf("Leksēmai '%s' #%d galotne neatbilst paradigmai%n", lemma, this.id);
+				this.describe(System.err);
+			}
         }
 
         if (getValue(AttributeNames.i_LemmaOverride) != null) {
@@ -233,7 +212,6 @@ public class Lexeme extends AttributeValues {
             /* Unclear why this was added
             if (getValue(AttributeNames.i_NumberSpecial) == null)
                 addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
-
              */
         //}
     }
