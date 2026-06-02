@@ -1,20 +1,3 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
 import java.io.PrintWriter;
@@ -223,7 +206,7 @@ public class Analyzer extends Lexicon {
 				hasNonrareOption = true;
 			}
 
-			List<Wordform> to_remove = new LinkedList<Wordform>();
+			List<Wordform> to_remove = new LinkedList<>();
 			for (Wordform wf : result.wordforms) {
 				if (removeRareWords && hasNonrareOption && (
 						wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare) ||
@@ -844,7 +827,7 @@ public class Analyzer extends Lexicon {
 
         Lexeme l = this.createLexeme(lemma, ending, "temp");
         if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
-            return new ArrayList<Wordform>();
+            return new ArrayList<>();
         }
         l.addAttributes(lemmaAttributes);
 		// Workaround priekš tā, ka vajag leksēmas ID lai atrastu atbilstošās papildformas
@@ -923,7 +906,7 @@ public class Analyzer extends Lexicon {
 	 * 	Removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
  	 */
 	public void filterInflectionOptions(boolean nounsOnly, AttributeValues filter, ArrayList<Wordform> options) {
-		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
+		ArrayList<Wordform> unsuitable = new ArrayList<>();
 		for (Wordform wf : options) {
 
 			// "nouns_only" filter and its exceptions
@@ -1013,7 +996,7 @@ public class Analyzer extends Lexicon {
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 				}
 				if (lex == null) continue;
-				ArrayList<Wordform> result = new ArrayList<Wordform>();
+				ArrayList<Wordform> result = new ArrayList<>();
 				for (Wordform wf2 : generateInflections(lex, lemma)) {
 					if (wf2.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) && wf2.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive) && wf2.isMatchingWeak(AttributeNames.i_Gender, wf.getValue(AttributeNames.i_Gender))) {
 						result.add(wf2);
@@ -1052,7 +1035,9 @@ public class Analyzer extends Lexicon {
 					stemBeforeMija = this.NEGATION_PREFIX + stemBeforeMija;
 				}
 
-		    	ArrayList<StemVariant> stemVariants = Mijas.applyLemmaToFormMija(stemBeforeMija, ending.getMija(), thirdStem, superlativeDegree, properName);
+		    	ArrayList<StemVariant> stemVariants = new ArrayList<>();
+				if (stemBeforeMija != null && !stemBeforeMija.isEmpty())
+					stemVariants = Mijas.applyLemmaToFormMija(stemBeforeMija, ending.getMija(), thirdStem, superlativeDegree, properName);
 
 		    	for (StemVariant stemVariant : stemVariants){
 		    		word = stemVariant.stem + ending.getEnding();

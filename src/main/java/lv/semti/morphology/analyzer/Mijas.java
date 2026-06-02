@@ -1,21 +1,3 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014, 2024-2026
- * Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens, Lauma Pretkalniņa
- *
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
 import java.io.OutputStreamWriter;
@@ -972,7 +954,7 @@ public abstract class Mijas {
 	private static int syllables(String word) {
 		int counter = 0;
 		boolean in_vowel = false;
-		HashSet<Character> vowels = new HashSet<>( Arrays.asList(new Character[] {'a','ā','e','ē','i','ī','o','u','ū'}));
+		HashSet<Character> vowels = new HashSet<>( Arrays.asList('a','ā','e','ē','i','ī','o','u','ū'));
 
 		for (char c : word.toCharArray()) {
 			if (!in_vowel && vowels.contains(c))
@@ -985,7 +967,7 @@ public abstract class Mijas {
 	/**
 	 * Procedure who actually does all the stem changes to get any form from
 	 * given lemma: consonant changes, verbs forms, devitives, superlatives, etc.
-	 * @return an array with variants - FIXME - principā vajadzētu būt vienam; izņēmums ir pārākās/vispārākās formas
+	 * @return list with variants - FIXME - principā vajadzētu būt vienam; izņēmums ir pārākās/vispārākās formas
 	 */
 	public static ArrayList<StemVariant> applyLemmaToFormMija(
 			String stem, int stemChange, String thirdStem,
@@ -1177,9 +1159,9 @@ public abstract class Mijas {
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (resultStem.endsWith("s")) {
-						if (thirdStem.endsWith("d")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"dī"));
-						else if (thirdStem.endsWith("t")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"tī"));
-						else if (thirdStem.endsWith("s")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"sī"));
+						if (thirdStem != null && thirdStem.endsWith("d")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"dī"));
+						else if (thirdStem != null && thirdStem.endsWith("t")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"tī"));
+						else if (thirdStem != null && thirdStem.endsWith("s")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"sī"));
 						else stemVariants.add(new StemVariant(resultStem));
 					} else if (resultStem.endsWith("z") || resultStem.endsWith("š")) {
 						stemVariants.add(new StemVariant(resultStem +"ī"));
@@ -1188,8 +1170,8 @@ public abstract class Mijas {
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
 				case 23: // 1. konjugācijas 2. personas tagadne - ja pēc tam seko garā galotne kā -iet
-					if (resultStem.endsWith("š") && thirdStem.endsWith("s")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"s"));
-					else if (resultStem.endsWith("š") && thirdStem.endsWith("t")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"t"));
+					if (resultStem.endsWith("š") && thirdStem != null && thirdStem.endsWith("s")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"s"));
+					else if (resultStem.endsWith("š") && thirdStem != null && thirdStem.endsWith("t")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"t"));
 					else if ( (resultStem.endsWith("od") && !resultStem.endsWith("dod")) || resultStem.endsWith("ūd") || resultStem.endsWith("op") || resultStem.endsWith("ūp") || resultStem.endsWith("ot") || resultStem.endsWith("ūt") || resultStem.endsWith("īt") || resultStem.endsWith("iet")  || resultStem.endsWith("st")) {
 						if (mija == 7)
 							stemVariants.add(new StemVariant(resultStem +"i"));
@@ -1201,7 +1183,8 @@ public abstract class Mijas {
 					else if (resultStem.endsWith("g")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"dz"));
 					else if (resultStem.endsWith("ž")) {
 						// stemVariants.add(new Variants(resultStem.substring(0,resultStem.length()-1)+"z")); // griez -> griežu
-						stemVariants.add(new StemVariant(thirdStem)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
+						if (thirdStem != null && !thirdStem.isEmpty())
+							stemVariants.add(new StemVariant(thirdStem)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
 					} else stemVariants.add(new StemVariant(resultStem));
 					break;
 				case 8: // -ams -āms 3. konjugācijai bezmiju gadījums
@@ -1239,7 +1222,8 @@ public abstract class Mijas {
 					else stemVariants.add(new StemVariant(resultStem));
 					break;
 				case 15: // pūst -> pūzdams nopūzdamies s -> z mija tad, ja 3. sakne (pagātnes sakne) beidzas ar t/d
-					if (resultStem.endsWith("s") && (thirdStem.endsWith("t") || thirdStem.endsWith("d"))) {
+					if (resultStem.endsWith("s") && thirdStem != null &&
+									(thirdStem.endsWith("t") || thirdStem.endsWith("d"))) {
 						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"z"));
 					} else stemVariants.add(new StemVariant(resultStem));
 					break;
@@ -1425,7 +1409,7 @@ public abstract class Mijas {
 						stemVariants.add(new StemVariant(resultStem +"a",AttributeNames.i_Degree,AttributeNames.v_Positive));
 					break;
 				case 36: // 'iet' speciālgadījums - normāli 3. personas tagadnei atbilstošais resultStem būtu 'ej', bet ir 'iet'.
-					if (resultStem.endsWith("ej") && thirdStem.endsWith("gāj"))
+					if (resultStem.endsWith("ej") && thirdStem != null && thirdStem.endsWith("gāj"))
 						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"iet"));
 					else stemVariants.add(new StemVariant(resultStem));
 					break;
