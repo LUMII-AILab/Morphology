@@ -1031,13 +1031,12 @@ public class Analyzer extends Lexicon {
 				boolean properName = lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
 
 				String stemBeforeMija = lexeme.getStem(ending.stemType);
-				if (negation) {
-					stemBeforeMija = this.NEGATION_PREFIX + stemBeforeMija;
-				}
-
 		    	ArrayList<StemVariant> stemVariants = new ArrayList<>();
-				if (stemBeforeMija != null && !stemBeforeMija.isEmpty())
+				if (stemBeforeMija != null && !stemBeforeMija.isEmpty()) {
+					if (negation)
+						stemBeforeMija = this.NEGATION_PREFIX + stemBeforeMija;
 					stemVariants = Mijas.applyLemmaToFormMija(stemBeforeMija, ending.getMija(), thirdStem, superlativeDegree, properName);
+				}
 
 		    	for (StemVariant stemVariant : stemVariants){
 		    		word = stemVariant.stem + ending.getEnding();
