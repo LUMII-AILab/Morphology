@@ -3165,19 +3165,45 @@ public class MorphologyTest {
     }
 
     @Test
-    public void jauš() {
-        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaut");
-        for (Wordform wf : formas) {
+    public void generationFrom1stConjStems() {
+        ArrayList<Wordform> jaust = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaut");
+        for (Wordform wf : jaust) {
             if (wf.getToken().equalsIgnoreCase("jauš")) {
                 assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
             }
         }
-        formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauž", "jaud");
-        for (Wordform wf : formas) {
+        jaust = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauž", "jaud");
+        for (Wordform wf : jaust) {
             if (wf.getToken().equalsIgnoreCase("jauš")) {
                 assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
             }
         }
+
+        // Testing on missing stems.
+        ArrayList<Wordform> aust = locītājs.generateInflectionsFromParadigm("aust", 15, "aus", "auž", null);
+        assertFalse(aust.isEmpty());
+        aust = locītājs.generateInflectionsFromParadigm("aust", 15, "aus", null, "aud");
+        assertFalse(aust.isEmpty());
+        aust = locītājs.generateInflectionsFromParadigm("aust", 15, "aus", null, null);
+        assertFalse(aust.isEmpty());
+        aust = locītājs.generateInflectionsFromParadigm("aust", 15, null, null, null);
+        assertTrue(aust.isEmpty());
+
+        ArrayList<Wordform> austies = locītājs.generateInflectionsFromParadigm("austies", 18, "aus", "auž", null);
+        assertFalse(austies.isEmpty());
+        austies = locītājs.generateInflectionsFromParadigm("austies", 18, "aus", null, "aud");
+        assertFalse(austies.isEmpty());
+        austies = locītājs.generateInflectionsFromParadigm("austies", 18, "aus", null, null);
+        assertFalse(austies.isEmpty());
+        austies = locītājs.generateInflectionsFromParadigm("austies", 18, null, null, null);
+        assertTrue(austies.isEmpty());
+    }
+
+    @Test
+    public void generationMissingOnlyStem()
+    {
+        ArrayList<Wordform> austies = locītājs.generateInflectionsFromParadigm("tēvs", 1, null, null, null);
+        assertTrue(austies.isEmpty());
     }
 
     @Test
