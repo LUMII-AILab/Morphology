@@ -793,15 +793,16 @@ public class MorphologyTest {
         // 2012. 10.feb Vienojāmies ar valodniecēm ka deminutīviem lemmas arī ir deminutīvā
 
         locītājs.enableDiminutive = true;
-        Word cirvītis = locītājs.analyze("cirvītis");
+        // Used to test on 'cirvītis', but from Summer 2026, it is in actual exicon
+        Word bērnudārziņš = locītājs.analyze("bērnudārziņš");
         Word pļava = locītājs.analyze("pļaviņa");
 
-        assertTrue(cirvītis.isRecognized());
+        assertTrue(bērnudārziņš.isRecognized());
         assertTrue(pļava.isRecognized());
 
         boolean irPareizā = false;
-        for (Wordform vārdforma : cirvītis.wordforms) {
-            if (vārdforma.getValue(AttributeNames.i_Lemma).equals("cirvītis")) {
+        for (Wordform vārdforma : bērnudārziņš.wordforms) {
+            if (vārdforma.getValue(AttributeNames.i_Lemma).equals("bērnudārziņš")) {
                 irPareizā = true;
                 assertEquals(AttributeNames.v_Deminutive, vārdforma.getValue(AttributeNames.i_Guess));
             }
