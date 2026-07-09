@@ -21,7 +21,7 @@
 	<Corpus FileName="Lexicon_minicore.xml" Type="core"/>
 <!-- <Corpus FileName="Lexicon_firstnames.xml" Type="core"/> -->
 	<Corpus FileName="Lexicon_vietas.xml" Type="core"/>
-	<Corpus FileName="tezaurs_lexemes.json" Type="core"/>
+	<Corpus FileName="tezaurs_lexemes.jsonl" Type="core"/>
 <!--	<Corpus FileName="Lexicon_core.xml" Type="core"/>	
 	<Corpus FileName="Lexicon_sv.xml" Type="core"/>
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
