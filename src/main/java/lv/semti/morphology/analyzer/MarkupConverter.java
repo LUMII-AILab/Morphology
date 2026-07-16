@@ -121,12 +121,12 @@ public class MarkupConverter {
 			else tag.append("v__________");
 
 			verifyAndSetKamolsAttribute(avs,tag,1,'m',AttributeNames.i_VerbType,AttributeNames.v_MainVerb);
-			verifyAndSetKamolsAttribute(avs,tag,1,'a',AttributeNames.i_VerbType,AttributeNames.v_PaliigDv);
-			verifyAndSetKamolsAttribute(avs,tag,1,'o',AttributeNames.i_VerbType,AttributeNames.v_Modaals);
-			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VerbType,AttributeNames.v_Faazes);
-			verifyAndSetKamolsAttribute(avs,tag,1,'e',AttributeNames.i_VerbType,AttributeNames.v_IzpausmesVeida);
+			verifyAndSetKamolsAttribute(avs,tag,1,'a',AttributeNames.i_VerbType,AttributeNames.v_AuxVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'o',AttributeNames.i_VerbType,AttributeNames.v_ModalVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VerbType,AttributeNames.v_PhaseVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'e',AttributeNames.i_VerbType,AttributeNames.v_ExpressionalVerb);
 			verifyAndSetKamolsAttribute(avs,tag,1,'c',AttributeNames.i_VerbType,AttributeNames.v_Buut);
-			verifyAndSetKamolsAttribute(avs,tag,1,'t',AttributeNames.i_VerbType,AttributeNames.v_TiktTapt);
+			verifyAndSetKamolsAttribute(avs,tag,1,'t',AttributeNames.i_VerbType,AttributeNames.v_Copula);
 			verifyAndSetKamolsAttribute(avs,tag,1,'g',AttributeNames.i_VerbType,AttributeNames.v_Nebuut);
 
 			verifyAndSetKamolsAttribute(avs,tag,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
@@ -181,12 +181,12 @@ public class MarkupConverter {
 
 
 			verifyAndSetKamolsAttribute(avs,tag,1,'m',AttributeNames.i_VerbType,AttributeNames.v_MainVerb);
-			verifyAndSetKamolsAttribute(avs,tag,1,'a',AttributeNames.i_VerbType,AttributeNames.v_PaliigDv);
-			verifyAndSetKamolsAttribute(avs,tag,1,'o',AttributeNames.i_VerbType,AttributeNames.v_Modaals);
-			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VerbType,AttributeNames.v_Faazes);
-			verifyAndSetKamolsAttribute(avs,tag,1,'e',AttributeNames.i_VerbType,AttributeNames.v_IzpausmesVeida);
+			verifyAndSetKamolsAttribute(avs,tag,1,'a',AttributeNames.i_VerbType,AttributeNames.v_AuxVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'o',AttributeNames.i_VerbType,AttributeNames.v_ModalVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VerbType,AttributeNames.v_PhaseVerb);
+			verifyAndSetKamolsAttribute(avs,tag,1,'e',AttributeNames.i_VerbType,AttributeNames.v_ExpressionalVerb);
 			verifyAndSetKamolsAttribute(avs,tag,1,'c',AttributeNames.i_VerbType,AttributeNames.v_Buut);
-			verifyAndSetKamolsAttribute(avs,tag,1,'t',AttributeNames.i_VerbType,AttributeNames.v_TiktTapt);
+			verifyAndSetKamolsAttribute(avs,tag,1,'t',AttributeNames.i_VerbType,AttributeNames.v_Copula);
 			verifyAndSetKamolsAttribute(avs,tag,1,'g',AttributeNames.i_VerbType,AttributeNames.v_Nebuut);
 
 			verifyAndSetKamolsAttribute(avs,tag,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
@@ -532,12 +532,12 @@ public class MarkupConverter {
 
 			if (tag.length()<4 || tag.charAt(3) != 'p') { // nav divdabis
 				verifyAndSetAVSAttribute(tag,attributes,1,'m',AttributeNames.i_VerbType,AttributeNames.v_MainVerb);
-				verifyAndSetAVSAttribute(tag,attributes,1,'a',AttributeNames.i_VerbType,AttributeNames.v_PaliigDv);
-				verifyAndSetAVSAttribute(tag,attributes,1,'o',AttributeNames.i_VerbType,AttributeNames.v_Modaals);
-				verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VerbType,AttributeNames.v_Faazes);
-				verifyAndSetAVSAttribute(tag,attributes,1,'e',AttributeNames.i_VerbType,AttributeNames.v_IzpausmesVeida);
+				verifyAndSetAVSAttribute(tag,attributes,1,'a',AttributeNames.i_VerbType,AttributeNames.v_AuxVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'o',AttributeNames.i_VerbType,AttributeNames.v_ModalVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VerbType,AttributeNames.v_PhaseVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'e',AttributeNames.i_VerbType,AttributeNames.v_ExpressionalVerb);
 				verifyAndSetAVSAttribute(tag,attributes,1,'c',AttributeNames.i_VerbType,AttributeNames.v_Buut);
-				verifyAndSetAVSAttribute(tag,attributes,1,'t',AttributeNames.i_VerbType,AttributeNames.v_TiktTapt);
+				verifyAndSetAVSAttribute(tag,attributes,1,'t',AttributeNames.i_VerbType,AttributeNames.v_Copula);
 				verifyAndSetAVSAttribute(tag,attributes,1,'g',AttributeNames.i_VerbType,AttributeNames.v_Nebuut);
 
 				verifyAndSetAVSAttribute(tag,attributes,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
@@ -576,12 +576,12 @@ public class MarkupConverter {
 
 			} else { // ir divdabis
 				verifyAndSetAVSAttribute(tag,attributes,1,'m',AttributeNames.i_VerbType,AttributeNames.v_MainVerb);
-				verifyAndSetAVSAttribute(tag,attributes,1,'a',AttributeNames.i_VerbType,AttributeNames.v_PaliigDv);
-				verifyAndSetAVSAttribute(tag,attributes,1,'o',AttributeNames.i_VerbType,AttributeNames.v_Modaals);
-				verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VerbType,AttributeNames.v_Faazes);
-				verifyAndSetAVSAttribute(tag,attributes,1,'e',AttributeNames.i_VerbType,AttributeNames.v_IzpausmesVeida);
+				verifyAndSetAVSAttribute(tag,attributes,1,'a',AttributeNames.i_VerbType,AttributeNames.v_AuxVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'o',AttributeNames.i_VerbType,AttributeNames.v_ModalVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VerbType,AttributeNames.v_PhaseVerb);
+				verifyAndSetAVSAttribute(tag,attributes,1,'e',AttributeNames.i_VerbType,AttributeNames.v_ExpressionalVerb);
 				verifyAndSetAVSAttribute(tag,attributes,1,'c',AttributeNames.i_VerbType,AttributeNames.v_Buut);
-				verifyAndSetAVSAttribute(tag,attributes,1,'t',AttributeNames.i_VerbType,AttributeNames.v_TiktTapt);
+				verifyAndSetAVSAttribute(tag,attributes,1,'t',AttributeNames.i_VerbType,AttributeNames.v_Copula);
 				verifyAndSetAVSAttribute(tag,attributes,1,'g',AttributeNames.i_VerbType,AttributeNames.v_Nebuut);
 
 				verifyAndSetAVSAttribute(tag,attributes,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);

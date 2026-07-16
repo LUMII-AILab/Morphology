@@ -35,11 +35,11 @@ public class Statistics {
 	/**
 	 * Lexeme frequencies, indexed by lexeme IDs.
 	 */
-	public HashMap<Integer, Integer> lexemeFrequency = new HashMap<Integer, Integer>();
+	public HashMap<Integer, Integer> lexemeFrequency = new HashMap<>();
 	/**
 	 * Ending frequencies, indexed by ending IDs.
 	 */
-	public HashMap<Integer, Integer> endingFrequency = new HashMap<Integer, Integer>();
+	public HashMap<Integer, Integer> endingFrequency = new HashMap<>();
 	
 	/**
 	 * Add one occurrence of one lexeme.
@@ -69,21 +69,21 @@ public class Statistics {
 	public void toXML (Writer stream)
 	throws IOException {
 		stream.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-		stream.write("<Statistika>\n");
-		stream.write("<Galotņu_biežums\n");
+		stream.write("<Statistics>\n");
+		stream.write("<EndingFrequency\n");
 		for (Entry<Integer,Integer> tuple : endingFrequency.entrySet()) {
-			stream.write(" Galotne_"+tuple.getKey().toString()+"=\""+tuple.getValue().toString()+"\"");
+			stream.write(" Ending_"+tuple.getKey().toString()+"=\""+tuple.getValue().toString()+"\"");
 		}
 		stream.write("/>\n");
 
-		stream.write("<Leksēmu_biežums>\n");
+		stream.write("<LexemeFrequency>\n");
 		for (Entry<Integer, Integer> tuple : lexemeFrequency.entrySet()) {
 			if (tuple.getValue() > 1) {
-				stream.write("  <Leksēma id=\"" + tuple.getKey() + "\" count=\"" + tuple.getValue() + "\"/>\n");
+				stream.write("  <Lexeme id=\"" + tuple.getKey() + "\" count=\"" + tuple.getValue() + "\"/>\n");
 			}
 		}
-		stream.write("</Leksēmu_biežums>\n");
-		stream.write("</Statistika>\n");
+		stream.write("</LexemeFrequency>\n");
+		stream.write("</Statistics>\n");
 		stream.flush();
 	}
 
@@ -128,32 +128,34 @@ public class Statistics {
 	private Statistics(String fileName)
 	throws SAXException, IOException, ParserConfigurationException {
 
-		Document doc = null;
+		Document doc;
 
 		InputStream stream = this.getClass().getClassLoader().getResourceAsStream(fileName);
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		dbf.setAttribute("jdk.xml.elementAttributeLimit", 20000); // Galotņu biežumam nezkāpēc visas galotnes ir kā atribūti un latgaliešiem tas ir daudz.
+		// For ending frequencies all endings for some reason are attributes and
+		// in case of Latgalian that is A LOT.
+		dbf.setAttribute("jdk.xml.elementAttributeLimit", 20000);
 		DocumentBuilder docBuilder = dbf.newDocumentBuilder();
 		doc = docBuilder.parse(stream);
 
 		Node node = doc.getDocumentElement();
-		if (!node.getNodeName().equalsIgnoreCase("Statistika"))
-			throw new Error("Node " + node.getNodeName() + " nav Statistika!");
+		if (!node.getNodeName().equalsIgnoreCase("Statistics"))
+			throw new Error("Node " + node.getNodeName() + " nav Statistics!");
 
 		NodeList nodes = node.getChildNodes();
 		for (int i = 0; i < nodes.getLength(); i++) {
-			if (nodes.item(i).getNodeName().equals("Galotņu_biežums"))
+			if (nodes.item(i).getNodeName().equals("EndingFrequency"))
 				for (int j = 0; j < nodes.item(i).getAttributes().getLength(); j++) {
 					Node n = nodes.item(i).getAttributes().item(j);
 					int endingId = Integer.parseInt(n.getNodeName().substring(n.getNodeName().indexOf('_')+1));
 					int count = Integer.parseInt(n.getTextContent());
 					endingFrequency.put(endingId, count);
 				}
-			if (nodes.item(i).getNodeName().equals("Leksēmu_biežums")) {
+			if (nodes.item(i).getNodeName().equals("LexemeFrequency")) {
 				NodeList children = nodes.item(i).getChildNodes();
 				for (int j = 0; j < children.getLength(); j++) {
 					Node child = children.item(j);
-					if (child.getNodeType() == Node.ELEMENT_NODE && child.getNodeName().equals("Leksēma")) {
+					if (child.getNodeType() == Node.ELEMENT_NODE && child.getNodeName().equals("Lexeme")) {
 						Element el = (Element) child;
 						int lexemeId = Integer.parseInt(el.getAttribute("id"));
 						int count = Integer.parseInt(el.getAttribute("count"));
