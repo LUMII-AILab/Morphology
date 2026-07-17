@@ -17,3 +17,4 @@ target/
 ~$*.xlsx
 Statistics.xml
 *.gf
+*.kate-swp

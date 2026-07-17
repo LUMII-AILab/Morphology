@@ -7,6 +7,7 @@ public enum StemType
 	STEM1("1", "Pamatformas celms", "Base stem", null),
 	STEM2("2", "Tagadnes celms", "Present stem", null),
 	STEM3("3", "Pagātnes celms", "Past stem", null),
+	FORM_STEM("0", "Formas celms", "Form stem", null), // Helper
 	;
 
 	public final String id;
@@ -24,6 +25,8 @@ public enum StemType
 	public static StemType getFromXmlId(int id)
 	{
 		switch (id) {
+			case 0:
+				return FORM_STEM;
 			case 1:
 				return STEM1;
 			case 2:
@@ -39,6 +42,16 @@ public enum StemType
 	public static StemType getFromXmlId(String id)
 	{
 		return getFromXmlId(Integer.parseInt(id));
+	}
+
+	public static StemType getFromLatvian(String str)
+	{
+		for (StemType st : StemType.values())
+		{
+			if (st.descriptionLV.equals(str))
+				return st;
+		}
+		return null;
 	}
 
 }
