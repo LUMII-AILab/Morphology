@@ -21,26 +21,23 @@ Vajadzētu arī atjaunināt `Statistics.xml` failu. To no vārdnīcas un korpusa
 
 ## Korpusa datu atjaunināšana
 
-Vajag skriptus no https://github.com/LUMII-AILab/CorporaTools
-Vajag strādājošu Perl vidi 
-uz Linux:
+Vajag skriptus no https://github.com/LUMII-AILab/TreebankTools un strādājošu Perl vidi.
+
+Uz Linux:
 	```
 		sudo apt-get install libxml-libxslt-perl
-		sudo cpan -i Treex::PML
 	```
-uz OS X:
+Uz OS X:
 	```
 		curl -L https://install.perlbrew.pl | bash   
 		source ~/perl5/perlbrew/etc/bashrc
 		perlbrew install perl-5.16.0   
 		perlbrew switch perl-5.16.0
 		sudo cpan -i XML::LibXSLT
-		sudo cpan -i Treex::PML
 	```
-Uz Windows:
-	???
+Citiem _TreebankTools_ skriptiem var vajadzēt arī `sudo cpan -i XML::Simple`, bet failu savienotājs, ko lieto `preparePOSTagData.sh`, tos šobrīd nesauc.
 
-Palaižam `TreebankTools/PmlCorporaTools/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunākos datus zem `../morphology/src/main/resources/`
+Palaižam `TreebankTools/Scripts/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunākos datus zem `../morphology/src/main/resources/`
 
 
 ## Versijas atjaunināšana
@@ -67,15 +64,15 @@ Izlaiž testus un paskatās vai `MorphoEvaluate` rezultātos nav būtisku procen
 
 LVTager blokā (https://github.com/LUMII-AILab/LVTagger/)
 - Jāatjaunina `pom.xml` atkarības
-- `mvn clean install`, lai paņem svaigākās atkarības
+- `mvn clean install`vai `mvn clean install -P with-dep`, lai atsaucas uz svaigākajām atkarībām
 - Pozitīvi var būt arī apmācīt jaunu produkcijas modeli tagerim `./morpho_train.sh -production` kas uz 2025. MacbookPro iet 45min
 - Rezultātus pieraksta `MorphoCRF/morfoCRFeksperimenti.txt`
 - Produkcijas modeļus pako atsevišķā maven pakā, kas ir mapītē `morphomodel`
+- Uz Maven Central bez atkarībām publicēšana ir `mvn clean deploy`
+
 
 Webservisu blokā (https://github.com/LUMII-AILab/Webservices)
 - Jāatjaunina `pom.xml` atkarības
-- Jāpako maven uz maven central
-- Jāuzkopē uz `api.tezaurs.lv`
+- Uz Maven Central bez atkarībām publicēšana ir `mvn clean deploy`
+- Uz `api.tezaurs.lv` kopē `mvn clean install -P with-dep` rezultātu
 - `sudo service tezaurs-api restart`
-
-
