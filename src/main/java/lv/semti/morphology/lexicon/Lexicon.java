@@ -1,20 +1,3 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.lexicon;
 
 import lv.semti.morphology.analyzer.AllEndings;
@@ -43,7 +26,7 @@ import org.json.simple.parser.ParseException;
 
 /**
  * Contains lexicon data -- lexeme list and information about the inflection of
- * the given lexemes. Provides functionality to read from / write to XML, JSON
+ * the given lexemes. Provides functionality to read from / write to XML, JSONL
  * as well as functionality to add and remove lexemes.
  *
  * @author Pēteris Paikens
@@ -55,6 +38,7 @@ public class Lexicon {
 	protected String filename;
 	protected String NEGATION_PREFIX = "ne";
 	protected String DEBITIVE_PREFIX = "jā";
+	// TODO this must be list due to Latgalian need for "vys" and "vysu".
 	protected String SUPERLATIVE_PREFIX = "vis";
 
 	public String getRevision() {
@@ -235,12 +219,12 @@ public class Lexicon {
                     doc2 = docBuilder.parse(getClass().getClassLoader().getResourceAsStream(filename));
                 }
                 load_sublexicon_xml(doc2);
-            } else if (filename.endsWith(".json")) {
+            } else if (filename.endsWith(".json") || filename.endsWith(".jsonl")) {
                 if (path != null) {
                     String fullname = path + java.io.File.separatorChar + filename;
-                    load_sublexicon_json(new FileInputStream(new File(fullname)));
+                    load_sublexicon_jsonl(new FileInputStream(fullname));
                 } else {
-                    load_sublexicon_json(getClass().getClassLoader().getResourceAsStream(filename));
+                    load_sublexicon_jsonl(getClass().getClassLoader().getResourceAsStream(filename));
                 }
             } else throw new Error(String.format("Unsupported file format for sublexicon '%s'", filename));
 		}
@@ -267,7 +251,7 @@ public class Lexicon {
 		}
 	}
 
-	private void load_sublexicon_json(InputStream input)
+	private void load_sublexicon_jsonl(InputStream input)
 			throws ParseException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
         JSONParser parser = new JSONParser();
@@ -484,11 +468,11 @@ public class Lexicon {
 				ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, mija, word.matches("\\p{Lu}.*"));
 				if (stems.isEmpty()) return null; // acīmredzot neder ar miju
 				// FIXME ! Nevajadzētu te būt iespējai uz null!
-				stem = stems.get(0).stem;
+				stem = stems.getFirst().stem;
 				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 			}
 		} catch (Exception e) {
-            System.err.print(word + Integer.toString(ending.getID()) + source);
+            System.err.print(word + " " + ending.getID() + " " + source);
 			e.printStackTrace(System.err);
 			return null;
 		}
