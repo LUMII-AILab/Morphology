@@ -30,6 +30,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import lv.semti.morphology.lexicon.StemType;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -268,7 +269,20 @@ public class TagSet {
 		return result;
 	}
 
-	public AttributeValues toEnglish(AttributeValues latvian) {
+	/**
+	 * Transforms tagset defined attributes to English and loses the rest.
+	 */
+	public AttributeValues toEnglish(AttributeValues latvian)
+	{
+		return toEnglish(latvian, false);
+	}
+
+	/**
+	 * Transforms tagset defined attributes and optionally stem names to English
+	 * and loses the rest.
+	 * @param extended if true, will use stem names in addition to tagset.
+	 */
+	public AttributeValues toEnglish(AttributeValues latvian, boolean extended) {
 		AttributeValues result = new AttributeValues();
 		String pos = latvian.getValue(AttributeNames.i_PartOfSpeech);
 		if (structure == structureTypes.POS_BASED_SEMTI && AttributeNames.v_Verb.equalsIgnoreCase(pos) && latvian.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) {
@@ -277,7 +291,8 @@ public class TagSet {
 		}
 		
 		for (Entry<String, String> e : latvian.entrySet()) { // Apskatam visus atribūtus, kas ir padoti
-			for (Attribute attribute : getAttribute(e.getKey(), "LV")) { // atrodam TagSet tos, kas šim atribūta atslēgai varētu atbilst
+			List<Attribute> knownAttributes = getAttribute(e.getKey(), "LV");
+			for (Attribute attribute : knownAttributes) { // atrodam TagSet tos, kas šim atribūta atslēgai varētu atbilst
 				// FIXME - ja atribūts nav tagset.xml, tad šeit tas klusiņām pazudīs
 				if (attribute instanceof FixedAttribute) { // ja ir fiksētais, mēģinam tulkot gan atslēgu, gan vērtību
 					FixedAttribute fattribute = (FixedAttribute) attribute;
@@ -286,6 +301,12 @@ public class TagSet {
  				} else { // ja nav fiksētais, mēģinam tulkot tikai atslēgu
  					result.addAttribute(attribute.attributeEN, e.getValue());
  				}
+			}
+			if (extended && knownAttributes.isEmpty()) {
+				// Ja neatpazina nosaukumu atribūtos, pamēģinās, vai nav celmos
+				StemType potStem = StemType.getFromLatvian(e.getKey());
+				if (knownAttributes.isEmpty() && potStem != null)
+					result.addAttribute(potStem.descriptionEN, e.getValue());
 			}
 		}
 		

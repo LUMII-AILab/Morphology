@@ -830,5 +830,8 @@
 	<Value LV="Daudzskaitļa formas parasti lieto vienskaitļa formu nozīmē" EN="Plural forms usually used with singular meaning"/>
 </Attribute>
 
+<FreeAttribute LV="Nobīde rindkopā" EN="Position in paragraph"/> <!-- Tokenizācijas rezultātu attēlošanai -->
+
+
 
 </TagSet>
