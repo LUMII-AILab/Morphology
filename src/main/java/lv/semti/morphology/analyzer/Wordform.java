@@ -1,10 +1,6 @@
 package lv.semti.morphology.analyzer;
 
-import java.io.IOException;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.Serializable;
-import java.io.Writer;
+import java.io.*;
 import java.util.ArrayList;
 
 import org.w3c.dom.Node;
@@ -20,6 +16,7 @@ import lv.semti.morphology.lexicon.*;
  */
 public class Wordform extends AttributeValues implements Serializable{
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	private String token;
 	private transient Ending ending;
@@ -78,7 +75,7 @@ public class Wordform extends AttributeValues implements Serializable{
 					stem, lemmaEnding.getMija(), thirdStem, false,
 					this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
 			
-			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.get(0).stem; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
+			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.getFirst().stem; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
 			
 			String lemma = stem + lemmaEnding.getEnding();
 			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
@@ -112,8 +109,8 @@ public class Wordform extends AttributeValues implements Serializable{
 
 	public Wordform(Node node) {
 		super(node);
-		if (!node.getNodeName().equalsIgnoreCase("Vārdforma")) throw new Error("Node " + node.getNodeName() + " nav Vārdforma");
-		token = node.getAttributes().getNamedItem("vārds").getTextContent();
+		if (!node.getNodeName().equalsIgnoreCase("Wordform")) throw new Error("Node " + node.getNodeName() + " nav Wordform");
+		token = node.getAttributes().getNamedItem("token").getTextContent();
 	}
 
 	public void shortDescription(PrintWriter output) {
@@ -151,10 +148,10 @@ public class Wordform extends AttributeValues implements Serializable{
 
 	@Override
 	public void toXML (Writer output) throws IOException {
-		output.write("<Vārdforma");
-		output.write(" vārds=\""+token.replace("\"", "&quot;")+"\">\n");
+		output.write("<Wordform");
+		output.write(" token=\""+token.replace("\"", "&quot;")+"\">\n");
 		super.toXML(output); // īpašības UzXML
-		output.write("</Vārdforma>\n");
+		output.write("</Wordform>\n");
 	}
 
 	public Ending getEnding() {

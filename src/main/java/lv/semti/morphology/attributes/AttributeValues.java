@@ -1,28 +1,11 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014, 2026 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens, Lauma Pretkalniņa
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.attributes;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
@@ -34,26 +17,22 @@ import org.w3c.dom.NodeList;
 
 //TODO - būtu vienkārši jāinherito HashMap<String, String>
 public class AttributeValues implements FeatureStructure, Cloneable {
-	protected HashMap<String, String> attributes = new HashMap<String, String>();
+	protected HashMap<String, String> attributes = new HashMap<>();
 
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		for (Entry<String,String> īpašība : attributes.entrySet()) {
-			sb.append(String.format("%s = %s; ", īpašība.getKey(),īpašība.getValue()));
+		for (Entry<String,String> attribute : attributes.entrySet()) {
+			sb.append(String.format("%s = %s; ", attribute.getKey(),attribute.getValue()));
 		}
 		return sb.toString();
 	}
 
 	public void describe() {
-		PrintWriter izeja;
-		try {
-			izeja = new PrintWriter(new OutputStreamWriter(System.err, "UTF-8"));
-			this.describe(izeja);
-			izeja.flush();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+		PrintWriter out;
+		out = new PrintWriter(new OutputStreamWriter(System.err, StandardCharsets.UTF_8));
+		this.describe(out);
+		out.flush();
 	}
 
 	public void describe(PrintStream pipe) {
@@ -62,8 +41,8 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	
 	public void describe(PrintWriter pipe) {
 		pipe.printf("\t%s\n", this.getTag());
-		for (Entry<String,String> īpašība : attributes.entrySet()) {
-			pipe.format("\t\t%s = %s%n", īpašība.getKey(),īpašība.getValue());
+		for (Entry<String,String> attribute : attributes.entrySet()) {
+			pipe.format("\t\t%s = %s%n", attribute.getKey(),attribute.getValue());
 		}
 		pipe.flush();
 	}
@@ -169,23 +148,23 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public boolean isMatchingWeak(AttributeValues testSet) {
 		if (testSet == null) return true;
 		boolean der = true;
-		for (Entry<String,String> pāris : testSet.entrySet()) {
-			if (!this.isMatchingWeak(pāris.getKey(), pāris.getValue()))
+		for (Entry<String,String> attribute : testSet.entrySet()) {
+			if (!this.isMatchingWeak(attribute.getKey(), attribute.getValue()))
 				der = false;
 		}
 		return der;
 	}
 
 	
-	public void toXML (Writer straume) throws IOException {
-		straume.write("<Attributes");
-		for (Entry<String,String> pāris : attributes.entrySet()) {
-			String īpašība = pāris.getKey().replace(" ", "_").replace("\"", "&quot;").replace("&", "&amp;");
-			if (īpašība.equals("")) continue;
-			String vērtība = pāris.getValue().replace("\"", "&quot;").replace("&", "&amp;");
-			straume.write(" "+īpašība+"=\""+vērtība+"\"");
+	public void toXML (Writer out) throws IOException {
+		out.write("<Attributes");
+		for (Entry<String,String> attribute : attributes.entrySet()) {
+			String attrKey = attribute.getKey().replace(" ", "_").replace("\"", "&quot;").replace("&", "&amp;");
+			if (attrKey.isEmpty()) continue;
+			String attrVal = attribute.getValue().replace("\"", "&quot;").replace("&", "&amp;");
+			out.write(" "+attrKey+"=\""+attrVal+"\"");
 		}
-		straume.write("/>");
+		out.write("/>");
 	}
 	
 	public String toJSON() {
@@ -196,13 +175,13 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	//FIXME - atgriež rediģējamu pāri... netīri kautkā, tas ir kā getteris domāts, nevis rakstīšanai..
 	//jāmaina pieeja tur kur to sauc.
 
-		Entry<String,String> rezults = null;
+		Entry<String,String> result = null;
 		int i=0;
-		for (Entry<String,String> īpašība : attributes.entrySet()) {
-			if (i==nr) rezults = īpašība;
+		for (Entry<String,String> attribute : attributes.entrySet()) {
+			if (i==nr) result = attribute;
 			i++;
 		}
-		return rezults;
+		return result;
 	}
 
 	public int size() {
@@ -213,26 +192,26 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	@SuppressWarnings("unchecked")
 	public Object clone() throws CloneNotSupportedException {
 		try {
-			AttributeValues kopija = (AttributeValues)super.clone();
-			kopija.attributes = (HashMap<String,String>)attributes.clone();
-			return kopija;
+			AttributeValues avClone = (AttributeValues)super.clone();
+			avClone.attributes = (HashMap<String,String>)attributes.clone();
+			return avClone;
         } catch (CloneNotSupportedException e) {
-            throw new Error("Gļuks - nu vajag varēt klasi AttributeValues noklonēt.");
+            throw new Error("Problem: should be able to clone AttributeValues.");
         }
 	}
 
 	public String getDescription() {
-		String ret = "";
-		for (Entry<String,String> Īpašība : attributes.entrySet()) {
-			if (!Īpašība.getKey().startsWith("Nozīme")) {
-			if (ret.length() < 1) {
-				ret = Īpašība.getValue();
+		String result = "";
+		for (Entry<String,String> attribute : attributes.entrySet()) {
+			if (!attribute.getKey().startsWith("Nozīme")) {
+			if (result.isEmpty()) {
+				result = attribute.getValue();
 			} else {
-				ret = ret + ", "/* + Īpašība.getKey() + " = "*/ + Īpašība.getValue();
+				result = result + ", "/* + Īpašība.getKey() + " = "*/ + attribute.getValue();
 			}
 			}
 		}
-		return ret;
+		return result;
 	}
 
 	public Set<Entry<String,String>> entrySet() {
@@ -252,7 +231,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 			if (nodes.item(i).getNodeName().equals("Attributes"))
 				for (int j = 0; j < nodes.item(i).getAttributes().getLength(); j++) {
 					Node n = nodes.item(i).getAttributes().item(j);
-					addAttribute(n.getNodeName().replaceAll("_", " "), n.getTextContent());
+					addAttribute(n.getNodeName().replace("_", " "), n.getTextContent());
 				}
 		}
 	}
@@ -263,7 +242,6 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 
 	/**
 	 * Creates a new set of AttributeValues, initializing the contents from a source AV object
-	 * @param source
 	 */
 	public AttributeValues(AttributeValues source) {
 		this.addAttributes(source);
@@ -275,7 +253,6 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	
 	/**
 	 * Returns Semti-Kamols style positional morphosyntactic markup tag of this set of attributes
-	 * @return
 	 */
 	public String getTag() {
 		return TagSet.getTagSet().toTag(this);
@@ -355,17 +332,15 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 
     @Override
     public boolean equals(Object other) {
-        if (other == null || !(other instanceof AttributeValues)) {
+        if (!(other instanceof AttributeValues)) {
             return false;
         }
         AttributeValues that = (AttributeValues) other;
 
         if (this.attributes == null) {
-            if (that.attributes != null) return false;
-        } else if (!this.attributes.equals(that.attributes))
-            return false;
-        return true;
-    }
+			return that.attributes == null;
+        } else return this.attributes.equals(that.attributes);
+	}
 
     @Override
     public int hashCode() {

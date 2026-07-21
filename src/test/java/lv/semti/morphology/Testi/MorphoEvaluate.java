@@ -1,28 +1,11 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.Testi;
-
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.google.common.collect.*;
@@ -38,13 +21,13 @@ import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.corpus.Statistics;
 
 public class MorphoEvaluate {
-	private static Analyzer locītājs;
+	private static Analyzer analyzer;
 
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 		try {
 //			locītājs = new Analyzer("Lexicon.xml", false);
-			locītājs = new Analyzer(false);
+			analyzer = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -52,12 +35,12 @@ public class MorphoEvaluate {
 	
 	@Before
 	public void defaultsettings() { 
-		locītājs.enableVocative = false;
-		locītājs.enableDiminutive = false;
-		locītājs.enablePrefixes = false;
-		locītājs.enableGuessing = false;
-		locītājs.enableAllGuesses = false;
-		locītājs.searchCompoundWords = false;
+		analyzer.enableVocative = false;
+		analyzer.enableDiminutive = false;
+		analyzer.enablePrefixes = false;
+		analyzer.enableGuessing = false;
+		analyzer.enableAllGuesses = false;
+		analyzer.searchCompoundWords = false;
     }	
 	
 	@Test
@@ -66,11 +49,11 @@ public class MorphoEvaluate {
 		evaluate(etaloni);
 	}
 	
-//	@Test
+	/*@Test
 	public void testFile2013May() throws IOException{
 		LinkedList<Etalons> etaloni = readCONLLEtalons("morfoetalons.conll");
 		evaluate(etaloni);
-	}
+	}/*
 
     /**
      * Code from https://stackoverflow.com/questions/7881629/sort-guava-multimap-by-number-of-values answer
@@ -84,7 +67,7 @@ public class MorphoEvaluate {
     }
 
     private static Ordering<String> descendingCountOrdering(final Multiset<String> multiset) {
-        return new Ordering<String>() {
+        return new Ordering<>() {
             @Override
             public int compare(String left, String right) {
                 return Ints.compare(multiset.count(right), multiset.count(left));
@@ -92,14 +75,14 @@ public class MorphoEvaluate {
         };
     }
 	
-	public void evaluate(LinkedList<Etalons> etaloni) throws IOException{				
-		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
+	public void evaluate(LinkedList<Etalons> etalons) {
+		PrintWriter out = new PrintWriter(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 		
-		long sākums = System.currentTimeMillis();
+		long startTime = System.currentTimeMillis();
 		
-		locītājs.defaultSettings();
-		locītājs.enableGuessing = true;
-		locītājs.enableVocative = true;
+		analyzer.defaultSettings();
+		analyzer.enableGuessing = true;
+		analyzer.enableVocative = true;
 
         int first_pos_correct=0;
         int any_pos_correct=0;
@@ -121,11 +104,11 @@ public class MorphoEvaluate {
 		TagSet tags = TagSet.getTagSet();
 
         Multimap<String, String> mistakes_by_lemma = ArrayListMultimap.create();
-        Map<String, Integer> oov_frequency = new HashMap();
-		List<String> mistakes = new LinkedList<String>();
-		List<String> capitalization_mistakes = new LinkedList<String>();
+        Map<String, Integer> oov_frequency = new HashMap<>();
+		List<String> mistakes = new LinkedList<>();
+		List<String> capitalization_mistakes = new LinkedList<>();
 		
-		for (Etalons e : etaloni) {
+		for (Etalons e : etalons) {
 		    if (e.tag.startsWith("np") && !e.lemma.matches("(?U)^\\p{Lu}[\\p{Alnum}-.`]*$")) {
 		    	if (!e.lemma.startsWith("airBaltic"))
 					capitalization_mistakes.add(String.format("Īpašvārda lemma nav ar lielo burtu: %s\t%s", e.lemma, e.id));
@@ -134,7 +117,7 @@ public class MorphoEvaluate {
             if (e.tag.startsWith("n") && !e.tag.startsWith("np") && !e.lemma.matches("(?U)^[\\p{Ll}-.]+$"))
                 capitalization_mistakes.add(String.format("Sugasvārda lemma nav ar mazajiem burtiem: %s\t%s", e.lemma, e.id));
 
-			Word w = locītājs.analyze(e.wordform);
+			Word w = analyzer.analyze(e.wordform);
 			AttributeValues etalonaAV = tags.fromTag(e.tag);
 			if (!e.tag.equalsIgnoreCase(tags.toTag(etalonaAV))) {
 				System.out.printf("Nesavietojams tags vārdam %s : failā '%s', morfostruktūrās '%s' \t\t%s\n", e.wordform, e.tag, tags.toTag(etalonaAV), e.id);
@@ -164,21 +147,21 @@ public class MorphoEvaluate {
 			} else unambiguous++;
 			
 			if (w.isRecognized()) {
-				Wordform mainwf = w.wordforms.get(0);
-				double maxticamība = -1;
-				boolean visas_lemmas_vienādas = true;
+				Wordform mainwf = w.wordforms.getFirst();
+				double maxEstimate = -1;
+				boolean all_lemmas_the_same = true;
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 					wf.removeAttributesForCorpusTest();
 					double estimate = Statistics.getStatistics().getEstimate(wf);
-					if (estimate > maxticamība) {
-						maxticamība = estimate;
+					if (estimate > maxEstimate) {
+						maxEstimate = estimate;
 						mainwf = wf;
 					}
 					if (! wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(mainwf.getValue(AttributeNames.i_Lemma)))
-						visas_lemmas_vienādas = false;
+						all_lemmas_the_same = false;
 				}
-				if (visas_lemmas_vienādas) unambiguous_lemma++;
+				if (all_lemmas_the_same) unambiguous_lemma++;
 				
 				if (mainwf.getValue(AttributeNames.i_PartOfSpeech) != null && mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
 					first_pos_correct++;
@@ -213,16 +196,16 @@ public class MorphoEvaluate {
 					boolean found_all_correct = false;
 					boolean found_compatible = false;
                     boolean first_output = true;
-					String output = "";
+					StringBuilder output = new StringBuilder();
 					for (Wordform wf : w.wordforms) {
 						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.getTag().equalsIgnoreCase(e.tag)) found_all_correct = true;
                         if (wf.isMatchingWeak(tags.fromTag(e.tag))) found_compatible = true;
 
                         if (first_output)
-                            output += "Varianti:\t";
+                            output.append("Varianti:\t");
                         else
-                            output += "\t\t\t";
-						output += wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
+                            output.append("\t\t\t");
+						output.append(wf.getValue(AttributeNames.i_Lemma)).append("\t").append(wf.getTag()).append("\n");
 						first_output = false;
 					}
 					if (found_all_correct) any_all_correct++;
@@ -241,11 +224,11 @@ public class MorphoEvaluate {
 		}
 
 		// No AttributeValues.removeAttributesForCorpusTest()
-		izeja.println("Tagus salīdzinot neņem vērā transitivitāti, apstākļa vārda tipu, īpašības vārda tipu, prievārdu novietojumu");
+		out.println("Tagus salīdzinot neņem vērā transitivitāti, apstākļa vārda tipu, īpašības vārda tipu, prievārdu novietojumu");
 
         Collections.sort(capitalization_mistakes);
         for (String mistake:capitalization_mistakes){
-            izeja.println(mistake);
+            out.println(mistake);
         }
 //		Collections.sort(mistakes);
 //		for (String mistake:mistakes){
@@ -259,13 +242,12 @@ public class MorphoEvaluate {
                 singletons++;
                 continue;
             }
-            izeja.printf("%s : %d atšķirības\n", key, list.size());
-            Set<String> sortedlist = new TreeSet<String>();
-            sortedlist.addAll(list);
+            out.printf("%s : %d atšķirības\n", key, list.size());
+			Set<String> sortedlist = new TreeSet<>(list);
             for (String mistake : sortedlist)
-                izeja.println(mistake);
+                out.println(mistake);
         }
-		if (singletons > 0) izeja.printf(".... un %d izolētas atšķirības\n", singletons);
+		if (singletons > 0) out.printf(".... un %d izolētas atšķirības\n", singletons);
 
 		LinkedHashMap<String, Integer> most_common_oov = new LinkedHashMap<>();
 		oov_frequency.entrySet()
@@ -274,35 +256,35 @@ public class MorphoEvaluate {
 				.forEachOrdered(x -> most_common_oov.put(x.getKey(), x.getValue()));
 
 		int top_oov_words = 100;
-		izeja.printf("%d biežākie vārdi, kas nav leksikonā:", top_oov_words);
+		out.printf("%d biežākie vārdi, kas nav leksikonā:", top_oov_words);
 		most_common_oov.entrySet()
 				.stream()
 				.limit(top_oov_words)
-				.forEachOrdered(e -> izeja.printf("\t%s : %d\n", e.getKey(), e.getValue()));
+				.forEachOrdered(e -> out.printf("\t%s : %d\n", e.getKey(), e.getValue()));
 		
-		long beigas = System.currentTimeMillis();
-		long starpība = beigas - sākums;
-		izeja.flush();
+		long endTime = System.currentTimeMillis();
+		long spentTime = endTime - startTime;
+		out.flush();
 		
-		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, etaloni.size()*1000/starpība);
-		System.out.printf("\nAnalīzes rezultāti: (pirmais/kandidāti)\n");
-		System.out.printf("\tViss pareizi:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_all_correct*100.0/etaloni.size(), (first_all_correct+any_all_correct)*100.0/etaloni.size(), first_all_correct, any_all_correct, etaloni.size()-first_all_correct-any_all_correct);
-        System.out.printf("\tLemma pareiza:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_lemma_correct*100.0/etaloni.size(), (first_lemma_correct+any_lemma_correct)*100.0/etaloni.size(), first_lemma_correct, any_lemma_correct, etaloni.size()-first_lemma_correct-any_lemma_correct);
-		System.out.printf("\tTags der:    \t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_compatible*100.0/etaloni.size(), (first_compatible+any_compatible)*100.0/etaloni.size(), first_compatible, any_compatible, etaloni.size()-first_compatible-any_compatible);
-		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etaloni.size(), wrong);
-		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etaloni.size(), not_recognized);
-        System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etaloni.size(), (any_pos_correct+first_pos_correct)*100.0/etaloni.size(), first_pos_correct, any_pos_correct, etaloni.size()-first_pos_correct-any_pos_correct);
-		System.out.printf("\nEtalons uz 2.202603.0 relīzi: Viss pareizi 79.7%%/97.1%%, Lemma pareiza 95.5%%/99.8%%, Tags der 81.5%%/99.5%%, Varianti neder 0.4%%\n");
-		System.out.printf("\nEtalons uz      2.5.0 relīzi: Viss pareizi 81.9%%/96.0%%, Lemma pareiza 96.7%%/99.6%%, Tags der 84.3%%/99.3%%, Nav vārdnīcā 2.1%%\n");
-		System.out.printf("\nEtalons uz      2.3.0 relīzi: Viss pareizi 80.4%%/96.2%%, Lemma pareiza 95.4%%/99.6%%, Tags der 82.6%%/99.3%%, Nav vārdnīcā 2.2%%\n");
-		System.out.printf("\nEtalons uz      2.2.8 relīzi: Viss pareizi 81.2%%/96.1%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.5%%/99.2%%, Nav vārdnīcā 2.1%%\n");
-//		System.out.printf("\nEtalons uz      2.2.7 relīzi: Viss pareizi 81.0%%/96.0%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.4%%/99.2%%, Nav vārdnīcā 2.2%%\n");
-//		System.out.printf("\nEtalons uz      2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
+		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", spentTime, etalons.size()* 1000L /spentTime);
+		System.out.print("\nAnalīzes rezultāti: (pirmais/kandidāti)\n");
+		System.out.printf("\tViss pareizi:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_all_correct*100.0/etalons.size(), (first_all_correct+any_all_correct)*100.0/etalons.size(), first_all_correct, any_all_correct, etalons.size()-first_all_correct-any_all_correct);
+        System.out.printf("\tLemma pareiza:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_lemma_correct*100.0/etalons.size(), (first_lemma_correct+any_lemma_correct)*100.0/etalons.size(), first_lemma_correct, any_lemma_correct, etalons.size()-first_lemma_correct-any_lemma_correct);
+		System.out.printf("\tTags der:    \t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_compatible*100.0/etalons.size(), (first_compatible+any_compatible)*100.0/etalons.size(), first_compatible, any_compatible, etalons.size()-first_compatible-any_compatible);
+		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etalons.size(), wrong);
+		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etalons.size(), not_recognized);
+        System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etalons.size(), (any_pos_correct+first_pos_correct)*100.0/etalons.size(), first_pos_correct, any_pos_correct, etalons.size()-first_pos_correct-any_pos_correct);
+		System.out.print("\nEtalons uz 2.202603.0 relīzi: Viss pareizi 79.7%%/97.1%%, Lemma pareiza 95.5%%/99.8%%, Tags der 81.5%%/99.5%%, Varianti neder 0.4%%\n");
+		System.out.print("\nEtalons uz      2.5.0 relīzi: Viss pareizi 81.9%%/96.0%%, Lemma pareiza 96.7%%/99.6%%, Tags der 84.3%%/99.3%%, Nav vārdnīcā 2.1%%\n");
+		System.out.print("\nEtalons uz      2.3.0 relīzi: Viss pareizi 80.4%%/96.2%%, Lemma pareiza 95.4%%/99.6%%, Tags der 82.6%%/99.3%%, Nav vārdnīcā 2.2%%\n");
+		System.out.print("\nEtalons uz      2.2.8 relīzi: Viss pareizi 81.2%%/96.1%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.5%%/99.2%%, Nav vārdnīcā 2.1%%\n");
+//		System.out.print("\nEtalons uz      2.2.7 relīzi: Viss pareizi 81.0%%/96.0%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.4%%/99.2%%, Nav vārdnīcā 2.2%%\n");
+//		System.out.print("\nEtalons uz      2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
 
 		
-		System.out.printf("\nStatistika:\n");
-		System.out.printf("\tKopā vārdlietojumi:\t\t\t%6d\n", etaloni.size());
-		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etaloni.size(), oov);
+		System.out.print("\nStatistika:\n");
+		System.out.printf("\tKopā vārdlietojumi:\t\t\t%6d\n", etalons.size());
+		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etalons.size(), oov);
 		System.out.printf("\tDaudznozīmīgi:\t\t%4.1f%%\t%6d\n", ambiguous*100.0/(unambiguous+ambiguous), ambiguous);
 		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%6d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
 		System.out.printf("\tViennozīmīga pamatforma:\t\t%4.1f%%\t%6d\n", unambiguous_lemma*100.0/(unambiguous+ambiguous), unambiguous_lemma);
@@ -318,7 +300,7 @@ public class MorphoEvaluate {
 		ieeja = new BufferedReader(
 				new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filename), "UTF-8"));
 		
-		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
+		LinkedList<Etalons> etaloni = new LinkedList<>();
 		
 		while ((rinda = ieeja.readLine()) != null) {
 			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.equalsIgnoreCase("<g />") || rinda.isEmpty()) continue;
@@ -335,7 +317,7 @@ public class MorphoEvaluate {
 		ieeja = new BufferedReader(
 				new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filename), "UTF-8"));
 		
-		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
+		LinkedList<Etalons> etaloni = new LinkedList<>();
 		
 		while ((rinda = ieeja.readLine()) != null) {
 			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
@@ -346,7 +328,7 @@ public class MorphoEvaluate {
 		return etaloni;	}
 
 
-	static class Etalons {
+	public static class Etalons {
 		String wordform;
 		String lemma;
 		String tag;

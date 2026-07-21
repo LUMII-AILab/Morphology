@@ -1,20 +1,3 @@
-/*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
- * 
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- * 
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
 import java.io.IOException;
@@ -38,39 +21,39 @@ import lv.semti.morphology.corpus.Statistics;
  * Morphologically analyzed token with potentially multiple variants of
  * analysis.
  * 
- * @author Pēteris Paikens
+ * @author Pēteris Paikensklons
  */
 public class Word extends Observable implements Cloneable{
 
 	private String token;
-	public ArrayList<Wordform> wordforms = new ArrayList<Wordform>();
+	public ArrayList<Wordform> wordforms = new ArrayList<>();
 	private Wordform correctWordform = null;
 
 	public Word (String token) {
 		this.token = token.trim();
-		this.wordforms = new ArrayList<Wordform>(1);
+		this.wordforms = new ArrayList<>(1);
 	}
 
 	public Word(Node node) {
-		if (node.getNodeName().equalsIgnoreCase("Vārds")) {
+		if (node.getNodeName().equalsIgnoreCase("Word")) {
 			NodeList nodes = node.getChildNodes();
 			for (int i = 0; i < nodes.getLength(); i++) {
 				Node n = nodes.item(i);
-				if (n.getNodeName().equalsIgnoreCase("Vārdforma"))
+				if (n.getNodeName().equalsIgnoreCase("Wordform"))
 					wordforms.add(new Wordform(n));
 			}
 
-			Node n = node.getAttributes().getNamedItem("vārds");
+			Node n = node.getAttributes().getNamedItem("Word");
 			if (n != null)
 				token = n.getTextContent();
-			n = node.getAttributes().getNamedItem("pareizāVārdforma");
+			n = node.getAttributes().getNamedItem("correctWordform");
 			if (n != null)
 				setCorrectWordform(wordforms.get(Integer.parseInt(n.getTextContent())));
 
-		} else if (node.getNodeName().equalsIgnoreCase("Vārdforma")) {
-			token = node.getAttributes().getNamedItem("vārds").getTextContent();
+		} else if (node.getNodeName().equalsIgnoreCase("Wordform")) {
+			token = node.getAttributes().getNamedItem("token").getTextContent();
 			wordforms.add(new Wordform(node));
-		} else throw new Error("Node " + node.getNodeName() + " nav ne Vārds, ne Vārdforma");
+		} else throw new Error("Node " + node.getNodeName() + " nav ne Word, ne Wordform");
 	}
 
 	@Override
@@ -81,18 +64,18 @@ public class Word extends Observable implements Cloneable{
 	@Override
 	public Object clone() {
 		try {
-			Word kopija = (Word)super.clone();
-			kopija.token = this.token;
-			kopija.wordforms = new ArrayList<Wordform>();
-			for (Wordform vārdforma : wordforms) {
-				Wordform klons = (Wordform) vārdforma.clone();
-				kopija.wordforms.add(klons);
-				if (this.getCorrectWordform() == vārdforma)
-					kopija.setCorrectWordform(klons);
+			Word wordCopy = (Word)super.clone();
+			wordCopy.token = this.token;
+			wordCopy.wordforms = new ArrayList<>();
+			for (Wordform wordform : wordforms) {
+				Wordform wordformCopy = (Wordform) wordform.clone();
+				wordCopy.wordforms.add(wordformCopy);
+				if (this.getCorrectWordform() == wordform)
+					wordCopy.setCorrectWordform(wordformCopy);
 			}
-			return kopija;
+			return wordCopy;
         } catch (CloneNotSupportedException e) {
-            throw new Error("Gļuks - nu vajag varēt klasi Vārds noklonēt.");
+            throw new Error("Gļuks - nu vajag varēt klasi Word noklonēt.");
         }
 	}
 	
@@ -143,7 +126,7 @@ public class Word extends Observable implements Cloneable{
 		} else {
 			if (wordforms.size() == 1) {
 				stream.println("\tVārds ir atpazīts viennozīmīgi.\n");
-				wordforms.get(0).describe(stream);
+				wordforms.getFirst().describe(stream);
 			} else {
 				stream.format("\tVārds ir atpazīts %d variantos%n", wordforms.size());
 				for (Wordform variants : wordforms) {
@@ -171,17 +154,16 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	/**
-	 * 	gets rid of those wordforms that match (weakly) the attributes provided. Destructive!
-	 * @param attributes
+	 * Gets rid of those wordforms that match (weakly) the attributes provided. Destructive!
 	 */
 	public void filterByAttributes(AttributeValues attributes) {
-		ArrayList<Wordform> derīgās = new ArrayList<Wordform>();
+		ArrayList<Wordform> matchedForms = new ArrayList<>();
 
-		for (Wordform vārdforma : wordforms) {
-			if (vārdforma.isMatchingWeak(attributes)) derīgās.add(vārdforma);
+		for (Wordform wordform : wordforms) {
+			if (wordform.isMatchingWeak(attributes)) matchedForms.add(wordform);
 		}
 
-		wordforms = derīgās;
+		wordforms = matchedForms;
 	}
 
 	public String getToken() {
@@ -194,7 +176,7 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	public void setCorrectWordform(Wordform wordform) {
-		if (wordforms.indexOf(wordform) == -1)
+		if (!wordforms.contains(wordform))
 			throw new Error(String.format("Vārdam %s mēģina uzlikt par pareizo svešu vārdformu %s.", token, wordform.getToken()));
 
 		correctWordform = wordform;
@@ -205,26 +187,26 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	public void toXML(Writer stream) throws IOException {
-		stream.write("<Vārds");
-		stream.write(" vārds=\"" + token.replace("\"", "&quot;") + "\"");
+		stream.write("<Word");
+		stream.write(" token=\"" + token.replace("\"", "&quot;") + "\"");
 		if (correctWordform != null)
-			stream.write(" pareizāVārdforma=\""+wordforms.indexOf(correctWordform)+"\"");
+			stream.write(" correctWordform=\""+wordforms.indexOf(correctWordform)+"\"");
 		stream.write(">\n");
-		for (Wordform vārdforma : wordforms) {
-			vārdforma.toXML(stream);
+		for (Wordform wordform : wordforms) {
+			wordform.toXML(stream);
 		}
-		stream.write("</Vārds>");
+		stream.write("</Word>");
 	}
 	
 	public String toJSON() {
 		Iterator<Wordform> i = wordforms.iterator();
-		String out = "[";
+		StringBuilder out = new StringBuilder("[");
 		while (i.hasNext()) {
-			out += i.next().toJSON();
-			if (i.hasNext()) out += ", ";
+			out.append(i.next().toJSON());
+			if (i.hasNext()) out.append(", ");
 		}
-		out += "]";
-		return out;
+		out.append("]");
+		return out.toString();
 	}
 	
 	public String toJSONsingle() {
@@ -239,13 +221,13 @@ public class Word extends Observable implements Cloneable{
 
 	public Wordform getBestWordform() {
 		if (wordforms.isEmpty()) return null;
-		Wordform maxwf = wordforms.get(0);
-		double maxticamība = -1;
+		Wordform maxwf = wordforms.getFirst();
+		double bestEstimate = -1;
 		for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 			//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 			double estimate = Statistics.getStatistics().getEstimate(wf);
-			if (estimate > maxticamība) {
-				maxticamība = estimate;
+			if (estimate > bestEstimate) {
+				bestEstimate = estimate;
 				maxwf = wf;
 			}
 		}
@@ -266,18 +248,16 @@ public class Word extends Observable implements Cloneable{
 			av.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Definite);
 		}
 
-		double maxticamība = -100;
+		double bestEstimate = -100;
 		for (Wordform wf : this.wordforms) {
 			if (wf.isMatchingWeak(av)) {
                 double estimate = Statistics.getStatistics().getEstimate(wf);
                 if (!wf.isMatchingWeak(original_av))
                     estimate -= 5;
-                if (estimate > maxticamība) {
-                    maxticamība = estimate;
+                if (estimate > bestEstimate) {
+                    bestEstimate = estimate;
                     result = wf;
                 }
-//				if (complain && result != null) 
-//					System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
             }
 		}
 		
@@ -307,19 +287,19 @@ public class Word extends Observable implements Cloneable{
 
 	public String toTabSep(boolean probabilities) { // Čakarīgs formāts postagera pitonam
 		if (isRecognized()) {
-			double sumTicamība = 0;
-			for (Wordform wf : wordforms) sumTicamība += Statistics.getStatistics().getEstimate(wf);
-			if (sumTicamība < 0.001) sumTicamība = 0.001;
+			double sumEstimate = 0;
+			for (Wordform wf : wordforms) sumEstimate += Statistics.getStatistics().getEstimate(wf);
+			if (sumEstimate < 0.001) sumEstimate = 0.001;
 			
 			Iterator<Wordform> i = wordforms.iterator();
-			String out = "";
+			StringBuilder out = new StringBuilder();
 			while (i.hasNext()) {
 				Wordform wf = i.next();
-				out += String.format("%s\t%s\t%s", wf.getToken(), wf.getTag(), wf.getValue(AttributeNames.i_Lemma));;
-				if (probabilities) out += String.format("\t%.5f", Statistics.getStatistics().getEstimate(wf)/sumTicamība);
-				if (i.hasNext()) out += "\t";
+				out.append(String.format("%s\t%s\t%s", wf.getToken(), wf.getTag(), wf.getValue(AttributeNames.i_Lemma)));
+				if (probabilities) out.append(String.format("\t%.5f", Statistics.getStatistics().getEstimate(wf) / sumEstimate));
+				if (i.hasNext()) out.append("\t");
 			}
-			return out;
+			return out.toString();
 		} else {
 			String out = String.format("%s\t-\t%s", getToken(), getToken());
 			if (probabilities) out += "\t1.0";
@@ -329,15 +309,12 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	/**
-	 *
-	 * @param attribute
-	 * @param value
-	 * @return Checks if any of the wordforms has this attribute with the specified value
+	 * Checks if any of the wordforms has this attribute with the specified value.
 	 */
 	public boolean hasAttribute(String attribute, String value){
 		boolean results = false;
-		for (Wordform vārdforma : wordforms)
-			if (vārdforma.isMatchingStrong(attribute, value)) results = true;
+		for (Wordform wordform : wordforms)
+			if (wordform.isMatchingStrong(attribute, value)) results = true;
 		return results;
 	}
 
