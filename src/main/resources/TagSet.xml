@@ -407,8 +407,8 @@
 	<Value LV="Nē" EN="No"/>
 </Attribute>
 
-<Attribute LV="Minēšana" EN="Derivation">
-	<Value LV="Nav" EN="From lexicon"/>
+<Attribute LV="Minēšana" EN="Guesswork">
+	<Value LV="Nav" EN="None"/>
 	<Value LV="Deminutīvu atvasināšana" EN="Deminutive derivation"/>
 	<Value LV="Priedēkļu atvasināšana" EN="Prefix derivation"/>
 	<Value LV="Minēšana pēc galotnes" EN="Guess based on endings"/>
