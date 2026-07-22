@@ -9,8 +9,15 @@ import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.corpus.ParadigmFrequencyComparator;
 import lv.semti.morphology.lexicon.*;
 
+/**
+ * Central class of morphological analyzer, performs both analysis and synthesis
+ * (inflecting). Analysis results can be cached for POS tagging speed, but by
+ * defaylt it is turned off.
+ * TODO: move caching functionality to a wrapper.
+ * TODO: move all guessing/analysis/inflection booleans to a separate new object.
+ * TODO 2: update analysis cache to contain information about these booleans.
+ */
 public class Analyzer extends Lexicon {
-
 	public boolean enablePrefixes = true;
 	public boolean searchCompoundWords = false;
 	public boolean enableGuessing = false;
@@ -26,6 +33,13 @@ public class Analyzer extends Lexicon {
 	public boolean removeRareWords = true;
 	public boolean removeRegionalWords = true; // Ignore regiona/dialect forms as they tend to produce unexpected overlap with forms of other common words
 
+	/**
+	 * If you want to speed up tool for POS tagging, turn on analysis result
+	 * caching with this variable.
+	 * *NB!* However, in such case you need to run `clearCache()` each time you
+	 * directly change guessing options booleans, it is not done automatically!
+	 */
+	public boolean enableAnalysisCache = false;
 
 	private final Pattern p_number = Pattern.compile("[\\d., ]*[\\d+⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉]([.,][-‐‑‒–—―])?");
 	private final Pattern p_ordinal = Pattern.compile("\\d+\\.");
@@ -36,7 +50,7 @@ public class Analyzer extends Lexicon {
 	private final Pattern p_letter = Pattern.compile("(\\p{L})"); // an isolated letter
 	private final Pattern p_url = Pattern.compile("((ht|f)tps?://)?[.\\w-]+\\.(lv|com|org|gov)(/[\\w\\d-@:?=&%.]*)?");
 		
-	private Cache<String, Word> wordCache = new Cache<>();
+	private final Cache<String, Word> wordCache = new Cache<>();
 
 
 	/**
@@ -93,6 +107,7 @@ public class Analyzer extends Lexicon {
 		guessInflexibleNouns = true;
         removeRareWords = true;
         removeRegionalWords = true;
+		clearCache();
 	}
 	
 	public void describe(PrintWriter pipe) {
@@ -101,7 +116,7 @@ public class Analyzer extends Lexicon {
 		pipe.format("enableDiminutive:\t%b\n", enableDiminutive);
 		pipe.format("enableVocative:\t%b\n", enableVocative);
 		pipe.format("enableAllGuesses:\t%b\n", enableAllGuesses);
-		pipe.format("meklētsalikteņus:\t%b\n", searchCompoundWords);
+		pipe.format("searchCompoundWords:\t%b\n", searchCompoundWords);
 		pipe.format("guessNouns:\t\t%b\n", guessNouns);
 		pipe.format("guessVerbs:\t\t%b\n", guessVerbs);
 		pipe.format("guessParticiples:\t%b\n", guessParticiples);
@@ -121,9 +136,11 @@ public class Analyzer extends Lexicon {
 	 */
 	public Word analyze(String word) {
 		word = word.trim();
-		
-		Word cacheWord = wordCache.get(word);
-		if (cacheWord != null) return (Word) cacheWord.clone();		
+
+		if (enableAnalysisCache) {
+			Word cacheWord = wordCache.get(word);
+			if (cacheWord != null) return (Word) cacheWord.clone();
+		}
 				
 		Word result = new Word(word);
 		if (!word.equals(word.toLowerCase().trim())) {
@@ -139,8 +156,9 @@ public class Analyzer extends Lexicon {
 		} else { 
 			result = analyzeLowercase(word, word);
 		}
-		
-		wordCache.put(word, (Word) result.clone());
+
+		if (enableAnalysisCache)
+			wordCache.put(word, (Word) result.clone());
 		return result;
 	}
 
@@ -630,10 +648,16 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 
+	/**
+	 * Setting size for analysis result cache, set 0 for turning off caching.
+	 */
 	public void setCacheSize (int maxSize) {
 		wordCache.setSize(maxSize);
 	}
-	
+
+	/**
+	 * Clear analysis result cache.
+	 */
 	public void clearCache () {
 		wordCache.clear();
 	}
