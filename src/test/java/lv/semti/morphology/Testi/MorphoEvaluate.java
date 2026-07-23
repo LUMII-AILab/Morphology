@@ -81,6 +81,7 @@ public class MorphoEvaluate {
 		long startTime = System.currentTimeMillis();
 		
 		analyzer.defaultSettings();
+		analyzer.enableAnalysisCache = true;
 		analyzer.enableGuessing = true;
 		analyzer.enableVocative = true;
 
@@ -266,7 +267,7 @@ public class MorphoEvaluate {
 		long spentTime = endTime - startTime;
 		out.flush();
 		
-		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", spentTime, etalons.size()* 1000L /spentTime);
+		System.out.printf("Etalona pārbaude (ar ieslēgtu ķešošanu): pagāja %d ms\n%d pieprasījumi sekundē\n", spentTime, etalons.size()* 1000L /spentTime);
 		System.out.print("\nAnalīzes rezultāti: (pirmais/kandidāti)\n");
 		System.out.printf("\tViss pareizi:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_all_correct*100.0/etalons.size(), (first_all_correct+any_all_correct)*100.0/etalons.size(), first_all_correct, any_all_correct, etalons.size()-first_all_correct-any_all_correct);
         System.out.printf("\tLemma pareiza:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_lemma_correct*100.0/etalons.size(), (first_lemma_correct+any_lemma_correct)*100.0/etalons.size(), first_lemma_correct, any_lemma_correct, etalons.size()-first_lemma_correct-any_lemma_correct);
