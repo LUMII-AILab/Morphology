@@ -374,26 +374,26 @@ public abstract class Mijas {
 						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"uš"));
 					break;
 				case 24: //  analoģiski case 2, bet ar pārāko / vispārāko pakāpi - visizsakošākais
-					String pakāpe = AttributeNames.v_Comparative;
+					String degree24 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vis")) {
-						pakāpe = AttributeNames.v_Superlative;
+						degree24 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					stemVariants.add(new StemVariant(resultStem +"ā", AttributeNames.i_Degree, pakāpe));
-					stemVariants.add(new StemVariant(resultStem +"ī", AttributeNames.i_Degree, pakāpe));
-					stemVariants.add(new StemVariant(resultStem +"ē", AttributeNames.i_Degree, pakāpe));
+					stemVariants.add(new StemVariant(resultStem +"ā", AttributeNames.i_Degree, degree24));
+					stemVariants.add(new StemVariant(resultStem +"ī", AttributeNames.i_Degree, degree24));
+					stemVariants.add(new StemVariant(resultStem +"ē", AttributeNames.i_Degree, degree24));
 					break;
 				case 25: // analoģiski #8, bet ar pārākajām pakāpēm priekš -amāks formām
-					pakāpe = AttributeNames.v_Comparative;
+					String degree25 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vis")) {
-						pakāpe = AttributeNames.v_Superlative;
+						degree25 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					if (resultStem.endsWith("inā") || resultStem.endsWith("sargā")) stemVariants.add(new StemVariant(resultStem, AttributeNames.i_Degree, pakāpe)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
-					if (resultStem.endsWith("ā")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ī", AttributeNames.i_Degree, pakāpe));
+					if (resultStem.endsWith("inā") || resultStem.endsWith("sargā")) stemVariants.add(new StemVariant(resultStem, AttributeNames.i_Degree, degree25)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
+					if (resultStem.endsWith("ā")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ī", AttributeNames.i_Degree, degree25));
 					else if (resultStem.endsWith("a")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ē", AttributeNames.i_Degree, pakāpe));
-						if (!resultStem.endsWith("ina") && !resultStem.endsWith("sarga")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ā", AttributeNames.i_Degree, pakāpe));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ē", AttributeNames.i_Degree, degree25));
+						if (!resultStem.endsWith("ina") && !resultStem.endsWith("sarga")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"ā", AttributeNames.i_Degree, degree25));
 					}
 					break;
 				case 26: //  dv. 3. konjugācijas miju gadījuma formas - otrās personas tagadne, pavēles izteiksme
@@ -437,40 +437,40 @@ public abstract class Mijas {
 					else if (resultStem.endsWith("vajag")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"dzē")); //vajadzēt -> vajag
 					break;
 				case 32: //  analoģiski case 20, bet ar pārāko / vispārāko pakāpi - visizsakošākais
-					pakāpe = AttributeNames.v_Comparative;
+					String degree32 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vis")) {
-						pakāpe = AttributeNames.v_Superlative;
+						degree32 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 
 					if (resultStem.endsWith("k") ) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "cī", AttributeNames.i_Degree, pakāpe)); //sacīt -> sakošākais
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"cē", AttributeNames.i_Degree, pakāpe)); //mācēt -> mākošākais
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "cī", AttributeNames.i_Degree, degree32)); //sacīt -> sakošākais
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"cē", AttributeNames.i_Degree, degree32)); //mācēt -> mākošākais
 					} else if (resultStem.endsWith("g")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzī", AttributeNames.i_Degree, pakāpe)); //slodzīt -> slogošākais
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzē", AttributeNames.i_Degree, pakāpe)); //vajadzēt -> vajagošākais
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzī", AttributeNames.i_Degree, degree32)); //slodzīt -> slogošākais
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzē", AttributeNames.i_Degree, degree32)); //vajadzēt -> vajagošākais
 					} else if (resultStem.endsWith("ž") ) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dē", AttributeNames.i_Degree, pakāpe)); //sēdēt -> sēžu
-					} else if (resultStem.endsWith("ļ")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"lē", AttributeNames.i_Degree, pakāpe)); //gulēt -> guļošākais un arī gulošākais
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dē", AttributeNames.i_Degree, degree32)); //sēdēt -> sēžu
+					} else if (resultStem.endsWith("ļ")) stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-1)+"lē", AttributeNames.i_Degree, degree32)); //gulēt -> guļošākais un arī gulošākais
 					break;
 				case 33: // analoģiski #27, bet ar pārākajām pakāpēm priekš -amāks formām
-					pakāpe = AttributeNames.v_Comparative;
+					String degree33 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vis")) {
-						pakāpe = AttributeNames.v_Superlative;
+						degree33 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 					if (resultStem.endsWith("kā"))
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"cī", AttributeNames.i_Degree, pakāpe)); //sacīt
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"cī", AttributeNames.i_Degree, degree33)); //sacīt
 					else if (resultStem.endsWith("gā"))
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dzī", AttributeNames.i_Degree, pakāpe)); //slodzīt -> slogu
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dzī", AttributeNames.i_Degree, degree33)); //slodzīt -> slogu
 					else if (resultStem.endsWith("ka"))
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"cē", AttributeNames.i_Degree, pakāpe)); //mācēt -> mākam
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"cē", AttributeNames.i_Degree, degree33)); //mācēt -> mākam
 					else if (resultStem.endsWith("ga"))
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dzē", AttributeNames.i_Degree, pakāpe)); //vajadzēt -> vajag
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dzē", AttributeNames.i_Degree, degree33)); //vajadzēt -> vajag
 					else if (resultStem.endsWith("ža") )
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dē", AttributeNames.i_Degree, pakāpe)); //sēdēt -> sēžam
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"dē", AttributeNames.i_Degree, degree33)); //sēdēt -> sēžam
 					else if (resultStem.endsWith("guļa"))
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"lē", AttributeNames.i_Degree, pakāpe)); //gulēt -> guļam
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length()-2)+"lē", AttributeNames.i_Degree, degree33)); //gulēt -> guļam
 					break;
 				case 34: // īpašības vārdiem -āk- un vis- izskaņām kā -ajam: liekam nevis zaļ-š->zaļ-ajam, bet zaļ-š->zaļ-a-jam, bet pēdēj-ais -> pēdē-jam/pēdēj-a-jam
 					if (resultStem.endsWith("āka") && resultStem.length() > 4) {
@@ -732,36 +732,36 @@ public abstract class Mijas {
 					}
 					break;
 				case 115: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + tagadnes mija (110.)
-					String degree = AttributeNames.v_Comparative;
+					String degree115 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree115 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree115 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 
 					if (resultStem.endsWith("e")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ei", ltgDegreeFlags(degree)));
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ē", ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ei", ltgDegreeFlags(degree115)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ē", ltgDegreeFlags(degree115)));
 					} else if (resultStem.endsWith("o")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "uo", ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "uo", ltgDegreeFlags(degree115)));
 					}
 					break;
 				case 116: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + vēlējuma/supīna mija (114.) (-ts divdabim)
-					degree = AttributeNames.v_Comparative;
+					String degree116 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree116 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree116 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 
 					if (resultStem.endsWith("ā")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ē", ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ē", ltgDegreeFlags(degree116)));
 					} else if (resultStem.endsWith("uo") || resultStem.endsWith("ei")) {
-						stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree116)));
 					}
 					break;
 				case 117:  // 2. konjugācija, pagātnes mija -s, -use divdabim (vienkāršota 111.)
@@ -774,47 +774,47 @@ public abstract class Mijas {
 					}
 					break;
 				case 118: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + pag. mija -s, -use divdabim (117.)
-					degree = AttributeNames.v_Comparative;
+					String degree118 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree118 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree118 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 
 					if (resultStem.endsWith("ie")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ē", ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ē", ltgDegreeFlags(degree118)));
 					} else if (resultStem.endsWith("e")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ie", ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "ie", ltgDegreeFlags(degree118)));
 					} else if (resultStem.endsWith("uo")) {
-						stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree118)));
 					}
 					break;
 				case 119: // 3. konjugācija, standarta -eit, tagadne un pagātne (līdzskaņu mijas nekad nav)
 					stemVariants.add(new StemVariant(resultStem + "ei", "Mija", "ei -> "));
 					break;
 				case 120: // 3. konjugācija, standarta -eit bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
-					degree = AttributeNames.v_Comparative;
+					String degree120 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree120 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree120 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					stemVariants.add(new StemVariant(resultStem + "ei", ltgDegreeFlags(degree)));
+					stemVariants.add(new StemVariant(resultStem + "ei", ltgDegreeFlags(degree120)));
 					break;
 				case 121: // 3. konjugācija, divdabju formu vispārākā pakāpe bez mijas
-					degree = AttributeNames.v_Comparative;
+					String degree121 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree121 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree121 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree)));
+					stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree121)));
 					break;
 				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
 					String changedStem122 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
@@ -822,17 +822,17 @@ public abstract class Mijas {
 						stemVariants.add(new StemVariant(changedStem122, "Mija", "122"));
 					break;
 				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
-					degree = AttributeNames.v_Comparative;
+					String degree123 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree123 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree123 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
 					String changedStem123 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
 					if (changedStem123 != null)
-						stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(degree)));
+						stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(degree123)));
 					break;
 				case 124: // 3. konjugācija, standarta -ēt, tagadne un pagātne bez līdskaņu un burtu mijas
 					stemVariants.add(new StemVariant(resultStem + "ē", "Mija", "ē -> "));
@@ -841,26 +841,26 @@ public abstract class Mijas {
 					stemVariants.add(new StemVariant(ltgLetterMijaSoftToHard(resultStem) + "ē", "Mija", "ē -> "));
 					break;
 				case 126: // 3. konjugācija, standarta -ēt bez līdskaņu un burtu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
-					degree = AttributeNames.v_Comparative;
+					String degree126 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree126 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree126 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					stemVariants.add(new StemVariant(resultStem + "ē", ltgDegreeFlags(degree)));
+					stemVariants.add(new StemVariant(resultStem + "ē", ltgDegreeFlags(degree126)));
 					break;
 				case 127: // 3. konjugācija, standarta -ēt bez līdskaņu mijas ar inverso burtu miju, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
-					degree = AttributeNames.v_Comparative;
+					String degree127 = AttributeNames.v_Comparative;
 					if (resultStem.startsWith("vysu")) {
-						degree = AttributeNames.v_Superlative;
+						degree127 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(4);
 					} else if (resultStem.startsWith("vys")) {
-						degree = AttributeNames.v_Superlative;
+						degree127 = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-					stemVariants.add(new StemVariant(ltgLetterMijaSoftToHard(resultStem) + "ē", ltgDegreeFlags(degree)));
+					stemVariants.add(new StemVariant(ltgLetterMijaSoftToHard(resultStem) + "ē", ltgDegreeFlags(degree127)));
 					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);
@@ -917,8 +917,8 @@ public abstract class Mijas {
 			if (!isFound) { //debuginfo.
 				// FIXME - šo principā vajadzētu realizēt kā karodziņu - ka ieliekam Variant klasē zīmi, ka šis ir neiesakāms, un tad nebrīnamies, ja ģenerācija to neiedod; vai arī lai ģenerācija dod tos variantus ar tādu karodziņu un tad šeit tos ieraugam
 				System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, stemVariant.stem);
-				for (StemVariant locītais : backwardsMijaApplied) {
-					System.err.printf("\t'%s'\n", locītais.stem);
+				for (StemVariant inflected : backwardsMijaApplied) {
+					System.err.printf("\t'%s'\n", inflected.stem);
 				}
 			}
 			return true;
