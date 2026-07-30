@@ -862,6 +862,11 @@ public abstract class Mijas {
 					}
 					stemVariants.add(new StemVariant(ltgLetterMijaSoftToHard(resultStem) + "ē", ltgDegreeFlags(degree127)));
 					break;
+				case 128: // 3. konjugācija, standarta -ēt, tagadne ar līdzskaņu miju
+					String changedStem128 = ltgVerbConsonantMijaHardToSoft(resultStem, "ē");
+					if (changedStem128 != null)
+						stemVariants.add(new StemVariant(changedStem128, "Mija", "128"));
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);
 			}
@@ -1732,6 +1737,11 @@ public abstract class Mijas {
 							stemVariants.add(new StemVariant("vysu" + changedStem127, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
+					break;
+				case 128: // 3. konjugācija, standarta -ēt ar līdzskaņu miju, bez patskaņu mijas, tagadne
+					String changedStem128 = ltgVerbConsonantMijaSoftToHard(resultStem, "ē");
+					if (changedStem128 != null)
+						stemVariants.add(new StemVariant(changedStem128));
 					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);

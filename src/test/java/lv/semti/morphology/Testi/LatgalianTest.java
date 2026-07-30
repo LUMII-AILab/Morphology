@@ -924,9 +924,10 @@ public class LatgalianTest {
 		List<Wordform> gulēt = analyzer.generateInflectionsFromParadigm("gulēt", 50);
 		List<Wordform> ticēt = analyzer.generateInflectionsFromParadigm("ticēt", 51);
 		List<Wordform> svinēt = analyzer.generateInflectionsFromParadigm("svinēt", 51);
+		List<Wordform> muocēt = analyzer.generateInflectionsFromParadigm("muocēt", 52);
 
 		// Īstenības izteiksme
-		// Tagadne: 124., 125., 166. mija
+		// Tagadne: 124., 125., 128.,  166. mija
 		AttributeValues ind_pres_1_sg = new AttributeValues();
 		ind_pres_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		ind_pres_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
@@ -936,6 +937,7 @@ public class LatgalianTest {
 		assertInflection(gulēt, ind_pres_1_sg, "guļu");
 		assertInflection(ticēt, ind_pres_1_sg, "tycu");
 		assertInflection(svinēt, ind_pres_1_sg, "svynu");
+		assertInflection(muocēt, ind_pres_1_sg, "muoku");
 
 		AttributeValues ind_pres_2_sg = new AttributeValues();
 		ind_pres_2_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -946,6 +948,7 @@ public class LatgalianTest {
 		assertInflection(gulēt, ind_pres_2_sg, "guli");
 		assertInflection(ticēt, ind_pres_2_sg, "tici");
 		assertInflection(svinēt, ind_pres_2_sg, "svini");
+		assertInflection(muocēt, ind_pres_2_sg, "muoki");
 
 		AttributeValues ind_pres_3 = new AttributeValues();
 		ind_pres_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -955,15 +958,17 @@ public class LatgalianTest {
 		assertInflection(gulēt, ind_pres_3, "guļ");
 		assertInflection(ticēt, ind_pres_3, "tic");
 		assertInflection(svinēt, ind_pres_3, "sviņ");
+		assertInflection(muocēt, ind_pres_3, "muok");
 
 		// Citas izteiksmes
 		// Pavēles: 124. mija
 		AttributeValues imp = new AttributeValues();
 		imp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		imp.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Imperative);
-		assertInflectionMultipleWeak(gulēt, imp, new HashSet<String>(){{ add("guli"); add("gulit");}});
-		assertInflectionMultipleWeak(ticēt, imp, new HashSet<String>(){{ add("tici"); add("ticit");}});
-		assertInflectionMultipleWeak(svinēt, imp, new HashSet<String>(){{ add("svini"); add("svinit");}});
+		assertInflectionMultipleWeak(gulēt, imp, new HashSet<>(){{ add("guli"); add("gulit");}});
+		assertInflectionMultipleWeak(ticēt, imp, new HashSet<>(){{ add("tici"); add("ticit");}});
+		assertInflectionMultipleWeak(svinēt, imp, new HashSet<>(){{ add("svini"); add("svinit");}});
+		assertInflectionMultipleWeak(muocēt, imp, new HashSet<>(){{ add("muoki"); add("muokit");}});
 
 		// Vajadzības: 153. mija
 		AttributeValues deb = new AttributeValues();
