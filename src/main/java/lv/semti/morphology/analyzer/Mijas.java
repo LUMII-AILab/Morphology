@@ -3,7 +3,6 @@ package lv.semti.morphology.analyzer;
 import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -818,19 +817,9 @@ public abstract class Mijas {
 					stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree)));
 					break;
 				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
-					if (resultStem.endsWith("ld")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ļdei", "Mija", "ļdei -> ld"));
-					} else if (resultStem.endsWith("nd")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ņdei", "Mija", "ņdei -> nd"));
-					} else if (resultStem.endsWith("g")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzei", "Mija", "dzei -> g"));
-					} else if (resultStem.endsWith("k")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "cei", "Mija", "cei -> k"));
-					} else if (resultStem.endsWith("ļ")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "lei", "Mija", "lei -> ļ"));
-					} else if (resultStem.endsWith("ņ")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "nei", "Mija", "nei -> ņ"));
-					}
+					String changedStem122 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
+					if (changedStem122 != null)
+						stemVariants.add(new StemVariant(changedStem122, "Mija", "122"));
 					break;
 				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
 					degree = AttributeNames.v_Comparative;
@@ -841,20 +830,9 @@ public abstract class Mijas {
 						degree = AttributeNames.v_Superlative;
 						resultStem = resultStem.substring(3);
 					}
-
-					if (resultStem.endsWith("ld")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ļdei", ltgDegreeFlags(degree)));
-					} else if (resultStem.endsWith("nd")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 2) + "ņdei", ltgDegreeFlags(degree)));
-					} else if (resultStem.endsWith("g")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "dzei", ltgDegreeFlags(degree)));
-					} else if (resultStem.endsWith("k")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "cei", ltgDegreeFlags(degree)));
-					} else if (resultStem.endsWith("ļ")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "lei", ltgDegreeFlags(degree)));
-					} else if (resultStem.endsWith("ņ")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 1) + "nei", ltgDegreeFlags(degree)));
-					}
+					String changedStem123 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
+					if (changedStem123 != null)
+						stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(degree)));
 					break;
 				case 124: // 3. konjugācija, standarta -ēt, tagadne un pagātne bez līdskaņu un burtu mijas
 					stemVariants.add(new StemVariant(resultStem + "ē", "Mija", "ē -> "));
@@ -888,13 +866,9 @@ public abstract class Mijas {
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){
-			try {
-				new PrintStream(System.err, true, "UTF-8").printf(
-						"StringIndexOutOfBounds, resultStem '%s', mija %d\n", stem, stemChange);
-				e.printStackTrace();
-			} catch (UnsupportedEncodingException e1) {
-				e1.printStackTrace();
-			}
+			new PrintStream(System.err, true, StandardCharsets.UTF_8).printf(
+					"StringIndexOutOfBounds, resultStem '%s', mija %d\n", stem, stemChange);
+			e.printStackTrace();
 		}
 
 		return stemVariants;
@@ -1716,40 +1690,17 @@ public abstract class Mijas {
 					}
 					break;
 				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
-					if (resultStem.endsWith("ļdei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 4) + "ld"));
-					} else if (resultStem.endsWith("ņdei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 4) + "nd"));
-					} else if (resultStem.endsWith("dzei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 4) + "g"));
-					} else if (resultStem.endsWith("cei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 3) + "k"));
-					} else if (resultStem.endsWith("lei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 3) + "ļ"));
-					} else if (resultStem.endsWith("nei")) {
-						stemVariants.add(new StemVariant(resultStem.substring(0, resultStem.length() - 3) + "ņ"));
-					}
+					String changedStem122 = ltgVerbConsonantMijaSoftToHard(resultStem, "ei");
+					if (changedStem122 != null)
+						stemVariants.add(new StemVariant(changedStem122));
 					break;
 				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
-					String atvCelms = resultStem;
-					if (resultStem.endsWith("ļdei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 4) + "ld";
-					} else if (resultStem.endsWith("ņdei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 4) + "nd";
-					} else if (resultStem.endsWith("dzei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 4) + "g";
-					} else if (resultStem.endsWith("cei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 3) + "k";
-					} else if (resultStem.endsWith("lei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 3) + "ļ";
-					} else if (resultStem.endsWith("nei")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 3) + "ņ";
-					} else break;
-
-					stemVariants.add(new StemVariant(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
+					String changedStem123 = ltgVerbConsonantMijaSoftToHard(resultStem, "ei");
+					if (changedStem123 == null) break;
+					stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (addSuperlative) {
-						stemVariants.add(new StemVariant("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
-						stemVariants.add(new StemVariant("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+						stemVariants.add(new StemVariant("vys" + changedStem123, ltgDegreeFlags(AttributeNames.v_Superlative)));
+						stemVariants.add(new StemVariant("vysu" + changedStem123, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
 				case 124: // 3. konjugācija, standarta -ēt, tagadne un pagātne bez līdzskaņu un burtu mijas
@@ -1764,21 +1715,21 @@ public abstract class Mijas {
 					break;
 				case 126: // 3. konjugācija, standarta -ēt bez līdskaņu un burtu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
 					if (resultStem.endsWith("ē")) {
-						atvCelms = resultStem.substring(0, resultStem.length() - 1);
-						stemVariants.add(new StemVariant(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
+						String changedStem126 = resultStem.substring(0, resultStem.length() - 1);
+						stemVariants.add(new StemVariant(changedStem126, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (addSuperlative) {
-							stemVariants.add(new StemVariant("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
-							stemVariants.add(new StemVariant("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							stemVariants.add(new StemVariant("vys" + changedStem126, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							stemVariants.add(new StemVariant("vysu" + changedStem126, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 127: // 3. konjugācija, standarta -ēt bez līdskaņu mijas ar inverso burtu miju, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
 					if (resultStem.endsWith("ē")) {
-						atvCelms = ltgLetterMijaHardToSoftUnambiguous(resultStem.substring(0, resultStem.length() - 1));
-						stemVariants.add(new StemVariant(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
+						String changedStem127 = ltgLetterMijaHardToSoftUnambiguous(resultStem.substring(0, resultStem.length() - 1));
+						stemVariants.add(new StemVariant(changedStem127, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (addSuperlative) {
-							stemVariants.add(new StemVariant("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
-							stemVariants.add(new StemVariant("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							stemVariants.add(new StemVariant("vys" + changedStem127, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							stemVariants.add(new StemVariant("vysu" + changedStem127, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
@@ -1794,10 +1745,10 @@ public abstract class Mijas {
 		return stemVariants;
 	}
 
-	protected static String ltgVowelMijaLemmaToForm(String celms)
+	protected static String ltgVowelMijaLemmaToForm(String stem)
 	{
 		Pattern p = Pattern.compile("(.*?)(ai|ei|ui|oi|ie|[aāeēiīouūy])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
-		Matcher m = p.matcher(celms);
+		Matcher m = p.matcher(stem);
 		if (m.matches()) {
 			switch (m.group(2)) {
 				case "a":
@@ -1809,16 +1760,16 @@ public abstract class Mijas {
 				case "i":
 					return m.group(1) + 'y' + m.group(3);
 				default:
-					return celms;
+					return stem;
 			}
 		}
-		return celms;
+		return stem;
 	}
 
-	protected static String ltgVowelMijaFormToLemma(String celms)
+	protected static String ltgVowelMijaFormToLemma(String stem)
 	{
 		Pattern p = Pattern.compile("(.*?)(uo|[aāeēiīouūy]|)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
-		Matcher m = p.matcher(celms);
+		Matcher m = p.matcher(stem);
 		if (m.matches()) {
 			switch (m.group(2)) {
 				case "a":
@@ -1830,10 +1781,56 @@ public abstract class Mijas {
 				case "o":
 					return m.group(1) + 'a' + m.group(3);
 				default:
-					return celms;
+					return stem;
 			}
 		}
-		return celms;
+		return stem;
+	}
+
+	/**
+	 * Latgalian 2nd and 3rd conjugation consonant change, usually for lemma to
+	 * form direction. Returning null is important to notify that mija actually
+	 * applies.
+	 */
+	protected static String ltgVerbConsonantMijaSoftToHard(String stem, String inputSuffix)
+	{
+		if (inputSuffix == null) inputSuffix = "";
+		if (stem.endsWith("ļd" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "ld";
+		} else if (stem.endsWith("ņd" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "nd";
+		} else if (stem.endsWith("dz" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "g";
+		} else if (stem.endsWith("c" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "k";
+		} else if (stem.endsWith("l" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ļ";
+		} else if (stem.endsWith("n" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ņ";
+		} else return null;
+	}
+
+	/**
+	 * Latgalian 2nd and 3rd conjugation consonant change, usually for form to
+	 * lemma direction. Returning null is important to notify that mija actually
+	 * applies.
+	 */
+	protected static String ltgVerbConsonantMijaHardToSoft(String stem, String outputSufix)
+	{
+		if (outputSufix == null) outputSufix = "";
+		if (stem.endsWith("ld"))
+			return stem.substring(0, stem.length() - 2) + "ļd" + outputSufix;
+		else if (stem.endsWith("nd"))
+			return stem.substring(0, stem.length() - 2) + "ņd" + outputSufix;
+		else if (stem.endsWith("g"))
+			return stem.substring(0, stem.length() - 1) + "dz" + outputSufix;
+		else if (stem.endsWith("k"))
+			return stem.substring(0, stem.length() - 1) + "c" + outputSufix;
+		else if (stem.endsWith("ļ"))
+			return stem.substring(0, stem.length() - 1) + "l" + outputSufix;
+		else if (stem.endsWith("ņ"))
+			return stem.substring(0, stem.length() - 1) + "n" + outputSufix;
+		else return null;
 	}
 
 	/**
