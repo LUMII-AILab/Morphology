@@ -22,11 +22,11 @@ public class Wordform extends AttributeValues implements Serializable{
 	private transient Ending ending;
 	public transient Lexeme lexeme;
 		
-	public Wordform (String token, Lexeme lexeme, Ending ending) {
-	    this(token, lexeme, ending, null);
+	public Wordform (String token, Lexeme lexeme, Ending ending, Lexicon.Prefixes prefixes) {
+	    this(token, lexeme, ending, prefixes, null);
 	}
 
-	public Wordform(String token, Lexeme lexeme, Ending ending, String originalWord) {
+	public Wordform(String token, Lexeme lexeme, Ending ending, Lexicon.Prefixes prefixes, String originalWord) {
 		this.token = token;
 		this.lexeme = lexeme;
 		this.ending = ending;
@@ -72,7 +72,7 @@ public class Wordform extends AttributeValues implements Serializable{
 			ArrayList<StemVariant> stemsWithChanges = new ArrayList<>();
 			if (stem != null && !stem.isEmpty())
 				stemsWithChanges = Mijas.applyLemmaToFormMija(
-					stem, lemmaEnding.getMija(), thirdStem, false,
+					stem, lemmaEnding.getMija(), thirdStem, prefixes, false,
 					this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
 			
 			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.getFirst().stem; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri

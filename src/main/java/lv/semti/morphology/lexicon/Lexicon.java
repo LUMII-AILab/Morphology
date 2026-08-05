@@ -36,10 +36,7 @@ public class Lexicon {
 	public static int proper_name_frequency_floor = 2; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
-	protected String NEGATION_PREFIX = "ne";
-	protected String DEBITIVE_PREFIX = "jā";
-	// TODO this must be list due to Latgalian need for "vys" and "vysu".
-	protected String SUPERLATIVE_PREFIX = "vis";
+	protected Prefixes prefixes = new Prefixes();
 
 	public String getRevision() {
 		return revision;
@@ -50,7 +47,6 @@ public class Lexicon {
 	
 	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam, vajag tikai read-only iterēt
 	private AllEndings allEndings = null;
-	protected ArrayList<String> prefixes;
 	private ArrayList<String> corpusFileNames = new ArrayList<>();
 
 	// Vārdu lielo/mazo burtu nošķiršana
@@ -186,7 +182,6 @@ public class Lexicon {
 
 		NodeList nodes = node.getChildNodes();
 
-		prefixes = new ArrayList<>();
 		paradigms = new ArrayList<>();
 
 		for (int i = 0; i < nodes.getLength(); i++) {
@@ -202,6 +197,8 @@ public class Lexicon {
 					corpusFileNames.add(corpusFileName.getTextContent());
 			}
 			if (nodes.item(i).getNodeName().equals("Prefixes")) {
+				prefixes.emptySuperlatives();
+				prefixes.emptyVerbPrefs();
 				this.loadPrefixes(nodes.item(i));
 			}
 		}
@@ -237,16 +234,21 @@ public class Lexicon {
 		NodeList nodes = node.getChildNodes();
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Negation")) {
-				this.NEGATION_PREFIX = nodes.item(i).getTextContent();
+				this.prefixes.NEGATION_PREFIX = nodes.item(i).getTextContent();
+				// Prefix guessing algorithm already assumes that negation
+				// prefix will be duplicated in verb prefix data, (without it
+				// negative forms are not made correctly), so it is confusing
+				// to require them duplicated in lexicon.
+				this.prefixes.VERB_PREFIXES.add(nodes.item(i).getTextContent());
 			}
 			if (nodes.item(i).getNodeName().equals("Superlative")) {
-				this.SUPERLATIVE_PREFIX = nodes.item(i).getTextContent();
+				this.prefixes.SUPERLATIVE_PREFIXES.add(nodes.item(i).getTextContent());
 			}
 			if (nodes.item(i).getNodeName().equals("Debitive")) {
-				this.DEBITIVE_PREFIX = nodes.item(i).getTextContent();
+				this.prefixes.DEBITIVE_PREFIX = nodes.item(i).getTextContent();
 			}
 			if (nodes.item(i).getNodeName().equals("VerbPrefix")) {
-				this.prefixes.add(nodes.item(i).getTextContent());
+				this.prefixes.VERB_PREFIXES.add(nodes.item(i).getTextContent());
 			}
 		}
 	}
@@ -465,7 +467,7 @@ public class Lexicon {
 			stem = ending.stem(word.toLowerCase());
 			int mija = ending.getMija();
 			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
-				ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, mija, word.matches("\\p{Lu}.*"));
+				ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, mija, word.matches("\\p{Lu}.*"), this.prefixes);
 				if (stems.isEmpty()) return null; // acīmredzot neder ar miju
 				// FIXME ! Nevajadzētu te būt iespējai uz null!
 				stem = stems.getFirst().stem;
@@ -579,6 +581,39 @@ public class Lexicon {
 						+ word.substring(dash + 2);
 		}
 		return word;
+	}
+
+	public static class Prefixes
+	{
+		private final Comparator<String> prefixOrderer =
+				(s1, s2) -> {
+						if (s1.length() > s2.length()) return -1;
+						else if (s1.length() < s2.length()) return 1;
+						else return s1.compareTo(s2); };
+		public String NEGATION_PREFIX = "ne";
+		public String DEBITIVE_PREFIX = "jā";
+		/**
+		 * Superlative prefixes are sorted by length in a decreasing order so
+		 * that for-each though them will always start with the longer one.
+		 */
+		public SortedSet<String> SUPERLATIVE_PREFIXES =
+				new TreeSet<>(prefixOrderer){{add("vis");}};
+		/**
+		 * Verb derivation prefixes are sorted by length in a decreasing order
+		 * so that for-each though them will always start with the longer one.
+		 */
+		public SortedSet<String> VERB_PREFIXES =
+				new TreeSet<>(prefixOrderer);
+
+		public void emptySuperlatives()
+		{
+			SUPERLATIVE_PREFIXES = new TreeSet<>(prefixOrderer);
+		}
+
+		public void emptyVerbPrefs()
+		{
+			VERB_PREFIXES = new TreeSet<>(prefixOrderer);
+		}
 	}
 
 }

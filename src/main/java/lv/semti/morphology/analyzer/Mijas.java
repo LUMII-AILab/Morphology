@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
+import lv.semti.morphology.lexicon.Lexicon;
 
 
 /**
@@ -28,7 +29,7 @@ public abstract class Mijas {
 	 * Procedure who actually does all the stem changes to get lemma form any
 	 * given form: consonant changes, verbs forms, devitives, superlatives, etc.
 	 */
-	public static ArrayList<StemVariant> applyFormToLemmaMija(String stem, int stemChange, boolean properName) {
+	public static ArrayList<StemVariant> applyFormToLemmaMija(String stem, int stemChange, boolean properName, Lexicon.Prefixes prefixes) {
 		// TODO - iznest 'stemVariants.add(new Variants(... kā miniprocedūriņu.
 		// TODO - iekļaut galotnē(?) kā metodi
 
@@ -41,75 +42,75 @@ public abstract class Mijas {
 		try {
 			switch (stemChange) { //TODO - uz normālāku struktūru
 				case 4: // vajadzības izteiksmes jā-
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 0;
 					} else return stemVariants;
 					break;
 				case 5: // vajadzības izteiksme 3. konjugācijai bez mijas
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 9;
 					} else return stemVariants;
 					break;
 				case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai bez mijas
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 8;
 					} else return stemVariants;
 					break;
 				case 19: // vajadzības_vēlējuma izteiksme 3. konjugācijai bez mijas (jāmācot)
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 2;
 					} else return stemVariants;
 					break;
 				case 28: // vajadzības_vēlējuma izteiksme 3. konjugācijai ar miju (jāmākot)
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 20;
 					} else return stemVariants;
 					break;
 				case 29: // vajadzības izteiksme 3. konjugācijai atgriezeniskai ar miju
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 27;
 					} else return stemVariants;
 					break;
 				case 31: // vajadzības izteiksme 3. konjugācijai ar miju
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 30;
 					} else return stemVariants;
 					break;
 				case 37: // vajadzības izteiksme 1. konjugācijai ar miju (jāiet)
-					if (stem.startsWith("jā") && stem.length() >= 4) {
-						resultStem = stem.substring(2);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 36;
 					} else return stemVariants;
 					break;
 				// latgalieši
 				case 150: // vajadzības izteiksme 2. konjugācijai
-					if (stem.startsWith("juo") && stem.length() >= 5) {
-						resultStem = stem.substring(3);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 110;
 					} else return stemVariants;
 					break;
 				case 151: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju bez līdzskaņu mijas
-					if (stem.startsWith("juo") && stem.length() >= 5) {
-						resultStem = ltgVowelMijaFormToLemma(stem.substring(3));
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 119;
 					} else return stemVariants;
 					break;
 				case 152: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju ar līdzskaņu miju
-					if (stem.startsWith("juo") && stem.length() >= 5) {
-						resultStem = ltgVowelMijaFormToLemma(stem.substring(3));
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 122;
 					} else return stemVariants;
 					break;
 				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar burtu miju bez līdzskaņu un patskaņu mijas
-					if (stem.startsWith("juo") && stem.length() >= 5) {
-						resultStem = stem.substring(3);
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
 						mija = 125;
 					} else return stemVariants;
 					break;
@@ -887,7 +888,7 @@ public abstract class Mijas {
 	 * symmetric.
 	 */
 	public static boolean backwardsVerification(
-			StemVariant stemVariant, String stem, int stemChange, String thirdStem, boolean properName) {
+			StemVariant stemVariant, String stem, int stemChange, String thirdStem, Lexicon.Prefixes prefixes, boolean properName) {
 		// Verifikācija, vai variantu izlokot tiešām sanāk tas kas vajag.
 
 		if (Arrays.asList(18,20,34,35).contains(stemChange)) {
@@ -899,7 +900,7 @@ public abstract class Mijas {
 
 		if (stemChange == 6 && thirdStem.endsWith("ī")) thirdStem = thirdStem.substring(0, thirdStem.length()-1);
 		ArrayList<StemVariant> backwardsMijaApplied = applyLemmaToFormMija(
-				stemVariant.stem, stemChange, thirdStem, stemVariant.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative), properName);
+				stemVariant.stem, stemChange, thirdStem, prefixes, stemVariant.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative), properName);
 		boolean isFound = false;
 		for (StemVariant variant : backwardsMijaApplied) {
 			if (variant.stem.equalsIgnoreCase(stem))
@@ -913,7 +914,7 @@ public abstract class Mijas {
 			if (stemChange == 7 && stemVariant.stem.endsWith("dod")) return true; // izņēmums, ka "dodi" atpazīst bet neģenerē
 			if (properName) {
 				// pie atpazīšanas properName var būt nepareizs, jo lielie burti ir arī citos gadījumos - teikuma sākumā utt
-				return backwardsVerification(stemVariant, stem, stemChange, thirdStem, false);
+				return backwardsVerification(stemVariant, stem, stemChange, thirdStem, prefixes, false);
 			}
 
 			// System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
@@ -949,7 +950,7 @@ public abstract class Mijas {
 	 * @return list with variants - FIXME - principā vajadzētu būt vienam; izņēmums ir pārākās/vispārākās formas
 	 */
 	public static ArrayList<StemVariant> applyLemmaToFormMija(
-			String stem, int stemChange, String thirdStem,
+			String stem, int stemChange, String thirdStem, Lexicon.Prefixes prefixes,
 			boolean addSuperlative, boolean properName) {
 
 		ArrayList<StemVariant> stemVariants = new ArrayList<>(1);
@@ -961,52 +962,52 @@ public abstract class Mijas {
 		try {
 			switch (stemChange) { //TODO - uz normālāku struktūru
 				case 4: // vajadzības izteiksmes jā-
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 0;
 					break;
 				case 5: // vajadzības izteiksme 3. konjugācijai bez mijas
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 9;
 					break;
 				case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai bez mijas
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 8;
 					break;
 				case 19: // vajadzības_vēlējuma izteiksme 3. konjugācijai bez mijas (jāmācot)
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 2;
 					break;
 				case 28: // vajadzības_vēlējuma izteiksme 3. konjugācijai ar miju (jāmākot)
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 20;
 					break;
 				case 29: // vajadzības izteiksme 3. konjugācijai atgriezeniskai ar miju
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 27;
 					break;
 				case 31: // vajadzības izteiksme 3. konjugācijai ar miju
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 30;
 					break;
 				case 37: // vajadzības izteiksme 1. konjugācijai ar miju
-					resultStem = "jā" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 36;
 					break;
 				// latgalieši
 				case 150: // vajadzības izteiksme 2. konjugācijai
-					resultStem = "juo" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 110;
 					break;
 				case 151: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju bez līdzskaņu mijas
-					resultStem = "juo" + ltgVowelMijaLemmaToForm(stem);
+					resultStem = prefixes.DEBITIVE_PREFIX + ltgVowelMijaLemmaToForm(stem);
 					mija = 119;
 					break;
 				case 152: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju ar līdzskaņu miju
-					resultStem = "juo" + ltgVowelMijaLemmaToForm(stem);
+					resultStem = prefixes.DEBITIVE_PREFIX + ltgVowelMijaLemmaToForm(stem);
 					mija = 122;
 					break;
 				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar burtu miju bez līdzskaņu un patskaņu mijas
-					resultStem = "juo" + stem;
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 125;
 					break;
 				// patskaņu mijas verbiem
