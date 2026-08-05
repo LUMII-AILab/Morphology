@@ -1184,6 +1184,9 @@ public class LatgalianTest {
 			assertNotEquals(wf.getToken(), "vysnaugulamuokuos");
 			assertNotEquals(wf.getToken(), "vysnauguļamuokuos");
 		}
+
+		Word nadūmuoju = analyzer.analyze("nadūmuoju");
+		assertTrue(nadūmuoju.isRecognized());
 	}
 
 	@Test

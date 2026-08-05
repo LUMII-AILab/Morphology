@@ -6,6 +6,7 @@
 		<Negation>na</Negation>
 		<Debitive>juo</Debitive>
 		<Superlative>vys</Superlative>
+		<Superlative>vysu</Superlative>
 
 		<VerbPrefix>ap</VerbPrefix>
 		<VerbPrefix>at</VerbPrefix>
@@ -38,7 +39,7 @@
 		<VerbPrefix>puorza</VerbPrefix>
 		<VerbPrefix>saza</VerbPrefix>
 
-		<VerbPrefix>na</VerbPrefix>
+	<!--<VerbPrefix>na</VerbPrefix>-->
 	</Prefixes>
 
 	<!-- Lietvārdi -->
