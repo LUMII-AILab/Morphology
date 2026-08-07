@@ -227,12 +227,14 @@ public class AttributeNames {
     public static final String i_WhitespaceBefore = "Atstarpes pirms";
     public static final String i_Offset = "Nobīde rindkopā";
 
+    public static final String i_General_Frequency = "Vispārīgais lietojuma biežums";
     public static final String i_Frequency = "Lietojuma biežums";
 	public static final String v_Rare = "Reti";
 
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
 	public static final String v_Outdated = "Novecojis";
+	public static final String v_Nonlit = "Neliterārs";
 	public static final String v_RegionalOutdated = "[\"Apvidvārds\",\"Novecojis\"]";
 
 	public static final String i_Normative = "Valodas normēšana";
