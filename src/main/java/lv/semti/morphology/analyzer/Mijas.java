@@ -115,6 +115,12 @@ public abstract class Mijas {
 						mija = 125;
 					} else return stemVariants;
 					break;
+				/*case 154: // vajadzības izteiksme 3. konjugācijai -ēt ar līdzskaņu miju, bez burtu un patskaņu mijas
+					if (stem.startsWith(prefixes.DEBITIVE_PREFIX) && stem.length() >= prefixes.DEBITIVE_PREFIX.length() + 2) {
+						resultStem = stem.substring(prefixes.DEBITIVE_PREFIX.length());
+						mija = 128;
+					} else return stemVariants;
+					break;*/
 				case 160: // patskaņu mija 2. konjugācijas supīnam, vēlējuma izteiksmei un pagātnes divdabim
 					resultStem = ltgVowelMijaFormToLemma(stem);
 					mija = 114;
@@ -858,6 +864,17 @@ public abstract class Mijas {
 					if (changedStem128 != null)
 						stemVariants.add(new StemVariant(changedStem128, "Mija", "128"));
 					break;
+				case 129: // 3. konjugācija, standarta -ēt ar līdskaņu, bez burtu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (128.)
+					String degree129 = AttributeNames.v_Comparative;
+					String prefixlessStem129 = removeFirstFittingSuperlative(resultStem, prefixes);
+					if (prefixlessStem129 != null) {
+						degree129 = AttributeNames.v_Superlative;
+						resultStem = prefixlessStem129;
+					}
+					String changedStem129 = ltgVerbConsonantMijaHardToSoft(resultStem, "ē");
+					if (changedStem129 == null) break;
+					stemVariants.add(new StemVariant(changedStem129 + "ē", ltgDegreeFlags(degree129)));
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);
 			}
@@ -996,10 +1013,14 @@ public abstract class Mijas {
 					resultStem = prefixes.DEBITIVE_PREFIX + ltgVowelMijaLemmaToForm(stem);
 					mija = 122;
 					break;
-				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar burtu miju bez līdzskaņu un patskaņu mijas
+				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar burtu miju, bez līdzskaņu un patskaņu mijas
 					resultStem = prefixes.DEBITIVE_PREFIX + stem;
 					mija = 125;
 					break;
+				/*case 154: // vajadzības izteiksme 3. konjugācijai -ēt ar līdzskaņu miju, bez patskaņu mijas
+					resultStem = prefixes.DEBITIVE_PREFIX + stem;
+					mija = 128;
+					break;*/
 				// patskaņu mijas verbiem
 				case 160: // patskaņu mija 2. konjugācijas supīnam, vēlējuma izteiksmei un pagātnes divdabim
 					resultStem = ltgVowelMijaLemmaToForm(stem);
@@ -1700,6 +1721,16 @@ public abstract class Mijas {
 					if (changedStem128 != null)
 						stemVariants.add(new StemVariant(changedStem128));
 					break;
+				case 129: // 3. konjugācija, standarta -ēt ar līdskaņu miju, bez patskaņu un burtu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (128.)
+					if (resultStem.endsWith("ē")) {
+						String changedStem129 = ltgVerbConsonantMijaSoftToHard(resultStem, "ē");
+						if (changedStem129 == null) break;
+						stemVariants.add(new StemVariant(changedStem129, ltgDegreeFlags(AttributeNames.v_Comparative)));
+						if (addSuperlative)
+							for (String prefix : prefixes.SUPERLATIVE_PREFIXES)
+								stemVariants.add(new StemVariant(prefix + changedStem129, ltgDegreeFlags(AttributeNames.v_Superlative)));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", resultStem, mija);
 			}
@@ -1770,6 +1801,8 @@ public abstract class Mijas {
 			return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "g";
 		} else if (stem.endsWith("c" + inputSuffix)) {
 			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "k";
+		} else if (stem.endsWith("d" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ž";
 		} else if (stem.endsWith("l" + inputSuffix)) {
 			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ļ";
 		} else if (stem.endsWith("n" + inputSuffix)) {
@@ -1797,6 +1830,8 @@ public abstract class Mijas {
 			return stem.substring(0, stem.length() - 1) + "l" + outputSufix;
 		else if (stem.endsWith("ņ"))
 			return stem.substring(0, stem.length() - 1) + "n" + outputSufix;
+		else if (stem.endsWith("ž"))
+			return stem.substring(0, stem.length() - 1) + "d" + outputSufix;
 		else return null;
 	}
 
@@ -1871,6 +1906,7 @@ public abstract class Mijas {
 	 */
 	protected static String removeFirstFittingSuperlative (String stem, Lexicon.Prefixes prefixes)
 	{
+		if (stem == null || stem.isEmpty()) return null;
 		for (String prefix : prefixes.SUPERLATIVE_PREFIXES)
 			if (stem.startsWith(prefix)) {
 				return stem.substring(prefix.length());

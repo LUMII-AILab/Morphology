@@ -790,10 +790,11 @@ public class LatgalianTest extends LanguageSpecificTests {
 		List<Wordform> gulēt = analyzer.generateInflectionsFromParadigm("gulēt", 50);
 		List<Wordform> ticēt = analyzer.generateInflectionsFromParadigm("ticēt", 51);
 		List<Wordform> svinēt = analyzer.generateInflectionsFromParadigm("svinēt", 51);
-		List<Wordform> muocēt = analyzer.generateInflectionsFromParadigm("muocēt", 52);
+		List<Wordform> dzierdēt = analyzer.generateInflectionsFromParadigm("dzierdēt", 52);
+		//List<Wordform> muocēt = analyzer.generateInflectionsFromParadigm("muocēt", 52);
 
 		// Īstenības izteiksme
-		// Tagadne: 124., 125., 128.,  166. mija
+		// Tagadne: 124., 125., 128., 166. mija
 		AttributeValues ind_pres_1_sg = new AttributeValues();
 		ind_pres_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		ind_pres_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
@@ -803,7 +804,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, ind_pres_1_sg, "guļu");
 		assertInflection(ticēt, ind_pres_1_sg, "tycu");
 		assertInflection(svinēt, ind_pres_1_sg, "svynu");
-		assertInflection(muocēt, ind_pres_1_sg, "muoku");
+		assertInflection(dzierdēt, ind_pres_1_sg, "dzieržu");
+		//assertInflection(muocēt, ind_pres_1_sg, "muoku");
 
 		AttributeValues ind_pres_2_sg = new AttributeValues();
 		ind_pres_2_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -814,7 +816,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, ind_pres_2_sg, "guli");
 		assertInflection(ticēt, ind_pres_2_sg, "tici");
 		assertInflection(svinēt, ind_pres_2_sg, "svini");
-		assertInflection(muocēt, ind_pres_2_sg, "muoki");
+		assertInflection(dzierdēt, ind_pres_2_sg, "dzierdi");
+		//assertInflection(muocēt, ind_pres_2_sg, "muoki");
 
 		AttributeValues ind_pres_3 = new AttributeValues();
 		ind_pres_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -824,25 +827,29 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, ind_pres_3, "guļ");
 		assertInflection(ticēt, ind_pres_3, "tic");
 		assertInflection(svinēt, ind_pres_3, "sviņ");
-		assertInflection(muocēt, ind_pres_3, "muok");
+		assertInflection(dzierdēt, ind_pres_3, "dzierd");
+		//assertInflection(muocēt, ind_pres_3, "muok");
 
 		// Citas izteiksmes
-		// Pavēles: 124. mija
+		// Pavēles: 124., 128. mija
 		AttributeValues imp = new AttributeValues();
 		imp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		imp.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Imperative);
 		assertInflectionMultipleWeak(gulēt, imp, new HashSet<>(){{ add("guli"); add("gulit");}});
 		assertInflectionMultipleWeak(ticēt, imp, new HashSet<>(){{ add("tici"); add("ticit");}});
 		assertInflectionMultipleWeak(svinēt, imp, new HashSet<>(){{ add("svini"); add("svinit");}});
-		assertInflectionMultipleWeak(muocēt, imp, new HashSet<>(){{ add("muoki"); add("muokit");}});
+		assertInflectionMultipleWeak(dzierdēt, imp, new HashSet<>(){{ add("dzierdi"); add("dzierdit");}});
+		//assertInflectionMultipleWeak(muocēt, imp, new HashSet<>(){{ add("muoki"); add("muokit");}});
 
-		// Vajadzības: 153. mija
+		// Vajadzības: 153., 154. mija
 		AttributeValues deb = new AttributeValues();
 		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Debitive);
 		assertInflection(gulēt, deb, "juoguļ");
 		assertInflection(ticēt, deb, "juotic");
 		assertInflection(svinēt, deb, "juosviņ");
+		assertInflection(dzierdēt, deb, "juodzierd");
+		//assertInflection(muocēt, deb, "juomuok");
 
 		// Vēlējuma: 124., 166. mija
 		AttributeValues cond = new AttributeValues();
@@ -852,7 +859,9 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, cond, "gulātu");
 		assertInflection(ticēt, cond, "tycātu");
 		assertInflection(svinēt, cond, "svynātu");
-		// 0. mija
+		assertInflection(dzierdēt, cond, "dzierdātu");
+		//assertInflection(muocēt, cond, "muocātu");
+		// 0., 124. mija
 		AttributeValues cond_2pers_sg = new AttributeValues();
 		cond_2pers_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		cond_2pers_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
@@ -861,8 +870,10 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, cond_2pers_sg, "gulētim");
 		assertInflection(ticēt, cond_2pers_sg, "ticētim");
 		assertInflection(svinēt, cond_2pers_sg, "svinētim");
+		assertInflection(dzierdēt, cond_2pers_sg, "dzierdētim"); //todo
+		//assertInflectionMultipleWeak(muocēt, cond_2pers_sg, new HashSet<>(){{ add("muocātim"); add("muocētim");}});
 
-		// Atstāstījuma: 125., 166. mija
+		// Atstāstījuma: 125., 128., 166. mija
 		AttributeValues quot_pres_nogen_nonum = new AttributeValues();
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
@@ -872,6 +883,7 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, quot_pres_nogen_nonum, "guļūt");
 		assertInflection(ticēt, quot_pres_nogen_nonum, "tycūt");
 		assertInflection(svinēt, quot_pres_nogen_nonum, "svynūt");
+		assertInflection(dzierdēt, quot_pres_nogen_nonum, "dzieržūt");
 		// 124. mija
 		AttributeValues quot_fut_fem_pl = new AttributeValues();
 		quot_fut_fem_pl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -882,9 +894,11 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, quot_fut_fem_pl, "gulieškūšys");
 		assertInflection(ticēt, quot_fut_fem_pl, "ticieškūšys");
 		assertInflection(svinēt, quot_fut_fem_pl, "svinieškūšys");
+		assertInflection(dzierdēt, quot_fut_fem_pl, "dzierdieškūšys");
+		//assertInflection(muocēt, quot_fut_fem_pl, "muocieškūšys");
 
 		// Divdabji.
-		// Tagadnes darāmās kārtas: 125., 166. mija
+		// Tagadnes darāmās kārtas: 125., 128., 166. mija
 		AttributeValues part_act_pres = new AttributeValues();
 		part_act_pres.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		part_act_pres.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
@@ -898,8 +912,10 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_act_pres, "guļūšs");
 		assertInflection(ticēt, part_act_pres, "tycūšs");
 		assertInflection(svinēt, part_act_pres, "svynūšs");
+		assertInflection(dzierdēt, part_act_pres, "dzieržūšs");
+		//assertInflection(muocēt, part_act_pres, "muokūšs");
 
-		// 127., 167. mija
+		// 127., 129., 167. mija
 		AttributeValues part_act_pres_comp_def = new AttributeValues();
 		part_act_pres_comp_def.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		part_act_pres_comp_def.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
@@ -913,8 +929,10 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_act_pres_comp_def, "guļūšuokais");
 		assertInflection(ticēt, part_act_pres_comp_def, "tycūšuokais");
 		assertInflection(svinēt, part_act_pres_comp_def, "svynūšuokais");
+		assertInflection(dzierdēt, part_act_pres_comp_def, "dzieržūšuokais");
+		//assertInflection(muocēt, part_act_pres_comp_def, "muokūšuokais");
 
-		// Tagadnes ciešamās kārtas: 125., 166. mija
+		// Tagadnes ciešamās kārtas: 125., 128., 166. mija
 		AttributeValues part_pass_pres = new AttributeValues();
 		part_pass_pres.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		part_pass_pres.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
@@ -928,8 +946,10 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_pass_pres, "guļams");
 		assertInflection(ticēt, part_pass_pres, "tycams");
 		assertInflection(svinēt, part_pass_pres, "svynams");
+		assertInflection(dzierdēt, part_pass_pres, "dzieržams");
+		//assertInflection(muocēt, part_pass_pres, "muokams");
 
-		// 127., 167. mija
+		// 127., 129., 167. mija
 		AttributeValues part_pass_pres_comp_def = new AttributeValues();
 		part_pass_pres_comp_def.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		part_pass_pres_comp_def.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
@@ -943,6 +963,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_pass_pres_comp_def, "guļamuokais");
 		assertInflection(gulēt, part_pass_pres_comp_def, "guļamuokais");
 		assertInflection(svinēt, part_pass_pres_comp_def, "svynamuokais");
+		assertInflection(dzierdēt, part_pass_pres_comp_def, "dzieržamuokais");
+		//assertInflection(muocēt, part_pass_pres_comp_def, "muokamuokais");
 
 		// Pagātnes ciešamās kārtas: 124., 166. mija
 		AttributeValues part_pass_past = new AttributeValues();
@@ -958,6 +980,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_pass_past, "gulāts");
 		assertInflection(ticēt, part_pass_past, "tycāts");
 		assertInflection(svinēt, part_pass_past, "svynāts");
+		assertInflection(dzierdēt, part_pass_past, "dzierdāts");
+		//assertInflection(muocēt, part_pass_past, "muocāts");
 
 		// 126., 167. mija
 		AttributeValues part_pass_past_comp_def = new AttributeValues();
@@ -973,6 +997,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_pass_past_comp_def, "gulātuokais");
 		assertInflection(ticēt, part_pass_past_comp_def, "tycātuokais");
 		assertInflection(svinēt, part_pass_past_comp_def, "svynātuokais");
+		assertInflection(dzierdēt, part_pass_past_comp_def, "dzierdātuokais");
+		//assertInflection(muocēt, part_pass_past_comp_def, "muocātuokais");
 
 		// Pagātnes darāmās kārtas: 124. mija
 		AttributeValues part_act_past = new AttributeValues();
@@ -988,6 +1014,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_act_past, "guliejs");
 		assertInflection(ticēt, part_act_past, "ticiejs");
 		assertInflection(svinēt, part_act_past, "sviniejs");
+		assertInflection(dzierdēt, part_act_past, "dzierdiejs");
+		//assertInflection(muocēt, part_act_past, "muociejs");
 
 		// 126. mija
 		AttributeValues part_act_past_comp_def = new AttributeValues();
@@ -1003,8 +1031,10 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_act_past_comp_def, "guliejušuokais");
 		assertInflection(ticēt, part_act_past_comp_def, "ticiejušuokais");
 		assertInflection(svinēt, part_act_past_comp_def, "sviniejušuokais");
+		assertInflection(dzierdēt, part_act_past_comp_def, "dzierdiejušuokais");
+		//assertInflection(muocēt, part_act_past_comp_def, "muociejušuokais");
 
-		// Daļēji lokāmais divdabis: 124. mija
+		// Daļēji lokāmais divdabis: 124., 166. mija
 		AttributeValues part_partdecl = new AttributeValues();
 		part_partdecl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		part_partdecl.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
@@ -1015,6 +1045,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, part_partdecl, "gulādams");
 		assertInflection(ticēt, part_partdecl, "tycādams");
 		assertInflection(svinēt, part_partdecl, "svynādams");
+		assertInflection(dzierdēt, part_partdecl, "dzierdādams");
+		//assertInflection(muocēt, part_partdecl, "muocādams");
 
 		// Lietvārds: 124. mija
 		AttributeValues noun = new AttributeValues();
@@ -1026,6 +1058,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(gulēt, noun, "guliešona");
 		assertInflection(ticēt, noun, "ticiešona");
 		assertInflection(svinēt, noun, "sviniešona");
+		assertInflection(dzierdēt, noun, "dzierdiešona");
+		//assertInflection(muocēt, noun, "muociešona");
 
 	}
 
@@ -1084,7 +1118,7 @@ public class LatgalianTest extends LanguageSpecificTests {
 	@Test
 	public void šys() {
 		ArrayList<Wordform> formas = analyzer.generateInflectionsFromParadigm("šys", 29);
-		describe(formas);
+		//describe(formas);
 		assertTrue("Jābūt vairākām formām 'šys' tabulai no hardcoded", formas.size()>4);
 	}
 }
