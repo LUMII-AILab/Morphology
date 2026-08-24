@@ -155,12 +155,12 @@ public class Lexeme extends AttributeValues {
 					stems.put(StemType.STEM1, lemma);
 				} else if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
 						|| isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
-					constructor_try_plural();
+					constructor_try_plural(lexicon.prefixes);
 				} else {
 					String stem = paradigm.getLemmaEnding().stem(lemma);
 					int mija = paradigm.getLemmaEnding().getMija();
 					if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
-						ArrayList<StemVariant> varianti = Mijas.applyFormToLemmaMija(stem, mija, false);
+						ArrayList<StemVariant> varianti = Mijas.applyFormToLemmaMija(stem, mija, false, lexicon.prefixes);
 						for (StemVariant v : varianti) {
 							if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
 									!v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
@@ -186,7 +186,7 @@ public class Lexeme extends AttributeValues {
         paradigm.addLexeme(this);
     }
 
-    private void constructor_try_plural() {
+    private void constructor_try_plural(Lexicon.Prefixes prefixes) {
         // Check if maybe it's plurare tantum
         String lemma = this.getValue(AttributeNames.i_Lemma);
 
@@ -197,7 +197,7 @@ public class Lexeme extends AttributeValues {
             if (e.isMatchingWeak(filter)) {
                 try {
                     String stem = e.stem(lemma);
-                    ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
+                    ArrayList<StemVariant> stems = Mijas.applyFormToLemmaMija(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches(), prefixes);
                     for (StemVariant v : stems) {
                         // FIXME - ko tad darīt ar vairākiem variantiem ????
                         this.stems.put(StemType.STEM1, v.stem.toLowerCase(Locale.ROOT));
