@@ -12,7 +12,15 @@ import lv.semti.morphology.lexicon.*;
 /**
  * Central class of morphological analyzer, performs both analysis and synthesis
  * (inflecting). Analysis results can be cached for POS tagging speed, but by
- * defaylt it is turned off.
+ * default it is turned off.
+ * <p>
+ * Thread safety: analysis ({@link #analyze(String)} and related methods) only reads the
+ * lexicon and the analysis cache is thread-safe, so a single instance can serve
+ * concurrent analysis calls, provided the configuration booleans are not changed
+ * meanwhile. Synthesis ({@code generateInflections*}) and lexicon modification
+ * ({@code createLexeme}, {@code addLexeme}, {@code removeLexeme}) temporarily or
+ * permanently mutate the lexicon and must not run concurrently with anything else
+ * on the same instance.
  * TODO: move caching functionality to a wrapper.
  * TODO: move all guessing/analysis/inflection booleans to a separate new object.
  * TODO 2: update analysis cache to contain information about these booleans.
