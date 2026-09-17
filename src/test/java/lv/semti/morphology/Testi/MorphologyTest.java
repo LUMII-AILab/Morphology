@@ -3994,14 +3994,19 @@ public class MorphologyTest extends LanguageSpecificTests {
 
     @Test
     public void dodi() {
-        //Word dod = analyzer.analyze("dod");
+        //2026-09-15: Tēzaurs now contains both dod and dodi, both must be generated.
         Word dodi = analyzer.analyze("dodi");
         assertTrue(dodi.isRecognized());
 
-        List<Wordform> formas = analyzer.generateInflections("dot");
-        for (Wordform wf : formas) {
+        List<Wordform> dot = analyzer.generateInflections("dot");
+        AttributeValues any_2_sg = new AttributeValues();
+        any_2_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        any_2_sg.addAttribute(AttributeNames.i_Person, "2");
+        any_2_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflectionMultipleWeak(dot, any_2_sg, new HashSet<>(){{ add("dod"); add("dodi");}});
+        /*for (Wordform wf : dot) {
             assertNotEquals("dodi", wf.getToken());
-        }
+        }*/
     }
 
     @Test
