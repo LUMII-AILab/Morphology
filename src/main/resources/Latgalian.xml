@@ -10640,10 +10640,10 @@
 		<Ending ID="3767" StemChange="124" Ending="ieji" StemID="1" LemmaEnding="3760">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="3768" StemChange="124" Ending="ējom" StemID="1" LemmaEnding="3760">
+		<Ending ID="3768" StemChange="124" Ending="iejom" StemID="1" LemmaEnding="3760">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="3769" StemChange="124" Ending="ējot" StemID="1" LemmaEnding="3760">
+		<Ending ID="3769" StemChange="124" Ending="iejot" StemID="1" LemmaEnding="3760">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="3770" StemChange="124" Ending="ēja" StemID="1" LemmaEnding="3760">
