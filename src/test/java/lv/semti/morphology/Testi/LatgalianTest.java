@@ -791,6 +791,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		List<Wordform> ticēt = analyzer.generateInflectionsFromParadigm("ticēt", 51);
 		List<Wordform> svinēt = analyzer.generateInflectionsFromParadigm("svinēt", 51);
 		List<Wordform> dzierdēt = analyzer.generateInflectionsFromParadigm("dzierdēt", 52);
+		List<Wordform> atbiļdēt = analyzer.generateInflectionsFromParadigm("atbiļdēt", 52);
+		List<Wordform> kladzēt = analyzer.generateInflectionsFromParadigm("kladzēt", 52);
 		//List<Wordform> muocēt = analyzer.generateInflectionsFromParadigm("muocēt", 52);
 
 		// Īstenības izteiksme
@@ -805,6 +807,8 @@ public class LatgalianTest extends LanguageSpecificTests {
 		assertInflection(ticēt, ind_pres_1_sg, "tycu");
 		assertInflection(svinēt, ind_pres_1_sg, "svynu");
 		assertInflection(dzierdēt, ind_pres_1_sg, "dzieržu");
+		assertInflection(atbiļdēt, ind_pres_1_sg, "atbiļžu");
+		assertInflection(kladzēt, ind_pres_1_sg, "kladžu");
 		//assertInflection(muocēt, ind_pres_1_sg, "muoku");
 
 		AttributeValues ind_pres_2_sg = new AttributeValues();

@@ -820,7 +820,7 @@ public abstract class Mijas {
 					stemVariants.add(new StemVariant(resultStem, ltgDegreeFlags(degree121)));
 					break;
 				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
-					String changedStem122 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
+					String changedStem122 = ltgVerbDefConsonantMijaHardToSoft(resultStem, "ei");
 					if (changedStem122 != null)
 						stemVariants.add(new StemVariant(changedStem122, "Mija", "122"));
 					break;
@@ -831,7 +831,7 @@ public abstract class Mijas {
 						degree123 = AttributeNames.v_Superlative;
 						resultStem = prefixlessStem123;
 					}
-					String changedStem123 = ltgVerbConsonantMijaHardToSoft(resultStem, "ei");
+					String changedStem123 = ltgVerbDefConsonantMijaHardToSoft(resultStem, "ei");
 					if (changedStem123 != null)
 						stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(degree123)));
 					break;
@@ -860,7 +860,7 @@ public abstract class Mijas {
 					stemVariants.add(new StemVariant(ltgLetterMijaSoftToHard(resultStem) + "ē", ltgDegreeFlags(degree127)));
 					break;
 				case 128: // 3. konjugācija, standarta -ēt, tagadne ar līdzskaņu miju
-					String changedStem128 = ltgVerbConsonantMijaHardToSoft(resultStem, "ē");
+					String changedStem128 = ltgVerb3AltConsonantMijaHardToSoft(resultStem, "ē");
 					if (changedStem128 != null)
 						stemVariants.add(new StemVariant(changedStem128, "Mija", "128"));
 					break;
@@ -871,7 +871,7 @@ public abstract class Mijas {
 						degree129 = AttributeNames.v_Superlative;
 						resultStem = prefixlessStem129;
 					}
-					String changedStem129 = ltgVerbConsonantMijaHardToSoft(resultStem, "ē");
+					String changedStem129 = ltgVerb3AltConsonantMijaHardToSoft(resultStem, "ē");
 					if (changedStem129 == null) break;
 					stemVariants.add(new StemVariant(changedStem129 + "ē", ltgDegreeFlags(degree129)));
 					break;
@@ -1676,12 +1676,12 @@ public abstract class Mijas {
 							stemVariants.add(new StemVariant(prefix + resultStem, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					break;
 				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
-					String changedStem122 = ltgVerbConsonantMijaSoftToHard(resultStem, "ei");
+					String changedStem122 = ltgVerbDefConsonantMijaSoftToHard(resultStem, "ei");
 					if (changedStem122 != null)
 						stemVariants.add(new StemVariant(changedStem122));
 					break;
 				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
-					String changedStem123 = ltgVerbConsonantMijaSoftToHard(resultStem, "ei");
+					String changedStem123 = ltgVerbDefConsonantMijaSoftToHard(resultStem, "ei");
 					if (changedStem123 == null) break;
 					stemVariants.add(new StemVariant(changedStem123, ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (addSuperlative)
@@ -1717,13 +1717,13 @@ public abstract class Mijas {
 					}
 					break;
 				case 128: // 3. konjugācija, standarta -ēt ar līdzskaņu miju, bez patskaņu mijas, tagadne
-					String changedStem128 = ltgVerbConsonantMijaSoftToHard(resultStem, "ē");
+					String changedStem128 = ltgVerb3AltConsonantMijaSoftToHard(resultStem, "ē");
 					if (changedStem128 != null)
 						stemVariants.add(new StemVariant(changedStem128));
 					break;
 				case 129: // 3. konjugācija, standarta -ēt ar līdskaņu miju, bez patskaņu un burtu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (128.)
 					if (resultStem.endsWith("ē")) {
-						String changedStem129 = ltgVerbConsonantMijaSoftToHard(resultStem, "ē");
+						String changedStem129 = ltgVerb3AltConsonantMijaSoftToHard(resultStem, "ē");
 						if (changedStem129 == null) break;
 						stemVariants.add(new StemVariant(changedStem129, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (addSuperlative)
@@ -1786,11 +1786,11 @@ public abstract class Mijas {
 	}
 
 	/**
-	 * Latgalian 2nd and 3rd conjugation consonant change, usually for lemma to
-	 * form direction. Returning null is important to notify that mija actually
+	 * Latgalian 2nd conjugation consonant change, usually for lemma to form
+	 * direction. Returning null is important to notify that mija actually
 	 * applies.
 	 */
-	protected static String ltgVerbConsonantMijaSoftToHard(String stem, String inputSuffix)
+	protected static String ltgVerbDefConsonantMijaSoftToHard(String stem, String inputSuffix)
 	{
 		if (inputSuffix == null) inputSuffix = "";
 		if (stem.endsWith("ļd" + inputSuffix)) {
@@ -1811,11 +1811,11 @@ public abstract class Mijas {
 	}
 
 	/**
-	 * Latgalian 2nd and 3rd conjugation consonant change, usually for form to
-	 * lemma direction. Returning null is important to notify that mija actually
+	 * Latgalian 2nd conjugation consonant change, usually for form to lemma
+	 * direction. Returning null is important to notify that mija actually
 	 * applies.
 	 */
-	protected static String ltgVerbConsonantMijaHardToSoft(String stem, String outputSufix)
+	protected static String ltgVerbDefConsonantMijaHardToSoft(String stem, String outputSufix)
 	{
 		if (outputSufix == null) outputSufix = "";
 		if (stem.endsWith("ld"))
@@ -1825,6 +1825,54 @@ public abstract class Mijas {
 		else if (stem.endsWith("g"))
 			return stem.substring(0, stem.length() - 1) + "dz" + outputSufix;
 		else if (stem.endsWith("k"))
+			return stem.substring(0, stem.length() - 1) + "c" + outputSufix;
+		else if (stem.endsWith("ļ"))
+			return stem.substring(0, stem.length() - 1) + "l" + outputSufix;
+		else if (stem.endsWith("ņ"))
+			return stem.substring(0, stem.length() - 1) + "n" + outputSufix;
+		else if (stem.endsWith("ž"))
+			return stem.substring(0, stem.length() - 1) + "d" + outputSufix;
+		else return null;
+	}
+
+	/**
+	 * Latgalian 3rd conjugation -ēt group consonant change, usually for lemma
+	 * to form direction. Returning null is important to notify when mija
+	 * actually applies.
+	 */
+	protected static String ltgVerb3AltConsonantMijaSoftToHard(String stem, String inputSuffix)
+	{
+		// TODO: vai nevajadzēs arī z/ž likumu
+		if (inputSuffix == null) inputSuffix = "";
+		//if (stem.endsWith("ļd" + inputSuffix)) {
+		//	return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "ļž";
+		//} else if (stem.endsWith("ņd" + inputSuffix)) {
+		//	return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "ņž";
+		if (stem.endsWith("dz" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 2 - inputSuffix.length()) + "dž";
+		} else if (stem.endsWith("c" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "č";
+		} else if (stem.endsWith("d" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ž";
+		} else if (stem.endsWith("l" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ļ";
+		} else if (stem.endsWith("n" + inputSuffix)) {
+			return stem.substring(0, stem.length() - 1 - inputSuffix.length()) + "ņ";
+		} else return null;
+	}
+
+	/**
+	 * Latgalian 3rd conjugation -ēt group consonant change, usually for form to
+	 * lemma direction. Returning null is important to notify when mija actually
+	 * applies.
+	 */
+	protected static String ltgVerb3AltConsonantMijaHardToSoft(String stem, String outputSufix)
+	{
+		// TODO: vai nevajadzēs arī z/ž likumu
+		if (outputSufix == null) outputSufix = "";
+		if (stem.endsWith("dž"))
+			return stem.substring(0, stem.length() - 1) + "z" + outputSufix;
+		else if (stem.endsWith("č"))
 			return stem.substring(0, stem.length() - 1) + "c" + outputSufix;
 		else if (stem.endsWith("ļ"))
 			return stem.substring(0, stem.length() - 1) + "l" + outputSufix;
