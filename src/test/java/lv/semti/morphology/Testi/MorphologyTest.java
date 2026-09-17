@@ -4400,7 +4400,17 @@ public class MorphologyTest extends LanguageSpecificTests {
                 found = true;
         }
         assertTrue(found);
+    }
 
+    @Test
+    public void negativePronouns()
+    {
+        // 2026-09-17 Laura šaubās, vai analizators māk iedot nolieguma tagu vietniekvārdiem
+        Word nekādam = analyzer.analyze("nekādam");
+        assertEquals("pi0msdy", nekādam.wordforms.getFirst().getTag());
+        Word neko = analyzer.analyze("neko");
+        assertEquals("pi000ay", neko.wordforms.getFirst().getTag());
+        //analyzer.analyze("nekāda").describe(System.out);
     }
 
 }
