@@ -19,7 +19,7 @@ Rīks sagatavos `tezaurs_lexemes.json` (vai arī `tezaurs_latgalian.json` ja skr
 Vajadzētu arī atjaunināt `Statistics.xml` failu. To no vārdnīcas un korpusa datiem (kuru atjaunināšana ir zemāk) uzģenerē skripts `CorpusProcessing.java`, tas to uzģenerēs zem projekta pamatmapes, lai to atjauninātu, tas arī jāieliek zem `src/main/resources/`
 
 
-## Korpusa datu atjaunināšana
+## Korpusa datu atjaunināšana (ja ir bijusi jauna koku korpusa versija)
 
 Vajag skriptus no https://github.com/LUMII-AILab/TreebankTools un strādājošu Perl vidi.
 
@@ -47,6 +47,8 @@ Izlaiž testus un paskatās vai `MorphoEvaluate` rezultātos nav būtisku procen
 - MorphologyTest
 - LatgalianTest
 - MorphoEvaluate
+- CacheTest
+- ConcurrencyTest
 
 `pom.xml` jāatjaunina laidiena versija, un ar `mvn clean deploy` tas varētu nonākt maven central, ja ir šādi priekšnosacījumi.
 - Pareizi piekļuves parametri `~/.m2/settings.xml`:
