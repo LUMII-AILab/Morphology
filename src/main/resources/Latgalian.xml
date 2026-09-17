@@ -763,7 +763,7 @@
 		</Ending>
 	</Paradigm>
 	<!-- Iespējams, ka šo būs jāizņem, ja latgaliešu grupa sapratīs, ka nav piemēru -->
-	<Paradigm Stems="1" ID="19" Name="noun-5ma-ltg" LemmaEnding="247" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, ar miju (uzvārdi?)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="19" Name="noun-5ma-ltg" LemmaEnding="247" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, ar miju (dzjadze, uzvārdi)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="247" StemChange="0" Ending="e" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
