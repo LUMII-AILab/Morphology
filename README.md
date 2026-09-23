@@ -7,6 +7,8 @@
 
 ## BASIC USAGE
 
+See also https://github.com/LUMII-AILab/Webservices
+
 ```
  Analyzer analyzer = new Analyzer();
  
