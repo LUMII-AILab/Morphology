@@ -271,6 +271,8 @@ public class AttributeNames {
 	public static final String i_PositionInParagraph = "Nobīde rindkopā";
 	public static final String i_SpaceBefore = "Atstarpes pirms";
 
+	public static final String i_Pronunciation = "Izruna";
+
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai 2012. gada Javas GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";
 	public static final String i_Tagged = "Tagera rekomendācija";
