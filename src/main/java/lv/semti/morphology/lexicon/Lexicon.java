@@ -42,7 +42,13 @@ public class Lexicon {
 		return revision;
 	}
 
+	public String getSecondaryRevisions() {
+		if (secondaryRevisions == null) return null;
+		return secondaryRevisions.stream().reduce( (a, b) -> a + ", " + b).orElse(null);
+	}
+
 	private String revision;
+	private List<String> secondaryRevisions;
 	private String licence;
 	
 	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam, vajag tikai read-only iterēt
@@ -180,6 +186,8 @@ public class Lexicon {
 		if (nodeLicence != null)
 			licence = nodeLicence.getTextContent();
 
+		secondaryRevisions = new ArrayList<>();
+
 		NodeList nodes = node.getChildNodes();
 
 		paradigms = new ArrayList<>();
@@ -227,7 +235,10 @@ public class Lexicon {
 		}
 
 		automats.initializeExceptions();
-		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
+		System.err.println(
+				"Lexicon " + (revision != null ? revision : "") +
+						" --- " + (getSecondaryRevisions() != null ? getSecondaryRevisions() : "")
+						+ " loaded");
 	}
 
 	private void loadPrefixes(Node node) {
@@ -253,20 +264,33 @@ public class Lexicon {
 		}
 	}
 
+	/**
+	 * Most lines has to be lexemes, however one can be additional metadata in
+	 * format `{"what": "...", "when": "..."}`.
+	 */
 	private void load_sublexicon_jsonl(InputStream input)
 			throws ParseException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
         JSONParser parser = new JSONParser();
+		boolean foundMeta = false;
         String json_row;
         try {
             while ((json_row = reader.readLine()) != null) {
-                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
-                if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
-						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
-						|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
-                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art")) {
-                    l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
-                }
+				if (json_row.isEmpty()) continue;
+				JSONObject jobj = (JSONObject) parser.parse(json_row);
+				if (!foundMeta && jobj.containsKey("what") && jobj.containsKey("when")) {
+					this.secondaryRevisions.add(jobj.get("what") + " " + jobj.get("when"));
+					foundMeta = true;
+				}
+				else {
+					Lexeme l = new Lexeme(jobj, this);
+					if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
+							|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
+							|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
+							|| l.isMatchingStrong(AttributeNames.i_EntryName, "art")) {
+						l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
+					}
+				}
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
