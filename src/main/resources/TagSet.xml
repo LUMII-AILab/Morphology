@@ -629,11 +629,9 @@
 <FreeAttribute LV="FreeText" EN="FreeText"/> 
 <FreeAttribute LV="Leftovers" EN="Leftovers"/> 
 <FreeAttribute LV="StructuralRestrictions" EN="FormRestrictions"/> 
-<FreeAttribute LV="Pronunciations" EN="Pronunciations"/> 
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
-<FreeAttribute LV="pronunciations" EN="Pronunciations"/>
 
 <!--
 <Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
