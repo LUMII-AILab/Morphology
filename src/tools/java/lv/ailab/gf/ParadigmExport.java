@@ -1,4 +1,4 @@
-package lv.semti.gf;
+package lv.ailab.gf;
 
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.attributes.*;
