@@ -20,8 +20,45 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.corpus.Statistics;
 
+import javax.swing.*;
+
 public class MorphoEvaluate {
 	private static Analyzer analyzer;
+	public static boolean DONT_PRINT_KNOWN = true;
+	public static LinkedHashSet<ProblemDescriptor> knowns = new LinkedHashSet<>(){{
+		add(new ProblemDescriptor("B.", "B.", "yp"));
+		add(new ProblemDescriptor("J.", "J.", "yp"));
+		add(new ProblemDescriptor("P.", "P.", "yp"));
+		add(new ProblemDescriptor("BAS", "BAS", "yp"));
+
+		add(new ProblemDescriptor("Al", "Al", "xf"));
+		add(new ProblemDescriptor("facie", "facie", "xf"));
+		add(new ProblemDescriptor("Ford", "Ford", "xf"));
+		add(new ProblemDescriptor("Huawei", "Huawei", "xf"));
+		add(new ProblemDescriptor("Initiatives", "Initiatives", "xf"));		add(new ProblemDescriptor("Hosē", "Hosē", "npm000"));
+		add(new ProblemDescriptor("Re", "Re", "xx"));
+
+		add(new ProblemDescriptor("airBaltic", "airBaltic", "np0000"));
+		add(new ProblemDescriptor("Grindeks", "Grindeks", "np0000"));
+		add(new ProblemDescriptor("Hosē", "Hosē", "npf000"));
+		add(new ProblemDescriptor("Papavrami", "Papavrami", "npm000"));
+		add(new ProblemDescriptor("Positivus", "Positivus", "np0000"));
+		add(new ProblemDescriptor("Sanī", "Sanī", "npf000"));
+
+		add(new ProblemDescriptor("Kūtri", "Kūtris", "npmsa2"));
+		add(new ProblemDescriptor("Kūtra", "Kūtris", "npmsg2"));
+		add(new ProblemDescriptor("Obamu", "Obama", "npmpg4"));
+		add(new ProblemDescriptor("Putinu", "Putins", "npmsa1"));
+		add(new ProblemDescriptor("Putina", "Putins", "npmsg1"));		add(new ProblemDescriptor("Vestu", "Vests", "npmsa1"));
+		add(new ProblemDescriptor("Straujuma", "Straujuma", "npfsn4"));		add(new ProblemDescriptor("Vestu", "Vests", "npmsa1"));
+		add(new ProblemDescriptor("Štramu", "Štrams", "npmsa1"));		add(new ProblemDescriptor("Vestu", "Vests", "npmsa1"));
+		add(new ProblemDescriptor("Štrams", "Štrams", "npmsn1"));		add(new ProblemDescriptor("Vestu", "Vests", "npmsa1"));
+		add(new ProblemDescriptor("Vesta", "Vests", "npmsg1"));
+		add(new ProblemDescriptor("Vests", "Vests", "npmsn1"));
+
+		add(new ProblemDescriptor("Kuplais", "Kuplais", "amsnyp"));
+	}};
+
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -59,8 +96,8 @@ public class MorphoEvaluate {
      * Code from https://stackoverflow.com/questions/7881629/sort-guava-multimap-by-number-of-values answer
      * @return a {@link Multimap} whose entries are sorted by descending frequency
      */
-    public Multimap<String, String> sortedByDescendingFrequency(Multimap<String, String> multimap) {
-        return ImmutableMultimap.<String, String>builder()
+    public Multimap<String, ProblemDescriptor> sortedByDescendingFrequency(Multimap<String, ProblemDescriptor> multimap) {
+        return ImmutableMultimap.<String, ProblemDescriptor>builder()
                 .orderKeysBy(descendingCountOrdering(multimap.keys()))
                 .putAll(multimap)
                 .build();
@@ -104,19 +141,23 @@ public class MorphoEvaluate {
 
 		TagSet tags = TagSet.getTagSet();
 
-        Multimap<String, String> mistakes_by_lemma = ArrayListMultimap.create();
+        Multimap<String, ProblemDescriptor> mistakes_by_lemma = ArrayListMultimap.create();
         Map<String, Integer> oov_frequency = new HashMap<>();
-		List<String> mistakes = new LinkedList<>();
-		List<String> capitalization_mistakes = new LinkedList<>();
+		List<ProblemDescriptor> mistakes = new LinkedList<>();
+		List<ProblemDescriptor> capitalization_mistakes = new LinkedList<>();
 		
 		for (Etalons e : etalons) {
 		    if (e.tag.startsWith("np") && !e.lemma.matches("(?U)^\\p{Lu}[\\p{Alnum}-.`]*$")) {
 		    	if (!e.lemma.startsWith("airBaltic"))
-					capitalization_mistakes.add(String.format("Īpašvārda lemma nav ar lielo burtu: %s\t%s", e.lemma, e.id));
+					capitalization_mistakes.add(new ProblemDescriptor(
+							e.wordform, e.lemma, e.tag,
+							String.format("Īpašvārda lemma nav ar lielo burtu: %s\t%s", e.lemma, e.id)));
 			}
 
             if (e.tag.startsWith("n") && !e.tag.startsWith("np") && !e.lemma.matches("(?U)^[\\p{Ll}-.]+$"))
-                capitalization_mistakes.add(String.format("Sugasvārda lemma nav ar mazajiem burtiem: %s\t%s", e.lemma, e.id));
+                capitalization_mistakes.add(new ProblemDescriptor(
+						e.wordform, e.lemma, e.tag,
+						String.format("Sugasvārda lemma nav ar mazajiem burtiem: %s\t%s", e.lemma, e.id)));
 
 			Word w = analyzer.analyze(e.wordform);
 			AttributeValues etalonaAV = tags.fromTag(e.tag);
@@ -184,9 +225,11 @@ public class MorphoEvaluate {
                     if (found_lemma) {
                     	any_lemma_correct++;
 					} else {
-						String mistake_description = String.format("Lemma korpusā %s, analizatoram %s (%s - %s)", e.lemma, mainwf.getValue(AttributeNames.i_Lemma), mainwf.getToken(), e.id);
-						mistakes.add(mistake_description);
-						mistakes_by_lemma.put(e.lemma, mistake_description);
+						String mistake_description = String.format("Lemma korpusā %s, analizatoram %s (%s, %s - %s)", e.lemma, mainwf.getValue(AttributeNames.i_Lemma), mainwf.getToken(), e.tag, e.id);
+						ProblemDescriptor pd = new ProblemDescriptor(
+								e.wordform, e.lemma, e.tag, mistake_description);
+						mistakes.add(pd);
+						mistakes_by_lemma.put(e.lemma, pd);
 					}
                 }
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
@@ -214,22 +257,33 @@ public class MorphoEvaluate {
 					else {
 						wrong++;
 						String mistake_description = e.tag+"\t"+e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output;
-						mistakes.add(mistake_description);
-						mistakes_by_lemma.put(e.lemma, mistake_description);
+						ProblemDescriptor pd = new ProblemDescriptor(e.wordform, e.lemma, e.tag, mistake_description);
+						mistakes.add(pd);
+						mistakes_by_lemma.put(e.lemma, pd);
 					}
 				}	
 			} else {
 				not_recognized++;
-				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\t\t"+e.id+"\n");
-			}						
+				mistakes.add(new ProblemDescriptor(
+						e.wordform, e.lemma, e.tag, "Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\t\t"+e.id+"\n"));
+			}
 		}
 
 		// No AttributeValues.removeAttributesForCorpusTest()
-		out.println("Tagus salīdzinot neņem vērā transitivitāti, apstākļa vārda tipu, īpašības vārda tipu, prievārdu novietojumu");
+		//out.println("Tagus salīdzinot neņem vērā transitivitāti, apstākļa vārda tipu, īpašības vārda tipu, prievārdu novietojumu");
+		if (DONT_PRINT_KNOWN)
+		{
+			out.println("Šīs zināmās novirzes netiek iekļautas pārskatā (forma, lemma, tags):");
+			for (ProblemDescriptor kp : knowns)
+				out.println("\t" + kp.form + "\t" + kp.lemma + "\t" + kp.tag);
+			out.println();
+		}
 
-        Collections.sort(capitalization_mistakes);
-        for (String mistake:capitalization_mistakes){
-            out.println(mistake);
+		List<ProblemDescriptor> sorted_cap = capitalization_mistakes.stream()
+				.sorted(Comparator.comparing(a -> a.description)).toList();
+        for (ProblemDescriptor mistake : sorted_cap) {
+			if (!DONT_PRINT_KNOWN || !knowns.contains(new ProblemDescriptor(mistake.form, mistake.lemma, mistake.tag)))
+            	out.println(mistake.description);
         }
 //		Collections.sort(mistakes);
 //		for (String mistake:mistakes){
@@ -238,15 +292,17 @@ public class MorphoEvaluate {
 		int limit_differences = 1;
         int singletons = 0;
 		for (String key : sortedByDescendingFrequency(mistakes_by_lemma).keySet()) {
-            Collection<String> list = mistakes_by_lemma.get(key);
+            Collection<ProblemDescriptor> list = mistakes_by_lemma.get(key);
             if (list.size()<limit_differences) {
                 singletons++;
                 continue;
             }
             out.printf("%s : %d atšķirības\n", key, list.size());
-			Set<String> sortedlist = new TreeSet<>(list);
-            for (String mistake : sortedlist)
-                out.println(mistake);
+			List<ProblemDescriptor> sorted_mistakes = list.stream()
+					.sorted(Comparator.comparing(a -> a.description)).toList();
+			for (ProblemDescriptor mistake : sorted_mistakes)
+				if (!DONT_PRINT_KNOWN || !knowns.contains(new ProblemDescriptor(mistake.form, mistake.lemma, mistake.tag)))
+					out.println(mistake.description);
         }
 		if (singletons > 0) out.printf(".... un %d izolētas atšķirības\n", singletons);
 
@@ -352,6 +408,55 @@ public class MorphoEvaluate {
 			etalons.lemma = parse[2].replace('_', ' ');
 			etalons.tag = parse[4];
 			return etalons;
+		}
+	}
+
+	public static class ProblemDescriptor
+	{
+		public String form;
+		public String lemma;
+		public String tag;
+		public String description;
+
+		public ProblemDescriptor(String form, String lemma, String tag)
+		{
+			this.form = form;
+			this.lemma = lemma;
+			this.tag = tag;
+		}
+
+		public ProblemDescriptor(String form, String lemma, String tag, String description)
+		{
+			this.form = form;
+			this.lemma = lemma;
+			this.tag = tag;
+			this.description = description;
+		}
+
+		@Override
+		public boolean equals(Object other)
+		{
+			if (!Objects.equals(other.getClass(), this.getClass()))
+				return false;
+			return Objects.equals(form, ((ProblemDescriptor)other).form)
+					&& Objects.equals(lemma, ((ProblemDescriptor)other).lemma)
+					&& Objects.equals(tag, ((ProblemDescriptor)other).tag)
+					&& Objects.equals(description, ((ProblemDescriptor)other).description);
+		}
+
+		public boolean equalsWithoutDesc(ProblemDescriptor other)
+		{
+			return Objects.equals(form, other.form)
+					&& Objects.equals(lemma, other.lemma)
+					&& Objects.equals(tag, other.tag);
+		}
+
+		@Override
+		public int hashCode()
+		{
+			return 342 * (form == null ? 1 : form.hashCode())
+					+ 5043 * (lemma == null ? 23 : lemma.hashCode())
+					+ 3749 * (tag == null ? 871 : tag.hashCode());
 		}
 	}
 	
