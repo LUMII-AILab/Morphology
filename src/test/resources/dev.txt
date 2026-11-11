@@ -9695,7 +9695,7 @@ ceļu	ncmsa1	ceļš	m-p13381-p1s16w7
 <s>
 Latgalē	npfsl5	Latgale	m-p13381-p1s17w1
 būvdarbi	ncmdn1	būvdarbi	m-p13381-p1s17w2
-turpinās	vmnift330an	turpināt	m-p13381-p1s17w3
+turpinās	vmyipi330an	turpināties	m-p13381-p1s17w3
 arī	q	arī	m-p13381-p1s17w4
 Rēzeknes	npfsg5	Rēzekne	m-p13381-p1s17w5
 apkārtnē	ncfsl5	apkārtne	m-p13381-p1s17w6
@@ -39373,7 +39373,7 @@ stādiem	ncmpd1	stāds	m-p9804-p2s2w14
 .	zs	.	m-p9804-p2s2w15
 </s>
 <s>
-Protams	vmnpdmsnppnpn	prast	m-p9804-p2s3w1
+Protams	q	protams	m-p9804-p2s3w1
 <g />
 ,	zc	,	m-p9804-p2s3w2
 tirgū	ncmsl3	tirgus	m-p9804-p2s3w3
@@ -41979,59 +41979,59 @@ labprātīgi	rpn	labprātīgi	m-d178-p706s4w20
 .	zs	.	m-d178-p706s4w21
 </s>
 <s>
-Daru	vmnipt31san	darīt	m-d178-p707s1w1
-to	pd3msan	tas	m-d178-p707s1w2
+Daru	vmnipt31san	darīt	m-d178-p706s1w1
+to	pd3msan	tas	m-d178-p706s1w2
 <g />
-,	zc	,	m-d178-p707s1w3
-ko	pr000an	kas	m-d178-p707s1w4
-šobrīd	r0n	šobrīd	m-d178-p707s1w5
-gribu	vonipt31san	gribēt	m-d178-p707s1w6
-darīt	vmnn0t3000n	darīt	m-d178-p707s1w7
+,	zc	,	m-d178-p706s1w3
+ko	pr000an	kas	m-d178-p706s1w4
+šobrīd	r0n	šobrīd	m-d178-p706s1w5
+gribu	vonipt31san	gribēt	m-d178-p706s1w6
+darīt	vmnn0t3000n	darīt	m-d178-p706s1w7
 <g />
-,	zc	,	m-d178-p707s1w8
-un	cc	un	m-d178-p707s1w9
-manā	ps0fsln	mana	m-d178-p707s1w10
-uztverē	ncfsl5	uztvere	m-d178-p707s1w11
-tā	pd3fsnn	tā	m-d178-p707s1w12
-ir	vcnipii30an	būt	m-d178-p707s1w13
-liela	affsnnp	liels	m-d178-p707s1w14
-laime	ncfsn5	laime	m-d178-p707s1w15
-–	zd	–	m-d178-p707s1w16
-piepildīt	vmnn0t3000n	piepildīt	m-d178-p707s1w17
-sevi	px000an	sevis	m-d178-p707s1w18
-ar	spsa	ar	m-d178-p707s1w19
-to	pd3msan	tas	m-d178-p707s1w20
+,	zc	,	m-d178-p706s1w8
+un	cc	un	m-d178-p706s1w9
+manā	ps0fsln	mana	m-d178-p706s1w10
+uztverē	ncfsl5	uztvere	m-d178-p706s1w11
+tā	pd3fsnn	tā	m-d178-p706s1w12
+ir	vcnipii30an	būt	m-d178-p706s1w13
+liela	affsnnp	liels	m-d178-p706s1w14
+laime	ncfsn5	laime	m-d178-p706s1w15
+–	zd	–	m-d178-p706s1w16
+piepildīt	vmnn0t3000n	piepildīt	m-d178-p706s1w17
+sevi	px000an	sevis	m-d178-p706s1w18
+ar	spsa	ar	m-d178-p706s1w19
+to	pd3msan	tas	m-d178-p706s1w20
 <g />
-,	zc	,	m-d178-p707s1w21
-ko	pr000an	kas	m-d178-p707s1w22
-vēlies	vmyipt32san	vēlēties	m-d178-p707s1w23
+,	zc	,	m-d178-p706s1w21
+ko	pr000an	kas	m-d178-p706s1w22
+vēlies	vmyipt32san	vēlēties	m-d178-p706s1w23
 <g />
-,	zc	,	m-d178-p707s1w24
-lai	cs	lai	m-d178-p707s1w25
-cik	r0n	cik	m-d178-p707s1w26
-tas	pd3msnn	tas	m-d178-p707s1w27
-brīžiem	ncmpd2	brīdis	m-d178-p707s1w28
-arī	q	arī	m-d178-p707s1w29
-būtu	vcnc0ii00an	būt	m-d178-p707s1w30
-sāpīgi	rpn	sāpīgi	m-d178-p707s1w31
+,	zc	,	m-d178-p706s1w24
+lai	cs	lai	m-d178-p706s1w25
+cik	r0n	cik	m-d178-p706s1w26
+tas	pd3msnn	tas	m-d178-p706s1w27
+brīžiem	ncmpd2	brīdis	m-d178-p706s1w28
+arī	q	arī	m-d178-p706s1w29
+būtu	vcnc0ii00an	būt	m-d178-p706s1w30
+sāpīgi	rpn	sāpīgi	m-d178-p706s1w31
 <g />
-,	zc	,	m-d178-p707s1w32
-lai	cs	lai	m-d178-p707s1w33
-kādas	pi0fpnn	kāda	m-d178-p707s1w34
-asaras	ncfpn4	asara	m-d178-p707s1w35
-nesmacētu	vmnc0t200ay	smacēt	m-d178-p707s1w36
+,	zc	,	m-d178-p706s1w32
+lai	cs	lai	m-d178-p706s1w33
+kādas	pi0fpnn	kāda	m-d178-p706s1w34
+asaras	ncfpn4	asara	m-d178-p706s1w35
+nesmacētu	vmnc0t200ay	smacēt	m-d178-p706s1w36
 <g />
-.	zs	.	m-d178-p707s1w37
+.	zs	.	m-d178-p706s1w37
 </s>
 <s>
-Es	pp10snn	es	m-d178-p707s2w1
-dzīvoju	vmnipi21san	dzīvot	m-d178-p707s2w2
-pašas	pg0fsgn	pati	m-d178-p707s2w3
-apzināti	rpn	apzināti	m-d178-p707s2w4
-izvēlētu	vmnpdfsapsnpn	izvēlēt	m-d178-p707s2w5
-dzīvi	ncfsa5	dzīve	m-d178-p707s2w6
+Es	pp10snn	es	m-d178-p706s2w1
+dzīvoju	vmnipi21san	dzīvot	m-d178-p706s2w2
+pašas	pg0fsgn	pati	m-d178-p706s2w3
+apzināti	rpn	apzināti	m-d178-p706s2w4
+izvēlētu	vmnpdfsapsnpn	izvēlēt	m-d178-p706s2w5
+dzīvi	ncfsa5	dzīve	m-d178-p706s2w6
 <g />
-.	zs	.	m-d178-p707s2w7
+.	zs	.	m-d178-p706s2w7
 </s>
 <s>
 Negativus	np0000	Negativus	m-p13741-p1s1w1

@@ -62,7 +62,7 @@ mūziku	ncfsa4	mūzika	m-p7348-p6s1w9
 viegli	rpn	viegli	m-p7348-p6s1w11
 šūpojoties	vmypu0000000n	šūpoties	m-p7348-p6s1w12
 tās	pd3fsgn	tā	m-p7348-p6s1w13
-ritmā	npfsl4	Ritma	m-p7348-p6s1w14
+ritmā	ncmsl1	ritms	m-p7348-p6s1w14
 un	cc	un	m-p7348-p6s1w15
 baudot	vmnpu0000000n	baudīt	m-p7348-p6s1w16
 saules	ncfsg5	saule	m-p7348-p6s1w17
@@ -1471,7 +1471,7 @@ tā	r0n	tā	m-d206-p31s3w3
 sēdēt	vmnn0i3000n	sēdēt	m-d206-p31s3w4
 un	cc	un	m-d206-p31s3w5
 šūpoties	vmyn0i2000n	šūpoties	m-d206-p31s3w6
-krēslā	ncfsl4	krēsla	m-d206-p31s3w7
+krēslā	ncmsl1	krēsls	m-d206-p31s3w7
 <g />
 ,	zc	,	m-d206-p31s3w8
 es	pp10snn	es	m-d206-p31s3w9
@@ -1555,7 +1555,7 @@ kūrortam	ncmsd1	kūrorts	m-p18932-p6s2w17
 bija	vcnisii30an	būt	m-p18932-p6s2w18
 jāpiemērojas	vmyd0i200an	piemēroties	m-p18932-p6s2w19
 izsmalcināto	vmnpdmpgpsypn	izsmalcināt	m-p18932-p6s2w20
-peldviesu	ncmpg1	peldviess	m-p18932-p6s2w21
+peldviesu	ncmpg2	peldviesis	m-p18932-p6s2w21
 prasībām	ncfpd4	prasība	m-p18932-p6s2w22
 <g />
 .	zs	.	m-p18932-p6s2w23
@@ -4942,7 +4942,7 @@ kurp	r0n	kurp	m-d208-p4s2w7
 ,	zc	,	m-d208-p4s2w8
 Otrajam	mosmsd	otrais	m-d208-p4s2w9
 pasaules	ncfsg5	pasaule	m-d208-p4s2w10
-karam	ncmsd1	kars	m-d208-p4s2w11
+karam	ncmsd1	karš	m-d208-p4s2w11
 beidzoties	vmypu0000000n	beigties	m-d208-p4s2w12
 <g />
 ,	zc	,	m-d208-p4s2w13
@@ -5052,7 +5052,7 @@ simbolu	ncmsa1	simbols	m-d186-p226s3w30
 —	zd	–	m-d186-p226s3w31
 lai	cs	lai	m-d186-p226s3w32
 viņu	pp3mpgn	viņš	m-d186-p226s3w33
-cīnu	ncfpg4	cīna	m-d186-p226s3w34
+cīņu	ncfpg4	cīņa	m-d186-p226s3w34
 biedram	ncmsd1	biedrs	m-d186-p226s3w35
 virsniekam	ncmsd1	virsnieks	m-d186-p226s3w36
 Fricgalam	npmsd1	Fricgals	m-d186-p226s3w37
@@ -6100,7 +6100,7 @@ labi	rpn	labi	m-p11517-p1s3w10
 .	zs	.	m-p11517-p1s3w11
 </s>
 <s>
-Protams	vmnpdmsnppnpn	prast	m-p11517-p1s4w1
+Protams	q	protams	m-p11517-p1s4w1
 <g />
 ,	zc	,	m-p11517-p1s4w2
 ir	vcnipii30an	būt	m-p11517-p1s4w3
@@ -7914,7 +7914,7 @@ rīcībai	ncfsd4	rīcība	m-p18594-p8s1w22
 Baltija	npfsn4	Baltija	m-p18594-p8s1w24
 nav	vcnipii30ay	būt	m-p18594-p8s1w25
 ierauta	vmnpdfsnpsnpn	ieraut	m-p18594-p8s1w26
-karā	ncmsl1	kars	m-p18594-p8s1w27
+karā	ncmsl1	karš	m-p18594-p8s1w27
 <g />
 .	zs	.	m-p18594-p8s1w28
 </s>
@@ -9196,7 +9196,7 @@ apgrozījums	ncmsn1	apgrozījums	m-p3738-p8s1w5
 <g />
 gada	ncmsg1	gads	m-p3738-p8s1w7
 deviņos	mcsmpl	deviņi	m-p3738-p8s1w8
-mēnešos	ncmpl2	mēness	m-p3738-p8s1w9
+mēnešos	ncmpl2	mēnesis	m-p3738-p8s1w9
 bija	vcnisii30an	būt	m-p3738-p8s1w10
 50,1	xn	50,1	m-p3738-p8s1w11
 miljons	ncmsn1	miljons	m-p3738-p8s1w12
@@ -9219,7 +9219,7 @@ nekā	cs	nekā	m-p3738-p8s1w25
 <g />
 gada	ncmsg1	gads	m-p3738-p8s1w27
 deviņos	mcsmpl	deviņi	m-p3738-p8s1w28
-mēnešos	ncmpl2	mēness	m-p3738-p8s1w29
+mēnešos	ncmpl2	mēnesis	m-p3738-p8s1w29
 <g />
 .	zs	.	m-p3738-p8s1w30
 </s>
@@ -9242,7 +9242,7 @@ akcionāriem	ncmpd1	akcionārs	m-p3738-p9s1w11
 <g />
 gada	ncmsg1	gads	m-p3738-p9s1w14
 deviņos	mcsmpl	deviņi	m-p3738-p9s1w15
-mēnešos	ncmpl2	mēness	m-p3738-p9s1w16
+mēnešos	ncmpl2	mēnesis	m-p3738-p9s1w16
 bija	vcnisii30an	būt	m-p3738-p9s1w17
 pieci	mcsmpn	pieci	m-p3738-p9s1w18
 miljoni	ncmpn1	miljons	m-p3738-p9s1w19
@@ -9258,7 +9258,7 @@ ar	sppd	ar	m-p3738-p9s1w25
 <g />
 gada	ncmsg1	gads	m-p3738-p9s1w27
 deviņiem	mcsmpd	deviņi	m-p3738-p9s1w28
-mēnešiem	ncmpd2	mēness	m-p3738-p9s1w29
+mēnešiem	ncmpd2	mēnesis	m-p3738-p9s1w29
 <g />
 ,	zc	,	m-p3738-p9s1w30
 ir	vcnipii30an	būt	m-p3738-p9s1w31
@@ -16858,928 +16858,928 @@ Mičulei	npfsd5	Mičule	m-p11647-p9s6w18
 2	xn	2	m-d1291-Mazais-princis-p17s1w1
 </s>
 <s>
-Tā	r0n	tā	m-d1291-Mazais-princis-p18s1w1
-es	pp10snn	es	m-d1291-Mazais-princis-p18s1w2
-dzīvoju	vmnisi21san	dzīvot	m-d1291-Mazais-princis-p18s1w3
-viens	mcsmsn	viens	m-d1291-Mazais-princis-p18s1w4
-pats	pg0msnn	pats	m-d1291-Mazais-princis-p18s1w5
+Tā	r0n	tā	m-d1291-Mazais-princis-p17-p2s1w1
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p2s1w2
+dzīvoju	vmnisi21san	dzīvot	m-d1291-Mazais-princis-p17-p2s1w3
+viens	mcsmsn	viens	m-d1291-Mazais-princis-p17-p2s1w4
+pats	pg0msnn	pats	m-d1291-Mazais-princis-p17-p2s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p18s1w6
-un	cc	un	m-d1291-Mazais-princis-p18s1w7
-līdz	spsd	līdz	m-d1291-Mazais-princis-p18s1w8
-katastrofai	ncfsd4	katastrofa	m-d1291-Mazais-princis-p18s1w9
-Sahāras	npfsg4	Sahāra	m-d1291-Mazais-princis-p18s1w10
-tuksnesī	ncmsl2	tuksnesis	m-d1291-Mazais-princis-p18s1w11
-pirms	sppd	pirms	m-d1291-Mazais-princis-p18s1w12
-sešiem	mcsmpd	seši	m-d1291-Mazais-princis-p18s1w13
-gadiem	ncmpd1	gads	m-d1291-Mazais-princis-p18s1w14
-man	pp10sdn	es	m-d1291-Mazais-princis-p18s1w15
-patiešām	q	patiešām	m-d1291-Mazais-princis-p18s1w16
-nebija	vmnisii30ay	būt	m-d1291-Mazais-princis-p18s1w17
-neviena	pi0msgy	neviens	m-d1291-Mazais-princis-p18s1w18
+,	zc	,	m-d1291-Mazais-princis-p17-p2s1w6
+un	cc	un	m-d1291-Mazais-princis-p17-p2s1w7
+līdz	spsd	līdz	m-d1291-Mazais-princis-p17-p2s1w8
+katastrofai	ncfsd4	katastrofa	m-d1291-Mazais-princis-p17-p2s1w9
+Sahāras	npfsg4	Sahāra	m-d1291-Mazais-princis-p17-p2s1w10
+tuksnesī	ncmsl2	tuksnesis	m-d1291-Mazais-princis-p17-p2s1w11
+pirms	sppd	pirms	m-d1291-Mazais-princis-p17-p2s1w12
+sešiem	mcsmpd	seši	m-d1291-Mazais-princis-p17-p2s1w13
+gadiem	ncmpd1	gads	m-d1291-Mazais-princis-p17-p2s1w14
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p2s1w15
+patiešām	q	patiešām	m-d1291-Mazais-princis-p17-p2s1w16
+nebija	vmnisii30ay	būt	m-d1291-Mazais-princis-p17-p2s1w17
+neviena	pi0msgy	neviens	m-d1291-Mazais-princis-p17-p2s1w18
 <g />
-,	zc	,	m-d1291-Mazais-princis-p18s1w19
-ar	spsa	ar	m-d1291-Mazais-princis-p18s1w20
-ko	pr000an	kas	m-d1291-Mazais-princis-p18s1w21
-parunāties	vmyn0i2000n	parunāties	m-d1291-Mazais-princis-p18s1w22
+,	zc	,	m-d1291-Mazais-princis-p17-p2s1w19
+ar	spsa	ar	m-d1291-Mazais-princis-p17-p2s1w20
+ko	pr000an	kas	m-d1291-Mazais-princis-p17-p2s1w21
+parunāties	vmyn0i2000n	parunāties	m-d1291-Mazais-princis-p17-p2s1w22
 <g />
-.	zs	.	m-d1291-Mazais-princis-p18s1w23
+.	zs	.	m-d1291-Mazais-princis-p17-p2s1w23
 </s>
 <s>
-Manas	ps0fsgn	mana	m-d1291-Mazais-princis-p18s2w1
-lidmašīnas	ncfsg4	lidmašīna	m-d1291-Mazais-princis-p18s2w2
-motorā	ncmsl1	motors	m-d1291-Mazais-princis-p18s2w3
-kaut	q	kaut	m-d1291-Mazais-princis-p18s2w4
-kas	pi000nn	kas	m-d1291-Mazais-princis-p18s2w5
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p18s2w6
-salūzis	vmnpdmsnasnpn	salūzt	m-d1291-Mazais-princis-p18s2w7
+Manas	ps0fsgn	mana	m-d1291-Mazais-princis-p17-p2s2w1
+lidmašīnas	ncfsg4	lidmašīna	m-d1291-Mazais-princis-p17-p2s2w2
+motorā	ncmsl1	motors	m-d1291-Mazais-princis-p17-p2s2w3
+kaut	q	kaut	m-d1291-Mazais-princis-p17-p2s2w4
+kas	pi000nn	kas	m-d1291-Mazais-princis-p17-p2s2w5
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p17-p2s2w6
+salūzis	vmnpdmsnasnpn	salūzt	m-d1291-Mazais-princis-p17-p2s2w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p18s2w8
+.	zs	.	m-d1291-Mazais-princis-p17-p2s2w8
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p18s3w1
+Un	cc	un	m-d1291-Mazais-princis-p17-p2s3w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p18s3w2
-tā	cs	tā	m-d1291-Mazais-princis-p18s3w3
-kā	cs	kā	m-d1291-Mazais-princis-p18s3w4
-man	pp10sdn	es	m-d1291-Mazais-princis-p18s3w5
-nebija	vmnisii30ay	būt	m-d1291-Mazais-princis-p18s3w6
-līdzi	r0n	līdzi	m-d1291-Mazais-princis-p18s3w7
-ne	cc	ne	m-d1291-Mazais-princis-p18s3w8
-mehāniķa	ncmsg2	mehāniķis	m-d1291-Mazais-princis-p18s3w9
+,	zc	,	m-d1291-Mazais-princis-p17-p2s3w2
+tā	cs	tā	m-d1291-Mazais-princis-p17-p2s3w3
+kā	cs	kā	m-d1291-Mazais-princis-p17-p2s3w4
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p2s3w5
+nebija	vmnisii30ay	būt	m-d1291-Mazais-princis-p17-p2s3w6
+līdzi	r0n	līdzi	m-d1291-Mazais-princis-p17-p2s3w7
+ne	cc	ne	m-d1291-Mazais-princis-p17-p2s3w8
+mehāniķa	ncmsg2	mehāniķis	m-d1291-Mazais-princis-p17-p2s3w9
 <g />
-,	zc	,	m-d1291-Mazais-princis-p18s3w10
-ne	cc	ne	m-d1291-Mazais-princis-p18s3w11
-pasažieru	ncmpg2	pasažieris	m-d1291-Mazais-princis-p18s3w12
+,	zc	,	m-d1291-Mazais-princis-p17-p2s3w10
+ne	cc	ne	m-d1291-Mazais-princis-p17-p2s3w11
+pasažieru	ncmpg2	pasažieris	m-d1291-Mazais-princis-p17-p2s3w12
 <g />
-,	zc	,	m-d1291-Mazais-princis-p18s3w13
-nolēmu	vmnist11san	nolemt	m-d1291-Mazais-princis-p18s3w14
-mēģināt	vonn0i3000n	mēģināt	m-d1291-Mazais-princis-p18s3w15
-viens	mcsmsn	viens	m-d1291-Mazais-princis-p18s3w16
-pats	pg0msnn	pats	m-d1291-Mazais-princis-p18s3w17
-veikt	vmnn0t1000n	veikt	m-d1291-Mazais-princis-p18s3w18
-sarežģīto	vmnpdfsapsypn	sarežģīt	m-d1291-Mazais-princis-p18s3w19
-labošanu	ncfsa4	labošana	m-d1291-Mazais-princis-p18s3w20
+,	zc	,	m-d1291-Mazais-princis-p17-p2s3w13
+nolēmu	vmnist11san	nolemt	m-d1291-Mazais-princis-p17-p2s3w14
+mēģināt	vonn0i3000n	mēģināt	m-d1291-Mazais-princis-p17-p2s3w15
+viens	mcsmsn	viens	m-d1291-Mazais-princis-p17-p2s3w16
+pats	pg0msnn	pats	m-d1291-Mazais-princis-p17-p2s3w17
+veikt	vmnn0t1000n	veikt	m-d1291-Mazais-princis-p17-p2s3w18
+sarežģīto	vmnpdfsapsypn	sarežģīt	m-d1291-Mazais-princis-p17-p2s3w19
+labošanu	ncfsa4	labošana	m-d1291-Mazais-princis-p17-p2s3w20
 <g />
-.	zs	.	m-d1291-Mazais-princis-p18s3w21
+.	zs	.	m-d1291-Mazais-princis-p17-p2s3w21
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p18s4w1
-tas	pd3msnn	tas	m-d1291-Mazais-princis-p18s4w2
-nozīmēja	vmnist230an	nozīmēt	m-d1291-Mazais-princis-p18s4w3
-dzīvot	vmnn0i2000n	dzīvot	m-d1291-Mazais-princis-p18s4w4
-vai	cc	vai	m-d1291-Mazais-princis-p18s4w5
-mirt	vmnn0i1000n	mirt	m-d1291-Mazais-princis-p18s4w6
+Man	pp10sdn	es	m-d1291-Mazais-princis-p17-p2s4w1
+tas	pd3msnn	tas	m-d1291-Mazais-princis-p17-p2s4w2
+nozīmēja	vmnist230an	nozīmēt	m-d1291-Mazais-princis-p17-p2s4w3
+dzīvot	vmnn0i2000n	dzīvot	m-d1291-Mazais-princis-p17-p2s4w4
+vai	cc	vai	m-d1291-Mazais-princis-p17-p2s4w5
+mirt	vmnn0i1000n	mirt	m-d1291-Mazais-princis-p17-p2s4w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p18s4w7
+.	zs	.	m-d1291-Mazais-princis-p17-p2s4w7
 </s>
 <s>
-Dzeramā	vmnpdmsgppypn	dzert	m-d1291-Mazais-princis-p18s5w1
-ūdens	ncmsg2	ūdens	m-d1291-Mazais-princis-p18s5w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p18s5w3
-pietika	vmnisi130an	pietikt	m-d1291-Mazais-princis-p18s5w4
-tikko	r0n	tikko	m-d1291-Mazais-princis-p18s5w5
-astoņām	mcsfpd	astoņi	m-d1291-Mazais-princis-p18s5w6
-dienām	ncfpd4	diena	m-d1291-Mazais-princis-p18s5w7
+Dzeramā	vmnpdmsgppypn	dzert	m-d1291-Mazais-princis-p17-p2s5w1
+ūdens	ncmsg2	ūdens	m-d1291-Mazais-princis-p17-p2s5w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p2s5w3
+pietika	vmnisi130an	pietikt	m-d1291-Mazais-princis-p17-p2s5w4
+tikko	r0n	tikko	m-d1291-Mazais-princis-p17-p2s5w5
+astoņām	mcsfpd	astoņi	m-d1291-Mazais-princis-p17-p2s5w6
+dienām	ncfpd4	diena	m-d1291-Mazais-princis-p17-p2s5w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p18s5w8
+.	zs	.	m-d1291-Mazais-princis-p17-p2s5w8
 </s>
 <s>
-Pirmajā	mosmsl	pirmais	m-d1291-Mazais-princis-p19s1w1
-vakarā	ncmsl1	vakars	m-d1291-Mazais-princis-p19s1w2
-iemigu	vmnisi11san	iemigt	m-d1291-Mazais-princis-p19s1w3
-uz	sppd	uz	m-d1291-Mazais-princis-p19s1w4
-smiltīm	ncfpd6	smilts	m-d1291-Mazais-princis-p19s1w5
-tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p19s1w6
-jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p19s1w7
-tālu	rpn	tālu	m-d1291-Mazais-princis-p19s1w8
-no	spsg	no	m-d1291-Mazais-princis-p19s1w9
-jebkuras	pi0fsgn	jebkura	m-d1291-Mazais-princis-p19s1w10
-apdzīvotas	vmnpdfsgpsnpn	apdzīvot	m-d1291-Mazais-princis-p19s1w11
-vietas	ncfsg4	vieta	m-d1291-Mazais-princis-p19s1w12
+Pirmajā	mosmsl	pirmais	m-d1291-Mazais-princis-p17-p3s1w1
+vakarā	ncmsl1	vakars	m-d1291-Mazais-princis-p17-p3s1w2
+iemigu	vmnisi11san	iemigt	m-d1291-Mazais-princis-p17-p3s1w3
+uz	sppd	uz	m-d1291-Mazais-princis-p17-p3s1w4
+smiltīm	ncfpd6	smilts	m-d1291-Mazais-princis-p17-p3s1w5
+tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p17-p3s1w6
+jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p17-p3s1w7
+tālu	rpn	tālu	m-d1291-Mazais-princis-p17-p3s1w8
+no	spsg	no	m-d1291-Mazais-princis-p17-p3s1w9
+jebkuras	pi0fsgn	jebkura	m-d1291-Mazais-princis-p17-p3s1w10
+apdzīvotas	vmnpdfsgpsnpn	apdzīvot	m-d1291-Mazais-princis-p17-p3s1w11
+vietas	ncfsg4	vieta	m-d1291-Mazais-princis-p17-p3s1w12
 <g />
-.	zs	.	m-d1291-Mazais-princis-p19s1w13
+.	zs	.	m-d1291-Mazais-princis-p17-p3s1w13
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p19s2w1
-biju	vcnisii1san	būt	m-d1291-Mazais-princis-p19s2w2
-vēl	r0n	vēl	m-d1291-Mazais-princis-p19s2w3
-vientuļāks	afmsnnc	vientuļš	m-d1291-Mazais-princis-p19s2w4
-par	spsa	par	m-d1291-Mazais-princis-p19s2w5
-kuģa	ncmsg2	kuģis	m-d1291-Mazais-princis-p19s2w6
-avārijā	ncfsl4	avārija	m-d1291-Mazais-princis-p19s2w7
-cietušu	vmnpdmpgasnpn	ciest	m-d1291-Mazais-princis-p19s2w8
-cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p19s2w9
-uz	spsg	uz	m-d1291-Mazais-princis-p19s2w10
-plosta	ncmsg1	plosts	m-d1291-Mazais-princis-p19s2w11
-okeāna	ncmsg1	okeāns	m-d1291-Mazais-princis-p19s2w12
-vidū	ncmsl3	vidus	m-d1291-Mazais-princis-p19s2w13
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p3s2w1
+biju	vcnisii1san	būt	m-d1291-Mazais-princis-p17-p3s2w2
+vēl	r0n	vēl	m-d1291-Mazais-princis-p17-p3s2w3
+vientuļāks	afmsnnc	vientuļš	m-d1291-Mazais-princis-p17-p3s2w4
+par	spsa	par	m-d1291-Mazais-princis-p17-p3s2w5
+kuģa	ncmsg2	kuģis	m-d1291-Mazais-princis-p17-p3s2w6
+avārijā	ncfsl4	avārija	m-d1291-Mazais-princis-p17-p3s2w7
+cietušu	vmnpdmpgasnpn	ciest	m-d1291-Mazais-princis-p17-p3s2w8
+cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p17-p3s2w9
+uz	spsg	uz	m-d1291-Mazais-princis-p17-p3s2w10
+plosta	ncmsg1	plosts	m-d1291-Mazais-princis-p17-p3s2w11
+okeāna	ncmsg1	okeāns	m-d1291-Mazais-princis-p17-p3s2w12
+vidū	ncmsl3	vidus	m-d1291-Mazais-princis-p17-p3s2w13
 <g />
-.	zs	.	m-d1291-Mazais-princis-p19s2w14
+.	zs	.	m-d1291-Mazais-princis-p17-p3s2w14
 </s>
 <s>
-Tad	q	tad	m-d1291-Mazais-princis-p19s3w1
-nu	q	nu	m-d1291-Mazais-princis-p19s3w2
-jūs	pp20pnn	jūs	m-d1291-Mazais-princis-p19s3w3
-varat	vonipt32pan	varēt	m-d1291-Mazais-princis-p19s3w4
-iedomāties	vmyn0t2000n	iedomāties	m-d1291-Mazais-princis-p19s3w5
-manu	ps0msan	mans	m-d1291-Mazais-princis-p19s3w6
-pārsteigumu	ncmsa1	pārsteigums	m-d1291-Mazais-princis-p19s3w7
+Tad	q	tad	m-d1291-Mazais-princis-p17-p3s3w1
+nu	q	nu	m-d1291-Mazais-princis-p17-p3s3w2
+jūs	pp20pnn	jūs	m-d1291-Mazais-princis-p17-p3s3w3
+varat	vonipt32pan	varēt	m-d1291-Mazais-princis-p17-p3s3w4
+iedomāties	vmyn0t2000n	iedomāties	m-d1291-Mazais-princis-p17-p3s3w5
+manu	ps0msan	mans	m-d1291-Mazais-princis-p17-p3s3w6
+pārsteigumu	ncmsa1	pārsteigums	m-d1291-Mazais-princis-p17-p3s3w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p19s3w8
-kad	r0n	kad	m-d1291-Mazais-princis-p19s3w9
-rītausmā	ncfsl4	rītausma	m-d1291-Mazais-princis-p19s3w10
-mani	pp10san	es	m-d1291-Mazais-princis-p19s3w11
-atmodināja	vmnist330an	atmodināt	m-d1291-Mazais-princis-p19s3w12
-kāda	pi0fsnn	kāda	m-d1291-Mazais-princis-p19s3w13
-sīka	affsnnp	sīks	m-d1291-Mazais-princis-p19s3w14
+,	zc	,	m-d1291-Mazais-princis-p17-p3s3w8
+kad	r0n	kad	m-d1291-Mazais-princis-p17-p3s3w9
+rītausmā	ncfsl4	rītausma	m-d1291-Mazais-princis-p17-p3s3w10
+mani	pp10san	es	m-d1291-Mazais-princis-p17-p3s3w11
+atmodināja	vmnist330an	atmodināt	m-d1291-Mazais-princis-p17-p3s3w12
+kāda	pi0fsnn	kāda	m-d1291-Mazais-princis-p17-p3s3w13
+sīka	affsnnp	sīks	m-d1291-Mazais-princis-p17-p3s3w14
 <g />
-,	zc	,	m-d1291-Mazais-princis-p19s3w15
-bērnišķīga	affsnnp	bērnišķīgs	m-d1291-Mazais-princis-p19s3w16
-balss	ncfsn6	balss	m-d1291-Mazais-princis-p19s3w17
+,	zc	,	m-d1291-Mazais-princis-p17-p3s3w15
+bērnišķīga	affsnnp	bērnišķīgs	m-d1291-Mazais-princis-p17-p3s3w16
+balss	ncfsn6	balss	m-d1291-Mazais-princis-p17-p3s3w17
 <g />
-.	zs	.	m-d1291-Mazais-princis-p19s3w18
+.	zs	.	m-d1291-Mazais-princis-p17-p3s3w18
 </s>
 <s>
-Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p19s4w1
-teica	vmnist130an	teikt	m-d1291-Mazais-princis-p19s4w2
+Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p17-p3s4w1
+teica	vmnist130an	teikt	m-d1291-Mazais-princis-p17-p3s4w2
 <g />
-:	zo	:	m-d1291-Mazais-princis-p19s4w3
--	zd	-	m-d1291-Mazais-princis-p19s4w4
-Lūdzu	i	lūdzu	m-d1291-Mazais-princis-p19s4w5
+:	zo	:	m-d1291-Mazais-princis-p17-p3s4w3
+-	zd	-	m-d1291-Mazais-princis-p17-p3s4w4
+Lūdzu	i	lūdzu	m-d1291-Mazais-princis-p17-p3s4w5
 <g />
-…	zs	...	m-d1291-Mazais-princis-p19s4w6
-uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p19s4w7
-man	pp10sdn	es	m-d1291-Mazais-princis-p19s4w8
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p19s4w9
+…	zs	...	m-d1291-Mazais-princis-p17-p3s4w6
+uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p17-p3s4w7
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p3s4w8
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p3s4w9
 <g />
-!	zs	!	m-d1291-Mazais-princis-p19s4w10
+!	zs	!	m-d1291-Mazais-princis-p17-p3s4w10
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p20s1w1
+-	zd	-	m-d1291-Mazais-princis-p17-p4s1w1
 <g />
-Hm	i	hm	m-d1291-Mazais-princis-p20s1w2
+Hm	i	hm	m-d1291-Mazais-princis-p17-p4s1w2
 <g />
-!	zs	!	m-d1291-Mazais-princis-p20s1w3
+!	zs	!	m-d1291-Mazais-princis-p17-p4s1w3
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p21s1w1
-Uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p21s1w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p21s1w3
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p21s1w4
+-	zd	-	m-d1291-Mazais-princis-p17-p5s1w1
+Uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p17-p5s1w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p5s1w3
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p5s1w4
 <g />
-…	zs	...	m-d1291-Mazais-princis-p21s1w5
+…	zs	...	m-d1291-Mazais-princis-p17-p5s1w5
 </s>
 <s>
-Pielēcu	vmnisi11san	pielēkt	m-d1291-Mazais-princis-p22s1w1
-kājās	ncfpl4	kāja	m-d1291-Mazais-princis-p22s1w2
+Pielēcu	vmnisi11san	pielēkt	m-d1291-Mazais-princis-p17-p6s1w1
+kājās	ncfpl4	kāja	m-d1291-Mazais-princis-p17-p6s1w2
 <g />
-,	zc	,	m-d1291-Mazais-princis-p22s1w3
-kā	cs	kā	m-d1291-Mazais-princis-p22s1w4
-zibens	ncmsn2	zibens	m-d1291-Mazais-princis-p22s1w5
-ķerts	vmnpdmsnpsnpn	ķert	m-d1291-Mazais-princis-p22s1w6
+,	zc	,	m-d1291-Mazais-princis-p17-p6s1w3
+kā	cs	kā	m-d1291-Mazais-princis-p17-p6s1w4
+zibens	ncmsn2	zibens	m-d1291-Mazais-princis-p17-p6s1w5
+ķerts	vmnpdmsnpsnpn	ķert	m-d1291-Mazais-princis-p17-p6s1w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p22s1w7
+.	zs	.	m-d1291-Mazais-princis-p17-p6s1w7
 </s>
 <s>
-Krietni	rpn	krietni	m-d1291-Mazais-princis-p22s2w1
-izberzēju	vmnist21san	izberzēt	m-d1291-Mazais-princis-p22s2w2
-acis	ncfpa6	acs	m-d1291-Mazais-princis-p22s2w3
+Krietni	rpn	krietni	m-d1291-Mazais-princis-p17-p6s2w1
+izberzēju	vmnist21san	izberzēt	m-d1291-Mazais-princis-p17-p6s2w2
+acis	ncfpa6	acs	m-d1291-Mazais-princis-p17-p6s2w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p22s2w4
+.	zs	.	m-d1291-Mazais-princis-p17-p6s2w4
 </s>
 <s>
-Pavēros	vmyisi11san	pavērties	m-d1291-Mazais-princis-p22s3w1
-visapkārt	r0n	visapkārt	m-d1291-Mazais-princis-p22s3w2
-un	cc	un	m-d1291-Mazais-princis-p22s3w3
-ieraudzīju	vmnist31san	ieraudzīt	m-d1291-Mazais-princis-p22s3w4
-pavisam	r0n	pavisam	m-d1291-Mazais-princis-p22s3w5
-neparastu	afmsanp	neparasts	m-d1291-Mazais-princis-p22s3w6
-mazu	afmsanp	mazs	m-d1291-Mazais-princis-p22s3w7
-puisēnu	ncmsa1	puisēns	m-d1291-Mazais-princis-p22s3w8
+Pavēros	vmyisi11san	pavērties	m-d1291-Mazais-princis-p17-p6s3w1
+visapkārt	r0n	visapkārt	m-d1291-Mazais-princis-p17-p6s3w2
+un	cc	un	m-d1291-Mazais-princis-p17-p6s3w3
+ieraudzīju	vmnist31san	ieraudzīt	m-d1291-Mazais-princis-p17-p6s3w4
+pavisam	r0n	pavisam	m-d1291-Mazais-princis-p17-p6s3w5
+neparastu	afmsanp	neparasts	m-d1291-Mazais-princis-p17-p6s3w6
+mazu	afmsanp	mazs	m-d1291-Mazais-princis-p17-p6s3w7
+puisēnu	ncmsa1	puisēns	m-d1291-Mazais-princis-p17-p6s3w8
 <g />
-,	zc	,	m-d1291-Mazais-princis-p22s3w9
-kas	pr000nn	kas	m-d1291-Mazais-princis-p22s3w10
-mani	pp10san	es	m-d1291-Mazais-princis-p22s3w11
-nopietni	rpn	nopietni	m-d1291-Mazais-princis-p22s3w12
-aplūkoja	vmnist230an	aplūkot	m-d1291-Mazais-princis-p22s3w13
+,	zc	,	m-d1291-Mazais-princis-p17-p6s3w9
+kas	pr000nn	kas	m-d1291-Mazais-princis-p17-p6s3w10
+mani	pp10san	es	m-d1291-Mazais-princis-p17-p6s3w11
+nopietni	rpn	nopietni	m-d1291-Mazais-princis-p17-p6s3w12
+aplūkoja	vmnist230an	aplūkot	m-d1291-Mazais-princis-p17-p6s3w13
 <g />
-.	zs	.	m-d1291-Mazais-princis-p22s3w14
+.	zs	.	m-d1291-Mazais-princis-p17-p6s3w14
 </s>
 <s>
-Lūk	i	lūk	m-d1291-Mazais-princis-p23s1w1
+Lūk	i	lūk	m-d1291-Mazais-princis-p17-p7s1w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s1w2
-viņa	pp3msgn	viņš	m-d1291-Mazais-princis-p23s1w3
-labākais	afmsnyc	labs	m-d1291-Mazais-princis-p23s1w4
-portrets	ncmsn1	portrets	m-d1291-Mazais-princis-p23s1w5
+,	zc	,	m-d1291-Mazais-princis-p17-p7s1w2
+viņa	pp3msgn	viņš	m-d1291-Mazais-princis-p17-p7s1w3
+labākais	afmsnyc	labs	m-d1291-Mazais-princis-p17-p7s1w4
+portrets	ncmsn1	portrets	m-d1291-Mazais-princis-p17-p7s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s1w6
-kādu	pi0msan	kāds	m-d1291-Mazais-princis-p23s1w7
-man	pp10sdn	es	m-d1291-Mazais-princis-p23s1w8
-vēlāk	rcn	vēlu	m-d1291-Mazais-princis-p23s1w9
-izdevās	veyisii30an	izdoties	m-d1291-Mazais-princis-p23s1w10
-uzzīmēt	vmnn0t2000n	uzzīmēt	m-d1291-Mazais-princis-p23s1w11
+,	zc	,	m-d1291-Mazais-princis-p17-p7s1w6
+kādu	pi0msan	kāds	m-d1291-Mazais-princis-p17-p7s1w7
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p7s1w8
+vēlāk	rcn	vēlu	m-d1291-Mazais-princis-p17-p7s1w9
+izdevās	veyisii30an	izdoties	m-d1291-Mazais-princis-p17-p7s1w10
+uzzīmēt	vmnn0t2000n	uzzīmēt	m-d1291-Mazais-princis-p17-p7s1w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p23s1w12
+.	zs	.	m-d1291-Mazais-princis-p17-p7s1w12
 </s>
 <s>
-Mans	ps0msnn	mans	m-d1291-Mazais-princis-p23s2w1
-zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p23s2w2
+Mans	ps0msnn	mans	m-d1291-Mazais-princis-p17-p7s2w1
+zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p17-p7s2w2
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s2w3
-protams	q	protams	m-d1291-Mazais-princis-p23s2w4
+,	zc	,	m-d1291-Mazais-princis-p17-p7s2w3
+protams	q	protams	m-d1291-Mazais-princis-p17-p7s2w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s2w5
-nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p23s2w6
-tik	r0n	tik	m-d1291-Mazais-princis-p23s2w7
-valdzinošs	vmnpdmsnapnpn	valdzināt	m-d1291-Mazais-princis-p23s2w8
-kā	cs	kā	m-d1291-Mazais-princis-p23s2w9
-pats	pg0msnn	pats	m-d1291-Mazais-princis-p23s2w10
-oriģināls	ncmsn1	oriģināls	m-d1291-Mazais-princis-p23s2w11
+,	zc	,	m-d1291-Mazais-princis-p17-p7s2w5
+nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p17-p7s2w6
+tik	r0n	tik	m-d1291-Mazais-princis-p17-p7s2w7
+valdzinošs	vmnpdmsnapnpn	valdzināt	m-d1291-Mazais-princis-p17-p7s2w8
+kā	cs	kā	m-d1291-Mazais-princis-p17-p7s2w9
+pats	pg0msnn	pats	m-d1291-Mazais-princis-p17-p7s2w10
+oriģināls	ncmsn1	oriģināls	m-d1291-Mazais-princis-p17-p7s2w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p23s2w12
+.	zs	.	m-d1291-Mazais-princis-p17-p7s2w12
 </s>
 <s>
-Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p23s3w1
-nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p23s3w2
-mana	ps0fsnn	mana	m-d1291-Mazais-princis-p23s3w3
-vaina	ncfsn4	vaina	m-d1291-Mazais-princis-p23s3w4
+Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p17-p7s3w1
+nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p17-p7s3w2
+mana	ps0fsnn	mana	m-d1291-Mazais-princis-p17-p7s3w3
+vaina	ncfsn4	vaina	m-d1291-Mazais-princis-p17-p7s3w4
 <g />
-.	zs	.	m-d1291-Mazais-princis-p23s3w5
+.	zs	.	m-d1291-Mazais-princis-p17-p7s3w5
 </s>
 <s>
-Drosmi	ncfsa5	drosme	m-d1291-Mazais-princis-p23s4w1
-uzsākt	vmnn0t1000n	uzsākt	m-d1291-Mazais-princis-p23s4w2
-gleznotāja	ncmsg1	gleznotājs	m-d1291-Mazais-princis-p23s4w3
-karjeru	ncfsa4	karjera	m-d1291-Mazais-princis-p23s4w4
-man	pp10sdn	es	m-d1291-Mazais-princis-p23s4w5
-laupīja	vmnist330an	laupīt	m-d1291-Mazais-princis-p23s4w6
-pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p23s4w7
+Drosmi	ncfsa5	drosme	m-d1291-Mazais-princis-p17-p7s4w1
+uzsākt	vmnn0t1000n	uzsākt	m-d1291-Mazais-princis-p17-p7s4w2
+gleznotāja	ncmsg1	gleznotājs	m-d1291-Mazais-princis-p17-p7s4w3
+karjeru	ncfsa4	karjera	m-d1291-Mazais-princis-p17-p7s4w4
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p7s4w5
+laupīja	vmnist330an	laupīt	m-d1291-Mazais-princis-p17-p7s4w6
+pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p17-p7s4w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s4w8
-kad	r0n	kad	m-d1291-Mazais-princis-p23s4w9
-biju	vcnisii1san	būt	m-d1291-Mazais-princis-p23s4w10
-sešus	mcsmpa	seši	m-d1291-Mazais-princis-p23s4w11
-gadus	ncmpa1	gads	m-d1291-Mazais-princis-p23s4w12
-vecs	afmsnnp	vecs	m-d1291-Mazais-princis-p23s4w13
+,	zc	,	m-d1291-Mazais-princis-p17-p7s4w8
+kad	r0n	kad	m-d1291-Mazais-princis-p17-p7s4w9
+biju	vcnisii1san	būt	m-d1291-Mazais-princis-p17-p7s4w10
+sešus	mcsmpa	seši	m-d1291-Mazais-princis-p17-p7s4w11
+gadus	ncmpa1	gads	m-d1291-Mazais-princis-p17-p7s4w12
+vecs	afmsnnp	vecs	m-d1291-Mazais-princis-p17-p7s4w13
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s4w14
-un	cc	un	m-d1291-Mazais-princis-p23s4w15
+,	zc	,	m-d1291-Mazais-princis-p17-p7s4w14
+un	cc	un	m-d1291-Mazais-princis-p17-p7s4w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s4w16
-izņemot	vmnpu0000000n	izņemt	m-d1291-Mazais-princis-p23s4w17
-boa	ncf000	boa	m-d1291-Mazais-princis-p23s4w18
-čūskas	ncfpa4	čūska	m-d1291-Mazais-princis-p23s4w19
-no	spsg	no	m-d1291-Mazais-princis-p23s4w20
-ārpuses	ncfsg5	ārpuse	m-d1291-Mazais-princis-p23s4w21
-un	cc	un	m-d1291-Mazais-princis-p23s4w22
-iekšpuses	ncfsg5	iekšpuse	m-d1291-Mazais-princis-p23s4w23
+,	zc	,	m-d1291-Mazais-princis-p17-p7s4w16
+izņemot	vmnpu0000000n	izņemt	m-d1291-Mazais-princis-p17-p7s4w17
+boa	ncf000	boa	m-d1291-Mazais-princis-p17-p7s4w18
+čūskas	ncfpa4	čūska	m-d1291-Mazais-princis-p17-p7s4w19
+no	spsg	no	m-d1291-Mazais-princis-p17-p7s4w20
+ārpuses	ncfsg5	ārpuse	m-d1291-Mazais-princis-p17-p7s4w21
+un	cc	un	m-d1291-Mazais-princis-p17-p7s4w22
+iekšpuses	ncfsg5	iekšpuse	m-d1291-Mazais-princis-p17-p7s4w23
 <g />
-,	zc	,	m-d1291-Mazais-princis-p23s4w24
-neko	pi000ay	nekas	m-d1291-Mazais-princis-p23s4w25
-citu	pi0msan	cits	m-d1291-Mazais-princis-p23s4w26
-neesmu	vcnipii1say	būt	m-d1291-Mazais-princis-p23s4w27
-iemācījies	vmypdmsnasnpn	iemācīties	m-d1291-Mazais-princis-p23s4w28
-zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p23s4w29
+,	zc	,	m-d1291-Mazais-princis-p17-p7s4w24
+neko	pi000ay	nekas	m-d1291-Mazais-princis-p17-p7s4w25
+citu	pi0msan	cits	m-d1291-Mazais-princis-p17-p7s4w26
+neesmu	vcnipii1say	būt	m-d1291-Mazais-princis-p17-p7s4w27
+iemācījies	vmypdmsnasnpn	iemācīties	m-d1291-Mazais-princis-p17-p7s4w28
+zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p17-p7s4w29
 <g />
-.	zs	.	m-d1291-Mazais-princis-p23s4w30
+.	zs	.	m-d1291-Mazais-princis-p17-p7s4w30
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p24s1w1
-tā	r0n	tā	m-d1291-Mazais-princis-p24s1w2
-es	pp10snn	es	m-d1291-Mazais-princis-p24s1w3
-raudzījos	vmyisi31san	raudzīties	m-d1291-Mazais-princis-p24s1w4
-uz	spsa	uz	m-d1291-Mazais-princis-p24s1w5
-šo	pd3fsan	šī	m-d1291-Mazais-princis-p24s1w6
-parādību	ncfsa4	parādība	m-d1291-Mazais-princis-p24s1w7
-izbrīnā	ncmsl1	izbrīns	m-d1291-Mazais-princis-p24s1w8
-plati	rpn	plati	m-d1291-Mazais-princis-p24s1w9
-ieplestām	vmnpdfpdpsnpn	ieplest	m-d1291-Mazais-princis-p24s1w10
-acīm	ncfpd6	acs	m-d1291-Mazais-princis-p24s1w11
+Un	cc	un	m-d1291-Mazais-princis-p17-p8s1w1
+tā	r0n	tā	m-d1291-Mazais-princis-p17-p8s1w2
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p8s1w3
+raudzījos	vmyisi31san	raudzīties	m-d1291-Mazais-princis-p17-p8s1w4
+uz	spsa	uz	m-d1291-Mazais-princis-p17-p8s1w5
+šo	pd3fsan	šī	m-d1291-Mazais-princis-p17-p8s1w6
+parādību	ncfsa4	parādība	m-d1291-Mazais-princis-p17-p8s1w7
+izbrīnā	ncmsl1	izbrīns	m-d1291-Mazais-princis-p17-p8s1w8
+plati	rpn	plati	m-d1291-Mazais-princis-p17-p8s1w9
+ieplestām	vmnpdfpdpsnpn	ieplest	m-d1291-Mazais-princis-p17-p8s1w10
+acīm	ncfpd6	acs	m-d1291-Mazais-princis-p17-p8s1w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p24s1w12
+.	zs	.	m-d1291-Mazais-princis-p17-p8s1w12
 </s>
 <s>
-Neaizmirstiet	vmnm0t12pay	aizmirst	m-d1291-Mazais-princis-p24s2w1
+Neaizmirstiet	vmnm0t12pay	aizmirst	m-d1291-Mazais-princis-p17-p8s2w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s2w2
-ka	cs	ka	m-d1291-Mazais-princis-p24s2w3
-atrados	vmyisi11san	atrasties	m-d1291-Mazais-princis-p24s2w4
-tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p24s2w5
-jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p24s2w6
-tālu	rpn	tālu	m-d1291-Mazais-princis-p24s2w7
-no	spsg	no	m-d1291-Mazais-princis-p24s2w8
-jebkuras	pi0fsgn	jebkura	m-d1291-Mazais-princis-p24s2w9
-apdzīvotas	vmnpdfsgpsnpn	apdzīvot	m-d1291-Mazais-princis-p24s2w10
-vietas	ncfsg4	vieta	m-d1291-Mazais-princis-p24s2w11
+,	zc	,	m-d1291-Mazais-princis-p17-p8s2w2
+ka	cs	ka	m-d1291-Mazais-princis-p17-p8s2w3
+atrados	vmyisi11san	atrasties	m-d1291-Mazais-princis-p17-p8s2w4
+tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p17-p8s2w5
+jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p17-p8s2w6
+tālu	rpn	tālu	m-d1291-Mazais-princis-p17-p8s2w7
+no	spsg	no	m-d1291-Mazais-princis-p17-p8s2w8
+jebkuras	pi0fsgn	jebkura	m-d1291-Mazais-princis-p17-p8s2w9
+apdzīvotas	vmnpdfsgpsnpn	apdzīvot	m-d1291-Mazais-princis-p17-p8s2w10
+vietas	ncfsg4	vieta	m-d1291-Mazais-princis-p17-p8s2w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p24s2w12
+.	zs	.	m-d1291-Mazais-princis-p17-p8s2w12
 </s>
 <s>
-Taču	cc	taču	m-d1291-Mazais-princis-p24s3w1
-šis	pd3msnn	šis	m-d1291-Mazais-princis-p24s3w2
-mazais	afmsnyp	mazs	m-d1291-Mazais-princis-p24s3w3
-puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p24s3w4
-nelikās	vtyisi130ay	likties	m-d1291-Mazais-princis-p24s3w5
-nedz	cc	nedz	m-d1291-Mazais-princis-p24s3w6
-nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p24s3w7
+Taču	cc	taču	m-d1291-Mazais-princis-p17-p8s3w1
+šis	pd3msnn	šis	m-d1291-Mazais-princis-p17-p8s3w2
+mazais	afmsnyp	mazs	m-d1291-Mazais-princis-p17-p8s3w3
+puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p17-p8s3w4
+nelikās	vtyisi130ay	likties	m-d1291-Mazais-princis-p17-p8s3w5
+nedz	cc	nedz	m-d1291-Mazais-princis-p17-p8s3w6
+nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p17-p8s3w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s3w8
-nedz	cc	nedz	m-d1291-Mazais-princis-p24s3w9
-noguris	vmnpdmsnasnpn	nogurt	m-d1291-Mazais-princis-p24s3w10
-līdz	spsd	līdz	m-d1291-Mazais-princis-p24s3w11
-nāvei	ncfsd5	nāve	m-d1291-Mazais-princis-p24s3w12
+,	zc	,	m-d1291-Mazais-princis-p17-p8s3w8
+nedz	cc	nedz	m-d1291-Mazais-princis-p17-p8s3w9
+noguris	vmnpdmsnasnpn	nogurt	m-d1291-Mazais-princis-p17-p8s3w10
+līdz	spsd	līdz	m-d1291-Mazais-princis-p17-p8s3w11
+nāvei	ncfsd5	nāve	m-d1291-Mazais-princis-p17-p8s3w12
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s3w13
-neizskatījās	vmyisi330ay	izskatīties	m-d1291-Mazais-princis-p24s3w14
-arī	q	arī	m-d1291-Mazais-princis-p24s3w15
+,	zc	,	m-d1291-Mazais-princis-p17-p8s3w13
+neizskatījās	vmyisi330ay	izskatīties	m-d1291-Mazais-princis-p17-p8s3w14
+arī	q	arī	m-d1291-Mazais-princis-p17-p8s3w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s3w16
-ka	cs	ka	m-d1291-Mazais-princis-p24s3w17
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p24s3w18
-mirtu	vmnc0i100an	mirt	m-d1291-Mazais-princis-p24s3w19
-nost	rpn	nost	m-d1291-Mazais-princis-p24s3w20
-no	spsg	no	m-d1291-Mazais-princis-p24s3w21
-bada	ncmsg1	bads	m-d1291-Mazais-princis-p24s3w22
+,	zc	,	m-d1291-Mazais-princis-p17-p8s3w16
+ka	cs	ka	m-d1291-Mazais-princis-p17-p8s3w17
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p8s3w18
+mirtu	vmnc0i100an	mirt	m-d1291-Mazais-princis-p17-p8s3w19
+nost	rpn	nost	m-d1291-Mazais-princis-p17-p8s3w20
+no	spsg	no	m-d1291-Mazais-princis-p17-p8s3w21
+bada	ncmsg1	bads	m-d1291-Mazais-princis-p17-p8s3w22
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s3w23
-slāpēm	ncfdd5	slāpes	m-d1291-Mazais-princis-p24s3w24
-vai	cc	vai	m-d1291-Mazais-princis-p24s3w25
-bailēm	ncfdd5	bailes	m-d1291-Mazais-princis-p24s3w26
+,	zc	,	m-d1291-Mazais-princis-p17-p8s3w23
+slāpēm	ncfdd5	slāpes	m-d1291-Mazais-princis-p17-p8s3w24
+vai	cc	vai	m-d1291-Mazais-princis-p17-p8s3w25
+bailēm	ncfdd5	bailes	m-d1291-Mazais-princis-p17-p8s3w26
 <g />
-.	zs	.	m-d1291-Mazais-princis-p24s3w27
+.	zs	.	m-d1291-Mazais-princis-p17-p8s3w27
 </s>
 <s>
-Nekas	pi000ny	nekas	m-d1291-Mazais-princis-p24s4w1
-neliecināja	vmnist330ay	liecināt	m-d1291-Mazais-princis-p24s4w2
+Nekas	pi000ny	nekas	m-d1291-Mazais-princis-p17-p8s4w1
+neliecināja	vmnist330ay	liecināt	m-d1291-Mazais-princis-p17-p8s4w2
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s4w3
-ka	cs	ka	m-d1291-Mazais-princis-p24s4w4
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p24s4w5
-būtu	vcnc0ii00an	būt	m-d1291-Mazais-princis-p24s4w6
-neapdzīvota	vmnpdmsgpsnpy	apdzīvot	m-d1291-Mazais-princis-p24s4w7
-tuksneša	ncmsg2	tuksnesis	m-d1291-Mazais-princis-p24s4w8
-vidū	ncmsl3	vidus	m-d1291-Mazais-princis-p24s4w9
-nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p24s4w10
-bērns	ncmsn1	bērns	m-d1291-Mazais-princis-p24s4w11
+,	zc	,	m-d1291-Mazais-princis-p17-p8s4w3
+ka	cs	ka	m-d1291-Mazais-princis-p17-p8s4w4
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p8s4w5
+būtu	vcnc0ii00an	būt	m-d1291-Mazais-princis-p17-p8s4w6
+neapdzīvota	vmnpdmsgpsnpy	apdzīvot	m-d1291-Mazais-princis-p17-p8s4w7
+tuksneša	ncmsg2	tuksnesis	m-d1291-Mazais-princis-p17-p8s4w8
+vidū	ncmsl3	vidus	m-d1291-Mazais-princis-p17-p8s4w9
+nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p17-p8s4w10
+bērns	ncmsn1	bērns	m-d1291-Mazais-princis-p17-p8s4w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p24s4w12
+.	zs	.	m-d1291-Mazais-princis-p17-p8s4w12
 </s>
 <s>
-Kad	r0n	kad	m-d1291-Mazais-princis-p24s5w1
-beidzot	r0n	beidzot	m-d1291-Mazais-princis-p24s5w2
-atguvu	vmnist11san	atgūt	m-d1291-Mazais-princis-p24s5w3
-spēju	ncfsa4	spēja	m-d1291-Mazais-princis-p24s5w4
-runāt	vmnn0i2000n	runāt	m-d1291-Mazais-princis-p24s5w5
+Kad	r0n	kad	m-d1291-Mazais-princis-p17-p8s5w1
+beidzot	r0n	beidzot	m-d1291-Mazais-princis-p17-p8s5w2
+atguvu	vmnist11san	atgūt	m-d1291-Mazais-princis-p17-p8s5w3
+spēju	ncfsa4	spēja	m-d1291-Mazais-princis-p17-p8s5w4
+runāt	vmnn0i2000n	runāt	m-d1291-Mazais-princis-p17-p8s5w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p24s5w6
-es	pp10snn	es	m-d1291-Mazais-princis-p24s5w7
-viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p24s5w8
-jautāju	vmnipt21san	jautāt	m-d1291-Mazais-princis-p24s5w9
+,	zc	,	m-d1291-Mazais-princis-p17-p8s5w6
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p8s5w7
+viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p17-p8s5w8
+jautāju	vmnipt21san	jautāt	m-d1291-Mazais-princis-p17-p8s5w9
 <g />
-:	zo	:	m-d1291-Mazais-princis-p24s5w10
--	zd	-	m-d1291-Mazais-princis-p24s5w11
-Bet	cc	bet	m-d1291-Mazais-princis-p24s5w12
+:	zo	:	m-d1291-Mazais-princis-p17-p8s5w10
+-	zd	-	m-d1291-Mazais-princis-p17-p8s5w11
+Bet	cc	bet	m-d1291-Mazais-princis-p17-p8s5w12
 <g />
-…	zs	...	m-d1291-Mazais-princis-p24s5w13
-ko	pq000an	kas	m-d1291-Mazais-princis-p24s5w14
-tad	q	tad	m-d1291-Mazais-princis-p24s5w15
-tu	pp20snn	tu	m-d1291-Mazais-princis-p24s5w16
-še	r0n	še	m-d1291-Mazais-princis-p24s5w17
-dari	vmnipt32san	darīt	m-d1291-Mazais-princis-p24s5w18
+…	zs	...	m-d1291-Mazais-princis-p17-p8s5w13
+ko	pq000an	kas	m-d1291-Mazais-princis-p17-p8s5w14
+tad	q	tad	m-d1291-Mazais-princis-p17-p8s5w15
+tu	pp20snn	tu	m-d1291-Mazais-princis-p17-p8s5w16
+še	r0n	še	m-d1291-Mazais-princis-p17-p8s5w17
+dari	vmnipt32san	darīt	m-d1291-Mazais-princis-p17-p8s5w18
 <g />
-?	zs	?	m-d1291-Mazais-princis-p24s5w19
+?	zs	?	m-d1291-Mazais-princis-p17-p8s5w19
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p26s1w1
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p26s1w2
-atkal	r0n	atkal	m-d1291-Mazais-princis-p26s1w3
-man	pp10sdn	es	m-d1291-Mazais-princis-p26s1w4
-mierīgi	rpn	mierīgi	m-d1291-Mazais-princis-p26s1w5
-palūdza	vmnist130an	palūgt	m-d1291-Mazais-princis-p26s1w6
+Un	cc	un	m-d1291-Mazais-princis-p17-p10s1w1
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p10s1w2
+atkal	r0n	atkal	m-d1291-Mazais-princis-p17-p10s1w3
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p10s1w4
+mierīgi	rpn	mierīgi	m-d1291-Mazais-princis-p17-p10s1w5
+palūdza	vmnist130an	palūgt	m-d1291-Mazais-princis-p17-p10s1w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p26s1w7
-it	q	it	m-d1291-Mazais-princis-p26s1w8
-kā	cs	kā	m-d1291-Mazais-princis-p26s1w9
-runa	ncfsn4	runa	m-d1291-Mazais-princis-p26s1w10
-būtu	vcnc0ii00an	būt	m-d1291-Mazais-princis-p26s1w11
-par	spsa	par	m-d1291-Mazais-princis-p26s1w12
-kaut	q	kaut	m-d1291-Mazais-princis-p26s1w13
-ko	pi000an	kas	m-d1291-Mazais-princis-p26s1w14
-sevišķi	rpn	sevišķi	m-d1291-Mazais-princis-p26s1w15
-svarīgu	afmsanp	svarīgs	m-d1291-Mazais-princis-p26s1w16
+,	zc	,	m-d1291-Mazais-princis-p17-p10s1w7
+it	q	it	m-d1291-Mazais-princis-p17-p10s1w8
+kā	cs	kā	m-d1291-Mazais-princis-p17-p10s1w9
+runa	ncfsn4	runa	m-d1291-Mazais-princis-p17-p10s1w10
+būtu	vcnc0ii00an	būt	m-d1291-Mazais-princis-p17-p10s1w11
+par	spsa	par	m-d1291-Mazais-princis-p17-p10s1w12
+kaut	q	kaut	m-d1291-Mazais-princis-p17-p10s1w13
+ko	pi000an	kas	m-d1291-Mazais-princis-p17-p10s1w14
+sevišķi	rpn	sevišķi	m-d1291-Mazais-princis-p17-p10s1w15
+svarīgu	afmsanp	svarīgs	m-d1291-Mazais-princis-p17-p10s1w16
 <g />
-:	zo	:	m-d1291-Mazais-princis-p26s1w17
--	zd	-	m-d1291-Mazais-princis-p26s1w18
-Lūdzu	i	lūdzu	m-d1291-Mazais-princis-p26s1w19
+:	zo	:	m-d1291-Mazais-princis-p17-p10s1w17
+-	zd	-	m-d1291-Mazais-princis-p17-p10s1w18
+Lūdzu	i	lūdzu	m-d1291-Mazais-princis-p17-p10s1w19
 <g />
-…	zs	...	m-d1291-Mazais-princis-p26s1w20
-uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p26s1w21
-man	pp10sdn	es	m-d1291-Mazais-princis-p26s1w22
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p26s1w23
+…	zs	...	m-d1291-Mazais-princis-p17-p10s1w20
+uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p17-p10s1w21
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p10s1w22
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p10s1w23
 <g />
-…	zs	...	m-d1291-Mazais-princis-p26s1w24
+…	zs	...	m-d1291-Mazais-princis-p17-p10s1w24
 </s>
 <s>
-Kad	r0n	kad	m-d1291-Mazais-princis-p28s1w1
-noslēpums	ncmsn1	noslēpums	m-d1291-Mazais-princis-p28s1w2
-mūs	pp10pan	mēs	m-d1291-Mazais-princis-p28s1w3
-pārāk	r0n	pārāk	m-d1291-Mazais-princis-p28s1w4
-satrauc	vmnipt130an	satraukt	m-d1291-Mazais-princis-p28s1w5
+Kad	r0n	kad	m-d1291-Mazais-princis-p17-p12s1w1
+noslēpums	ncmsn1	noslēpums	m-d1291-Mazais-princis-p17-p12s1w2
+mūs	pp10pan	mēs	m-d1291-Mazais-princis-p17-p12s1w3
+pārāk	r0n	pārāk	m-d1291-Mazais-princis-p17-p12s1w4
+satrauc	vmnipt130an	satraukt	m-d1291-Mazais-princis-p17-p12s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s1w6
-mēs	pp10pnn	mēs	m-d1291-Mazais-princis-p28s1w7
-neuzdrošināmies	voyipt31pay	uzdrošināties	m-d1291-Mazais-princis-p28s1w8
-nepaklausīt	vmnn0i3000y	paklausīt	m-d1291-Mazais-princis-p28s1w9
+,	zc	,	m-d1291-Mazais-princis-p17-p12s1w6
+mēs	pp10pnn	mēs	m-d1291-Mazais-princis-p17-p12s1w7
+neuzdrošināmies	voyipt31pay	uzdrošināties	m-d1291-Mazais-princis-p17-p12s1w8
+nepaklausīt	vmnn0i3000y	paklausīt	m-d1291-Mazais-princis-p17-p12s1w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p28s1w10
+.	zs	.	m-d1291-Mazais-princis-p17-p12s1w10
 </s>
 <s>
-Kaut	cs	kaut	m-d1291-Mazais-princis-p28s2w1
-arī	q	arī	m-d1291-Mazais-princis-p28s2w2
-tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p28s2w3
-jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p28s2w4
-tālu	rpn	tālu	m-d1291-Mazais-princis-p28s2w5
-no	sppd	no	m-d1291-Mazais-princis-p28s2w6
-apdzīvotām	vmnpdfpdpsnpn	apdzīvot	m-d1291-Mazais-princis-p28s2w7
-vietām	ncfpd4	vieta	m-d1291-Mazais-princis-p28s2w8
-un	cc	un	m-d1291-Mazais-princis-p28s2w9
-nāves	ncfsg5	nāve	m-d1291-Mazais-princis-p28s2w10
-briesmās	ncfdl4	briesmas	m-d1291-Mazais-princis-p28s2w11
-tas	pd3msnn	tas	m-d1291-Mazais-princis-p28s2w12
-man	pp10sdn	es	m-d1291-Mazais-princis-p28s2w13
-šķita	vtnisi130an	šķist	m-d1291-Mazais-princis-p28s2w14
-muļķīgi	rpn	muļķīgi	m-d1291-Mazais-princis-p28s2w15
+Kaut	cs	kaut	m-d1291-Mazais-princis-p17-p12s2w1
+arī	q	arī	m-d1291-Mazais-princis-p17-p12s2w2
+tūkstošiem	ncmpd2	tūkstotis	m-d1291-Mazais-princis-p17-p12s2w3
+jūdžu	ncfpg5	jūdze	m-d1291-Mazais-princis-p17-p12s2w4
+tālu	rpn	tālu	m-d1291-Mazais-princis-p17-p12s2w5
+no	sppd	no	m-d1291-Mazais-princis-p17-p12s2w6
+apdzīvotām	vmnpdfpdpsnpn	apdzīvot	m-d1291-Mazais-princis-p17-p12s2w7
+vietām	ncfpd4	vieta	m-d1291-Mazais-princis-p17-p12s2w8
+un	cc	un	m-d1291-Mazais-princis-p17-p12s2w9
+nāves	ncfsg5	nāve	m-d1291-Mazais-princis-p17-p12s2w10
+briesmās	ncfdl4	briesmas	m-d1291-Mazais-princis-p17-p12s2w11
+tas	pd3msnn	tas	m-d1291-Mazais-princis-p17-p12s2w12
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p12s2w13
+šķita	vtnisi130an	šķist	m-d1291-Mazais-princis-p17-p12s2w14
+muļķīgi	rpn	muļķīgi	m-d1291-Mazais-princis-p17-p12s2w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s2w16
-es	pp10snn	es	m-d1291-Mazais-princis-p28s2w17
-tomēr	q	tomēr	m-d1291-Mazais-princis-p28s2w18
-izņēmu	vmnist11san	izņemt	m-d1291-Mazais-princis-p28s2w19
-no	spsg	no	m-d1291-Mazais-princis-p28s2w20
-kabatas	ncfsg4	kabata	m-d1291-Mazais-princis-p28s2w21
-papīra	ncmsg1	papīrs	m-d1291-Mazais-princis-p28s2w22
-lapu	ncfsa4	lapa	m-d1291-Mazais-princis-p28s2w23
-un	cc	un	m-d1291-Mazais-princis-p28s2w24
-pildspalvu	ncfsa4	pildspalva	m-d1291-Mazais-princis-p28s2w25
+,	zc	,	m-d1291-Mazais-princis-p17-p12s2w16
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p12s2w17
+tomēr	q	tomēr	m-d1291-Mazais-princis-p17-p12s2w18
+izņēmu	vmnist11san	izņemt	m-d1291-Mazais-princis-p17-p12s2w19
+no	spsg	no	m-d1291-Mazais-princis-p17-p12s2w20
+kabatas	ncfsg4	kabata	m-d1291-Mazais-princis-p17-p12s2w21
+papīra	ncmsg1	papīrs	m-d1291-Mazais-princis-p17-p12s2w22
+lapu	ncfsa4	lapa	m-d1291-Mazais-princis-p17-p12s2w23
+un	cc	un	m-d1291-Mazais-princis-p17-p12s2w24
+pildspalvu	ncfsa4	pildspalva	m-d1291-Mazais-princis-p17-p12s2w25
 <g />
-.	zs	.	m-d1291-Mazais-princis-p28s2w26
+.	zs	.	m-d1291-Mazais-princis-p17-p12s2w26
 </s>
 <s>
-Tad	r0n	tad	m-d1291-Mazais-princis-p28s3w1
-gan	q	gan	m-d1291-Mazais-princis-p28s3w2
-atcerējos	vmyist31san	atcerēties	m-d1291-Mazais-princis-p28s3w3
+Tad	r0n	tad	m-d1291-Mazais-princis-p17-p12s3w1
+gan	q	gan	m-d1291-Mazais-princis-p17-p12s3w2
+atcerējos	vmyist31san	atcerēties	m-d1291-Mazais-princis-p17-p12s3w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s3w4
-ka	cs	ka	m-d1291-Mazais-princis-p28s3w5
-esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p28s3w6
-mācījies	vmypdmsnasnpn	mācīties	m-d1291-Mazais-princis-p28s3w7
-gandrīz	r0n	gandrīz	m-d1291-Mazais-princis-p28s3w8
-vienīgi	q	vienīgi	m-d1291-Mazais-princis-p28s3w9
-ģeogrāfiju	ncfsa4	ģeogrāfija	m-d1291-Mazais-princis-p28s3w10
+,	zc	,	m-d1291-Mazais-princis-p17-p12s3w4
+ka	cs	ka	m-d1291-Mazais-princis-p17-p12s3w5
+esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p17-p12s3w6
+mācījies	vmypdmsnasnpn	mācīties	m-d1291-Mazais-princis-p17-p12s3w7
+gandrīz	r0n	gandrīz	m-d1291-Mazais-princis-p17-p12s3w8
+vienīgi	q	vienīgi	m-d1291-Mazais-princis-p17-p12s3w9
+ģeogrāfiju	ncfsa4	ģeogrāfija	m-d1291-Mazais-princis-p17-p12s3w10
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s3w11
-vēsturi	ncfsa5	vēsture	m-d1291-Mazais-princis-p28s3w12
+,	zc	,	m-d1291-Mazais-princis-p17-p12s3w11
+vēsturi	ncfsa5	vēsture	m-d1291-Mazais-princis-p17-p12s3w12
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s3w13
-rēķināšanu	ncfsa4	rēķināšana	m-d1291-Mazais-princis-p28s3w14
-un	cc	un	m-d1291-Mazais-princis-p28s3w15
-gramatiku	ncfsa4	gramatika	m-d1291-Mazais-princis-p28s3w16
+,	zc	,	m-d1291-Mazais-princis-p17-p12s3w13
+rēķināšanu	ncfsa4	rēķināšana	m-d1291-Mazais-princis-p17-p12s3w14
+un	cc	un	m-d1291-Mazais-princis-p17-p12s3w15
+gramatiku	ncfsa4	gramatika	m-d1291-Mazais-princis-p17-p12s3w16
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s3w17
-un	cc	un	m-d1291-Mazais-princis-p28s3w18
-teicu	vmnist11san	teikt	m-d1291-Mazais-princis-p28s3w19
-mazliet	r0n	mazliet	m-d1291-Mazais-princis-p28s3w20
-īgni	rpn	īgni	m-d1291-Mazais-princis-p28s3w21
-puisēnam	ncmsd1	puisēns	m-d1291-Mazais-princis-p28s3w22
+,	zc	,	m-d1291-Mazais-princis-p17-p12s3w17
+un	cc	un	m-d1291-Mazais-princis-p17-p12s3w18
+teicu	vmnist11san	teikt	m-d1291-Mazais-princis-p17-p12s3w19
+mazliet	r0n	mazliet	m-d1291-Mazais-princis-p17-p12s3w20
+īgni	rpn	īgni	m-d1291-Mazais-princis-p17-p12s3w21
+puisēnam	ncmsd1	puisēns	m-d1291-Mazais-princis-p17-p12s3w22
 <g />
-,	zc	,	m-d1291-Mazais-princis-p28s3w23
-ka	cs	ka	m-d1291-Mazais-princis-p28s3w24
-neprotu	vonipi11say	prast	m-d1291-Mazais-princis-p28s3w25
-zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p28s3w26
+,	zc	,	m-d1291-Mazais-princis-p17-p12s3w23
+ka	cs	ka	m-d1291-Mazais-princis-p17-p12s3w24
+neprotu	vonipi11say	prast	m-d1291-Mazais-princis-p17-p12s3w25
+zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p17-p12s3w26
 <g />
-.	zs	.	m-d1291-Mazais-princis-p28s3w27
+.	zs	.	m-d1291-Mazais-princis-p17-p12s3w27
 </s>
 <s>
-Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p28s4w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p28s4w2
-atbildēja	vmnisi330an	atbildēt	m-d1291-Mazais-princis-p28s4w3
+Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p12s4w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p12s4w2
+atbildēja	vmnisi330an	atbildēt	m-d1291-Mazais-princis-p17-p12s4w3
 <g />
-:	zo	:	m-d1291-Mazais-princis-p28s4w4
--	zd	-	m-d1291-Mazais-princis-p28s4w5
-Tas	pd3msnn	tas	m-d1291-Mazais-princis-p28s4w6
-nekas	pi000ny	nekas	m-d1291-Mazais-princis-p28s4w7
+:	zo	:	m-d1291-Mazais-princis-p17-p12s4w4
+-	zd	-	m-d1291-Mazais-princis-p17-p12s4w5
+Tas	pd3msnn	tas	m-d1291-Mazais-princis-p17-p12s4w6
+nekas	pi000ny	nekas	m-d1291-Mazais-princis-p17-p12s4w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p28s4w8
+.	zs	.	m-d1291-Mazais-princis-p17-p12s4w8
 </s>
 <s>
-Uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p29s1w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p29s1w2
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p29s1w3
+Uzzīmē	vmnipt230an	uzzīmēt	m-d1291-Mazais-princis-p17-p13s1w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p13s1w2
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p13s1w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p29s1w4
+.	zs	.	m-d1291-Mazais-princis-p17-p13s1w4
 </s>
 <s>
-Tā	cs	tā	m-d1291-Mazais-princis-p30s1w1
-kā	cs	kā	m-d1291-Mazais-princis-p30s1w2
-nekad	r0n	nekad	m-d1291-Mazais-princis-p30s1w3
-nebiju	vcnisii1say	būt	m-d1291-Mazais-princis-p30s1w4
-zīmējis	vmnpdmsnasnpn	zīmēt	m-d1291-Mazais-princis-p30s1w5
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p30s1w6
+Tā	cs	tā	m-d1291-Mazais-princis-p17-p14s1w1
+kā	cs	kā	m-d1291-Mazais-princis-p17-p14s1w2
+nekad	r0n	nekad	m-d1291-Mazais-princis-p17-p14s1w3
+nebiju	vcnisii1say	būt	m-d1291-Mazais-princis-p17-p14s1w4
+zīmējis	vmnpdmsnasnpn	zīmēt	m-d1291-Mazais-princis-p17-p14s1w5
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p14s1w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p30s1w7
-es	pp10snn	es	m-d1291-Mazais-princis-p30s1w8
-uzmetu	vmnist11san	uzmest	m-d1291-Mazais-princis-p30s1w9
-vienu	mcsmsa	viens	m-d1291-Mazais-princis-p30s1w10
-no	sppd	no	m-d1291-Mazais-princis-p30s1w11
-tiem	pd3mpdn	tas	m-d1291-Mazais-princis-p30s1w12
-diviem	mcsmpd	divi	m-d1291-Mazais-princis-p30s1w13
-vienīgajiem	afmpdyp	vienīgs	m-d1291-Mazais-princis-p30s1w14
-zīmējumiem	ncmpd1	zīmējums	m-d1291-Mazais-princis-p30s1w15
+,	zc	,	m-d1291-Mazais-princis-p17-p14s1w7
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p14s1w8
+uzmetu	vmnist11san	uzmest	m-d1291-Mazais-princis-p17-p14s1w9
+vienu	mcsmsa	viens	m-d1291-Mazais-princis-p17-p14s1w10
+no	sppd	no	m-d1291-Mazais-princis-p17-p14s1w11
+tiem	pd3mpdn	tas	m-d1291-Mazais-princis-p17-p14s1w12
+diviem	mcsmpd	divi	m-d1291-Mazais-princis-p17-p14s1w13
+vienīgajiem	afmpdyp	vienīgs	m-d1291-Mazais-princis-p17-p14s1w14
+zīmējumiem	ncmpd1	zīmējums	m-d1291-Mazais-princis-p17-p14s1w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p30s1w16
-ko	pr000an	kas	m-d1291-Mazais-princis-p30s1w17
-pratu	vonisi11san	prast	m-d1291-Mazais-princis-p30s1w18
-zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p30s1w19
+,	zc	,	m-d1291-Mazais-princis-p17-p14s1w16
+ko	pr000an	kas	m-d1291-Mazais-princis-p17-p14s1w17
+pratu	vonisi11san	prast	m-d1291-Mazais-princis-p17-p14s1w18
+zīmēt	vmnn0t2000n	zīmēt	m-d1291-Mazais-princis-p17-p14s1w19
 <g />
-,	zc	,	m-d1291-Mazais-princis-p30s1w20
-proti	q	proti	m-d1291-Mazais-princis-p30s1w21
+,	zc	,	m-d1291-Mazais-princis-p17-p14s1w20
+proti	q	proti	m-d1291-Mazais-princis-p17-p14s1w21
 <g />
-,	zc	,	m-d1291-Mazais-princis-p30s1w22
-neuzšķērsto	vmnpdfsapsypy	uzšķērst	m-d1291-Mazais-princis-p30s1w23
-čūsku	ncfsa4	čūska	m-d1291-Mazais-princis-p30s1w24
-ar	spsa	ar	m-d1291-Mazais-princis-p30s1w25
-ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p30s1w26
-vēderā	ncmsl1	vēders	m-d1291-Mazais-princis-p30s1w27
+,	zc	,	m-d1291-Mazais-princis-p17-p14s1w22
+neuzšķērsto	vmnpdfsapsypy	uzšķērst	m-d1291-Mazais-princis-p17-p14s1w23
+čūsku	ncfsa4	čūska	m-d1291-Mazais-princis-p17-p14s1w24
+ar	spsa	ar	m-d1291-Mazais-princis-p17-p14s1w25
+ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p17-p14s1w26
+vēderā	ncmsl1	vēders	m-d1291-Mazais-princis-p17-p14s1w27
 <g />
-.	zs	.	m-d1291-Mazais-princis-p30s1w28
+.	zs	.	m-d1291-Mazais-princis-p17-p14s1w28
 </s>
 <s>
-Biju	vcnisii1san	būt	m-d1291-Mazais-princis-p30s2w1
-ārkārtīgi	rpn	ārkārtīgi	m-d1291-Mazais-princis-p30s2w2
-pārsteigts	vmnpdmsnpsnpn	pārsteigt	m-d1291-Mazais-princis-p30s2w3
+Biju	vcnisii1san	būt	m-d1291-Mazais-princis-p17-p14s2w1
+ārkārtīgi	rpn	ārkārtīgi	m-d1291-Mazais-princis-p17-p14s2w2
+pārsteigts	vmnpdmsnpsnpn	pārsteigt	m-d1291-Mazais-princis-p17-p14s2w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p30s2w4
-kad	r0n	kad	m-d1291-Mazais-princis-p30s2w5
-izdzirdu	vmnipt31san	izdzirdēt	m-d1291-Mazais-princis-p30s2w6
-mazo	afmsayp	mazs	m-d1291-Mazais-princis-p30s2w7
-puisēnu	ncmsa1	puisēns	m-d1291-Mazais-princis-p30s2w8
-atbildam	vmnipi31pan	atbildēt	m-d1291-Mazais-princis-p30s2w9
+,	zc	,	m-d1291-Mazais-princis-p17-p14s2w4
+kad	r0n	kad	m-d1291-Mazais-princis-p17-p14s2w5
+izdzirdu	vmnipt31san	izdzirdēt	m-d1291-Mazais-princis-p17-p14s2w6
+mazo	afmsayp	mazs	m-d1291-Mazais-princis-p17-p14s2w7
+puisēnu	ncmsa1	puisēns	m-d1291-Mazais-princis-p17-p14s2w8
+atbildam	vmnipi31pan	atbildēt	m-d1291-Mazais-princis-p17-p14s2w9
 <g />
-:	zo	:	m-d1291-Mazais-princis-p30s2w10
--	zd	-	m-d1291-Mazais-princis-p30s2w11
+:	zo	:	m-d1291-Mazais-princis-p17-p14s2w10
+-	zd	-	m-d1291-Mazais-princis-p17-p14s2w11
 <g />
-Nē	q	nē	m-d1291-Mazais-princis-p30s2w12
+Nē	q	nē	m-d1291-Mazais-princis-p17-p14s2w12
 <g />
-!	zs	!	m-d1291-Mazais-princis-p30s2w13
+!	zs	!	m-d1291-Mazais-princis-p17-p14s2w13
 </s>
 <s>
-Nē	q	nē	m-d1291-Mazais-princis-p31s1w1
+Nē	q	nē	m-d1291-Mazais-princis-p17-p15s1w1
 <g />
-!	zs	!	m-d1291-Mazais-princis-p31s1w2
+!	zs	!	m-d1291-Mazais-princis-p17-p15s1w2
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p31s2w1
-negribu	vmnipt31say	gribēt	m-d1291-Mazais-princis-p31s2w2
-ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p31s2w3
-čūskas	ncfsg4	čūska	m-d1291-Mazais-princis-p31s2w4
-vēderā	ncmsl1	vēders	m-d1291-Mazais-princis-p31s2w5
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p15s2w1
+negribu	vmnipt31say	gribēt	m-d1291-Mazais-princis-p17-p15s2w2
+ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p17-p15s2w3
+čūskas	ncfsg4	čūska	m-d1291-Mazais-princis-p17-p15s2w4
+vēderā	ncmsl1	vēders	m-d1291-Mazais-princis-p17-p15s2w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s2w6
+.	zs	.	m-d1291-Mazais-princis-p17-p15s2w6
 </s>
 <s>
-Čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p31s3w1
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p31s3w2
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p31s3w3
-bīstama	affsnnp	bīstams	m-d1291-Mazais-princis-p31s3w4
+Čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p17-p15s3w1
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p15s3w2
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p17-p15s3w3
+bīstama	affsnnp	bīstams	m-d1291-Mazais-princis-p17-p15s3w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p31s3w5
-un	cc	un	m-d1291-Mazais-princis-p31s3w6
-zilonis	ncmsn2	zilonis	m-d1291-Mazais-princis-p31s3w7
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p31s3w8
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p31s3w9
-liels	afmsnnp	liels	m-d1291-Mazais-princis-p31s3w10
-un	cc	un	m-d1291-Mazais-princis-p31s3w11
-neveikls	afmsnnp	neveikls	m-d1291-Mazais-princis-p31s3w12
+,	zc	,	m-d1291-Mazais-princis-p17-p15s3w5
+un	cc	un	m-d1291-Mazais-princis-p17-p15s3w6
+zilonis	ncmsn2	zilonis	m-d1291-Mazais-princis-p17-p15s3w7
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p15s3w8
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p17-p15s3w9
+liels	afmsnnp	liels	m-d1291-Mazais-princis-p17-p15s3w10
+un	cc	un	m-d1291-Mazais-princis-p17-p15s3w11
+neveikls	afmsnnp	neveikls	m-d1291-Mazais-princis-p17-p15s3w12
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s3w13
+.	zs	.	m-d1291-Mazais-princis-p17-p15s3w13
 </s>
 <s>
-Manās	ps0fpln	mana	m-d1291-Mazais-princis-p31s4w1
-mājās	ncfpl4	māja	m-d1291-Mazais-princis-p31s4w2
-viss	pg0msnn	viss	m-d1291-Mazais-princis-p31s4w3
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p31s4w4
-tik	r0n	tik	m-d1291-Mazais-princis-p31s4w5
-mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p31s4w6
+Manās	ps0fpln	mana	m-d1291-Mazais-princis-p17-p15s4w1
+mājās	ncfpl4	māja	m-d1291-Mazais-princis-p17-p15s4w2
+viss	pg0msnn	viss	m-d1291-Mazais-princis-p17-p15s4w3
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p15s4w4
+tik	r0n	tik	m-d1291-Mazais-princis-p17-p15s4w5
+mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p17-p15s4w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s4w7
+.	zs	.	m-d1291-Mazais-princis-p17-p15s4w7
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p31s5w1
-vajag	vmnipt330an	vajadzēt	m-d1291-Mazais-princis-p31s5w2
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p31s5w3
+Man	pp10sdn	es	m-d1291-Mazais-princis-p17-p15s5w1
+vajag	vmnipt330an	vajadzēt	m-d1291-Mazais-princis-p17-p15s5w2
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p15s5w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s5w4
+.	zs	.	m-d1291-Mazais-princis-p17-p15s5w4
 </s>
 <s>
-Uzzīmē	vmnm0t22san	uzzīmēt	m-d1291-Mazais-princis-p31s6w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p31s6w2
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p31s6w3
+Uzzīmē	vmnm0t22san	uzzīmēt	m-d1291-Mazais-princis-p17-p15s6w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p15s6w2
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p15s6w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s6w4
+.	zs	.	m-d1291-Mazais-princis-p17-p15s6w4
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p31s7w1
-es	pp10snn	es	m-d1291-Mazais-princis-p31s7w2
-uzzīmēju	vmnist21san	uzzīmēt	m-d1291-Mazais-princis-p31s7w3
+Un	cc	un	m-d1291-Mazais-princis-p17-p15s7w1
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p15s7w2
+uzzīmēju	vmnist21san	uzzīmēt	m-d1291-Mazais-princis-p17-p15s7w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p31s7w4
+.	zs	.	m-d1291-Mazais-princis-p17-p15s7w4
 </s>
 <s>
-Uzmanīgi	rpn	uzmanīgi	m-d1291-Mazais-princis-p32s1w1
-apskatījis	vmnpdmsnasnpn	apskatīt	m-d1291-Mazais-princis-p32s1w2
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p32s1w3
+Uzmanīgi	rpn	uzmanīgi	m-d1291-Mazais-princis-p17-p16s1w1
+apskatījis	vmnpdmsnasnpn	apskatīt	m-d1291-Mazais-princis-p17-p16s1w2
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p17-p16s1w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p32s1w4
-puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p32s1w5
-iebilda	vmnist130an	iebilst	m-d1291-Mazais-princis-p32s1w6
+,	zc	,	m-d1291-Mazais-princis-p17-p16s1w4
+puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p17-p16s1w5
+iebilda	vmnist130an	iebilst	m-d1291-Mazais-princis-p17-p16s1w6
 <g />
-:	zo	:	m-d1291-Mazais-princis-p32s1w7
--	zd	-	m-d1291-Mazais-princis-p32s1w8
-Nē	q	nē	m-d1291-Mazais-princis-p32s1w9
+:	zo	:	m-d1291-Mazais-princis-p17-p16s1w7
+-	zd	-	m-d1291-Mazais-princis-p17-p16s1w8
+Nē	q	nē	m-d1291-Mazais-princis-p17-p16s1w9
 <g />
-!	zs	!	m-d1291-Mazais-princis-p32s1w10
+!	zs	!	m-d1291-Mazais-princis-p17-p16s1w10
 </s>
 <s>
-Šis	pd3msnn	šis	m-d1291-Mazais-princis-p33s1w1
-jau	q	jau	m-d1291-Mazais-princis-p33s1w2
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p33s1w3
-galīgi	rpn	galīgi	m-d1291-Mazais-princis-p33s1w4
-slims	afmsnnp	slims	m-d1291-Mazais-princis-p33s1w5
+Šis	pd3msnn	šis	m-d1291-Mazais-princis-p17-p17s1w1
+jau	q	jau	m-d1291-Mazais-princis-p17-p17s1w2
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p17s1w3
+galīgi	rpn	galīgi	m-d1291-Mazais-princis-p17-p17s1w4
+slims	afmsnnp	slims	m-d1291-Mazais-princis-p17-p17s1w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p33s1w6
+.	zs	.	m-d1291-Mazais-princis-p17-p17s1w6
 </s>
 <s>
-Uzzīmē	vmnm0t22san	uzzīmēt	m-d1291-Mazais-princis-p33s2w1
-citu	pi0msan	cits	m-d1291-Mazais-princis-p33s2w2
+Uzzīmē	vmnm0t22san	uzzīmēt	m-d1291-Mazais-princis-p17-p17s2w1
+citu	pi0msan	cits	m-d1291-Mazais-princis-p17-p17s2w2
 <g />
-.	zs	.	m-d1291-Mazais-princis-p33s2w3
+.	zs	.	m-d1291-Mazais-princis-p17-p17s2w3
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p33s3w1
-uzzīmēju	vmnist21san	uzzīmēt	m-d1291-Mazais-princis-p33s3w2
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p17s3w1
+uzzīmēju	vmnist21san	uzzīmēt	m-d1291-Mazais-princis-p17-p17s3w2
 <g />
-.	zs	.	m-d1291-Mazais-princis-p33s3w3
+.	zs	.	m-d1291-Mazais-princis-p17-p17s3w3
 </s>
 <s>
-Mans	ps0msnn	mans	m-d1291-Mazais-princis-p34s1w1
-draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p34s1w2
-mīļi	afmpnnp	mīļš	m-d1291-Mazais-princis-p34s1w3
-un	cc	un	m-d1291-Mazais-princis-p34s1w4
-iecietīgi	rpn	iecietīgi	m-d1291-Mazais-princis-p34s1w5
-pasmaidīja	vmnisi330an	pasmaidīt	m-d1291-Mazais-princis-p34s1w6
+Mans	ps0msnn	mans	m-d1291-Mazais-princis-p17-p18s1w1
+draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p17-p18s1w2
+mīļi	afmpnnp	mīļš	m-d1291-Mazais-princis-p17-p18s1w3
+un	cc	un	m-d1291-Mazais-princis-p17-p18s1w4
+iecietīgi	rpn	iecietīgi	m-d1291-Mazais-princis-p17-p18s1w5
+pasmaidīja	vmnisi330an	pasmaidīt	m-d1291-Mazais-princis-p17-p18s1w6
 <g />
-:	zo	:	m-d1291-Mazais-princis-p34s1w7
--	zd	-	m-d1291-Mazais-princis-p34s1w8
-Vai	q	vai	m-d1291-Mazais-princis-p34s1w9
-tad	q	tad	m-d1291-Mazais-princis-p34s1w10
-tu	pp20snn	tu	m-d1291-Mazais-princis-p34s1w11
-neredzi	vmnipt32say	redzēt	m-d1291-Mazais-princis-p34s1w12
+:	zo	:	m-d1291-Mazais-princis-p17-p18s1w7
+-	zd	-	m-d1291-Mazais-princis-p17-p18s1w8
+Vai	q	vai	m-d1291-Mazais-princis-p17-p18s1w9
+tad	q	tad	m-d1291-Mazais-princis-p17-p18s1w10
+tu	pp20snn	tu	m-d1291-Mazais-princis-p17-p18s1w11
+neredzi	vmnipt32say	redzēt	m-d1291-Mazais-princis-p17-p18s1w12
 <g />
-…	zs	...	m-d1291-Mazais-princis-p34s1w13
+…	zs	...	m-d1291-Mazais-princis-p17-p18s1w13
 </s>
 <s>
-Tas	pd3msnn	tas	m-d1291-Mazais-princis-p34s2w1
-nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p34s2w2
-vis	q	vis	m-d1291-Mazais-princis-p34s2w3
-jēriņš	ncmsn1	jēriņš	m-d1291-Mazais-princis-p34s2w4
+Tas	pd3msnn	tas	m-d1291-Mazais-princis-p17-p18s2w1
+nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p17-p18s2w2
+vis	q	vis	m-d1291-Mazais-princis-p17-p18s2w3
+jēriņš	ncmsn1	jēriņš	m-d1291-Mazais-princis-p17-p18s2w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p34s2w5
-bet	cc	bet	m-d1291-Mazais-princis-p34s2w6
-auns	ncmsn1	auns	m-d1291-Mazais-princis-p34s2w7
+,	zc	,	m-d1291-Mazais-princis-p17-p18s2w5
+bet	cc	bet	m-d1291-Mazais-princis-p17-p18s2w6
+auns	ncmsn1	auns	m-d1291-Mazais-princis-p17-p18s2w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p34s2w8
+.	zs	.	m-d1291-Mazais-princis-p17-p18s2w8
 </s>
 <s>
-Viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p34s3w1
-ir	vmnipii30an	būt	m-d1291-Mazais-princis-p34s3w2
-ragi	ncmpn1	rags	m-d1291-Mazais-princis-p34s3w3
+Viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p17-p18s3w1
+ir	vmnipii30an	būt	m-d1291-Mazais-princis-p17-p18s3w2
+ragi	ncmpn1	rags	m-d1291-Mazais-princis-p17-p18s3w3
 <g />
-…	zs	...	m-d1291-Mazais-princis-p34s3w4
+…	zs	...	m-d1291-Mazais-princis-p17-p18s3w4
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p35s1w1
-vēlreiz	r0n	vēlreiz	m-d1291-Mazais-princis-p35s1w2
-pārlaboju	vmnist21san	pārlabot	m-d1291-Mazais-princis-p35s1w3
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p35s1w4
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p19s1w1
+vēlreiz	r0n	vēlreiz	m-d1291-Mazais-princis-p17-p19s1w2
+pārlaboju	vmnist21san	pārlabot	m-d1291-Mazais-princis-p17-p19s1w3
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p17-p19s1w4
 <g />
-.	zs	.	m-d1291-Mazais-princis-p35s1w5
+.	zs	.	m-d1291-Mazais-princis-p17-p19s1w5
 </s>
 <s>
-Taču	cc	taču	m-d1291-Mazais-princis-p35s2w1
-puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p35s2w2
-to	pd3msan	tas	m-d1291-Mazais-princis-p35s2w3
-noraidīja	vmnist330an	noraidīt	m-d1291-Mazais-princis-p35s2w4
-tāpat	r0n	tāpat	m-d1291-Mazais-princis-p35s2w5
-kā	cs	kā	m-d1291-Mazais-princis-p35s2w6
-visus	pg0mpan	viss	m-d1291-Mazais-princis-p35s2w7
-iepriekšējos	afmpayp	iepriekšējs	m-d1291-Mazais-princis-p35s2w8
+Taču	cc	taču	m-d1291-Mazais-princis-p17-p19s2w1
+puisēns	ncmsn1	puisēns	m-d1291-Mazais-princis-p17-p19s2w2
+to	pd3msan	tas	m-d1291-Mazais-princis-p17-p19s2w3
+noraidīja	vmnist330an	noraidīt	m-d1291-Mazais-princis-p17-p19s2w4
+tāpat	r0n	tāpat	m-d1291-Mazais-princis-p17-p19s2w5
+kā	cs	kā	m-d1291-Mazais-princis-p17-p19s2w6
+visus	pg0mpan	viss	m-d1291-Mazais-princis-p17-p19s2w7
+iepriekšējos	afmpayp	iepriekšējs	m-d1291-Mazais-princis-p17-p19s2w8
 <g />
-:	zo	:	m-d1291-Mazais-princis-p35s2w9
--	zd	-	m-d1291-Mazais-princis-p35s2w10
-Šis	pd3msnn	šis	m-d1291-Mazais-princis-p35s2w11
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p35s2w12
-pārāk	r0n	pārāk	m-d1291-Mazais-princis-p35s2w13
-vecs	afmsnnp	vecs	m-d1291-Mazais-princis-p35s2w14
+:	zo	:	m-d1291-Mazais-princis-p17-p19s2w9
+-	zd	-	m-d1291-Mazais-princis-p17-p19s2w10
+Šis	pd3msnn	šis	m-d1291-Mazais-princis-p17-p19s2w11
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p19s2w12
+pārāk	r0n	pārāk	m-d1291-Mazais-princis-p17-p19s2w13
+vecs	afmsnnp	vecs	m-d1291-Mazais-princis-p17-p19s2w14
 <g />
-.	zs	.	m-d1291-Mazais-princis-p35s2w15
+.	zs	.	m-d1291-Mazais-princis-p17-p19s2w15
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p36s1w1
-gribu	vmnipt31san	gribēt	m-d1291-Mazais-princis-p36s1w2
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p36s1w3
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p20s1w1
+gribu	vmnipt31san	gribēt	m-d1291-Mazais-princis-p17-p20s1w2
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p20s1w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p36s1w4
-kas	pr000nn	kas	m-d1291-Mazais-princis-p36s1w5
-ilgi	rpn	ilgi	m-d1291-Mazais-princis-p36s1w6
-dzīvotu	vmnc0i200an	dzīvot	m-d1291-Mazais-princis-p36s1w7
+,	zc	,	m-d1291-Mazais-princis-p17-p20s1w4
+kas	pr000nn	kas	m-d1291-Mazais-princis-p17-p20s1w5
+ilgi	rpn	ilgi	m-d1291-Mazais-princis-p17-p20s1w6
+dzīvotu	vmnc0i200an	dzīvot	m-d1291-Mazais-princis-p17-p20s1w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p36s1w8
+.	zs	.	m-d1291-Mazais-princis-p17-p20s1w8
 </s>
 <s>
-Tad	r0n	tad	m-d1291-Mazais-princis-p37s1w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p37s1w2
-pietrūka	vmnisi130an	pietrūkt	m-d1291-Mazais-princis-p37s1w3
-pacietības	ncfsg4	pacietība	m-d1291-Mazais-princis-p37s1w4
+Tad	r0n	tad	m-d1291-Mazais-princis-p17-p21s1w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p17-p21s1w2
+pietrūka	vmnisi130an	pietrūkt	m-d1291-Mazais-princis-p17-p21s1w3
+pacietības	ncfsg4	pacietība	m-d1291-Mazais-princis-p17-p21s1w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p37s1w5
-un	cc	un	m-d1291-Mazais-princis-p37s1w6
+,	zc	,	m-d1291-Mazais-princis-p17-p21s1w5
+un	cc	un	m-d1291-Mazais-princis-p17-p21s1w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p37s1w7
-tā	cs	tā	m-d1291-Mazais-princis-p37s1w8
-kā	cs	kā	m-d1291-Mazais-princis-p37s1w9
-steidzos	voyisi11san	steigties	m-d1291-Mazais-princis-p37s1w10
-izjaukt	vmnn0t1000n	izjaukt	m-d1291-Mazais-princis-p37s1w11
-motoru	ncmsa1	motors	m-d1291-Mazais-princis-p37s1w12
+,	zc	,	m-d1291-Mazais-princis-p17-p21s1w7
+tā	cs	tā	m-d1291-Mazais-princis-p17-p21s1w8
+kā	cs	kā	m-d1291-Mazais-princis-p17-p21s1w9
+steidzos	voyisi11san	steigties	m-d1291-Mazais-princis-p17-p21s1w10
+izjaukt	vmnn0t1000n	izjaukt	m-d1291-Mazais-princis-p17-p21s1w11
+motoru	ncmsa1	motors	m-d1291-Mazais-princis-p17-p21s1w12
 <g />
-,	zc	,	m-d1291-Mazais-princis-p37s1w13
-es	pp10snn	es	m-d1291-Mazais-princis-p37s1w14
-uzmetu	vmnist11san	uzmest	m-d1291-Mazais-princis-p37s1w15
-šādu	pd0msan	šāds	m-d1291-Mazais-princis-p37s1w16
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p37s1w17
+,	zc	,	m-d1291-Mazais-princis-p17-p21s1w13
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p21s1w14
+uzmetu	vmnist11san	uzmest	m-d1291-Mazais-princis-p17-p21s1w15
+šādu	pd0msan	šāds	m-d1291-Mazais-princis-p17-p21s1w16
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p17-p21s1w17
 <g />
-:	zo	:	m-d1291-Mazais-princis-p37s1w18
+:	zo	:	m-d1291-Mazais-princis-p17-p21s1w18
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p38s1w1
-ātrumā	ncmsl1	ātrums	m-d1291-Mazais-princis-p38s1w2
-teicu	vmnist11san	teikt	m-d1291-Mazais-princis-p38s1w3
+Un	cc	un	m-d1291-Mazais-princis-p17-p22s1w1
+ātrumā	ncmsl1	ātrums	m-d1291-Mazais-princis-p17-p22s1w2
+teicu	vmnist11san	teikt	m-d1291-Mazais-princis-p17-p22s1w3
 <g />
-:	zo	:	m-d1291-Mazais-princis-p38s1w4
--	zd	-	m-d1291-Mazais-princis-p38s1w5
-Šī	pd3fsnn	šī	m-d1291-Mazais-princis-p38s1w6
-te	r0n	te	m-d1291-Mazais-princis-p38s1w7
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p38s1w8
-kaste	ncfsn5	kaste	m-d1291-Mazais-princis-p38s1w9
+:	zo	:	m-d1291-Mazais-princis-p17-p22s1w4
+-	zd	-	m-d1291-Mazais-princis-p17-p22s1w5
+Šī	pd3fsnn	šī	m-d1291-Mazais-princis-p17-p22s1w6
+te	r0n	te	m-d1291-Mazais-princis-p17-p22s1w7
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p22s1w8
+kaste	ncfsn5	kaste	m-d1291-Mazais-princis-p17-p22s1w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p38s1w10
+.	zs	.	m-d1291-Mazais-princis-p17-p22s1w10
 </s>
 <s>
-Jēriņš	ncmsn1	jēriņš	m-d1291-Mazais-princis-p39s1w1
+Jēriņš	ncmsn1	jēriņš	m-d1291-Mazais-princis-p17-p23s1w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p39s1w2
-ko	pr000an	kas	m-d1291-Mazais-princis-p39s1w3
-tu	pp20snn	tu	m-d1291-Mazais-princis-p39s1w4
-vēlies	vmyipt32san	vēlēties	m-d1291-Mazais-princis-p39s1w5
+,	zc	,	m-d1291-Mazais-princis-p17-p23s1w2
+ko	pr000an	kas	m-d1291-Mazais-princis-p17-p23s1w3
+tu	pp20snn	tu	m-d1291-Mazais-princis-p17-p23s1w4
+vēlies	vmyipt32san	vēlēties	m-d1291-Mazais-princis-p17-p23s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p39s1w6
-atrodas	vmyipi130an	atrasties	m-d1291-Mazais-princis-p39s1w7
-tur	r0n	tur	m-d1291-Mazais-princis-p39s1w8
-iekšā	r0n	iekšā	m-d1291-Mazais-princis-p39s1w9
+,	zc	,	m-d1291-Mazais-princis-p17-p23s1w6
+atrodas	vmyipi130an	atrasties	m-d1291-Mazais-princis-p17-p23s1w7
+tur	r0n	tur	m-d1291-Mazais-princis-p17-p23s1w8
+iekšā	r0n	iekšā	m-d1291-Mazais-princis-p17-p23s1w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p39s1w10
+.	zs	.	m-d1291-Mazais-princis-p17-p23s1w10
 </s>
 <s>
-Bet	cc	bet	m-d1291-Mazais-princis-p40s1w1
-cik	r0n	cik	m-d1291-Mazais-princis-p40s1w2
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p40s1w3
-biju	vcnisii1san	būt	m-d1291-Mazais-princis-p40s1w4
-pārsteigts	vmnpdmsnpsnpn	pārsteigt	m-d1291-Mazais-princis-p40s1w5
+Bet	cc	bet	m-d1291-Mazais-princis-p17-p24s1w1
+cik	r0n	cik	m-d1291-Mazais-princis-p17-p24s1w2
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p17-p24s1w3
+biju	vcnisii1san	būt	m-d1291-Mazais-princis-p17-p24s1w4
+pārsteigts	vmnpdmsnpsnpn	pārsteigt	m-d1291-Mazais-princis-p17-p24s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p40s1w6
-redzēdams	vmnppmsn0000n	redzēt	m-d1291-Mazais-princis-p40s1w7
+,	zc	,	m-d1291-Mazais-princis-p17-p24s1w6
+redzēdams	vmnppmsn0000n	redzēt	m-d1291-Mazais-princis-p17-p24s1w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p40s1w8
-ka	cs	ka	m-d1291-Mazais-princis-p40s1w9
-mana	ps0msgn	mans	m-d1291-Mazais-princis-p40s1w10
-mazā	afmsgyp	mazs	m-d1291-Mazais-princis-p40s1w11
-kritiķa	ncmsg2	kritiķis	m-d1291-Mazais-princis-p40s1w12
-seja	ncfsn4	seja	m-d1291-Mazais-princis-p40s1w13
-iemirdzas	vmyipi330an	iemirdzēties	m-d1291-Mazais-princis-p40s1w14
-priekā	ncmsl1	prieks	m-d1291-Mazais-princis-p40s1w15
+,	zc	,	m-d1291-Mazais-princis-p17-p24s1w8
+ka	cs	ka	m-d1291-Mazais-princis-p17-p24s1w9
+mana	ps0msgn	mans	m-d1291-Mazais-princis-p17-p24s1w10
+mazā	afmsgyp	mazs	m-d1291-Mazais-princis-p17-p24s1w11
+kritiķa	ncmsg2	kritiķis	m-d1291-Mazais-princis-p17-p24s1w12
+seja	ncfsn4	seja	m-d1291-Mazais-princis-p17-p24s1w13
+iemirdzas	vmyipi330an	iemirdzēties	m-d1291-Mazais-princis-p17-p24s1w14
+priekā	ncmsl1	prieks	m-d1291-Mazais-princis-p17-p24s1w15
 <g />
-:	zo	:	m-d1291-Mazais-princis-p40s1w16
--	zd	-	m-d1291-Mazais-princis-p40s1w17
-Tieši	q	tieši	m-d1291-Mazais-princis-p40s1w18
-tādu	pd0msan	tāds	m-d1291-Mazais-princis-p40s1w19
-es	pp10snn	es	m-d1291-Mazais-princis-p40s1w20
-vēlējos	vmyist31san	vēlēties	m-d1291-Mazais-princis-p40s1w21
+:	zo	:	m-d1291-Mazais-princis-p17-p24s1w16
+-	zd	-	m-d1291-Mazais-princis-p17-p24s1w17
+Tieši	q	tieši	m-d1291-Mazais-princis-p17-p24s1w18
+tādu	pd0msan	tāds	m-d1291-Mazais-princis-p17-p24s1w19
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p24s1w20
+vēlējos	vmyist31san	vēlēties	m-d1291-Mazais-princis-p17-p24s1w21
 <g />
-.	zs	.	m-d1291-Mazais-princis-p40s1w22
+.	zs	.	m-d1291-Mazais-princis-p17-p24s1w22
 </s>
 <s>
-Kā	r0n	kā	m-d1291-Mazais-princis-p41s1w1
-tev	pp20sdn	tu	m-d1291-Mazais-princis-p41s1w2
-šķiet	vmnipi130an	šķist	m-d1291-Mazais-princis-p41s1w3
+Kā	r0n	kā	m-d1291-Mazais-princis-p17-p25s1w1
+tev	pp20sdn	tu	m-d1291-Mazais-princis-p17-p25s1w2
+šķiet	vmnipi130an	šķist	m-d1291-Mazais-princis-p17-p25s1w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p41s1w4
-vai	q	vai	m-d1291-Mazais-princis-p41s1w5
-šim	pd3msdn	šis	m-d1291-Mazais-princis-p41s1w6
-jēriņam	ncmsd1	jēriņš	m-d1291-Mazais-princis-p41s1w7
-vajadzēs	vmnift330an	vajadzēt	m-d1291-Mazais-princis-p41s1w8
-daudz	rpn	daudz	m-d1291-Mazais-princis-p41s1w9
-zāles	ncfsg5	zāle	m-d1291-Mazais-princis-p41s1w10
+,	zc	,	m-d1291-Mazais-princis-p17-p25s1w4
+vai	q	vai	m-d1291-Mazais-princis-p17-p25s1w5
+šim	pd3msdn	šis	m-d1291-Mazais-princis-p17-p25s1w6
+jēriņam	ncmsd1	jēriņš	m-d1291-Mazais-princis-p17-p25s1w7
+vajadzēs	vmnift330an	vajadzēt	m-d1291-Mazais-princis-p17-p25s1w8
+daudz	rpn	daudz	m-d1291-Mazais-princis-p17-p25s1w9
+zāles	ncfsg5	zāle	m-d1291-Mazais-princis-p17-p25s1w10
 <g />
-?	zs	?	m-d1291-Mazais-princis-p41s1w11
+?	zs	?	m-d1291-Mazais-princis-p17-p25s1w11
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p42s1w1
+-	zd	-	m-d1291-Mazais-princis-p17-p26s1w1
 <g />
-Kādēļ	r0n	kādēļ	m-d1291-Mazais-princis-p42s1w2
+Kādēļ	r0n	kādēļ	m-d1291-Mazais-princis-p17-p26s1w2
 <g />
-?	zs	?	m-d1291-Mazais-princis-p42s1w3
+?	zs	?	m-d1291-Mazais-princis-p17-p26s1w3
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p43s1w1
-Tādēļ	r0n	tādēļ	m-d1291-Mazais-princis-p43s1w2
+-	zd	-	m-d1291-Mazais-princis-p17-p27s1w1
+Tādēļ	r0n	tādēļ	m-d1291-Mazais-princis-p17-p27s1w2
 <g />
-,	zc	,	m-d1291-Mazais-princis-p43s1w3
-ka	cs	ka	m-d1291-Mazais-princis-p43s1w4
-manās	ps0fpln	mana	m-d1291-Mazais-princis-p43s1w5
-mājās	ncfpl4	māja	m-d1291-Mazais-princis-p43s1w6
-viss	pg0msnn	viss	m-d1291-Mazais-princis-p43s1w7
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p43s1w8
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p43s1w9
-mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p43s1w10
+,	zc	,	m-d1291-Mazais-princis-p17-p27s1w3
+ka	cs	ka	m-d1291-Mazais-princis-p17-p27s1w4
+manās	ps0fpln	mana	m-d1291-Mazais-princis-p17-p27s1w5
+mājās	ncfpl4	māja	m-d1291-Mazais-princis-p17-p27s1w6
+viss	pg0msnn	viss	m-d1291-Mazais-princis-p17-p27s1w7
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p27s1w8
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p17-p27s1w9
+mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p17-p27s1w10
 <g />
-…	zs	...	m-d1291-Mazais-princis-p43s1w11
+…	zs	...	m-d1291-Mazais-princis-p17-p27s1w11
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p44s1w1
-Droši	q	droši	m-d1291-Mazais-princis-p44s1w2
-vien	q	vien	m-d1291-Mazais-princis-p44s1w3
-pietiks	vmnifi130an	pietikt	m-d1291-Mazais-princis-p44s1w4
+-	zd	-	m-d1291-Mazais-princis-p17-p28s1w1
+Droši	q	droši	m-d1291-Mazais-princis-p17-p28s1w2
+vien	q	vien	m-d1291-Mazais-princis-p17-p28s1w3
+pietiks	vmnifi130an	pietikt	m-d1291-Mazais-princis-p17-p28s1w4
 <g />
-.	zs	.	m-d1291-Mazais-princis-p44s1w5
+.	zs	.	m-d1291-Mazais-princis-p17-p28s1w5
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p44s2w1
-tev	pp20sdn	tu	m-d1291-Mazais-princis-p44s2w2
-uzdāvināju	vmnist31san	uzdāvināt	m-d1291-Mazais-princis-p44s2w3
-pavisam	r0n	pavisam	m-d1291-Mazais-princis-p44s2w4
-mazu	afmsanp	mazs	m-d1291-Mazais-princis-p44s2w5
-jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p44s2w6
+Es	pp10snn	es	m-d1291-Mazais-princis-p17-p28s2w1
+tev	pp20sdn	tu	m-d1291-Mazais-princis-p17-p28s2w2
+uzdāvināju	vmnist31san	uzdāvināt	m-d1291-Mazais-princis-p17-p28s2w3
+pavisam	r0n	pavisam	m-d1291-Mazais-princis-p17-p28s2w4
+mazu	afmsanp	mazs	m-d1291-Mazais-princis-p17-p28s2w5
+jēriņu	ncmsa1	jēriņš	m-d1291-Mazais-princis-p17-p28s2w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p44s2w7
+.	zs	.	m-d1291-Mazais-princis-p17-p28s2w7
 </s>
 <s>
-Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p45s1w1
-noliecās	vmyisi130an	noliekties	m-d1291-Mazais-princis-p45s1w2
-pār	spsa	pār	m-d1291-Mazais-princis-p45s1w3
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p45s1w4
+Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p29s1w1
+noliecās	vmyisi130an	noliekties	m-d1291-Mazais-princis-p17-p29s1w2
+pār	spsa	pār	m-d1291-Mazais-princis-p17-p29s1w3
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p17-p29s1w4
 <g />
-:	zo	:	m-d1291-Mazais-princis-p45s1w5
--	zd	-	m-d1291-Mazais-princis-p45s1w6
-Nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p45s1w7
-jau	q	jau	m-d1291-Mazais-princis-p45s1w8
-nemaz	r0n	nemaz	m-d1291-Mazais-princis-p45s1w9
-tik	r0n	tik	m-d1291-Mazais-princis-p45s1w10
-maziņš	afmsnnp	maziņš	m-d1291-Mazais-princis-p45s1w11
+:	zo	:	m-d1291-Mazais-princis-p17-p29s1w5
+-	zd	-	m-d1291-Mazais-princis-p17-p29s1w6
+Nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p17-p29s1w7
+jau	q	jau	m-d1291-Mazais-princis-p17-p29s1w8
+nemaz	r0n	nemaz	m-d1291-Mazais-princis-p17-p29s1w9
+tik	r0n	tik	m-d1291-Mazais-princis-p17-p29s1w10
+maziņš	afmsnnp	maziņš	m-d1291-Mazais-princis-p17-p29s1w11
 <g />
-…	zs	...	m-d1291-Mazais-princis-p45s1w12
+…	zs	...	m-d1291-Mazais-princis-p17-p29s1w12
 </s>
 <s>
-Paskat	i	paskat	m-d1291-Mazais-princis-p46s1w1
+Paskat	i	paskat	m-d1291-Mazais-princis-p17-p30s1w1
 <g />
-!	zs	!	m-d1291-Mazais-princis-p46s1w2
+!	zs	!	m-d1291-Mazais-princis-p17-p30s1w2
 </s>
 <s>
-Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p46s2w1
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p46s2w2
-aizmidzis	vmnpdmsnasnpn	aizmigt	m-d1291-Mazais-princis-p46s2w3
+Viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p17-p30s2w1
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p17-p30s2w2
+aizmidzis	vmnpdmsnasnpn	aizmigt	m-d1291-Mazais-princis-p17-p30s2w3
 <g />
-…	zs	...	m-d1291-Mazais-princis-p46s2w4
+…	zs	...	m-d1291-Mazais-princis-p17-p30s2w4
 </s>
 <s>
--	zd	-	m-d1291-Mazais-princis-p47s1w1
-Tā	r0n	tā	m-d1291-Mazais-princis-p47s1w2
-es	pp10snn	es	m-d1291-Mazais-princis-p47s1w3
-iepazinos	vmyisi11san	iepazīties	m-d1291-Mazais-princis-p47s1w4
-ar	spsa	ar	m-d1291-Mazais-princis-p47s1w5
-mazo	afmsayp	mazs	m-d1291-Mazais-princis-p47s1w6
-princi	ncmsa2	princis	m-d1291-Mazais-princis-p47s1w7
+-	zd	-	m-d1291-Mazais-princis-p17-p31s1w1
+Tā	r0n	tā	m-d1291-Mazais-princis-p17-p31s1w2
+es	pp10snn	es	m-d1291-Mazais-princis-p17-p31s1w3
+iepazinos	vmyisi11san	iepazīties	m-d1291-Mazais-princis-p17-p31s1w4
+ar	spsa	ar	m-d1291-Mazais-princis-p17-p31s1w5
+mazo	afmsayp	mazs	m-d1291-Mazais-princis-p17-p31s1w6
+princi	ncmsa2	princis	m-d1291-Mazais-princis-p17-p31s1w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p47s1w8
+.	zs	.	m-d1291-Mazais-princis-p17-p31s1w8
 </s>
 <s>
 Rūdolfs	npmsn1	Rūdolfs	m-p8330-p1s1w1
@@ -28551,7 +28551,7 @@ pieaugt	vmnn0i1000n	pieaugt	m-z94-p66s2w36
 un	cc	un	m-z94-p66s2w37
 tā	pd3msgn	tas	m-z94-p66s2w38
 vērtības	ncfpn4	vērtība	m-z94-p66s2w39
-tuvinās	vmnift330an	tuvināt	m-z94-p66s2w40
+tuvinās	vmyipi330an	tuvināties	m-z94-p66s2w40
 aktīvās	affsgyp	aktīvs	m-z94-p66s2w41
 ortostāzes	ncfsg5	ortostāze	m-z94-p66s2w42
 laikā	ncmsl1	laiks	m-z94-p66s2w43
@@ -30941,21 +30941,21 @@ summa	ncfsn4	summa	m-p5548-p4s1w19
 .	zs	.	m-p5548-p4s1w22
 </s>
 <s>
-Aktieris	ncmsn2	aktieris	m-p5548-p5s1w1
-to	pd3msan	tas	m-p5548-p5s1w2
-sauc	vmnipt130an	saukt	m-p5548-p5s1w3
-par	spsa	par	m-p5548-p5s1w4
-pārpratumu	ncmsa1	pārpratums	m-p5548-p5s1w5
+Aktieris	ncmsn2	aktieris	m-p5548-p4s1w1
+to	pd3msan	tas	m-p5548-p4s1w2
+sauc	vmnipt130an	saukt	m-p5548-p4s1w3
+par	spsa	par	m-p5548-p4s1w4
+pārpratumu	ncmsa1	pārpratums	m-p5548-p4s1w5
 <g />
-,	zc	,	m-p5548-p5s1w6
-jo	cs	jo	m-p5548-p5s1w7
-vienkārši	q	vienkārši	m-p5548-p5s1w8
-vairākus	afmpanp	vairāki	m-p5548-p5s1w9
-mēnešus	ncmpa2	mēnesis	m-p5548-p5s1w10
-aizmirsis	vmnpdmsnasnpn	aizmirst	m-p5548-p5s1w11
-samaksāt	vmnn0t2000n	samaksāt	m-p5548-p5s1w12
+,	zc	,	m-p5548-p4s1w6
+jo	cs	jo	m-p5548-p4s1w7
+vienkārši	q	vienkārši	m-p5548-p4s1w8
+vairākus	afmpanp	vairāki	m-p5548-p4s1w9
+mēnešus	ncmpa2	mēnesis	m-p5548-p4s1w10
+aizmirsis	vmnpdmsnasnpn	aizmirst	m-p5548-p4s1w11
+samaksāt	vmnn0t2000n	samaksāt	m-p5548-p4s1w12
 <g />
-.	zs	.	m-p5548-p5s1w13
+.	zs	.	m-p5548-p4s1w13
 </s>
 <s>
 Te	q	te	m-d182-p337s1w1
@@ -31865,7 +31865,7 @@ Mērījumi	ncmpn1	mērījums	m-z94-p56s2w1
 notika	vmnisi130an	notikt	m-z94-p56s2w2
 ,	zc	,	m-z94-p56s2w3
 izmantojot	vmnpu0000000n	izmantot	m-z94-p56s2w4
-vienkanāla	ncmsg1	vienkanāls	m-z94-p56s2w5
+vienkanāla	ncm0g1	vienkanāla	m-z94-p56s2w5
 fotopletizmogrāfisko	affsayp	fotopletizmogrāfisks	m-z94-p56s2w6
 iekārtu	ncfsa4	iekārta	m-z94-p56s2w7
 <g />
@@ -35120,566 +35120,566 @@ faktoriem	ncmpd1	faktors	m-z110-p136s2w30
 1	xn	1	m-d1291-Mazais-princis-p7s1w1
 </s>
 <s>
-Kad	r0n	kad	m-d1291-Mazais-princis-p8s1w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p8s1w2
-bija	vmnisii30an	būt	m-d1291-Mazais-princis-p8s1w3
-seši	mcsmpn	seši	m-d1291-Mazais-princis-p8s1w4
-gadi	ncmpn1	gads	m-d1291-Mazais-princis-p8s1w5
+Kad	r0n	kad	m-d1291-Mazais-princis-p7-p2s1w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p2s1w2
+bija	vmnisii30an	būt	m-d1291-Mazais-princis-p7-p2s1w3
+seši	mcsmpn	seši	m-d1291-Mazais-princis-p7-p2s1w4
+gadi	ncmpn1	gads	m-d1291-Mazais-princis-p7-p2s1w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p8s1w6
-reiz	r0n	reiz	m-d1291-Mazais-princis-p8s1w7
-kādā	pi0fsln	kāda	m-d1291-Mazais-princis-p8s1w8
-grāmatā	ncfsl4	grāmata	m-d1291-Mazais-princis-p8s1w9
-par	spsa	par	m-d1291-Mazais-princis-p8s1w10
-mūžamežu	ncmsa1	mūžamežs	m-d1291-Mazais-princis-p8s1w11
+,	zc	,	m-d1291-Mazais-princis-p7-p2s1w6
+reiz	r0n	reiz	m-d1291-Mazais-princis-p7-p2s1w7
+kādā	pi0fsln	kāda	m-d1291-Mazais-princis-p7-p2s1w8
+grāmatā	ncfsl4	grāmata	m-d1291-Mazais-princis-p7-p2s1w9
+par	spsa	par	m-d1291-Mazais-princis-p7-p2s1w10
+mūžamežu	ncmsa1	mūžamežs	m-d1291-Mazais-princis-p7-p2s1w11
 <g />
-,	zc	,	m-d1291-Mazais-princis-p8s1w12
-kura	pr0fsnn	kura	m-d1291-Mazais-princis-p8s1w13
-saucās	vmyisi130an	saukties	m-d1291-Mazais-princis-p8s1w14
-"	zq	"	m-d1291-Mazais-princis-p8s1w15
+,	zc	,	m-d1291-Mazais-princis-p7-p2s1w12
+kura	pr0fsnn	kura	m-d1291-Mazais-princis-p7-p2s1w13
+saucās	vmyisi130an	saukties	m-d1291-Mazais-princis-p7-p2s1w14
+"	zq	"	m-d1291-Mazais-princis-p7-p2s1w15
 <g />
-Patiesi	afmpnnp	patiess	m-d1291-Mazais-princis-p8s1w16
-stāsti	ncmpn1	stāsts	m-d1291-Mazais-princis-p8s1w17
+Patiesi	afmpnnp	patiess	m-d1291-Mazais-princis-p7-p2s1w16
+stāsti	ncmpn1	stāsts	m-d1291-Mazais-princis-p7-p2s1w17
 <g />
-"	zq	"	m-d1291-Mazais-princis-p8s1w18
+"	zq	"	m-d1291-Mazais-princis-p7-p2s1w18
 <g />
-,	zc	,	m-d1291-Mazais-princis-p8s1w19
-ieraudzīju	vmnist31san	ieraudzīt	m-d1291-Mazais-princis-p8s1w20
-brīnišķīgu	afmsanp	brīnišķīgs	m-d1291-Mazais-princis-p8s1w21
-attēlu	ncmsa1	attēls	m-d1291-Mazais-princis-p8s1w22
+,	zc	,	m-d1291-Mazais-princis-p7-p2s1w19
+ieraudzīju	vmnist31san	ieraudzīt	m-d1291-Mazais-princis-p7-p2s1w20
+brīnišķīgu	afmsanp	brīnišķīgs	m-d1291-Mazais-princis-p7-p2s1w21
+attēlu	ncmsa1	attēls	m-d1291-Mazais-princis-p7-p2s1w22
 <g />
-.	zs	.	m-d1291-Mazais-princis-p8s1w23
+.	zs	.	m-d1291-Mazais-princis-p7-p2s1w23
 </s>
 <s>
-Tur	r0n	tur	m-d1291-Mazais-princis-p8s2w1
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p8s2w2
-attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p8s2w3
-boa	ncf000	boa	m-d1291-Mazais-princis-p8s2w4
-čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p8s2w5
+Tur	r0n	tur	m-d1291-Mazais-princis-p7-p2s2w1
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p2s2w2
+attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p7-p2s2w3
+boa	ncf000	boa	m-d1291-Mazais-princis-p7-p2s2w4
+čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p7-p2s2w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p8s2w6
-kas	pr000nn	kas	m-d1291-Mazais-princis-p8s2w7
-aprij	vmnipt130an	aprīt	m-d1291-Mazais-princis-p8s2w8
-meža	ncmsg1	mežs	m-d1291-Mazais-princis-p8s2w9
-zvēru	ncmsa1	zvērs	m-d1291-Mazais-princis-p8s2w10
+,	zc	,	m-d1291-Mazais-princis-p7-p2s2w6
+kas	pr000nn	kas	m-d1291-Mazais-princis-p7-p2s2w7
+aprij	vmnipt130an	aprīt	m-d1291-Mazais-princis-p7-p2s2w8
+meža	ncmsg1	mežs	m-d1291-Mazais-princis-p7-p2s2w9
+zvēru	ncmsa1	zvērs	m-d1291-Mazais-princis-p7-p2s2w10
 <g />
-.	zs	.	m-d1291-Mazais-princis-p8s2w11
+.	zs	.	m-d1291-Mazais-princis-p7-p2s2w11
 </s>
 <s>
-Lūk	i	lūk	m-d1291-Mazais-princis-p8s3w1
+Lūk	i	lūk	m-d1291-Mazais-princis-p7-p2s3w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p8s3w2
-kāds	pr0msnn	kāds	m-d1291-Mazais-princis-p8s3w3
-izskatījās	vtyisi330an	izskatīties	m-d1291-Mazais-princis-p8s3w4
-zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p8s3w5
+,	zc	,	m-d1291-Mazais-princis-p7-p2s3w2
+kāds	pr0msnn	kāds	m-d1291-Mazais-princis-p7-p2s3w3
+izskatījās	vtyisi330an	izskatīties	m-d1291-Mazais-princis-p7-p2s3w4
+zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p7-p2s3w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p8s3w6
+.	zs	.	m-d1291-Mazais-princis-p7-p2s3w6
 </s>
 <s>
-Grāmatā	ncfsl4	grāmata	m-d1291-Mazais-princis-p9s1w1
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p9s1w2
-rakstīts	vmnpdmsnpsnpn	rakstīt	m-d1291-Mazais-princis-p9s1w3
+Grāmatā	ncfsl4	grāmata	m-d1291-Mazais-princis-p7-p3s1w1
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p3s1w2
+rakstīts	vmnpdmsnpsnpn	rakstīt	m-d1291-Mazais-princis-p7-p3s1w3
 <g />
-:	zo	:	m-d1291-Mazais-princis-p9s1w4
-"	zq	"	m-d1291-Mazais-princis-p9s1w5
+:	zo	:	m-d1291-Mazais-princis-p7-p3s1w4
+"	zq	"	m-d1291-Mazais-princis-p7-p3s1w5
 <g />
-Boa	ncf000	boa	m-d1291-Mazais-princis-p9s1w6
-čūskas	ncfpn4	čūska	m-d1291-Mazais-princis-p9s1w7
-savu	ps0msan	savs	m-d1291-Mazais-princis-p9s1w8
-laupījumu	ncmsa1	laupījums	m-d1291-Mazais-princis-p9s1w9
-aprij	vmnipt130an	aprīt	m-d1291-Mazais-princis-p9s1w10
-veselu	afmsanp	vesels	m-d1291-Mazais-princis-p9s1w11
+Boa	ncf000	boa	m-d1291-Mazais-princis-p7-p3s1w6
+čūskas	ncfpn4	čūska	m-d1291-Mazais-princis-p7-p3s1w7
+savu	ps0msan	savs	m-d1291-Mazais-princis-p7-p3s1w8
+laupījumu	ncmsa1	laupījums	m-d1291-Mazais-princis-p7-p3s1w9
+aprij	vmnipt130an	aprīt	m-d1291-Mazais-princis-p7-p3s1w10
+veselu	afmsanp	vesels	m-d1291-Mazais-princis-p7-p3s1w11
 <g />
-,	zc	,	m-d1291-Mazais-princis-p9s1w12
-to	pd3msan	tas	m-d1291-Mazais-princis-p9s1w13
-nesasmalcinot	vmnpu0000000y	sasmalcināt	m-d1291-Mazais-princis-p9s1w14
+,	zc	,	m-d1291-Mazais-princis-p7-p3s1w12
+to	pd3msan	tas	m-d1291-Mazais-princis-p7-p3s1w13
+nesasmalcinot	vmnpu0000000y	sasmalcināt	m-d1291-Mazais-princis-p7-p3s1w14
 <g />
-.	zs	.	m-d1291-Mazais-princis-p9s1w15
+.	zs	.	m-d1291-Mazais-princis-p7-p3s1w15
 </s>
 <s>
-Pēc	sppd	pēc	m-d1291-Mazais-princis-p9s2w1
-tam	pd3msdn	tas	m-d1291-Mazais-princis-p9s2w2
-tās	pd3fpnn	tā	m-d1291-Mazais-princis-p9s2w3
-vairs	r0n	vairs	m-d1291-Mazais-princis-p9s2w4
-nevar	vonipi330ay	varēt	m-d1291-Mazais-princis-p9s2w5
-kustēties	vmyn0i3000n	kustēties	m-d1291-Mazais-princis-p9s2w6
-un	cc	un	m-d1291-Mazais-princis-p9s2w7
-guļ	vmnipi330an	gulēt	m-d1291-Mazais-princis-p9s2w8
-veselus	afmpanp	vesels	m-d1291-Mazais-princis-p9s2w9
-sešus	mcsmpa	seši	m-d1291-Mazais-princis-p9s2w10
-mēnešus	ncmpa2	mēnesis	m-d1291-Mazais-princis-p9s2w11
+Pēc	sppd	pēc	m-d1291-Mazais-princis-p7-p3s2w1
+tam	pd3msdn	tas	m-d1291-Mazais-princis-p7-p3s2w2
+tās	pd3fpnn	tā	m-d1291-Mazais-princis-p7-p3s2w3
+vairs	r0n	vairs	m-d1291-Mazais-princis-p7-p3s2w4
+nevar	vonipi330ay	varēt	m-d1291-Mazais-princis-p7-p3s2w5
+kustēties	vmyn0i3000n	kustēties	m-d1291-Mazais-princis-p7-p3s2w6
+un	cc	un	m-d1291-Mazais-princis-p7-p3s2w7
+guļ	vmnipi330an	gulēt	m-d1291-Mazais-princis-p7-p3s2w8
+veselus	afmpanp	vesels	m-d1291-Mazais-princis-p7-p3s2w9
+sešus	mcsmpa	seši	m-d1291-Mazais-princis-p7-p3s2w10
+mēnešus	ncmpa2	mēnesis	m-d1291-Mazais-princis-p7-p3s2w11
 <g />
-,	zc	,	m-d1291-Mazais-princis-p9s2w12
-kamēr	cs	kamēr	m-d1291-Mazais-princis-p9s2w13
-laupījums	ncmsn1	laupījums	m-d1291-Mazais-princis-p9s2w14
-sagremots	vmnpdmsnpsnpn	sagremot	m-d1291-Mazais-princis-p9s2w15
+,	zc	,	m-d1291-Mazais-princis-p7-p3s2w12
+kamēr	cs	kamēr	m-d1291-Mazais-princis-p7-p3s2w13
+laupījums	ncmsn1	laupījums	m-d1291-Mazais-princis-p7-p3s2w14
+sagremots	vmnpdmsnpsnpn	sagremot	m-d1291-Mazais-princis-p7-p3s2w15
 <g />
-.	zs	.	m-d1291-Mazais-princis-p9s2w16
+.	zs	.	m-d1291-Mazais-princis-p7-p3s2w16
 <g />
-"	zq	"	m-d1291-Mazais-princis-p9s2w17
+"	zq	"	m-d1291-Mazais-princis-p7-p3s2w17
 </s>
 <s>
-Toreiz	r0n	toreiz	m-d1291-Mazais-princis-p10s1w1
-es	pp10snn	es	m-d1291-Mazais-princis-p10s1w2
-daudz	rpn	daudz	m-d1291-Mazais-princis-p10s1w3
-domāju	vmnisi21san	domāt	m-d1291-Mazais-princis-p10s1w4
-par	sppd	par	m-d1291-Mazais-princis-p10s1w5
-piedzīvojumiem	ncmpd1	piedzīvojums	m-d1291-Mazais-princis-p10s1w6
-džungļos	ncmdl2	džungļi	m-d1291-Mazais-princis-p10s1w7
-un	cc	un	m-d1291-Mazais-princis-p10s1w8
-man	pp10sdn	es	m-d1291-Mazais-princis-p10s1w9
-arī	q	arī	m-d1291-Mazais-princis-p10s1w10
-izdevās	veyisii30an	izdoties	m-d1291-Mazais-princis-p10s1w11
-ar	spsa	ar	m-d1291-Mazais-princis-p10s1w12
-krāsainu	afmsanp	krāsains	m-d1291-Mazais-princis-p10s1w13
-zīmuli	ncmsa2	zīmulis	m-d1291-Mazais-princis-p10s1w14
-uzmest	vmnn0t1000n	uzmest	m-d1291-Mazais-princis-p10s1w15
-manu	ps0msan	mans	m-d1291-Mazais-princis-p10s1w16
-pirmo	mosmsa	pirmais	m-d1291-Mazais-princis-p10s1w17
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p10s1w18
+Toreiz	r0n	toreiz	m-d1291-Mazais-princis-p7-p4s1w1
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p4s1w2
+daudz	rpn	daudz	m-d1291-Mazais-princis-p7-p4s1w3
+domāju	vmnisi21san	domāt	m-d1291-Mazais-princis-p7-p4s1w4
+par	sppd	par	m-d1291-Mazais-princis-p7-p4s1w5
+piedzīvojumiem	ncmpd1	piedzīvojums	m-d1291-Mazais-princis-p7-p4s1w6
+džungļos	ncmdl2	džungļi	m-d1291-Mazais-princis-p7-p4s1w7
+un	cc	un	m-d1291-Mazais-princis-p7-p4s1w8
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p4s1w9
+arī	q	arī	m-d1291-Mazais-princis-p7-p4s1w10
+izdevās	veyisii30an	izdoties	m-d1291-Mazais-princis-p7-p4s1w11
+ar	spsa	ar	m-d1291-Mazais-princis-p7-p4s1w12
+krāsainu	afmsanp	krāsains	m-d1291-Mazais-princis-p7-p4s1w13
+zīmuli	ncmsa2	zīmulis	m-d1291-Mazais-princis-p7-p4s1w14
+uzmest	vmnn0t1000n	uzmest	m-d1291-Mazais-princis-p7-p4s1w15
+manu	ps0msan	mans	m-d1291-Mazais-princis-p7-p4s1w16
+pirmo	mosmsa	pirmais	m-d1291-Mazais-princis-p7-p4s1w17
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p7-p4s1w18
 <g />
-.	zs	.	m-d1291-Mazais-princis-p10s1w19
+.	zs	.	m-d1291-Mazais-princis-p7-p4s1w19
 </s>
 <s>
-Zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p10s2w1
-Nr.	yr	nr.	m-d1291-Mazais-princis-p10s2w2
-I	xn	I	m-d1291-Mazais-princis-p10s2w3
+Zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p7-p4s2w1
+Nr.	yr	nr.	m-d1291-Mazais-princis-p7-p4s2w2
+I	xn	I	m-d1291-Mazais-princis-p7-p4s2w3
 <g />
-.	zs	.	m-d1291-Mazais-princis-p10s2w4
+.	zs	.	m-d1291-Mazais-princis-p7-p4s2w4
 </s>
 <s>
-Tas	pd3msnn	tas	m-d1291-Mazais-princis-p10s3w1
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p10s3w2
-apmēram	r0n	apmēram	m-d1291-Mazais-princis-p10s3w3
-šāds	pd0msnn	šāds	m-d1291-Mazais-princis-p10s3w4
+Tas	pd3msnn	tas	m-d1291-Mazais-princis-p7-p4s3w1
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p4s3w2
+apmēram	r0n	apmēram	m-d1291-Mazais-princis-p7-p4s3w3
+šāds	pd0msnn	šāds	m-d1291-Mazais-princis-p7-p4s3w4
 <g />
-:	zo	:	m-d1291-Mazais-princis-p10s3w5
+:	zo	:	m-d1291-Mazais-princis-p7-p4s3w5
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p11s1w1
-parādīju	vmnist31san	parādīt	m-d1291-Mazais-princis-p11s1w2
-savu	ps0msan	savs	m-d1291-Mazais-princis-p11s1w3
-mākslas	ncfsg4	māksla	m-d1291-Mazais-princis-p11s1w4
-darbu	ncmsa1	darbs	m-d1291-Mazais-princis-p11s1w5
-pieaugušajiem	vmnpdmpdasypn	pieaugt	m-d1291-Mazais-princis-p11s1w6
-un	cc	un	m-d1291-Mazais-princis-p11s1w7
-jautāju	vmnipt21san	jautāt	m-d1291-Mazais-princis-p11s1w8
+Es	pp10snn	es	m-d1291-Mazais-princis-p7-p5s1w1
+parādīju	vmnist31san	parādīt	m-d1291-Mazais-princis-p7-p5s1w2
+savu	ps0msan	savs	m-d1291-Mazais-princis-p7-p5s1w3
+mākslas	ncfsg4	māksla	m-d1291-Mazais-princis-p7-p5s1w4
+darbu	ncmsa1	darbs	m-d1291-Mazais-princis-p7-p5s1w5
+pieaugušajiem	vmnpdmpdasypn	pieaugt	m-d1291-Mazais-princis-p7-p5s1w6
+un	cc	un	m-d1291-Mazais-princis-p7-p5s1w7
+jautāju	vmnipt21san	jautāt	m-d1291-Mazais-princis-p7-p5s1w8
 <g />
-,	zc	,	m-d1291-Mazais-princis-p11s1w9
-vai	cs	vai	m-d1291-Mazais-princis-p11s1w10
-tas	pd3msnn	tas	m-d1291-Mazais-princis-p11s1w11
-viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p11s1w12
-iedveš	vmnipt130an	iedvest	m-d1291-Mazais-princis-p11s1w13
-bailes	ncfda5	bailes	m-d1291-Mazais-princis-p11s1w14
+,	zc	,	m-d1291-Mazais-princis-p7-p5s1w9
+vai	cs	vai	m-d1291-Mazais-princis-p7-p5s1w10
+tas	pd3msnn	tas	m-d1291-Mazais-princis-p7-p5s1w11
+viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p7-p5s1w12
+iedveš	vmnipt130an	iedvest	m-d1291-Mazais-princis-p7-p5s1w13
+bailes	ncfda5	bailes	m-d1291-Mazais-princis-p7-p5s1w14
 <g />
-.	zs	.	m-d1291-Mazais-princis-p11s1w15
+.	zs	.	m-d1291-Mazais-princis-p7-p5s1w15
 </s>
 <s>
-Viņi	pp3mpnn	viņš	m-d1291-Mazais-princis-p12s1w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p12s1w2
-atbildēja	vmnist330an	atbildēt	m-d1291-Mazais-princis-p12s1w3
+Viņi	pp3mpnn	viņš	m-d1291-Mazais-princis-p7-p6s1w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p6s1w2
+atbildēja	vmnist330an	atbildēt	m-d1291-Mazais-princis-p7-p6s1w3
 <g />
-:	zo	:	m-d1291-Mazais-princis-p12s1w4
-"	zq	"	m-d1291-Mazais-princis-p12s1w5
+:	zo	:	m-d1291-Mazais-princis-p7-p6s1w4
+"	zq	"	m-d1291-Mazais-princis-p7-p6s1w5
 <g />
-Kādēļ	r0n	kādēļ	m-d1291-Mazais-princis-p12s1w6
-lai	q	lai	m-d1291-Mazais-princis-p12s1w7
-cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p12s1w8
-iedvestu	vmnc0t100an	iedvest	m-d1291-Mazais-princis-p12s1w9
-bailes	ncfda5	bailes	m-d1291-Mazais-princis-p12s1w10
+Kādēļ	r0n	kādēļ	m-d1291-Mazais-princis-p7-p6s1w6
+lai	q	lai	m-d1291-Mazais-princis-p7-p6s1w7
+cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p7-p6s1w8
+iedvestu	vmnc0t100an	iedvest	m-d1291-Mazais-princis-p7-p6s1w9
+bailes	ncfda5	bailes	m-d1291-Mazais-princis-p7-p6s1w10
 <g />
-?	zs	?	m-d1291-Mazais-princis-p12s1w11
+?	zs	?	m-d1291-Mazais-princis-p7-p6s1w11
 <g />
-"	zq	"	m-d1291-Mazais-princis-p12s1w12
+"	zq	"	m-d1291-Mazais-princis-p7-p6s1w12
 </s>
 <s>
-Manā	ps0msln	mans	m-d1291-Mazais-princis-p12s2w1
-zīmējumā	ncmsl1	zīmējums	m-d1291-Mazais-princis-p12s2w2
-nebija	vcnisii30ay	būt	m-d1291-Mazais-princis-p12s2w3
-attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p12s2w4
-cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p12s2w5
+Manā	ps0msln	mans	m-d1291-Mazais-princis-p7-p6s2w1
+zīmējumā	ncmsl1	zīmējums	m-d1291-Mazais-princis-p7-p6s2w2
+nebija	vcnisii30ay	būt	m-d1291-Mazais-princis-p7-p6s2w3
+attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p7-p6s2w4
+cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p7-p6s2w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p12s2w6
+.	zs	.	m-d1291-Mazais-princis-p7-p6s2w6
 </s>
 <s>
-Tur	r0n	tur	m-d1291-Mazais-princis-p12s3w1
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p12s3w2
-attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p12s3w3
-boa	ncf000	boa	m-d1291-Mazais-princis-p12s3w4
-čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p12s3w5
+Tur	r0n	tur	m-d1291-Mazais-princis-p7-p6s3w1
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p6s3w2
+attēlota	vmnpdfsnpsnpn	attēlot	m-d1291-Mazais-princis-p7-p6s3w3
+boa	ncf000	boa	m-d1291-Mazais-princis-p7-p6s3w4
+čūska	ncfsn4	čūska	m-d1291-Mazais-princis-p7-p6s3w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p12s3w6
-kas	pr000nn	kas	m-d1291-Mazais-princis-p12s3w7
-sagremo	vmnipt230an	sagremot	m-d1291-Mazais-princis-p12s3w8
-ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p12s3w9
+,	zc	,	m-d1291-Mazais-princis-p7-p6s3w6
+kas	pr000nn	kas	m-d1291-Mazais-princis-p7-p6s3w7
+sagremo	vmnipt230an	sagremot	m-d1291-Mazais-princis-p7-p6s3w8
+ziloni	ncmsa2	zilonis	m-d1291-Mazais-princis-p7-p6s3w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p12s3w10
+.	zs	.	m-d1291-Mazais-princis-p7-p6s3w10
 </s>
 <s>
-Tad	r0n	tad	m-d1291-Mazais-princis-p12s4w1
-uzzīmēju	vmnipt21san	uzzīmēt	m-d1291-Mazais-princis-p12s4w2
-boa	ncf000	boa	m-d1291-Mazais-princis-p12s4w3
-čūskas	ncfsg4	čūska	m-d1291-Mazais-princis-p12s4w4
-vēderu	ncmsa1	vēders	m-d1291-Mazais-princis-p12s4w5
-šķērsgriezumā	ncmsl1	šķērsgriezums	m-d1291-Mazais-princis-p12s4w6
+Tad	r0n	tad	m-d1291-Mazais-princis-p7-p6s4w1
+uzzīmēju	vmnipt21san	uzzīmēt	m-d1291-Mazais-princis-p7-p6s4w2
+boa	ncf000	boa	m-d1291-Mazais-princis-p7-p6s4w3
+čūskas	ncfsg4	čūska	m-d1291-Mazais-princis-p7-p6s4w4
+vēderu	ncmsa1	vēders	m-d1291-Mazais-princis-p7-p6s4w5
+šķērsgriezumā	ncmsl1	šķērsgriezums	m-d1291-Mazais-princis-p7-p6s4w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p12s4w7
-lai	cs	lai	m-d1291-Mazais-princis-p12s4w8
-lielie	afmpnyp	liels	m-d1291-Mazais-princis-p12s4w9
-cilvēki	ncmpn1	cilvēks	m-d1291-Mazais-princis-p12s4w10
-varētu	vonc0t300an	varēt	m-d1291-Mazais-princis-p12s4w11
-saprast	vmnn0t1000n	saprast	m-d1291-Mazais-princis-p12s4w12
+,	zc	,	m-d1291-Mazais-princis-p7-p6s4w7
+lai	cs	lai	m-d1291-Mazais-princis-p7-p6s4w8
+lielie	afmpnyp	liels	m-d1291-Mazais-princis-p7-p6s4w9
+cilvēki	ncmpn1	cilvēks	m-d1291-Mazais-princis-p7-p6s4w10
+varētu	vonc0t300an	varēt	m-d1291-Mazais-princis-p7-p6s4w11
+saprast	vmnn0t1000n	saprast	m-d1291-Mazais-princis-p7-p6s4w12
 <g />
-.	zs	.	m-d1291-Mazais-princis-p12s4w13
+.	zs	.	m-d1291-Mazais-princis-p7-p6s4w13
 </s>
 <s>
-Viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p12s5w1
-arvien	r0n	arvien	m-d1291-Mazais-princis-p12s5w2
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p12s5w3
-vajadzīgi	afmpnnp	vajadzīgs	m-d1291-Mazais-princis-p12s5w4
-paskaidrojumi	ncmpn1	paskaidrojums	m-d1291-Mazais-princis-p12s5w5
+Viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p7-p6s5w1
+arvien	r0n	arvien	m-d1291-Mazais-princis-p7-p6s5w2
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p7-p6s5w3
+vajadzīgi	afmpnnp	vajadzīgs	m-d1291-Mazais-princis-p7-p6s5w4
+paskaidrojumi	ncmpn1	paskaidrojums	m-d1291-Mazais-princis-p7-p6s5w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p12s5w6
+.	zs	.	m-d1291-Mazais-princis-p7-p6s5w6
 </s>
 <s>
-Mans	ps0msnn	mans	m-d1291-Mazais-princis-p12s6w1
-zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p12s6w2
-Nr.	yr	nr.	m-d1291-Mazais-princis-p12s6w3
+Mans	ps0msnn	mans	m-d1291-Mazais-princis-p7-p6s6w1
+zīmējums	ncmsn1	zīmējums	m-d1291-Mazais-princis-p7-p6s6w2
+Nr.	yr	nr.	m-d1291-Mazais-princis-p7-p6s6w3
 <g />
-2	xn	2	m-d1291-Mazais-princis-p12s6w4
-izskatījās	vtyisi330an	izskatīties	m-d1291-Mazais-princis-p12s6w5
-šāds	pd0msnn	šāds	m-d1291-Mazais-princis-p12s6w6
+2	xn	2	m-d1291-Mazais-princis-p7-p6s6w4
+izskatījās	vtyisi330an	izskatīties	m-d1291-Mazais-princis-p7-p6s6w5
+šāds	pd0msnn	šāds	m-d1291-Mazais-princis-p7-p6s6w6
 <g />
-:	zo	:	m-d1291-Mazais-princis-p12s6w7
+:	zo	:	m-d1291-Mazais-princis-p7-p6s6w7
 </s>
 <s>
-Pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p13s1w1
-man	pp10sdn	es	m-d1291-Mazais-princis-p13s1w2
-deva	vmnisti30an	dot	m-d1291-Mazais-princis-p13s1w3
-padomu	ncmsa1	padoms	m-d1291-Mazais-princis-p13s1w4
-vairs	r0n	vairs	m-d1291-Mazais-princis-p13s1w5
-nezīmēt	vmnn0t2000y	zīmēt	m-d1291-Mazais-princis-p13s1w6
-uzšķērstas	vmnpdfpapsnpn	uzšķērst	m-d1291-Mazais-princis-p13s1w7
-un	cc	un	m-d1291-Mazais-princis-p13s1w8
-veselas	affpanp	vesels	m-d1291-Mazais-princis-p13s1w9
-boa	ncf000	boa	m-d1291-Mazais-princis-p13s1w10
-čūskas	ncfpa4	čūska	m-d1291-Mazais-princis-p13s1w11
+Pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p7-p7s1w1
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p7s1w2
+deva	vmnisti30an	dot	m-d1291-Mazais-princis-p7-p7s1w3
+padomu	ncmsa1	padoms	m-d1291-Mazais-princis-p7-p7s1w4
+vairs	r0n	vairs	m-d1291-Mazais-princis-p7-p7s1w5
+nezīmēt	vmnn0t2000y	zīmēt	m-d1291-Mazais-princis-p7-p7s1w6
+uzšķērstas	vmnpdfpapsnpn	uzšķērst	m-d1291-Mazais-princis-p7-p7s1w7
+un	cc	un	m-d1291-Mazais-princis-p7-p7s1w8
+veselas	affpanp	vesels	m-d1291-Mazais-princis-p7-p7s1w9
+boa	ncf000	boa	m-d1291-Mazais-princis-p7-p7s1w10
+čūskas	ncfpa4	čūska	m-d1291-Mazais-princis-p7-p7s1w11
 <g />
-,	zc	,	m-d1291-Mazais-princis-p13s1w12
-bet	cc	bet	m-d1291-Mazais-princis-p13s1w13
-labāk	rcn	labi	m-d1291-Mazais-princis-p13s1w14
-interesēties	vmyn0i2000n	interesēties	m-d1291-Mazais-princis-p13s1w15
-par	spsa	par	m-d1291-Mazais-princis-p13s1w16
-ģeogrāfiju	ncfsa4	ģeogrāfija	m-d1291-Mazais-princis-p13s1w17
+,	zc	,	m-d1291-Mazais-princis-p7-p7s1w12
+bet	cc	bet	m-d1291-Mazais-princis-p7-p7s1w13
+labāk	rcn	labi	m-d1291-Mazais-princis-p7-p7s1w14
+interesēties	vmyn0i2000n	interesēties	m-d1291-Mazais-princis-p7-p7s1w15
+par	spsa	par	m-d1291-Mazais-princis-p7-p7s1w16
+ģeogrāfiju	ncfsa4	ģeogrāfija	m-d1291-Mazais-princis-p7-p7s1w17
 <g />
-,	zc	,	m-d1291-Mazais-princis-p13s1w18
-vēsturi	ncfsa5	vēsture	m-d1291-Mazais-princis-p13s1w19
+,	zc	,	m-d1291-Mazais-princis-p7-p7s1w18
+vēsturi	ncfsa5	vēsture	m-d1291-Mazais-princis-p7-p7s1w19
 <g />
-,	zc	,	m-d1291-Mazais-princis-p13s1w20
-rēķināšanu	ncfsa4	rēķināšana	m-d1291-Mazais-princis-p13s1w21
-un	cc	un	m-d1291-Mazais-princis-p13s1w22
-gramatiku	ncfsa4	gramatika	m-d1291-Mazais-princis-p13s1w23
+,	zc	,	m-d1291-Mazais-princis-p7-p7s1w20
+rēķināšanu	ncfsa4	rēķināšana	m-d1291-Mazais-princis-p7-p7s1w21
+un	cc	un	m-d1291-Mazais-princis-p7-p7s1w22
+gramatiku	ncfsa4	gramatika	m-d1291-Mazais-princis-p7-p7s1w23
 <g />
-.	zs	.	m-d1291-Mazais-princis-p13s1w24
+.	zs	.	m-d1291-Mazais-princis-p7-p7s1w24
 </s>
 <s>
-Tā	r0n	tā	m-d1291-Mazais-princis-p13s2w1
-sešu	mcsmpg	seši	m-d1291-Mazais-princis-p13s2w2
-gadu	ncmpg1	gads	m-d1291-Mazais-princis-p13s2w3
-vecumā	ncmsl1	vecums	m-d1291-Mazais-princis-p13s2w4
-es	pp10snn	es	m-d1291-Mazais-princis-p13s2w5
-atteicos	vmyipi11san	atteikties	m-d1291-Mazais-princis-p13s2w6
-no	spsg	no	m-d1291-Mazais-princis-p13s2w7
-spožās	affsgyp	spožs	m-d1291-Mazais-princis-p13s2w8
-gleznotāja	ncmsg1	gleznotājs	m-d1291-Mazais-princis-p13s2w9
-karjeras	ncfsg4	karjera	m-d1291-Mazais-princis-p13s2w10
+Tā	r0n	tā	m-d1291-Mazais-princis-p7-p7s2w1
+sešu	mcsmpg	seši	m-d1291-Mazais-princis-p7-p7s2w2
+gadu	ncmpg1	gads	m-d1291-Mazais-princis-p7-p7s2w3
+vecumā	ncmsl1	vecums	m-d1291-Mazais-princis-p7-p7s2w4
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p7s2w5
+atteicos	vmyipi11san	atteikties	m-d1291-Mazais-princis-p7-p7s2w6
+no	spsg	no	m-d1291-Mazais-princis-p7-p7s2w7
+spožās	affsgyp	spožs	m-d1291-Mazais-princis-p7-p7s2w8
+gleznotāja	ncmsg1	gleznotājs	m-d1291-Mazais-princis-p7-p7s2w9
+karjeras	ncfsg4	karjera	m-d1291-Mazais-princis-p7-p7s2w10
 <g />
-.	zs	.	m-d1291-Mazais-princis-p13s2w11
+.	zs	.	m-d1291-Mazais-princis-p7-p7s2w11
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p13s3w1
-atņēma	vmnist130an	atņemt	m-d1291-Mazais-princis-p13s3w2
-drosmi	ncfsa5	drosme	m-d1291-Mazais-princis-p13s3w3
-mana	ps0fsnn	mana	m-d1291-Mazais-princis-p13s3w4
-pirmā	mosmsg	pirmais	m-d1291-Mazais-princis-p13s3w5
-un	cc	un	m-d1291-Mazais-princis-p13s3w6
-otrā	mosmsg	otrais	m-d1291-Mazais-princis-p13s3w7
-zīmējuma	ncmsg1	zīmējums	m-d1291-Mazais-princis-p13s3w8
-neveiksme	ncfsn5	neveiksme	m-d1291-Mazais-princis-p13s3w9
+Man	pp10sdn	es	m-d1291-Mazais-princis-p7-p7s3w1
+atņēma	vmnist130an	atņemt	m-d1291-Mazais-princis-p7-p7s3w2
+drosmi	ncfsa5	drosme	m-d1291-Mazais-princis-p7-p7s3w3
+mana	ps0fsnn	mana	m-d1291-Mazais-princis-p7-p7s3w4
+pirmā	mosmsg	pirmais	m-d1291-Mazais-princis-p7-p7s3w5
+un	cc	un	m-d1291-Mazais-princis-p7-p7s3w6
+otrā	mosmsg	otrais	m-d1291-Mazais-princis-p7-p7s3w7
+zīmējuma	ncmsg1	zīmējums	m-d1291-Mazais-princis-p7-p7s3w8
+neveiksme	ncfsn5	neveiksme	m-d1291-Mazais-princis-p7-p7s3w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p13s3w10
+.	zs	.	m-d1291-Mazais-princis-p7-p7s3w10
 </s>
 <s>
-Pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p13s4w1
-paši	pg0mpnn	pats	m-d1291-Mazais-princis-p13s4w2
-nekad	r0n	nekad	m-d1291-Mazais-princis-p13s4w3
-neko	pi000ay	nekas	m-d1291-Mazais-princis-p13s4w4
-nesaprot	vmnipt130ay	saprast	m-d1291-Mazais-princis-p13s4w5
+Pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p7-p7s4w1
+paši	pg0mpnn	pats	m-d1291-Mazais-princis-p7-p7s4w2
+nekad	r0n	nekad	m-d1291-Mazais-princis-p7-p7s4w3
+neko	pi000ay	nekas	m-d1291-Mazais-princis-p7-p7s4w4
+nesaprot	vmnipt130ay	saprast	m-d1291-Mazais-princis-p7-p7s4w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p13s4w6
-bet	cc	bet	m-d1291-Mazais-princis-p13s4w7
-bērni	ncmpn1	bērns	m-d1291-Mazais-princis-p13s4w8
-nogurst	vmnipi130an	nogurt	m-d1291-Mazais-princis-p13s4w9
+,	zc	,	m-d1291-Mazais-princis-p7-p7s4w6
+bet	cc	bet	m-d1291-Mazais-princis-p7-p7s4w7
+bērni	ncmpn1	bērns	m-d1291-Mazais-princis-p7-p7s4w8
+nogurst	vmnipi130an	nogurt	m-d1291-Mazais-princis-p7-p7s4w9
 <g />
-,	zc	,	m-d1291-Mazais-princis-p13s4w10
-mūžīgi	rpn	mūžīgi	m-d1291-Mazais-princis-p13s4w11
-viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p13s4w12
-kaut	q	kaut	m-d1291-Mazais-princis-p13s4w13
-ko	pi000an	kas	m-d1291-Mazais-princis-p13s4w14
-paskaidrodami	vmnppmpn0000n	paskaidrot	m-d1291-Mazais-princis-p13s4w15
+,	zc	,	m-d1291-Mazais-princis-p7-p7s4w10
+mūžīgi	rpn	mūžīgi	m-d1291-Mazais-princis-p7-p7s4w11
+viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p7-p7s4w12
+kaut	q	kaut	m-d1291-Mazais-princis-p7-p7s4w13
+ko	pi000an	kas	m-d1291-Mazais-princis-p7-p7s4w14
+paskaidrodami	vmnppmpn0000n	paskaidrot	m-d1291-Mazais-princis-p7-p7s4w15
 <g />
-.	zs	.	m-d1291-Mazais-princis-p13s4w16
+.	zs	.	m-d1291-Mazais-princis-p7-p7s4w16
 </s>
 <s>
-Tā	r0n	tā	m-d1291-Mazais-princis-p14s1w1
-nu	q	nu	m-d1291-Mazais-princis-p14s1w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p14s1w3
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p14s1w4
-jāizraugās	vmyd0t300an	izraudzīties	m-d1291-Mazais-princis-p14s1w5
-cita	pi0fsnn	cita	m-d1291-Mazais-princis-p14s1w6
-profesija	ncfsn4	profesija	m-d1291-Mazais-princis-p14s1w7
+Tā	r0n	tā	m-d1291-Mazais-princis-p7-p8s1w1
+nu	q	nu	m-d1291-Mazais-princis-p7-p8s1w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p8s1w3
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p8s1w4
+jāizraugās	vmyd0t300an	izraudzīties	m-d1291-Mazais-princis-p7-p8s1w5
+cita	pi0fsnn	cita	m-d1291-Mazais-princis-p7-p8s1w6
+profesija	ncfsn4	profesija	m-d1291-Mazais-princis-p7-p8s1w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p14s1w8
-un	cc	un	m-d1291-Mazais-princis-p14s1w9
-es	pp10snn	es	m-d1291-Mazais-princis-p14s1w10
-iemācījos	vmyist31san	iemācīties	m-d1291-Mazais-princis-p14s1w11
-vadīt	vmnn0t3000n	vadīt	m-d1291-Mazais-princis-p14s1w12
-lidmašīnas	ncfpa4	lidmašīna	m-d1291-Mazais-princis-p14s1w13
+,	zc	,	m-d1291-Mazais-princis-p7-p8s1w8
+un	cc	un	m-d1291-Mazais-princis-p7-p8s1w9
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p8s1w10
+iemācījos	vmyist31san	iemācīties	m-d1291-Mazais-princis-p7-p8s1w11
+vadīt	vmnn0t3000n	vadīt	m-d1291-Mazais-princis-p7-p8s1w12
+lidmašīnas	ncfpa4	lidmašīna	m-d1291-Mazais-princis-p7-p8s1w13
 <g />
-.	zs	.	m-d1291-Mazais-princis-p14s1w14
+.	zs	.	m-d1291-Mazais-princis-p7-p8s1w14
 </s>
 <s>
-Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p14s2w1
-lidojis	vmnpdmsnasnpn	lidot	m-d1291-Mazais-princis-p14s2w2
-gandrīz	r0n	gandrīz	m-d1291-Mazais-princis-p14s2w3
-vai	q	vai	m-d1291-Mazais-princis-p14s2w4
-pa	spsa	pa	m-d1291-Mazais-princis-p14s2w5
-visu	pg0fsan	visa	m-d1291-Mazais-princis-p14s2w6
-pasauli	ncfsa5	pasaule	m-d1291-Mazais-princis-p14s2w7
+Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p7-p8s2w1
+lidojis	vmnpdmsnasnpn	lidot	m-d1291-Mazais-princis-p7-p8s2w2
+gandrīz	r0n	gandrīz	m-d1291-Mazais-princis-p7-p8s2w3
+vai	q	vai	m-d1291-Mazais-princis-p7-p8s2w4
+pa	spsa	pa	m-d1291-Mazais-princis-p7-p8s2w5
+visu	pg0fsan	visa	m-d1291-Mazais-princis-p7-p8s2w6
+pasauli	ncfsa5	pasaule	m-d1291-Mazais-princis-p7-p8s2w7
 <g />
-.	zs	.	m-d1291-Mazais-princis-p14s2w8
+.	zs	.	m-d1291-Mazais-princis-p7-p8s2w8
 </s>
 <s>
-Ģeogrāfija	ncfsn4	ģeogrāfija	m-d1291-Mazais-princis-p14s3w1
-patiešām	q	patiešām	m-d1291-Mazais-princis-p14s3w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p14s3w3
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p14s3w4
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p14s3w5
-noderējusi	vmnpdfsnasnpn	noderēt	m-d1291-Mazais-princis-p14s3w6
+Ģeogrāfija	ncfsn4	ģeogrāfija	m-d1291-Mazais-princis-p7-p8s3w1
+patiešām	q	patiešām	m-d1291-Mazais-princis-p7-p8s3w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p8s3w3
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p7-p8s3w4
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p7-p8s3w5
+noderējusi	vmnpdfsnasnpn	noderēt	m-d1291-Mazais-princis-p7-p8s3w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p14s3w7
+.	zs	.	m-d1291-Mazais-princis-p7-p8s3w7
 </s>
 <s>
-No	spsg	no	m-d1291-Mazais-princis-p14s4w1
-pirmā	mosmsg	pirmais	m-d1291-Mazais-princis-p14s4w2
-acu	ncfpg6	acs	m-d1291-Mazais-princis-p14s4w3
-uzmetiena	ncmsg1	uzmetiens	m-d1291-Mazais-princis-p14s4w4
-es	pp10snn	es	m-d1291-Mazais-princis-p14s4w5
-pratu	vonisi11san	prast	m-d1291-Mazais-princis-p14s4w6
-atšķirt	vmnn0t1000n	atšķirt	m-d1291-Mazais-princis-p14s4w7
-Ķīnu	npfsa4	Ķīna	m-d1291-Mazais-princis-p14s4w8
-no	spsg	no	m-d1291-Mazais-princis-p14s4w9
-Arizonas	npfsg4	Arizona	m-d1291-Mazais-princis-p14s4w10
+No	spsg	no	m-d1291-Mazais-princis-p7-p8s4w1
+pirmā	mosmsg	pirmais	m-d1291-Mazais-princis-p7-p8s4w2
+acu	ncfpg6	acs	m-d1291-Mazais-princis-p7-p8s4w3
+uzmetiena	ncmsg1	uzmetiens	m-d1291-Mazais-princis-p7-p8s4w4
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p8s4w5
+pratu	vonisi11san	prast	m-d1291-Mazais-princis-p7-p8s4w6
+atšķirt	vmnn0t1000n	atšķirt	m-d1291-Mazais-princis-p7-p8s4w7
+Ķīnu	npfsa4	Ķīna	m-d1291-Mazais-princis-p7-p8s4w8
+no	spsg	no	m-d1291-Mazais-princis-p7-p8s4w9
+Arizonas	npfsg4	Arizona	m-d1291-Mazais-princis-p7-p8s4w10
 <g />
-.	zs	.	m-d1291-Mazais-princis-p14s4w11
+.	zs	.	m-d1291-Mazais-princis-p7-p8s4w11
 </s>
 <s>
-Tas	pd3msnn	tas	m-d1291-Mazais-princis-p14s5w1
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p14s5w2
-sevišķi	rpn	sevišķi	m-d1291-Mazais-princis-p14s5w3
-derīgi	rpn	derīgi	m-d1291-Mazais-princis-p14s5w4
+Tas	pd3msnn	tas	m-d1291-Mazais-princis-p7-p8s5w1
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p7-p8s5w2
+sevišķi	rpn	sevišķi	m-d1291-Mazais-princis-p7-p8s5w3
+derīgi	rpn	derīgi	m-d1291-Mazais-princis-p7-p8s5w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p14s5w5
-ja	cs	ja	m-d1291-Mazais-princis-p14s5w6
-naktī	ncfsl6	nakts	m-d1291-Mazais-princis-p14s5w7
-esi	vcnipii2san	būt	m-d1291-Mazais-princis-p14s5w8
-nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p14s5w9
+,	zc	,	m-d1291-Mazais-princis-p7-p8s5w5
+ja	cs	ja	m-d1291-Mazais-princis-p7-p8s5w6
+naktī	ncfsl6	nakts	m-d1291-Mazais-princis-p7-p8s5w7
+esi	vcnipii2san	būt	m-d1291-Mazais-princis-p7-p8s5w8
+nomaldījies	vmypdmsnasnpn	nomaldīties	m-d1291-Mazais-princis-p7-p8s5w9
 <g />
-.	zs	.	m-d1291-Mazais-princis-p14s5w10
+.	zs	.	m-d1291-Mazais-princis-p7-p8s5w10
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p15s1w1
-tā	r0n	tā	m-d1291-Mazais-princis-p15s1w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p15s1w3
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p15s1w4
-bieži	rpn	bieži	m-d1291-Mazais-princis-p15s1w5
-bijis	vcnpdmsnasnpn	būt	m-d1291-Mazais-princis-p15s1w6
-jāsaskaras	vmyd0i100an	saskarties	m-d1291-Mazais-princis-p15s1w7
-ar	sppd	ar	m-d1291-Mazais-princis-p15s1w8
-daudziem	afmpdnp	daudzi	m-d1291-Mazais-princis-p15s1w9
-nopietniem	afmpdnp	nopietns	m-d1291-Mazais-princis-p15s1w10
-cilvēkiem	ncmpd1	cilvēks	m-d1291-Mazais-princis-p15s1w11
+Un	cc	un	m-d1291-Mazais-princis-p7-p9s1w1
+tā	r0n	tā	m-d1291-Mazais-princis-p7-p9s1w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p9s1w3
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p7-p9s1w4
+bieži	rpn	bieži	m-d1291-Mazais-princis-p7-p9s1w5
+bijis	vcnpdmsnasnpn	būt	m-d1291-Mazais-princis-p7-p9s1w6
+jāsaskaras	vmyd0i100an	saskarties	m-d1291-Mazais-princis-p7-p9s1w7
+ar	sppd	ar	m-d1291-Mazais-princis-p7-p9s1w8
+daudziem	afmpdnp	daudzi	m-d1291-Mazais-princis-p7-p9s1w9
+nopietniem	afmpdnp	nopietns	m-d1291-Mazais-princis-p7-p9s1w10
+cilvēkiem	ncmpd1	cilvēks	m-d1291-Mazais-princis-p7-p9s1w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p15s1w12
+.	zs	.	m-d1291-Mazais-princis-p7-p9s1w12
 </s>
 <s>
-Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p15s2w1
-ilgi	rpn	ilgi	m-d1291-Mazais-princis-p15s2w2
-dzīvojis	vmnpdmsnasnpn	dzīvot	m-d1291-Mazais-princis-p15s2w3
-kopā	r0n	kopā	m-d1291-Mazais-princis-p15s2w4
-ar	sppd	ar	m-d1291-Mazais-princis-p15s2w5
-pieaugušajiem	vmnpdmpdasypn	pieaugt	m-d1291-Mazais-princis-p15s2w6
+Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p7-p9s2w1
+ilgi	rpn	ilgi	m-d1291-Mazais-princis-p7-p9s2w2
+dzīvojis	vmnpdmsnasnpn	dzīvot	m-d1291-Mazais-princis-p7-p9s2w3
+kopā	r0n	kopā	m-d1291-Mazais-princis-p7-p9s2w4
+ar	sppd	ar	m-d1291-Mazais-princis-p7-p9s2w5
+pieaugušajiem	vmnpdmpdasypn	pieaugt	m-d1291-Mazais-princis-p7-p9s2w6
 <g />
-.	zs	.	m-d1291-Mazais-princis-p15s2w7
+.	zs	.	m-d1291-Mazais-princis-p7-p9s2w7
 </s>
 <s>
-Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p15s3w1
-redzējis	vmnpdmsnasnpn	redzēt	m-d1291-Mazais-princis-p15s3w2
-viņus	pp3mpan	viņš	m-d1291-Mazais-princis-p15s3w3
-pavisam	r0n	pavisam	m-d1291-Mazais-princis-p15s3w4
-tuvu	rpn	tuvu	m-d1291-Mazais-princis-p15s3w5
+Esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p7-p9s3w1
+redzējis	vmnpdmsnasnpn	redzēt	m-d1291-Mazais-princis-p7-p9s3w2
+viņus	pp3mpan	viņš	m-d1291-Mazais-princis-p7-p9s3w3
+pavisam	r0n	pavisam	m-d1291-Mazais-princis-p7-p9s3w4
+tuvu	rpn	tuvu	m-d1291-Mazais-princis-p7-p9s3w5
 <g />
-.	zs	.	m-d1291-Mazais-princis-p15s3w6
+.	zs	.	m-d1291-Mazais-princis-p7-p9s3w6
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p15s4w1
-tomēr	q	tomēr	m-d1291-Mazais-princis-p15s4w2
-mans	ps0msnn	mans	m-d1291-Mazais-princis-p15s4w3
-spriedums	ncmsn1	spriedums	m-d1291-Mazais-princis-p15s4w4
-nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p15s4w5
-daudz	rpn	daudz	m-d1291-Mazais-princis-p15s4w6
-ko	pi000an	kas	m-d1291-Mazais-princis-p15s4w7
-uzlabojies	vmyipi22san	uzlaboties	m-d1291-Mazais-princis-p15s4w8
+Un	cc	un	m-d1291-Mazais-princis-p7-p9s4w1
+tomēr	q	tomēr	m-d1291-Mazais-princis-p7-p9s4w2
+mans	ps0msnn	mans	m-d1291-Mazais-princis-p7-p9s4w3
+spriedums	ncmsn1	spriedums	m-d1291-Mazais-princis-p7-p9s4w4
+nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p7-p9s4w5
+daudz	rpn	daudz	m-d1291-Mazais-princis-p7-p9s4w6
+ko	pi000an	kas	m-d1291-Mazais-princis-p7-p9s4w7
+uzlabojies	vmyipi22san	uzlaboties	m-d1291-Mazais-princis-p7-p9s4w8
 <g />
-.	zs	.	m-d1291-Mazais-princis-p15s4w9
+.	zs	.	m-d1291-Mazais-princis-p7-p9s4w9
 </s>
 <s>
-Ja	cs	ja	m-d1291-Mazais-princis-p16s1w1
-sastapu	vmnist11san	sastapt	m-d1291-Mazais-princis-p16s1w2
-kādu	pi0msan	kāds	m-d1291-Mazais-princis-p16s1w3
-cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p16s1w4
+Ja	cs	ja	m-d1291-Mazais-princis-p7-p10s1w1
+sastapu	vmnist11san	sastapt	m-d1291-Mazais-princis-p7-p10s1w2
+kādu	pi0msan	kāds	m-d1291-Mazais-princis-p7-p10s1w3
+cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p7-p10s1w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s1w5
-kas	pr000nn	kas	m-d1291-Mazais-princis-p16s1w6
-man	pp10sdn	es	m-d1291-Mazais-princis-p16s1w7
-šķita	vtnisi130an	šķist	m-d1291-Mazais-princis-p16s1w8
-mazliet	r0n	mazliet	m-d1291-Mazais-princis-p16s1w9
-saprātīgāks	afmsnnc	saprātīgs	m-d1291-Mazais-princis-p16s1w10
+,	zc	,	m-d1291-Mazais-princis-p7-p10s1w5
+kas	pr000nn	kas	m-d1291-Mazais-princis-p7-p10s1w6
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p10s1w7
+šķita	vtnisi130an	šķist	m-d1291-Mazais-princis-p7-p10s1w8
+mazliet	r0n	mazliet	m-d1291-Mazais-princis-p7-p10s1w9
+saprātīgāks	afmsnnc	saprātīgs	m-d1291-Mazais-princis-p7-p10s1w10
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s1w11
-es	pp10snn	es	m-d1291-Mazais-princis-p16s1w12
-eksperimentēju	vmnisi21san	eksperimentēt	m-d1291-Mazais-princis-p16s1w13
-ar	spsa	ar	m-d1291-Mazais-princis-p16s1w14
-viņu	pp3msan	viņš	m-d1291-Mazais-princis-p16s1w15
+,	zc	,	m-d1291-Mazais-princis-p7-p10s1w11
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p10s1w12
+eksperimentēju	vmnisi21san	eksperimentēt	m-d1291-Mazais-princis-p7-p10s1w13
+ar	spsa	ar	m-d1291-Mazais-princis-p7-p10s1w14
+viņu	pp3msan	viņš	m-d1291-Mazais-princis-p7-p10s1w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s1w16
-rādot	vmnpu0000000n	rādīt	m-d1291-Mazais-princis-p16s1w17
-savu	ps0msan	savs	m-d1291-Mazais-princis-p16s1w18
-pirmo	mosmsa	pirmais	m-d1291-Mazais-princis-p16s1w19
-zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p16s1w20
+,	zc	,	m-d1291-Mazais-princis-p7-p10s1w16
+rādot	vmnpu0000000n	rādīt	m-d1291-Mazais-princis-p7-p10s1w17
+savu	ps0msan	savs	m-d1291-Mazais-princis-p7-p10s1w18
+pirmo	mosmsa	pirmais	m-d1291-Mazais-princis-p7-p10s1w19
+zīmējumu	ncmsa1	zīmējums	m-d1291-Mazais-princis-p7-p10s1w20
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s1w21
-ko	pr000an	kas	m-d1291-Mazais-princis-p16s1w22
-vēl	r0n	vēl	m-d1291-Mazais-princis-p16s1w23
-arvien	r0n	arvien	m-d1291-Mazais-princis-p16s1w24
-esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p16s1w25
-saglabājis	vmnpdmsnasnpn	saglabāt	m-d1291-Mazais-princis-p16s1w26
+,	zc	,	m-d1291-Mazais-princis-p7-p10s1w21
+ko	pr000an	kas	m-d1291-Mazais-princis-p7-p10s1w22
+vēl	r0n	vēl	m-d1291-Mazais-princis-p7-p10s1w23
+arvien	r0n	arvien	m-d1291-Mazais-princis-p7-p10s1w24
+esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p7-p10s1w25
+saglabājis	vmnpdmsnasnpn	saglabāt	m-d1291-Mazais-princis-p7-p10s1w26
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s1w27
+.	zs	.	m-d1291-Mazais-princis-p7-p10s1w27
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p16s2w1
-gribējās	voyist330an	gribēties	m-d1291-Mazais-princis-p16s2w2
-zināt	vmnn0t3000n	zināt	m-d1291-Mazais-princis-p16s2w3
+Man	pp10sdn	es	m-d1291-Mazais-princis-p7-p10s2w1
+gribējās	voyist330an	gribēties	m-d1291-Mazais-princis-p7-p10s2w2
+zināt	vmnn0t3000n	zināt	m-d1291-Mazais-princis-p7-p10s2w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s2w4
-vai	cs	vai	m-d1291-Mazais-princis-p16s2w5
-šis	pd3msnn	šis	m-d1291-Mazais-princis-p16s2w6
-cilvēks	ncmsn1	cilvēks	m-d1291-Mazais-princis-p16s2w7
-tiešām	q	tiešām	m-d1291-Mazais-princis-p16s2w8
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p16s2w9
-saprātīgs	afmsnnp	saprātīgs	m-d1291-Mazais-princis-p16s2w10
+,	zc	,	m-d1291-Mazais-princis-p7-p10s2w4
+vai	cs	vai	m-d1291-Mazais-princis-p7-p10s2w5
+šis	pd3msnn	šis	m-d1291-Mazais-princis-p7-p10s2w6
+cilvēks	ncmsn1	cilvēks	m-d1291-Mazais-princis-p7-p10s2w7
+tiešām	q	tiešām	m-d1291-Mazais-princis-p7-p10s2w8
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p7-p10s2w9
+saprātīgs	afmsnnp	saprātīgs	m-d1291-Mazais-princis-p7-p10s2w10
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s2w11
+.	zs	.	m-d1291-Mazais-princis-p7-p10s2w11
 </s>
 <s>
-Bet	cc	bet	m-d1291-Mazais-princis-p16s3w1
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p16s3w2
-man	pp10sdn	es	m-d1291-Mazais-princis-p16s3w3
-vienmēr	r0n	vienmēr	m-d1291-Mazais-princis-p16s3w4
-atbildēja	vmnisi330an	atbildēt	m-d1291-Mazais-princis-p16s3w5
+Bet	cc	bet	m-d1291-Mazais-princis-p7-p10s3w1
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p7-p10s3w2
+man	pp10sdn	es	m-d1291-Mazais-princis-p7-p10s3w3
+vienmēr	r0n	vienmēr	m-d1291-Mazais-princis-p7-p10s3w4
+atbildēja	vmnisi330an	atbildēt	m-d1291-Mazais-princis-p7-p10s3w5
 <g />
-:	zo	:	m-d1291-Mazais-princis-p16s3w6
-"	zq	"	m-d1291-Mazais-princis-p16s3w7
+:	zo	:	m-d1291-Mazais-princis-p7-p10s3w6
+"	zq	"	m-d1291-Mazais-princis-p7-p10s3w7
 <g />
-Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p16s3w8
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p16s3w9
-cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p16s3w10
+Tā	pd3fsnn	tā	m-d1291-Mazais-princis-p7-p10s3w8
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p7-p10s3w9
+cepure	ncfsn5	cepure	m-d1291-Mazais-princis-p7-p10s3w10
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s3w11
+.	zs	.	m-d1291-Mazais-princis-p7-p10s3w11
 <g />
-"	zq	"	m-d1291-Mazais-princis-p16s3w12
+"	zq	"	m-d1291-Mazais-princis-p7-p10s3w12
 </s>
 <s>
-Tad	r0n	tad	m-d1291-Mazais-princis-p16s4w1
-es	pp10snn	es	m-d1291-Mazais-princis-p16s4w2
-nerunāju	vmnipi21say	runāt	m-d1291-Mazais-princis-p16s4w3
-ar	spsa	ar	m-d1291-Mazais-princis-p16s4w4
-viņu	pp3msan	viņš	m-d1291-Mazais-princis-p16s4w5
-nedz	cc	nedz	m-d1291-Mazais-princis-p16s4w6
-par	spsa	par	m-d1291-Mazais-princis-p16s4w7
-boa	ncf000	boa	m-d1291-Mazais-princis-p16s4w8
-čūskām	ncfpd4	čūska	m-d1291-Mazais-princis-p16s4w9
+Tad	r0n	tad	m-d1291-Mazais-princis-p7-p10s4w1
+es	pp10snn	es	m-d1291-Mazais-princis-p7-p10s4w2
+nerunāju	vmnipi21say	runāt	m-d1291-Mazais-princis-p7-p10s4w3
+ar	spsa	ar	m-d1291-Mazais-princis-p7-p10s4w4
+viņu	pp3msan	viņš	m-d1291-Mazais-princis-p7-p10s4w5
+nedz	cc	nedz	m-d1291-Mazais-princis-p7-p10s4w6
+par	spsa	par	m-d1291-Mazais-princis-p7-p10s4w7
+boa	ncf000	boa	m-d1291-Mazais-princis-p7-p10s4w8
+čūskām	ncfpd4	čūska	m-d1291-Mazais-princis-p7-p10s4w9
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s4w10
-nedz	cc	nedz	m-d1291-Mazais-princis-p16s4w11
-par	sppd	par	m-d1291-Mazais-princis-p16s4w12
-mūžamežiem	ncmpd1	mūžamežs	m-d1291-Mazais-princis-p16s4w13
+,	zc	,	m-d1291-Mazais-princis-p7-p10s4w10
+nedz	cc	nedz	m-d1291-Mazais-princis-p7-p10s4w11
+par	sppd	par	m-d1291-Mazais-princis-p7-p10s4w12
+mūžamežiem	ncmpd1	mūžamežs	m-d1291-Mazais-princis-p7-p10s4w13
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s4w14
-nedz	cc	nedz	m-d1291-Mazais-princis-p16s4w15
-par	sppd	par	m-d1291-Mazais-princis-p16s4w16
-zvaigznēm	ncfpd5	zvaigzne	m-d1291-Mazais-princis-p16s4w17
+,	zc	,	m-d1291-Mazais-princis-p7-p10s4w14
+nedz	cc	nedz	m-d1291-Mazais-princis-p7-p10s4w15
+par	sppd	par	m-d1291-Mazais-princis-p7-p10s4w16
+zvaigznēm	ncfpd5	zvaigzne	m-d1291-Mazais-princis-p7-p10s4w17
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s4w18
+.	zs	.	m-d1291-Mazais-princis-p7-p10s4w18
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p16s5w1
-pielāgojos	vmyisi21san	pielāgoties	m-d1291-Mazais-princis-p16s5w2
-viņa	pp3msgn	viņš	m-d1291-Mazais-princis-p16s5w3
-izpratnei	ncfsd5	izpratne	m-d1291-Mazais-princis-p16s5w4
+Es	pp10snn	es	m-d1291-Mazais-princis-p7-p10s5w1
+pielāgojos	vmyisi21san	pielāgoties	m-d1291-Mazais-princis-p7-p10s5w2
+viņa	pp3msgn	viņš	m-d1291-Mazais-princis-p7-p10s5w3
+izpratnei	ncfsd5	izpratne	m-d1291-Mazais-princis-p7-p10s5w4
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s5w5
+.	zs	.	m-d1291-Mazais-princis-p7-p10s5w5
 </s>
 <s>
-Es	pp10snn	es	m-d1291-Mazais-princis-p16s6w1
-runāju	vmnipi21san	runāt	m-d1291-Mazais-princis-p16s6w2
-ar	spsa	ar	m-d1291-Mazais-princis-p16s6w3
-viņu	pp3msan	viņš	m-d1291-Mazais-princis-p16s6w4
-par	spsa	par	m-d1291-Mazais-princis-p16s6w5
-bridžu	ncmsa1	bridžs	m-d1291-Mazais-princis-p16s6w6
+Es	pp10snn	es	m-d1291-Mazais-princis-p7-p10s6w1
+runāju	vmnipi21san	runāt	m-d1291-Mazais-princis-p7-p10s6w2
+ar	spsa	ar	m-d1291-Mazais-princis-p7-p10s6w3
+viņu	pp3msan	viņš	m-d1291-Mazais-princis-p7-p10s6w4
+par	spsa	par	m-d1291-Mazais-princis-p7-p10s6w5
+bridžu	ncmsa1	bridžs	m-d1291-Mazais-princis-p7-p10s6w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s6w7
-par	spsa	par	m-d1291-Mazais-princis-p16s6w8
-golfu	ncmsa1	golfs	m-d1291-Mazais-princis-p16s6w9
+,	zc	,	m-d1291-Mazais-princis-p7-p10s6w7
+par	spsa	par	m-d1291-Mazais-princis-p7-p10s6w8
+golfu	ncmsa1	golfs	m-d1291-Mazais-princis-p7-p10s6w9
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s6w10
-par	spsa	par	m-d1291-Mazais-princis-p16s6w11
-politiku	ncfsa4	politika	m-d1291-Mazais-princis-p16s6w12
+,	zc	,	m-d1291-Mazais-princis-p7-p10s6w10
+par	spsa	par	m-d1291-Mazais-princis-p7-p10s6w11
+politiku	ncfsa4	politika	m-d1291-Mazais-princis-p7-p10s6w12
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s6w13
-par	sppd	par	m-d1291-Mazais-princis-p16s6w14
-kravatēm	ncfpd5	kravate	m-d1291-Mazais-princis-p16s6w15
+,	zc	,	m-d1291-Mazais-princis-p7-p10s6w13
+par	sppd	par	m-d1291-Mazais-princis-p7-p10s6w14
+kravatēm	ncfpd5	kravate	m-d1291-Mazais-princis-p7-p10s6w15
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s6w16
+.	zs	.	m-d1291-Mazais-princis-p7-p10s6w16
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p16s7w1
-šī	pd3fsnn	šī	m-d1291-Mazais-princis-p16s7w2
-persona	ncfsn4	persona	m-d1291-Mazais-princis-p16s7w3
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p16s7w4
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p16s7w5
-apmierināta	vmnpdfsnpsnpn	apmierināt	m-d1291-Mazais-princis-p16s7w6
+Un	cc	un	m-d1291-Mazais-princis-p7-p10s7w1
+šī	pd3fsnn	šī	m-d1291-Mazais-princis-p7-p10s7w2
+persona	ncfsn4	persona	m-d1291-Mazais-princis-p7-p10s7w3
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p7-p10s7w4
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p7-p10s7w5
+apmierināta	vmnpdfsnpsnpn	apmierināt	m-d1291-Mazais-princis-p7-p10s7w6
 <g />
-,	zc	,	m-d1291-Mazais-princis-p16s7w7
-ka	cs	ka	m-d1291-Mazais-princis-p16s7w8
-iepazinusies	vmypdfsnasnpn	iepazīties	m-d1291-Mazais-princis-p16s7w9
-ar	spsa	ar	m-d1291-Mazais-princis-p16s7w10
-tik	r0n	tik	m-d1291-Mazais-princis-p16s7w11
-prātīgu	afmsanp	prātīgs	m-d1291-Mazais-princis-p16s7w12
-cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p16s7w13
+,	zc	,	m-d1291-Mazais-princis-p7-p10s7w7
+ka	cs	ka	m-d1291-Mazais-princis-p7-p10s7w8
+iepazinusies	vmypdfsnasnpn	iepazīties	m-d1291-Mazais-princis-p7-p10s7w9
+ar	spsa	ar	m-d1291-Mazais-princis-p7-p10s7w10
+tik	r0n	tik	m-d1291-Mazais-princis-p7-p10s7w11
+prātīgu	afmsanp	prātīgs	m-d1291-Mazais-princis-p7-p10s7w12
+cilvēku	ncmsa1	cilvēks	m-d1291-Mazais-princis-p7-p10s7w13
 <g />
-.	zs	.	m-d1291-Mazais-princis-p16s7w14
+.	zs	.	m-d1291-Mazais-princis-p7-p10s7w14
 </s>
 <s>
 «	zq	"	m-p7503-p12s1w1
@@ -36961,7 +36961,7 @@ pieejams	vmnpdmsnppnpn	pieiet	m-p3753-p8s1w14
 .	zs	.	m-p3753-p8s1w15
 </s>
 <s>
-Protams	vmnpdmsnppnpn	prast	m-p3753-p8s2w1
+Protams	q	protams	m-p3753-p8s2w1
 <g />
 ,	zc	,	m-p3753-p8s2w2
 tas	pd3msnn	tas	m-p3753-p8s2w3
@@ -39830,166 +39830,166 @@ Mazais	afmsnyp	mazs	m-d1291-Mazais-princis-p1s1w1
 Princis	ncmsn2	princis	m-d1291-Mazais-princis-p1s1w2
 </s>
 <s>
-Antuāns	npmsn1	Antuāns	m-d1291-Mazais-princis-p2s1w1
-de	xf	de	m-d1291-Mazais-princis-p2s1w2
-Sent-Ekziperī	npm000	Sent-Ekziperī	m-d1291-Mazais-princis-p2s1w3
+Antuāns	npmsn1	Antuāns	m-d1291-Mazais-princis-p1-p2s1w1
+de	xf	de	m-d1291-Mazais-princis-p1-p2s1w2
+Sent-Ekziperī	npm000	Sent-Ekziperī	m-d1291-Mazais-princis-p1-p2s1w3
 </s>
 <s>
-LEONAM	npmsd1	Leons	m-d1291-Mazais-princis-p3s1w1
-VERTAM	npmsd1	Verts	m-d1291-Mazais-princis-p3s1w2
+LEONAM	npmsd1	Leons	m-d1291-Mazais-princis-p1-p3s1w1
+VERTAM	npmsd1	Verts	m-d1291-Mazais-princis-p1-p3s1w2
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p4s1w1
-jālūdz	vmnd0t100an	lūgt	m-d1291-Mazais-princis-p4s1w2
-piedošana	ncfsn4	piedošana	m-d1291-Mazais-princis-p4s1w3
-bērniem	ncmpd1	bērns	m-d1291-Mazais-princis-p4s1w4
+Man	pp10sdn	es	m-d1291-Mazais-princis-p1-p4s1w1
+jālūdz	vmnd0t100an	lūgt	m-d1291-Mazais-princis-p1-p4s1w2
+piedošana	ncfsn4	piedošana	m-d1291-Mazais-princis-p1-p4s1w3
+bērniem	ncmpd1	bērns	m-d1291-Mazais-princis-p1-p4s1w4
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s1w5
-ka	cs	ka	m-d1291-Mazais-princis-p4s1w6
-šo	pd3fsan	šī	m-d1291-Mazais-princis-p4s1w7
-grāmatu	ncfsa4	grāmata	m-d1291-Mazais-princis-p4s1w8
-esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p4s1w9
-veltījis	vmnpdmsnasnpn	veltīt	m-d1291-Mazais-princis-p4s1w10
-pieaugušajam	vmnpdmsdasypn	pieaugt	m-d1291-Mazais-princis-p4s1w11
+,	zc	,	m-d1291-Mazais-princis-p1-p4s1w5
+ka	cs	ka	m-d1291-Mazais-princis-p1-p4s1w6
+šo	pd3fsan	šī	m-d1291-Mazais-princis-p1-p4s1w7
+grāmatu	ncfsa4	grāmata	m-d1291-Mazais-princis-p1-p4s1w8
+esmu	vcnipii1san	būt	m-d1291-Mazais-princis-p1-p4s1w9
+veltījis	vmnpdmsnasnpn	veltīt	m-d1291-Mazais-princis-p1-p4s1w10
+pieaugušajam	vmnpdmsdasypn	pieaugt	m-d1291-Mazais-princis-p1-p4s1w11
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s1w12
+.	zs	.	m-d1291-Mazais-princis-p1-p4s1w12
 </s>
 <s>
-Man	pp10sdn	es	m-d1291-Mazais-princis-p4s2w1
-gan	q	gan	m-d1291-Mazais-princis-p4s2w2
-ir	vmnipii30an	būt	m-d1291-Mazais-princis-p4s2w3
-nopietns	afmsnnp	nopietns	m-d1291-Mazais-princis-p4s2w4
-aizbildinājums	ncmsn1	aizbildinājums	m-d1291-Mazais-princis-p4s2w5
+Man	pp10sdn	es	m-d1291-Mazais-princis-p1-p4s2w1
+gan	q	gan	m-d1291-Mazais-princis-p1-p4s2w2
+ir	vmnipii30an	būt	m-d1291-Mazais-princis-p1-p4s2w3
+nopietns	afmsnnp	nopietns	m-d1291-Mazais-princis-p1-p4s2w4
+aizbildinājums	ncmsn1	aizbildinājums	m-d1291-Mazais-princis-p1-p4s2w5
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s2w6
-proti	q	proti	m-d1291-Mazais-princis-p4s2w7
+,	zc	,	m-d1291-Mazais-princis-p1-p4s2w6
+proti	q	proti	m-d1291-Mazais-princis-p1-p4s2w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s2w8
-šis	pd3msnn	šis	m-d1291-Mazais-princis-p4s2w9
-pieaugušais	vmnpdmsnasypn	pieaugt	m-d1291-Mazais-princis-p4s2w10
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p4s2w11
-mans	ps0msnn	mans	m-d1291-Mazais-princis-p4s2w12
-vislabākais	afmsnys	labs	m-d1291-Mazais-princis-p4s2w13
-draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p4s2w14
+,	zc	,	m-d1291-Mazais-princis-p1-p4s2w8
+šis	pd3msnn	šis	m-d1291-Mazais-princis-p1-p4s2w9
+pieaugušais	vmnpdmsnasypn	pieaugt	m-d1291-Mazais-princis-p1-p4s2w10
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p1-p4s2w11
+mans	ps0msnn	mans	m-d1291-Mazais-princis-p1-p4s2w12
+vislabākais	afmsnys	labs	m-d1291-Mazais-princis-p1-p4s2w13
+draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p1-p4s2w14
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s2w15
+.	zs	.	m-d1291-Mazais-princis-p1-p4s2w15
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p4s3w1
-vēl	r0n	vēl	m-d1291-Mazais-princis-p4s3w2
-jāpiebilst	vmnd0t100an	piebilst	m-d1291-Mazais-princis-p4s3w3
+Un	cc	un	m-d1291-Mazais-princis-p1-p4s3w1
+vēl	r0n	vēl	m-d1291-Mazais-princis-p1-p4s3w2
+jāpiebilst	vmnd0t100an	piebilst	m-d1291-Mazais-princis-p1-p4s3w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s3w4
-ka	cs	ka	m-d1291-Mazais-princis-p4s3w5
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p4s3w6
-saprot	vmnipt130an	saprast	m-d1291-Mazais-princis-p4s3w7
-visu	pg0msan	viss	m-d1291-Mazais-princis-p4s3w8
+,	zc	,	m-d1291-Mazais-princis-p1-p4s3w4
+ka	cs	ka	m-d1291-Mazais-princis-p1-p4s3w5
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p1-p4s3w6
+saprot	vmnipt130an	saprast	m-d1291-Mazais-princis-p1-p4s3w7
+visu	pg0msan	viss	m-d1291-Mazais-princis-p1-p4s3w8
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s3w9
-pat	q	pat	m-d1291-Mazais-princis-p4s3w10
-bērnu	ncmpg1	bērns	m-d1291-Mazais-princis-p4s3w11
-grāmatas	ncfpa4	grāmata	m-d1291-Mazais-princis-p4s3w12
+,	zc	,	m-d1291-Mazais-princis-p1-p4s3w9
+pat	q	pat	m-d1291-Mazais-princis-p1-p4s3w10
+bērnu	ncmpg1	bērns	m-d1291-Mazais-princis-p1-p4s3w11
+grāmatas	ncfpa4	grāmata	m-d1291-Mazais-princis-p1-p4s3w12
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s3w13
+.	zs	.	m-d1291-Mazais-princis-p1-p4s3w13
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p4s4w1
+Un	cc	un	m-d1291-Mazais-princis-p1-p4s4w1
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s4w2
-beidzot	r0n	beidzot	m-d1291-Mazais-princis-p4s4w3
+,	zc	,	m-d1291-Mazais-princis-p1-p4s4w2
+beidzot	r0n	beidzot	m-d1291-Mazais-princis-p1-p4s4w3
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s4w4
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p4s4w5
-dzīvo	vmnipi230an	dzīvot	m-d1291-Mazais-princis-p4s4w6
-Francijā	npfsl4	Francija	m-d1291-Mazais-princis-p4s4w7
+,	zc	,	m-d1291-Mazais-princis-p1-p4s4w4
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p1-p4s4w5
+dzīvo	vmnipi230an	dzīvot	m-d1291-Mazais-princis-p1-p4s4w6
+Francijā	npfsl4	Francija	m-d1291-Mazais-princis-p1-p4s4w7
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s4w8
-kur	r0n	kur	m-d1291-Mazais-princis-p4s4w9
-pašreiz	r0n	pašreiz	m-d1291-Mazais-princis-p4s4w10
-valda	vmnipi330an	valdīt	m-d1291-Mazais-princis-p4s4w11
-bads	ncmsn1	bads	m-d1291-Mazais-princis-p4s4w12
-un	cc	un	m-d1291-Mazais-princis-p4s4w13
-aukstums	ncmsn1	aukstums	m-d1291-Mazais-princis-p4s4w14
+,	zc	,	m-d1291-Mazais-princis-p1-p4s4w8
+kur	r0n	kur	m-d1291-Mazais-princis-p1-p4s4w9
+pašreiz	r0n	pašreiz	m-d1291-Mazais-princis-p1-p4s4w10
+valda	vmnipi330an	valdīt	m-d1291-Mazais-princis-p1-p4s4w11
+bads	ncmsn1	bads	m-d1291-Mazais-princis-p1-p4s4w12
+un	cc	un	m-d1291-Mazais-princis-p1-p4s4w13
+aukstums	ncmsn1	aukstums	m-d1291-Mazais-princis-p1-p4s4w14
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s4w15
+.	zs	.	m-d1291-Mazais-princis-p1-p4s4w15
 </s>
 <s>
-Tādēļ	r0n	tādēļ	m-d1291-Mazais-princis-p4s5w1
-viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p4s5w2
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p4s5w3
-nepieciešams	afmsnnp	nepieciešams	m-d1291-Mazais-princis-p4s5w4
-mierinājums	ncmsn1	mierinājums	m-d1291-Mazais-princis-p4s5w5
+Tādēļ	r0n	tādēļ	m-d1291-Mazais-princis-p1-p4s5w1
+viņam	pp3msdn	viņš	m-d1291-Mazais-princis-p1-p4s5w2
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p1-p4s5w3
+nepieciešams	afmsnnp	nepieciešams	m-d1291-Mazais-princis-p1-p4s5w4
+mierinājums	ncmsn1	mierinājums	m-d1291-Mazais-princis-p1-p4s5w5
 <g />
 </s>
 <s>
-.	zs	.	m-d1291-Mazais-princis-p4s6w1
-Ja	cs	ja	m-d1291-Mazais-princis-p4s6w2
-visi	pg0mpnn	viss	m-d1291-Mazais-princis-p4s6w3
-šie	pd3mpnn	šis	m-d1291-Mazais-princis-p4s6w4
-aizbildinājumi	ncmpn1	aizbildinājums	m-d1291-Mazais-princis-p4s6w5
-tomēr	q	tomēr	m-d1291-Mazais-princis-p4s6w6
-nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p4s6w7
-pietiekami	vmnpdmpnppnpn	pietikt	m-d1291-Mazais-princis-p4s6w8
+.	zs	.	m-d1291-Mazais-princis-p1-p4s6w1
+Ja	cs	ja	m-d1291-Mazais-princis-p1-p4s6w2
+visi	pg0mpnn	viss	m-d1291-Mazais-princis-p1-p4s6w3
+šie	pd3mpnn	šis	m-d1291-Mazais-princis-p1-p4s6w4
+aizbildinājumi	ncmpn1	aizbildinājums	m-d1291-Mazais-princis-p1-p4s6w5
+tomēr	q	tomēr	m-d1291-Mazais-princis-p1-p4s6w6
+nav	vcnipii30ay	būt	m-d1291-Mazais-princis-p1-p4s6w7
+pietiekami	vmnpdmpnppnpn	pietikt	m-d1291-Mazais-princis-p1-p4s6w8
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s6w9
-tad	r0n	tad	m-d1291-Mazais-princis-p4s6w10
-es	pp10snn	es	m-d1291-Mazais-princis-p4s6w11
-veltīšu	vmnift31san	veltīt	m-d1291-Mazais-princis-p4s6w12
-šo	pd3fsan	šī	m-d1291-Mazais-princis-p4s6w13
-grāmatu	ncfsa4	grāmata	m-d1291-Mazais-princis-p4s6w14
-puisēnam	ncmsd1	puisēns	m-d1291-Mazais-princis-p4s6w15
+,	zc	,	m-d1291-Mazais-princis-p1-p4s6w9
+tad	r0n	tad	m-d1291-Mazais-princis-p1-p4s6w10
+es	pp10snn	es	m-d1291-Mazais-princis-p1-p4s6w11
+veltīšu	vmnift31san	veltīt	m-d1291-Mazais-princis-p1-p4s6w12
+šo	pd3fsan	šī	m-d1291-Mazais-princis-p1-p4s6w13
+grāmatu	ncfsa4	grāmata	m-d1291-Mazais-princis-p1-p4s6w14
+puisēnam	ncmsd1	puisēns	m-d1291-Mazais-princis-p1-p4s6w15
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s6w16
-kāds	pr0msnn	kāds	m-d1291-Mazais-princis-p4s6w17
-reiz	r0n	reiz	m-d1291-Mazais-princis-p4s6w18
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p4s6w19
-mans	ps0msnn	mans	m-d1291-Mazais-princis-p4s6w20
-pieaugušais	vmnpdmsnasypn	pieaugt	m-d1291-Mazais-princis-p4s6w21
-draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p4s6w22
+,	zc	,	m-d1291-Mazais-princis-p1-p4s6w16
+kāds	pr0msnn	kāds	m-d1291-Mazais-princis-p1-p4s6w17
+reiz	r0n	reiz	m-d1291-Mazais-princis-p1-p4s6w18
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p1-p4s6w19
+mans	ps0msnn	mans	m-d1291-Mazais-princis-p1-p4s6w20
+pieaugušais	vmnpdmsnasypn	pieaugt	m-d1291-Mazais-princis-p1-p4s6w21
+draugs	ncmsn1	draugs	m-d1291-Mazais-princis-p1-p4s6w22
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s6w23
+.	zs	.	m-d1291-Mazais-princis-p1-p4s6w23
 </s>
 <s>
-Visi	pg0mpnn	viss	m-d1291-Mazais-princis-p4s7w1
-pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p4s7w2
-reiz	r0n	reiz	m-d1291-Mazais-princis-p4s7w3
-ir	vcnipii30an	būt	m-d1291-Mazais-princis-p4s7w4
-bijuši	vcnpdmpnasnpn	būt	m-d1291-Mazais-princis-p4s7w5
-bērni	ncmpn1	bērns	m-d1291-Mazais-princis-p4s7w6
-(	zb	(	m-d1291-Mazais-princis-p4s7w7
+Visi	pg0mpnn	viss	m-d1291-Mazais-princis-p1-p4s7w1
+pieaugušie	vmnpdmpnasypn	pieaugt	m-d1291-Mazais-princis-p1-p4s7w2
+reiz	r0n	reiz	m-d1291-Mazais-princis-p1-p4s7w3
+ir	vcnipii30an	būt	m-d1291-Mazais-princis-p1-p4s7w4
+bijuši	vcnpdmpnasnpn	būt	m-d1291-Mazais-princis-p1-p4s7w5
+bērni	ncmpn1	bērns	m-d1291-Mazais-princis-p1-p4s7w6
+(	zb	(	m-d1291-Mazais-princis-p1-p4s7w7
 <g />
-tikai	q	tikai	m-d1291-Mazais-princis-p4s7w8
-ļoti	r0n	ļoti	m-d1291-Mazais-princis-p4s7w9
-nedaudzi	afmpnnp	nedaudzi	m-d1291-Mazais-princis-p4s7w10
-no	sppd	no	m-d1291-Mazais-princis-p4s7w11
-viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p4s7w12
-to	pd3msan	tas	m-d1291-Mazais-princis-p4s7w13
-atceras	vmyipt330an	atcerēties	m-d1291-Mazais-princis-p4s7w14
+tikai	q	tikai	m-d1291-Mazais-princis-p1-p4s7w8
+ļoti	r0n	ļoti	m-d1291-Mazais-princis-p1-p4s7w9
+nedaudzi	afmpnnp	nedaudzi	m-d1291-Mazais-princis-p1-p4s7w10
+no	sppd	no	m-d1291-Mazais-princis-p1-p4s7w11
+viņiem	pp3mpdn	viņš	m-d1291-Mazais-princis-p1-p4s7w12
+to	pd3msan	tas	m-d1291-Mazais-princis-p1-p4s7w13
+atceras	vmyipt330an	atcerēties	m-d1291-Mazais-princis-p1-p4s7w14
 <g />
-)	zb	)	m-d1291-Mazais-princis-p4s7w15
+)	zb	)	m-d1291-Mazais-princis-p1-p4s7w15
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s7w16
+.	zs	.	m-d1291-Mazais-princis-p1-p4s7w16
 </s>
 <s>
-Un	cc	un	m-d1291-Mazais-princis-p4s8w1
-tā	r0n	tā	m-d1291-Mazais-princis-p4s8w2
-es	pp10snn	es	m-d1291-Mazais-princis-p4s8w3
-laboju	vmnipt21san	labot	m-d1291-Mazais-princis-p4s8w4
-savu	ps0msan	savs	m-d1291-Mazais-princis-p4s8w5
-veltījumu	ncmsa1	veltījums	m-d1291-Mazais-princis-p4s8w6
+Un	cc	un	m-d1291-Mazais-princis-p1-p4s8w1
+tā	r0n	tā	m-d1291-Mazais-princis-p1-p4s8w2
+es	pp10snn	es	m-d1291-Mazais-princis-p1-p4s8w3
+laboju	vmnipt21san	labot	m-d1291-Mazais-princis-p1-p4s8w4
+savu	ps0msan	savs	m-d1291-Mazais-princis-p1-p4s8w5
+veltījumu	ncmsa1	veltījums	m-d1291-Mazais-princis-p1-p4s8w6
 <g />
-:	zo	:	m-d1291-Mazais-princis-p4s8w7
-Leonam	npmsd1	Leons	m-d1291-Mazais-princis-p4s8w8
-Vertam	npmsd1	Verts	m-d1291-Mazais-princis-p4s8w9
+:	zo	:	m-d1291-Mazais-princis-p1-p4s8w7
+Leonam	npmsd1	Leons	m-d1291-Mazais-princis-p1-p4s8w8
+Vertam	npmsd1	Verts	m-d1291-Mazais-princis-p1-p4s8w9
 <g />
-,	zc	,	m-d1291-Mazais-princis-p4s8w10
-kad	r0n	kad	m-d1291-Mazais-princis-p4s8w11
-viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p4s8w12
-bija	vcnisii30an	būt	m-d1291-Mazais-princis-p4s8w13
-mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p4s8w14
-zēns	ncmsn1	zēns	m-d1291-Mazais-princis-p4s8w15
+,	zc	,	m-d1291-Mazais-princis-p1-p4s8w10
+kad	r0n	kad	m-d1291-Mazais-princis-p1-p4s8w11
+viņš	pp3msnn	viņš	m-d1291-Mazais-princis-p1-p4s8w12
+bija	vcnisii30an	būt	m-d1291-Mazais-princis-p1-p4s8w13
+mazs	afmsnnp	mazs	m-d1291-Mazais-princis-p1-p4s8w14
+zēns	ncmsn1	zēns	m-d1291-Mazais-princis-p1-p4s8w15
 <g />
-.	zs	.	m-d1291-Mazais-princis-p4s8w16
+.	zs	.	m-d1291-Mazais-princis-p1-p4s8w16
 </s>
 <s>
 Kā	r0n	kā	m-z96-p88s1w1
@@ -40729,7 +40729,7 @@ ir	vmnipii30an	būt	m-p12022-p3s3w42
 viena	mcsfsn	viens	m-p12022-p3s3w43
 stikla	ncmsg1	stikls	m-p12022-p3s3w44
 pūtēja	ncmsg1	pūtējs	m-p12022-p3s3w45
-pīpju	ncmpg2	pīpis	m-p12022-p3s3w46
+pīpju	ncfpg5	pīpe	m-p12022-p3s3w46
 sildāmā	vmnpdfsnppypn	sildīt	m-p12022-p3s3w47
 iekārta	ncfsn4	iekārta	m-p12022-p3s3w48
 <g />
@@ -41808,7 +41808,7 @@ sāksies	vmyifi130an	sākties	m-p15319-p7s1w4
 Vītolnieku	npmdg1	Vītolnieki	m-p15319-p7s1w6
 <g />
 "	zq	"	m-p15319-p7s1w7
-priekšpagalmā	ncfsl4	priekšpagalma	m-p15319-p7s1w8
+priekšpagalmā	ncmsl1	priekšpagalms	m-p15319-p7s1w8
 <g />
 ,	zc	,	m-p15319-p7s1w9
 kur	r0n	kur	m-p15319-p7s1w10
@@ -42138,7 +42138,7 @@ dzīvoklī	ncmsl2	dzīvoklis	m-p1182-p7s2w9
 <s>
 «	zq	"	m-p5535-p7s1w1
 <g />
-Protams	vmnpdmsnppnpn	prast	m-p5535-p7s1w2
+Protams	q	protams	m-p5535-p7s1w2
 <g />
 ,	zc	,	m-p5535-p7s1w3
 man	pp10sdn	es	m-p5535-p7s1w4
@@ -47603,7 +47603,7 @@ vienā	mcsmsl	viens	m-d207-p717s11w3
 vakarā	ncmsl1	vakars	m-d207-p717s11w4
 nospēlēt	vmnn0t2000n	nospēlēt	m-d207-p717s11w5
 kazino	ncm000	kazino	m-d207-p717s11w6
-prāvas	ncfpa4	prāva	m-d207-p717s11w7
+prāvas	affpanp	prāvs	m-d207-p717s11w7
 summas	ncfpa4	summa	m-d207-p717s11w8
 <g />
 ,	zc	,	m-d207-p717s11w9
@@ -47881,7 +47881,7 @@ Pēc	sppd	pēc	m-p12195-p2s3w1
 tam	pd3msdn	tas	m-p12195-p2s3w2
 mēs	pp10pnn	mēs	m-p12195-p2s3w3
 apmeklējām	vmnist21pan	apmeklēt	m-p12195-p2s3w4
-kara	ncmsg1	kars	m-p12195-p2s3w5
+kara	ncmsg1	karš	m-p12195-p2s3w5
 muzeju	ncmsa1	muzejs	m-p12195-p2s3w6
 <g />
 ,	zc	,	m-p12195-p2s3w7
@@ -47896,7 +47896,7 @@ iepazināmies	vmyisi11pan	iepazīties	m-p12195-p2s3w14
 ar	spsa	ar	m-p12195-p2s3w15
 2.	xo	2.	m-p12195-p2s3w16
 pasaules	ncfsg5	pasaule	m-p12195-p2s3w17
-kara	ncmsg1	kars	m-p12195-p2s3w18
+kara	ncmsg1	karš	m-p12195-p2s3w18
 laikam	ncmsd1	laiks	m-p12195-p2s3w19
 veltīto	vmnpdfsapsypn	veltīt	m-p12195-p2s3w20
 ekspozīciju	ncfsa4	ekspozīcija	m-p12195-p2s3w21
