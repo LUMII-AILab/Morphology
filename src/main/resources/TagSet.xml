@@ -2,13 +2,13 @@
 <TagSet>
 <Attribute LV="Vārdšķira" EN="Part of speech" MarkupPos="0">
 	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="nc____"/>
-	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
-	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="af_____"/>
+	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm________"/>
+	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p_____n"/>
-	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r_n"/>
+	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r_"/>
 	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
-	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
+	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m____"/>
 	<Value LV="Izsauksmes vārds" EN="Interjection" Tag="i"/>
 	<Value LV="Saīsinājums" EN="Abbreviation" Tag="y"/>
 	<Value LV="Partikula" EN="Particle" Tag="q"/>
@@ -66,9 +66,8 @@
 	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
 	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
 	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
-	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
-	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
+	<Value LV="Saitiņa" EN="Copula" Tag="c"/>
+	<Value LV="Palīgverbs" EN="Auxiliary" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" EN="Reflexive" PartOfSpeech="Darbības vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -91,34 +90,34 @@
 	<Value LV="Nākotne" EN="Future" GF="Fut" Tag="f"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds" MarkupPos="5">
+<Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds">
 	<Value LV="Transitīvs" EN="Transitive" Tag="t"/>
 	<Value LV="Intransitīvs" EN="Intransitive" Tag="i"/>
 	<Value LV="Transitīvs un intransitīvs" EN="Transitive or intransitive"/>
 </Attribute>
-<Attribute LV="Konjugācija" EN="Conjugation" GF="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="6"> <!-- GF: ResLav.gf -->
+<Attribute LV="Konjugācija" EN="Conjugation" GF="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="5"> <!-- GF: ResLav.gf -->
 	<Value LV="1" EN="1" GF="C1" Tag="1"/>
 	<Value LV="2" EN="2" GF="C2" Tag="2"/>
 	<Value LV="3" EN="3" GF="C3" Tag="3"/>
 	<Value LV="Nekārtns" EN="Irregular" GF="CI" Tag="i"/>
 </Attribute>
-<Attribute LV="Persona" EN="Person" GF="Person" PartOfSpeech="Darbības vārds" MarkupPos="7"> <!-- GF: ParamX.gf -->
+<Attribute LV="Persona" EN="Person" GF="Person" PartOfSpeech="Darbības vārds" MarkupPos="6"> <!-- GF: ParamX.gf -->
 	<Value LV="1" EN="1" GF="P1" Tag="1"/>
 	<Value LV="2" EN="2" GF="P2" Tag="2"/>
 	<Value LV="3" EN="3" GF="P3" Tag="3"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Darbības vārds" MarkupPos="8"> <!-- GF: ParamX.gf -->
+<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Darbības vārds" MarkupPos="7"> <!-- GF: ParamX.gf -->
 	<Value LV="Vienskaitlis" EN="Singular" GF="Sg" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" GF="Pl" Tag="p"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Kārta" EN="Voice" GF="Voice" PartOfSpeech="Darbības vārds" MarkupPos="9"> <!-- GF: ResLav.gf -->
+<Attribute LV="Kārta" EN="Voice" GF="Voice" PartOfSpeech="Darbības vārds" MarkupPos="8"> <!-- GF: ResLav.gf -->
 	<Value LV="Darāmā" EN="Active" GF="Act" Tag="a"/>
 	<Value LV="Ciešamā" EN="Passive" GF="Pass" Tag="p"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Noliegums" EN="Negation" GF="Polarity" PartOfSpeech="Darbības vārds" MarkupPos="10"> <!-- GF: ParamX.gf -->
+<Attribute LV="Noliegums" EN="Negation" GF="Polarity" PartOfSpeech="Darbības vārds" MarkupPos="9"> <!-- GF: ParamX.gf -->
 	<Value LV="Jā" EN="Yes" GF="Neg" Tag="y"/>
 	<Value LV="Nē" EN="No" GF="Pos" Tag="n"/>
 </Attribute>
@@ -128,9 +127,8 @@
 	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
 	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
 	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
-	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
-	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
+	<Value LV="Saitiņa" EN="Copula" Tag="c"/>
+	<Value LV="Palīgverbs" EN="Auxiliary" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -195,21 +193,21 @@
 	<Value LV="Nē" EN="No" GF="Pos" Tag="n"/>
 </Attribute>
 
-<Attribute LV="Īpašības vārda tips" EN="Adjective type" GF="AType" PartOfSpeech="Īpašības vārds" MarkupPos="1"> <!-- GF: ResLav.gf -->
+<Attribute LV="Īpašības vārda tips" EN="Adjective type" GF="AType" PartOfSpeech="Īpašības vārds"> <!-- GF: ResLav.gf -->
 	<Value LV="Kādības" EN="Qualificative" GF="AQual" Tag="f"/>
 	<Value LV="Attieksmes" EN="Relative" GF="ARel" Tag="r"/>
 </Attribute>
-<Attribute LV="Dzimte" EN="Gender" GF="Gender" PartOfSpeech="Īpašības vārds" MarkupPos="2"> <!-- GF: ResLav.gf -->
+<Attribute LV="Dzimte" EN="Gender" GF="Gender" PartOfSpeech="Īpašības vārds" MarkupPos="1"> <!-- GF: ResLav.gf -->
 	<Value LV="Vīriešu" EN="Masculine" GF="Masc" Tag="m"/>
 	<Value LV="Sieviešu" EN="Feminine" GF="Fem" Tag="f"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Īpašības vārds" MarkupPos="3"> <!-- GF: ParamX.gf -->
+<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Īpašības vārds" MarkupPos="2"> <!-- GF: ParamX.gf -->
 	<Value LV="Vienskaitlis" EN="Singular" GF="Sg" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" GF="Pl" Tag="p"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Locījums" EN="Case" GF="Case" PartOfSpeech="Īpašības vārds" MarkupPos="4"> <!-- GF: ResLav.gf -->
+<Attribute LV="Locījums" EN="Case" GF="Case" PartOfSpeech="Īpašības vārds" MarkupPos="3"> <!-- GF: ResLav.gf -->
 	<Value LV="Nominatīvs" EN="Nominative" GF="Nom" Tag="n"/>
 	<Value LV="Ģenitīvs" EN="Genitive" GF="Gen" Tag="g"/>
 	<Value LV="Datīvs" EN="Dative" GF="Dat" Tag="d"/>
@@ -218,14 +216,16 @@
 	<Value LV="Vokatīvs" EN="Vocative" GF="Voc" Tag="v"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Noteiktība" EN="Definiteness" GF="Definiteness" PartOfSpeech="Īpašības vārds" MarkupPos="5"> <!-- GF: ResLav.gf -->
+<Attribute LV="Noteiktība" EN="Definiteness" GF="Definiteness" PartOfSpeech="Īpašības vārds" MarkupPos="4"> <!-- GF: ResLav.gf -->
 	<Value LV="Nenoteiktā" EN="Indefinite" GF="Indef" Tag="n"/>
 	<Value LV="Noteiktā" EN="Definite" GF="Def" Tag="y"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Pakāpe" EN="Degree" GF="Degree" PartOfSpeech="Īpašības vārds" MarkupPos="6"> <!-- GF: ParamX.gf -->
+<Attribute LV="Pakāpe" EN="Degree" GF="Degree" PartOfSpeech="Īpašības vārds" MarkupPos="5"> <!-- GF: ParamX.gf -->
 	<Value LV="Pamata" EN="Positive" GF="Posit" Tag="p"/>
 	<Value LV="Pārākā" EN="Comparative" GF="Compar" Tag="c"/>
 	<Value LV="Vispārākā" EN="Superlative" GF="Superl" Tag="s"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 
 <Attribute LV="Vietniekvārda tips" EN="Pronoun type" PartOfSpeech="Vietniekvārds" MarkupPos="1">
@@ -260,6 +260,7 @@
 	<Value LV="Datīvs" EN="Dative" GF="Dat" Tag="d"/>
 	<Value LV="Akuzatīvs" EN="Accusative" GF="Acc" Tag="a"/>
 	<Value LV="Lokatīvs" EN="Locative" GF="Loc" Tag="l"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Noliegums" EN="Negation" GF="Polarity" PartOfSpeech="Vietniekvārds" MarkupPos="6"> <!-- GF: ParamX.gf -->
 	<Value LV="Jā" EN="Yes" GF="Neg" Tag="y"/>
@@ -277,7 +278,7 @@
 	<Value LV="Vispārākā" EN="Superlative" GF="Superl" Tag="s"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
+<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
 	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
@@ -330,21 +331,21 @@
 	<Value LV="Kārtas" EN="Ordinal" Tag="o"/>
 	<Value LV="Daļskaitlis" EN="Fraction" Tag="f"/>
 </Attribute>
-<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Skaitļa vārds" MarkupPos="2">
+<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Skaitļa vārds">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
 	<Value LV="Vairākvārdu" EN="Conjunction" Tag="j"/>
 </Attribute>
-<Attribute LV="Dzimte" EN="Gender" GF="Gender" PartOfSpeech="Skaitļa vārds" MarkupPos="3"> <!-- GF: ResLav.gf -->
+<Attribute LV="Dzimte" EN="Gender" GF="Gender" PartOfSpeech="Skaitļa vārds" MarkupPos="2"> <!-- GF: ResLav.gf -->
 	<Value LV="Vīriešu" EN="Masculine" GF="Masc" Tag="m"/>
 	<Value LV="Sieviešu" EN="Feminine" GF="Fem" Tag="f"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Skaitļa vārds" MarkupPos="4"> <!-- GF: ParamX.gf -->
+<Attribute LV="Skaitlis" EN="Number" GF="Number" PartOfSpeech="Skaitļa vārds" MarkupPos="3"> <!-- GF: ParamX.gf -->
 	<Value LV="Vienskaitlis" EN="Singular" GF="Sg" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" GF="Pl" Tag="p"/>
 </Attribute>
-<Attribute LV="Locījums" EN="Case" GF="Case" PartOfSpeech="Skaitļa vārds" MarkupPos="5"> <!-- GF: ResLav.gf -->
+<Attribute LV="Locījums" EN="Case" GF="Case" PartOfSpeech="Skaitļa vārds" MarkupPos="4"> <!-- GF: ResLav.gf -->
 	<Value LV="Nominatīvs" EN="Nominative" GF="Nom" Tag="n"/>
 	<Value LV="Ģenitīvs" EN="Genitive" GF="Gen" Tag="g"/>
 	<Value LV="Datīvs" EN="Dative" GF="Dat" Tag="d"/>
