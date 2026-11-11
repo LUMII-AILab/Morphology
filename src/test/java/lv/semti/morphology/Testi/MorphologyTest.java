@@ -388,7 +388,7 @@ public class MorphologyTest extends LanguageSpecificTests {
         analyzer.enablePrefixes = true;
         Word panest = analyzer.analyze("panest");
         assertTrue(panest.isRecognized());
-        assertEquals("vmnn0t1000n", panest.wordforms.getFirst().getTag());
+        assertEquals("vmnn01000n", panest.wordforms.getFirst().getTag());
     }
 
 
@@ -407,7 +407,7 @@ public class MorphologyTest extends LanguageSpecificTests {
         Word dodas = analyzer.analyze("dodas");
         assertTrue(dodas.isRecognized());
         assertEquals(AttributeNames.v_Active, dodas.wordforms.getFirst().getValue(AttributeNames.i_Voice));
-        assertEquals("vmyip_i30an", dodas.wordforms.getFirst().getTag());
+        assertEquals("vmyipi30an", dodas.wordforms.getFirst().getTag());
     }
 
 
@@ -1203,7 +1203,7 @@ public class MorphologyTest extends LanguageSpecificTests {
 
         word = analyzer.analyze("piecsimt");
         assertTrue(word.isRecognized());
-        assertEquals("mc_0p0", word.wordforms.getFirst().getTag());
+        assertEquals("mc0p0", word.wordforms.getFirst().getTag());
     }
 
     @Test
@@ -2940,7 +2940,7 @@ public class MorphologyTest extends LanguageSpecificTests {
 
         w = analyzer.analyze("zaļajā");
         assertTrue(w.isRecognized());
-        assertEquals("afmslyp", w.getBestWordform().getTag());
+        assertEquals("amslyp", w.getBestWordform().getTag());
     }
 
     @Test
@@ -2951,18 +2951,22 @@ public class MorphologyTest extends LanguageSpecificTests {
 //        nav.describe(System.out);
         boolean found_m = false;
         boolean found_c = false;
+        boolean found_a = false;
         boolean found_tag = false;
         for (Wordform wf : nav.wordforms) {
             assertEquals("būt", wf.getValue(AttributeNames.i_Lemma));
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_MainVerb))
                 found_m = true;
-            if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Buut))
+            if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Copula))
                 found_c = true;
-            if (wf.getTag().equalsIgnoreCase("vmnipii30ay"))
+            if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_AuxVerb))
+                found_a = true;
+            if (wf.getTag().equalsIgnoreCase("vmnipi30ay"))
                 found_tag = true;
         }
         assertTrue(found_m);
         assertTrue(found_c);
+        assertTrue(found_a);
         assertTrue(found_tag);
     }
 
@@ -2995,11 +2999,11 @@ public class MorphologyTest extends LanguageSpecificTests {
 
     @Test
     public void būt() {
-        ArrayList<Wordform> būt = analyzer.generateInflections("būt");
+        ArrayList<Wordform> būtGen = analyzer.generateInflections("būt");
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Debitive);
-        assertInflection(būt, testset, "jābūt");
+        assertInflection(būtGen, testset, "jābūt");
 
         Word jābūt = analyzer.analyze("jābūt");
         assertTrue(jābūt.isRecognized());
@@ -3008,13 +3012,21 @@ public class MorphologyTest extends LanguageSpecificTests {
         testset.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "2");
-        assertInflection(būt, testset, "esi");
+        assertInflection(būtGen, testset, "esi");
 
         testset.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
         testset.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(būt, testset, "esmu");
+        assertInflection(būtGen, testset, "esmu");
+
+        Word būtAnal = analyzer.analyze("ir");
+        assertTrue(būtAnal.isRecognized());
+        List<String> būtTags = būtAnal.wordforms.stream().map(AttributeValues::getTag).toList();
+        assertTrue(būtTags.stream().anyMatch(a -> a.matches("^vm.*")));
+        assertTrue(būtTags.stream().anyMatch(a -> a.matches("^va.*")));
+        assertTrue(būtTags.stream().anyMatch(a -> a.matches("^vc.*")));
+        //describe(būtAnal.wordforms);
     }
 
     @Test
@@ -3100,24 +3112,24 @@ public class MorphologyTest extends LanguageSpecificTests {
     public void ticket_26() {
         Word w = analyzer.analyze("sen");
         assertTrue(w.isRecognized());
-        assertEquals("rpn", w.getBestWordform().getTag());
+        assertEquals("rp", w.getBestWordform().getTag());
 
         w = analyzer.analyze("drīz");
         assertTrue(w.isRecognized());
-        assertEquals("rpn", w.getBestWordform().getTag());
+        assertEquals("rp", w.getBestWordform().getTag());
 
         w = analyzer.analyze("pārāk");
         assertTrue(w.isRecognized());
-        assertEquals("r0n", w.getBestWordform().getTag());
+        assertEquals("r0", w.getBestWordform().getTag());
 
         w = analyzer.analyze("daudzāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcn", w.getBestWordform().getTag());
+        assertEquals("rc", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
 
         w = analyzer.analyze("vairāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcn", w.getBestWordform().getTag());
+        assertEquals("rc", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
@@ -3448,7 +3460,7 @@ public class MorphologyTest extends LanguageSpecificTests {
     public void pusotrs() {
         Word w = analyzer.analyze("pusotrs");
         assertTrue(w.isRecognized());
-        assertEquals("mfsmsn", w.getBestWordform().getTag());
+        assertEquals("mfmsn", w.getBestWordform().getTag());
     }
 
     // Ticket #56
@@ -3456,7 +3468,7 @@ public class MorphologyTest extends LanguageSpecificTests {
     public void celties() {
         Word w = analyzer.analyze("celties");
         assertTrue(w.isRecognized());
-        assertEquals("vmyn0_1000n", w.getBestWordform().getTag());
+        assertEquals("vmyn01000n", w.getBestWordform().getTag());
     }
 
     // Ticket #48
@@ -3582,7 +3594,7 @@ public class MorphologyTest extends LanguageSpecificTests {
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rpn", wf.getTag());
+                assertEquals("rp", wf.getTag());
                 found = true;
             }
         }
@@ -3593,7 +3605,7 @@ public class MorphologyTest extends LanguageSpecificTests {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rcn", wf.getTag());
+                assertEquals("rc", wf.getTag());
                 found = true;
             }
         }
@@ -3603,7 +3615,7 @@ public class MorphologyTest extends LanguageSpecificTests {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rsn", wf.getTag());
+                assertEquals("rs", wf.getTag());
                 found = true;
             }
         }
@@ -3648,13 +3660,13 @@ public class MorphologyTest extends LanguageSpecificTests {
         Word w = analyzer.analyze("pusjokodama");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertEquals("arfsnnp", wf.getTag());
+        assertEquals("afsnnp", wf.getTag());
         assertEquals("pusjokodams", wf.getValue(AttributeNames.i_Lemma));
 
         w = analyzer.analyze("pusjokodamās");
         assertTrue(w.isRecognized());
         wf = w.getBestWordform();
-        assertEquals("arfsnnp", wf.getTag());
+        assertEquals("afsnnp", wf.getTag());
         assertEquals("pusjokodamies", wf.getValue(AttributeNames.i_Lemma));
     }
 
@@ -3791,7 +3803,7 @@ public class MorphologyTest extends LanguageSpecificTests {
     public void ticket_92() {
         Word iedot = analyzer.analyze("iedot");
         assertTrue(iedot.isRecognized());
-        assertEquals("vmnn0_i000n", iedot.wordforms.getFirst().getTag());
+        assertEquals("vmnn0i000n", iedot.wordforms.getFirst().getTag());
     }
 
     @Test
